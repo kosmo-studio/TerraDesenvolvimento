@@ -258,6 +258,130 @@ export default function Index() {
           </div>
         </div>
       </section>
+
+      {/* Client Testimonials Section */}
+      <section className="py-16 px-4 lg:px-8 bg-white">
+        <div className="max-w-7xl mx-auto">
+          {/* Section Header */}
+          <div className="text-center mb-12">
+            <h2 className="text-4xl lg:text-6xl font-lexend text-terra-navy mb-8">
+              <span className="font-normal">Com a Terra, passamos a</span>
+              <br />
+              <span className="font-bold">ter controle real da fazenda.</span>
+            </h2>
+          </div>
+
+          {/* Video Section */}
+          <div className="mb-16">
+            <div className="relative w-full max-w-4xl mx-auto rounded-lg overflow-hidden">
+              <img
+                src="https://api.builder.io/api/v1/image/assets/TEMP/2e947ade489ad97b288f12b311ef0680f0dec37e?width=2132"
+                alt="Depoimento de clientes Terra"
+                className="w-full h-auto"
+              />
+              {/* Play button overlay */}
+              <div className="absolute inset-0 flex items-center justify-center">
+                <button className="bg-black/50 rounded-full p-4 hover:bg-black/70 transition-colors">
+                  <svg className="w-12 h-12 text-white" viewBox="0 0 24 24" fill="currentColor">
+                    <path d="M8 5v14l11-7z"/>
+                  </svg>
+                </button>
+              </div>
+            </div>
+          </div>
+
+          {/* Clients Title */}
+          <div className="text-center mb-8">
+            <h3 className="text-4xl lg:text-5xl font-lexend text-terra-navy">
+              <span className="font-normal">Clientes </span>
+              <span className="font-bold">Terra</span>
+            </h3>
+            <p className="text-xl font-lexend text-terra-navy mt-4">
+              Veja os depoimentos sobre nossas parceirias
+            </p>
+          </div>
+
+          {/* Client Photos */}
+          <div className="grid grid-cols-2 md:grid-cols-5 gap-6">
+            {/* Client 1 */}
+            <div className="text-center">
+              <div className="bg-terra-darker-blue rounded-lg overflow-hidden mb-4">
+                <img
+                  src="https://api.builder.io/api/v1/image/assets/TEMP/167d9d5be0b7a32e8a957e91ad9b3ddc29a5bc43?width=976"
+                  alt="João Flavio Ribeiro"
+                  className="w-full h-48 object-cover"
+                />
+              </div>
+              <h4 className="text-lg font-lexend text-terra-navy">
+                João Flavio<br />
+                Ribeiro
+              </h4>
+            </div>
+
+            {/* Client 2 */}
+            <div className="text-center">
+              <div className="bg-terra-darker-blue rounded-lg overflow-hidden mb-4">
+                <img
+                  src="https://api.builder.io/api/v1/image/assets/TEMP/54f0d73b5a636daaaf641a0963437a0134d3c773?width=918"
+                  alt="Elton Silveira"
+                  className="w-full h-48 object-cover"
+                />
+              </div>
+              <h4 className="text-lg font-lexend text-terra-navy">
+                Elton<br />
+                Silveira
+              </h4>
+            </div>
+
+            {/* Client 3 */}
+            <div className="text-center">
+              <div className="bg-terra-darker-blue rounded-lg overflow-hidden mb-4">
+                <img
+                  src="https://api.builder.io/api/v1/image/assets/TEMP/70c8a604db88b32610607b67b99da2fbcc47cae3?width=1294"
+                  alt="Thiago Carminati"
+                  className="w-full h-48 object-cover"
+                />
+              </div>
+              <h4 className="text-lg font-lexend text-terra-navy">
+                Thiago<br />
+                Carminati
+              </h4>
+            </div>
+
+            {/* Client 4 */}
+            <div className="text-center">
+              <div className="bg-terra-darker-blue rounded-lg overflow-hidden mb-4">
+                <img
+                  src="https://api.builder.io/api/v1/image/assets/TEMP/d6a113fdacb6ab6a2e890810ea54dee9a55fc46d?width=1336"
+                  alt="Fernando Pinheiro Carneiro"
+                  className="w-full h-48 object-cover"
+                />
+              </div>
+              <h4 className="text-lg font-lexend text-terra-navy">
+                Fernando<br />
+                Pinheiro<br />
+                Carneiro
+              </h4>
+            </div>
+
+            {/* Client 5 */}
+            <div className="text-center">
+              <div className="bg-terra-darker-blue rounded-lg overflow-hidden mb-4">
+                <img
+                  src="https://api.builder.io/api/v1/image/assets/TEMP/ec671130f158f4501e49d9aa387e004ef26316ce?width=1450"
+                  alt="Duarte de Castro Cunha"
+                  className="w-full h-48 object-cover"
+                />
+              </div>
+              <h4 className="text-lg font-lexend text-terra-navy">
+                Duarte de<br />
+                Castro<br />
+                Cunha
+              </h4>
+            </div>
+          </div>
+        </div>
+      </section>
     </div>
   );
 }
