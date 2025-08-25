@@ -439,6 +439,101 @@ export default function Index() {
           </Button>
         </div>
       </section>
+
+      {/* News Section */}
+      <section className="py-16 px-4 lg:px-8 bg-gray-50">
+        <div className="max-w-7xl mx-auto">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+            {/* Article 1 */}
+            <div className="bg-white rounded-lg overflow-hidden shadow-sm">
+              <div className="relative h-48">
+                <img
+                  src="https://api.builder.io/api/v1/image/assets/TEMP/4afcf9b3e3244ee38a3c8a36490ca3801377faa2?width=1130"
+                  alt="5 Anos da Covid-19 no Brasil"
+                  className="w-full h-full object-cover"
+                />
+              </div>
+              <div className="p-6">
+                <h3 className="text-lg font-lexend text-terra-navy leading-tight mb-4">
+                  5 Anos da Covid-19 no Brasil: Lições de Resiliência e Inovação no Agronegócio
+                </h3>
+                <a href="#" className="text-terra-blue font-lexend text-sm hover:underline mb-2 block">
+                  Leia mais
+                </a>
+                <p className="text-terra-gray font-lexend text-sm">
+                  27 de fevereiro de 2025
+                </p>
+              </div>
+            </div>
+
+            {/* Article 2 */}
+            <div className="bg-white rounded-lg overflow-hidden shadow-sm">
+              <div className="relative h-48">
+                <img
+                  src="https://api.builder.io/api/v1/image/assets/TEMP/b0f43d8df013d60e4ead90c956d34aa52002d4aa?width=1650"
+                  alt="Passos para uma gestão eficiente"
+                  className="w-full h-full object-cover"
+                />
+              </div>
+              <div className="p-6">
+                <h3 className="text-lg font-lexend text-terra-navy leading-tight mb-4">
+                  Passos para uma gestão eficiente
+                </h3>
+                <a href="#" className="text-terra-blue font-lexend text-sm hover:underline mb-2 block">
+                  Leia mais
+                </a>
+                <p className="text-terra-gray font-lexend text-sm">
+                  27 de fevereiro de 2025
+                </p>
+              </div>
+            </div>
+
+            {/* Article 3 */}
+            <div className="bg-white rounded-lg overflow-hidden shadow-sm">
+              <div className="relative h-48">
+                <img
+                  src="https://api.builder.io/api/v1/image/assets/TEMP/3d1aa2e8f24ed563d6d90dc53929a40cc40cdd60?width=1600"
+                  alt="Gestão baseada em números"
+                  className="w-full h-full object-cover"
+                />
+              </div>
+              <div className="p-6">
+                <h3 className="text-lg font-lexend text-terra-navy leading-tight mb-4">
+                  Gestão baseada em números: um alicerce fundamental para novos gestores
+                </h3>
+                <a href="#" className="text-terra-blue font-lexend text-sm hover:underline mb-2 block">
+                  Leia mais
+                </a>
+                <p className="text-terra-gray font-lexend text-sm">
+                  27 de fevereiro de 2025
+                </p>
+              </div>
+            </div>
+
+            {/* Article 4 */}
+            <div className="bg-white rounded-lg overflow-hidden shadow-sm">
+              <div className="relative h-48">
+                <img
+                  src="https://api.builder.io/api/v1/image/assets/TEMP/fa844d3fafaf24c3a8bc6cea0b744ca4d4cfad92?width=1640"
+                  alt="Gestão de alta performance"
+                  className="w-full h-full object-cover"
+                />
+              </div>
+              <div className="p-6">
+                <h3 className="text-lg font-lexend text-terra-navy leading-tight mb-4">
+                  Gestão de alta performance eleva desempenho pecuário
+                </h3>
+                <a href="#" className="text-terra-blue font-lexend text-sm hover:underline mb-2 block">
+                  Leia mais
+                </a>
+                <p className="text-terra-gray font-lexend text-sm">
+                  27 de fevereiro de 2025
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
     </div>
   );
 }
