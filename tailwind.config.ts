@@ -14,19 +14,19 @@ export default {
     },
     extend: {
       fontFamily: {
-        'lexend': ['Lexend', 'system-ui', '-apple-system', 'sans-serif'],
+        lexend: ["Lexend", "system-ui", "-apple-system", "sans-serif"],
       },
       colors: {
         // Terra brand colors
-        'terra': {
-          'navy': '#152946',
-          'dark-blue': '#152A43',
-          'darker-blue': '#162946',
-          'red': '#FF0000',
-          'green': '#37BC69',
-          'blue': '#0261D6',
-          'gray': '#666666',
-          'light-gray': '#F2F2F2',
+        terra: {
+          navy: "#152946",
+          "dark-blue": "#152A43",
+          "darker-blue": "#162946",
+          red: "#FF0000",
+          green: "#37BC69",
+          blue: "#0261D6",
+          gray: "#666666",
+          "light-gray": "#F2F2F2",
         },
         border: "hsl(var(--border))",
         input: "hsl(var(--input))",
