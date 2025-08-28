@@ -16,40 +16,6 @@ export default function Index() {
               alt="Terra - Homem com equipamento agrícola"
               className="absolute inset-0 w-full h-full object-cover"
             />
-
-            {/* Statistics Overlay */}
-            <div className="absolute top-4 right-4 lg:top-8 lg:right-8 bg-white/10 backdrop-blur-sm rounded-lg p-4 lg:p-6">
-              <div className="space-y-2 lg:space-y-4 text-white">
-                <div className="flex items-center gap-2 lg:gap-4">
-                  <span className="bg-terra-navy px-2 lg:px-4 py-1 lg:py-2 text-lg lg:text-2xl font-bold">
-                    31 Bilhões
-                  </span>
-                  <span className="text-base lg:text-xl">
-                    administrados em ativos
-                  </span>
-                </div>
-                <div className="flex items-center gap-2 lg:gap-4">
-                  <span className="bg-terra-navy px-2 lg:px-4 py-1 lg:py-2 text-lg lg:text-2xl font-bold">
-                    400
-                  </span>
-                  <span className="text-base lg:text-xl">fazendas</span>
-                </div>
-                <div className="flex items-center gap-2 lg:gap-4">
-                  <span className="bg-terra-navy px-2 lg:px-4 py-1 lg:py-2 text-lg lg:text-2xl font-bold">
-                    1,5 Milhões
-                  </span>
-                  <span className="text-base lg:text-xl">
-                    de Cabeças de Gado
-                  </span>
-                </div>
-                <div className="flex items-center gap-2 lg:gap-4">
-                  <span className="bg-terra-navy px-2 lg:px-4 py-1 lg:py-2 text-lg lg:text-2xl font-bold">
-                    300mil
-                  </span>
-                  <span className="text-base lg:text-xl">HA Agricultura</span>
-                </div>
-              </div>
-            </div>
           </div>
         </div>
       </section>
@@ -70,10 +36,10 @@ export default function Index() {
       {/* Innovation Cards Section */}
       <section className="py-8 px-4 lg:px-8 bg-gray-50">
         <div className="max-w-7xl mx-auto">
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-2">
             {/* Card 1 */}
-            <div className="text-center">
-              <div className="relative h-64 mb-6 rounded-lg overflow-hidden">
+            <div className="text-left">
+              <div className="relative h-[550px] mb-6 rounded-3xl overflow-hidden">
                 <img
                   src="https://api.builder.io/api/v1/image/assets/TEMP/f21655c2f91616d8262a8ad0e815d99752e5409a?width=1112"
                   alt="Gestão estratégica"
@@ -90,8 +56,8 @@ export default function Index() {
             </div>
 
             {/* Card 2 */}
-            <div className="text-center">
-              <div className="relative h-64 mb-6 rounded-lg overflow-hidden">
+            <div className="text-left">
+              <div className="relative h-[550px] mb-6 rounded-3xl overflow-hidden">
                 <img
                   src="https://api.builder.io/api/v1/image/assets/TEMP/a6100926d96bc3f3cad361a2814524dc1a37b991?width=3110"
                   alt="Resultados mensuráveis"
@@ -109,8 +75,8 @@ export default function Index() {
             </div>
 
             {/* Card 3 */}
-            <div className="text-center">
-              <div className="relative h-64 mb-6 rounded-lg overflow-hidden">
+            <div className="text-left">
+              <div className="relative h-[550px] mb-6 rounded-3xl overflow-hidden">
                 <img
                   src="https://api.builder.io/api/v1/image/assets/TEMP/b235a756c1a6ba66ccb2e8b1a7714f4379864397?width=2310"
                   alt="Equipe técnica"
@@ -127,8 +93,8 @@ export default function Index() {
             </div>
 
             {/* Card 4 */}
-            <div className="text-center">
-              <div className="relative h-64 mb-6 rounded-lg overflow-hidden">
+            <div className="text-left">
+              <div className="relative h-[550px] mb-6 rounded-3xl overflow-hidden">
                 <img
                   src="https://api.builder.io/api/v1/image/assets/TEMP/9089e08c231ce6623565496d8afe658391eb6208?width=1440"
                   alt="Presença regional"
@@ -150,67 +116,78 @@ export default function Index() {
       </section>
 
       {/* Methodologies Section */}
-      <section className="py-16 px-4 lg:px-8 bg-white">
-        <div className="max-w-7xl mx-auto">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-            {/* Left side - Image */}
-            <div className="relative">
-              <img
-                src="https://api.builder.io/api/v1/image/assets/TEMP/706d9d071baa3da7c9afaf17bf4f386dded6b8df?width=3748"
-                alt="Metodologias e métricas comprovadas"
-                className="w-full h-full object-cover rounded-3xl"
-              />
+      <section className="lg:px-8 ">
+        <div className="mx-auto">
+          <h2 className="text-4xl lg:text-6xl font-lexend text-terra-navy text-center mb-10">
+            <span className="font-normal">Metodologias e métricas</span>
+            <br />
+            <span className="font-bold">comprovadas</span>
+          </h2>
+
+          <div className="relative rounded-3xl overflow-hidden w-full h-[780px] mx-auto">
+            <img
+              src="/images/Camada 4 (1).png"
+              alt="Metodologias e métricas comprovadas"
+              className="w-full h-full object-cover object-bottom"
+            />
+
+            <div className="absolute inset-0 flex items-start px-6 lg:px-64 text-terra-navy mt-10">
+              <div className="flex flex-col lg:flex-row justify-between items-start w-full gap-8">
+                <div className="lg:max-w-md">
+                  <h3 className="text-2xl lg:text-5xl font-bold mb-6">
+                    Aplicadas nas fazendas mais bem-sucedidas do Brasil, Paraguai e Bolívia.
+                  </h3>
+                </div>
+
+                <div className="space-y-3 text-lg font-semibold lg:text-3xl ">
+                  <p>
+                    <span className="bg-terra-navy text-white px-2 py-1 rounded">31 Bilhões</span> administrados em ativos
+                  </p>
+                  <p>
+                    <span className="bg-terra-navy text-white px-2 py-1 rounded">400</span> fazendas
+                  </p>
+                  <p>
+                    <span className="bg-terra-navy text-white px-2 py-1 rounded">1,5 Milhões</span> de Cabeças de Gado
+                  </p>
+                  <p>
+                    <span className="bg-terra-navy text-white px-2 py-1 rounded">300 mil</span> HA Agricultura
+                  </p>
+                </div>
+              </div>
             </div>
 
-            {/* Right side - Content */}
-            <div className="space-y-8">
-              <h2 className="text-4xl lg:text-6xl font-lexend text-terra-navy text-center">
-                <span className="font-normal">Metodologias e métricas</span>
-                <br />
-                <span className="font-bold">comprovadas</span>
-              </h2>
-
-              <div className="space-y-6">
-                <h3 className="text-4xl lg:text-6xl font-lexend font-bold text-terra-navy">
-                  Aplicadas nas
-                  <br />
-                  fazendas mais
-                  <br />
-                  bem-sucedidas do
-                  <br />
-                  Brasil, Paraguai
-                  <br />e Bolívia.
-                </h3>
-              </div>
-
-              <Button className="bg-terra-dark-blue hover:bg-terra-navy text-white px-8 py-4 text-lg font-lexend rounded-lg flex items-center gap-3">
+            <div className="absolute bottom-32 left-64">
+              <button className="inline-flex items-center bg-terra-navy text-white px-5 py-3 rounded-lg shadow-lg hover:bg-terra-navy/90 transition">
                 <svg
-                  className="w-6 h-6"
-                  viewBox="0 0 24 24"
+                  xmlns="http://www.w3.org/2000/svg"
                   fill="currentColor"
+                  viewBox="0 0 24 24"
+                  className="w-5 h-5 mr-2"
                 >
-                  <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413" />
+                  <path d="M16.75 2h-9.5C5.23 2 4 3.23 4 4.75v14.5C4 20.77 5.23 22 6.75 22h9.5c1.52 0 2.75-1.23 2.75-2.75V4.75C19.5 3.23 18.27 2 16.75 2zM12 21c-.69 0-1.25-.56-1.25-1.25S11.31 18.5 12 18.5s1.25.56 1.25 1.25S12.69 21 12 21zM17 17H7V5h10v12z" />
                 </svg>
                 SOLICITE UM PLANO DE AÇÃO PERSONALIZADO
-              </Button>
+              </button>
             </div>
           </div>
         </div>
       </section>
 
+
+
       {/* Services Section */}
-      <section className="py-16 px-4 lg:px-8 bg-gray-50">
-        <div className="max-w-7xl mx-auto">
-          <div className="text-center mb-12">
-            <h2 className="text-4xl lg:text-6xl font-lexend text-terra-navy">
-              <span className="font-normal">Serviços </span>
-              <span className="font-bold">Terra</span>
-            </h2>
-          </div>
+        <section className="py-16 px-4 lg:px-8 bg-gray-50">
+          <div className="max-w-7xl mx-auto">
+            <div className="text-center mb-12">
+              <h2 className="text-4xl lg:text-6xl font-lexend text-terra-navy">
+                <span className="font-normal">Serviços </span>
+                <span className="font-bold">Terra</span>
+              </h2>
+            </div>
 
           <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-5 gap-6">
             {/* Service 1 - Gestão de fazendas */}
-            <div className="bg-terra-dark-blue rounded-lg p-6 text-center text-white">
+            <div className="bg-terra-dark-blue rounded-3xl p-6 text-center text-white">
               <div className="mb-6 flex justify-center">
                 <svg className="w-16 h-16" viewBox="0 0 77 97" fill="none">
                   <path
@@ -239,14 +216,24 @@ export default function Index() {
             </div>
 
             {/* Service 2 - Planejamento estratégico */}
-            <div className="bg-terra-dark-blue rounded-lg p-6 text-center text-white">
-              <div className="mb-6 flex justify-center">
-                <img
-                  src="https://api.builder.io/api/v1/image/assets/TEMP/b8f4f0e150b3e30ba36c9d5193849bd7812277da?width=210"
-                  alt="Planejamento estratégico"
-                  className="w-16 h-12"
-                />
-              </div>
+            <div className="bg-terra-dark-blue rounded-3xl p-6 text-center text-white">
+            <div className="mb-6 flex justify-center">
+              <svg className="w-16 h-16" viewBox="0 0 64 64" fill="none" stroke="white" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" xmlns="http://www.w3.org/2000/svg">
+                <rect x="26" y="4" width="12" height="12" rx="2" />
+
+                <line x1="32" y1="16" x2="32" y2="28" />
+
+                <line x1="12" y1="28" x2="52" y2="28" />
+
+                <line x1="16" y1="28" x2="16" y2="40" />
+                <line x1="32" y1="28" x2="32" y2="40" />
+                <line x1="48" y1="28" x2="48" y2="40" />
+
+                <rect x="10" y="40" width="12" height="12" rx="2" />
+                <rect x="26" y="40" width="12" height="12" rx="2" />
+                <rect x="42" y="40" width="12" height="12" rx="2" />
+              </svg>
+            </div>
               <h3 className="text-xl font-lexend">
                 Planejamento
                 <br />
@@ -255,7 +242,7 @@ export default function Index() {
             </div>
 
             {/* Service 3 - Consultoria técnica */}
-            <div className="bg-terra-dark-blue rounded-lg p-6 text-center text-white">
+            <div className="bg-terra-dark-blue rounded-3xl p-6 text-center text-white">
               <div className="mb-6 flex justify-center">
                 <img
                   src="https://api.builder.io/api/v1/image/assets/TEMP/28e229fca138ab4c4258735fceaf7ded9685f8ed?width=156"
@@ -271,20 +258,18 @@ export default function Index() {
             </div>
 
             {/* Service 4 - Diagnóstico produtivo */}
-            <div className="bg-terra-dark-blue rounded-lg p-6 text-center text-white">
+            <div className="bg-terra-dark-blue rounded-3xl p-6 text-center text-white">
               <div className="mb-6 flex justify-center">
-                <svg className="w-16 h-16" viewBox="0 0 81 87" fill="none">
-                  <path
-                    d="M14.8821 68.4557H28.1161V75.3613H16.2203C15.2001 75.3613 14.3743 76.1866 14.3743 77.2065V83.6696C14.3743 84.6901 15.2001 85.516 16.2203 85.516H65.1594C66.1796 85.516 67.0054 84.6901 67.0054 83.6696V77.2065C67.0054 76.1866 66.1796 75.3613 65.1594 75.3613H53.2635V68.4557H66.4975C73.7207 68.4557 79.5977 62.5801 79.5977 55.3566V15.0138C79.5977 7.79165 73.7207 1.91455 66.4975 1.91455H14.8821C7.6587 1.91455 1.7832 7.79165 1.7832 15.0138V55.3566C1.7832 62.5801 7.6587 68.4557 14.8821 68.4557Z"
-                    fill="white"
-                  />
-                  <path
-                    d="M14.3743 44.6802C14.3743 51.9032 20.2501 57.7789 27.4733 57.7789H53.9064C61.1295 57.7789 67.0054 51.9032 67.0054 44.6802V25.6905C67.0054 18.467 61.1295 12.5913 53.9064 12.5913H27.4733C20.2501 12.5913 14.3743 18.467 14.3743 25.6905V44.6802Z"
-                    fill="white"
-                  />
+                <svg className="w-16 h-16" viewBox="0 0 64 64" fill="none" stroke="white" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" xmlns="http://www.w3.org/2000/svg">
+                  <rect x="8" y="8" width="48" height="36" rx="4" ry="4" />
+                  
+                  <line x1="32" y1="44" x2="32" y2="52" />
+                  <rect x="24" y="52" width="16" height="4" rx="1" />
+
+                  <polyline points="12,28 20,28 24,20 28,36 32,28 36,32 40,28 52,28" />
                 </svg>
               </div>
-              <h3 className="text-xl font-lexend">
+              <h3 className="text-xl font-lexend ">
                 Diagnóstico
                 <br />
                 produtivo
@@ -292,13 +277,23 @@ export default function Index() {
             </div>
 
             {/* Service 5 - Treinamento de equipes */}
-            <div className="bg-terra-dark-blue rounded-lg p-6 text-center text-white">
+            <div className="bg-terra-dark-blue rounded-3xl p-6 text-center text-white">
               <div className="mb-6 flex justify-center">
-                <img
-                  src="https://api.builder.io/api/v1/image/assets/TEMP/21118aa4bb982a515dcca3dfb4a542cba0332dd9?width=172"
-                  alt="Treinamento de equipes"
-                  className="w-16 h-16"
-                />
+                <svg width="86" height="94" viewBox="0 0 86 94" xmlns="http://www.w3.org/2000/svg">
+                  <filter id="whiteFilter">
+                    <feColorMatrix type="matrix" values="
+                      0 0 0 0 1
+                      0 0 0 0 1
+                      0 0 0 0 1
+                      0 0 0 1 0"/>
+                  </filter>
+                  <image
+                    width="86"
+                    height="94"
+                    href="data:image/png;base64,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"
+                    filter="url(#whiteFilter)"
+                  />
+                </svg>
               </div>
               <h3 className="text-xl font-lexend">
                 Treinamento
@@ -316,7 +311,7 @@ export default function Index() {
           {/* Section Header */}
           <div className="text-center mb-12">
             <h2 className="text-4xl lg:text-6xl font-lexend text-terra-navy mb-8">
-              <span className="font-normal">Com a Terra, passamos a</span>
+              <span className="font-light">Com a Terra, passamos a</span>
               <br />
               <span className="font-bold">ter controle real da fazenda.</span>
             </h2>
@@ -324,7 +319,7 @@ export default function Index() {
 
           {/* Video Section */}
           <div className="mb-16">
-            <div className="relative w-full max-w-4xl mx-auto rounded-lg overflow-hidden">
+            <div className="relative w-full max-w-4xl mx-auto rounded-3xl overflow-hidden">
               <img
                 src="https://api.builder.io/api/v1/image/assets/TEMP/2e947ade489ad97b288f12b311ef0680f0dec37e?width=2132"
                 alt="Depoimento de clientes Terra"
@@ -357,14 +352,14 @@ export default function Index() {
           </div>
 
           {/* Client Photos */}
-          <div className="grid grid-cols-2 md:grid-cols-5 gap-6">
+          <div className="grid grid-cols-2 md:grid-cols-5 gap-2">
             {/* Client 1 */}
             <div className="text-center">
-              <div className="bg-terra-darker-blue rounded-lg overflow-hidden mb-4">
+              <div className="bg-terra-darker-blue rounded-3xl overflow-hidden mb-4">
                 <img
                   src="https://api.builder.io/api/v1/image/assets/TEMP/167d9d5be0b7a32e8a957e91ad9b3ddc29a5bc43?width=976"
                   alt="João Flavio Ribeiro"
-                  className="w-full h-48 object-cover"
+                  className="w-full h-80 object-cover"
                 />
               </div>
               <h4 className="text-lg font-lexend text-terra-navy">
@@ -376,11 +371,11 @@ export default function Index() {
 
             {/* Client 2 */}
             <div className="text-center">
-              <div className="bg-terra-darker-blue rounded-lg overflow-hidden mb-4">
+              <div className="bg-terra-darker-blue rounded-3xl overflow-hidden mb-4">
                 <img
                   src="https://api.builder.io/api/v1/image/assets/TEMP/54f0d73b5a636daaaf641a0963437a0134d3c773?width=918"
                   alt="Elton Silveira"
-                  className="w-full h-48 object-cover"
+                  className="w-full h-80 object-cover"
                 />
               </div>
               <h4 className="text-lg font-lexend text-terra-navy">
@@ -392,11 +387,11 @@ export default function Index() {
 
             {/* Client 3 */}
             <div className="text-center">
-              <div className="bg-terra-darker-blue rounded-lg overflow-hidden mb-4">
+              <div className="bg-terra-darker-blue rounded-3xl overflow-hidden mb-4">
                 <img
                   src="https://api.builder.io/api/v1/image/assets/TEMP/70c8a604db88b32610607b67b99da2fbcc47cae3?width=1294"
                   alt="Thiago Carminati"
-                  className="w-full h-48 object-cover"
+                  className="w-full h-80 object-cover"
                 />
               </div>
               <h4 className="text-lg font-lexend text-terra-navy">
@@ -408,11 +403,11 @@ export default function Index() {
 
             {/* Client 4 */}
             <div className="text-center">
-              <div className="bg-terra-darker-blue rounded-lg overflow-hidden mb-4">
+              <div className="bg-terra-darker-blue rounded-3xl overflow-hidden mb-4">
                 <img
                   src="https://api.builder.io/api/v1/image/assets/TEMP/d6a113fdacb6ab6a2e890810ea54dee9a55fc46d?width=1336"
                   alt="Fernando Pinheiro Carneiro"
-                  className="w-full h-48 object-cover"
+                  className="w-full h-80 object-cover"
                 />
               </div>
               <h4 className="text-lg font-lexend text-terra-navy">
@@ -426,11 +421,11 @@ export default function Index() {
 
             {/* Client 5 */}
             <div className="text-center">
-              <div className="bg-terra-darker-blue rounded-lg overflow-hidden mb-4">
+              <div className="bg-terra-darker-blue rounded-3xl overflow-hidden mb-4">
                 <img
                   src="https://api.builder.io/api/v1/image/assets/TEMP/ec671130f158f4501e49d9aa387e004ef26316ce?width=1450"
                   alt="Duarte de Castro Cunha"
-                  className="w-full h-48 object-cover"
+                  className="w-full h-80 object-cover"
                 />
               </div>
               <h4 className="text-lg font-lexend text-terra-navy">
@@ -446,12 +441,12 @@ export default function Index() {
       </section>
 
       {/* Rodrigo Patussi Section */}
-      <section className="py-16 px-4 lg:px-8 bg-gray-50">
+      <section className="py-16 px-4 lg:px-8 ">
         <div className="max-w-7xl mx-auto">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-            {/* Left side - Image */}
+            {/* Image */}
             <div className="relative">
-              <div className="bg-white rounded-3xl p-8 shadow-lg">
+              <div className="bg-white rounded-3xl p-8 ">
                 <img
                   src="https://api.builder.io/api/v1/image/assets/TEMP/69204bfeffeba099d2457481d88ff001b35f1ae4?width=1172"
                   alt="Rodrigo Patussi"
@@ -460,7 +455,7 @@ export default function Index() {
               </div>
             </div>
 
-            {/* Right side - Content */}
+            {/* Content */}
             <div className="space-y-6">
               <div className="text-center lg:text-left">
                 <h2 className="text-4xl lg:text-5xl font-lexend text-terra-navy mb-2">
@@ -502,13 +497,18 @@ export default function Index() {
             <span className="font-normal">Seja você também um cliente </span>
             <span className="font-bold">Terra!</span>
           </h2>
-
-          <Button className="bg-terra-dark-blue hover:bg-terra-navy text-white px-8 py-4 text-lg font-lexend rounded-lg flex items-center gap-3 mx-auto">
-            <svg className="w-6 h-6" viewBox="0 0 24 24" fill="currentColor">
-              <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413" />
-            </svg>
-            TRANSFORME SUA PRODUÇÃO
-          </Button>
+          <a
+            href="https://wa.me/*numero*?text=Ol%C3%A1%2C%20gostaria%20de%20saber%20mais%20sobre%20os%20servi%C3%A7os%20da%20Terra"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <Button className="bg-terra-dark-blue hover:bg-terra-navy text-white px-8 py-4 text-lg font-lexend rounded-lg flex items-center gap-3 mx-auto">
+              <svg className="w-6 h-6" viewBox="0 0 24 24" fill="currentColor">
+                <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413" />
+              </svg>
+              TRANSFORME SUA PRODUÇÃO
+            </Button>
+          </a>
         </div>
       </section>
 
@@ -623,15 +623,6 @@ export default function Index() {
 
       {/* Footer */}
       <footer className="relative py-16 px-4 lg:px-8 bg-terra-light-gray overflow-hidden">
-        {/* Background Image */}
-        <div className="absolute inset-0 mix-blend-multiply">
-          <img
-            src="https://api.builder.io/api/v1/image/assets/TEMP/1f94e8cfe959d7a96577b24040af5594cdf1fb57?width=3840"
-            alt="Footer background"
-            className="w-full h-full object-cover opacity-30"
-          />
-        </div>
-
         <div className="relative max-w-7xl mx-auto">
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 text-terra-navy">
             {/* Company Info */}
@@ -641,65 +632,29 @@ export default function Index() {
                 alt="Terra Logo"
                 className="h-12 w-auto mb-4"
               />
-              <p className="font-lexend text-sm">
-                Desenvolvimento e gestão agropecuária
+              <p className="font-lexend text-sm pr-8">
+                Com a TERRA você tem todos os números da sua fazenda na mão, em tempo real, permitindo traçar estratégias, fazer previsões e, principalmente, 
+                agir e tornar a fazenda eficiente
               </p>
-              <div className="space-y-2 text-sm font-lexend">
-                <p>📍 Endereço: Rua das Fazendas, 123</p>
-                <p>📞 Telefone: (11) 99999-9999</p>
-                <p>✉️ Email: contato@terra.com.br</p>
-              </div>
             </div>
 
             {/* Services */}
             <div className="space-y-4">
-              <h3 className="text-lg font-lexend font-bold">Serviços</h3>
+              <h3 className="text-lg font-lexend font-bold">Menu</h3>
               <ul className="space-y-2 text-sm font-lexend">
                 <li>
                   <a href="#" className="hover:text-terra-blue">
-                    Gestão de fazendas
+                    Institucional
                   </a>
                 </li>
                 <li>
                   <a href="#" className="hover:text-terra-blue">
-                    Planejamento estratégico
+                    Capacitação
                   </a>
                 </li>
                 <li>
                   <a href="#" className="hover:text-terra-blue">
-                    Consultoria técnica
-                  </a>
-                </li>
-                <li>
-                  <a href="#" className="hover:text-terra-blue">
-                    Diagnóstico produtivo
-                  </a>
-                </li>
-                <li>
-                  <a href="#" className="hover:text-terra-blue">
-                    Treinamento de equipes
-                  </a>
-                </li>
-              </ul>
-            </div>
-
-            {/* Company */}
-            <div className="space-y-4">
-              <h3 className="text-lg font-lexend font-bold">Empresa</h3>
-              <ul className="space-y-2 text-sm font-lexend">
-                <li>
-                  <a href="#" className="hover:text-terra-blue">
-                    Sobre nós
-                  </a>
-                </li>
-                <li>
-                  <a href="#" className="hover:text-terra-blue">
-                    Nossa equipe
-                  </a>
-                </li>
-                <li>
-                  <a href="#" className="hover:text-terra-blue">
-                    Resultados
+                    Notícias
                   </a>
                 </li>
                 <li>
@@ -709,7 +664,54 @@ export default function Index() {
                 </li>
                 <li>
                   <a href="#" className="hover:text-terra-blue">
-                    Contato
+                    Área Do Associado
+                  </a>
+                </li>
+                <li>
+                  <a href="#" className="hover:text-terra-blue">
+                    Portal da LGPD
+                  </a>
+                </li>
+              </ul>
+            </div>
+
+            {/* Company */}
+            <div className="space-y-4">
+              <h3 className="text-lg font-lexend font-bold">Produtos</h3>
+              <ul className="space-y-2 text-sm font-lexend">
+                <li>
+                  <a href="#" className="hover:text-terra-blue">
+                    Gestão de Fazendas
+                  </a>
+                </li>
+                <li>
+                  <a href="#" className="hover:text-terra-blue">
+                    Planejamento Estratégico Rural
+                  </a>
+                </li>
+                <li>
+                  <a href="#" className="hover:text-terra-blue">
+                    Consultoria Técnica Agropecuária
+                  </a>
+                </li>
+                <li>
+                  <a href="#" className="hover:text-terra-blue">
+                    Diagnóstico Produtivo
+                  </a>
+                </li>
+                <li>
+                  <a href="#" className="hover:text-terra-blue">
+                    Treinamento de Equipes
+                  </a>
+                </li>
+                <li>
+                  <a href="#" className="hover:text-terra-blue">
+                    Monitoramento de Indicadores
+                  </a>
+                </li>
+                <li>
+                  <a href="#" className="hover:text-terra-blue">
+                    Avaliação de Desempenho Operacional
                   </a>
                 </li>
               </ul>
@@ -731,21 +733,28 @@ export default function Index() {
                 </Button>
                 <div className="flex space-x-3">
                   <a href="#" className="text-terra-navy hover:text-terra-blue">
-                    <svg
-                      className="w-5 h-5"
-                      fill="currentColor"
-                      viewBox="0 0 24 24"
-                    >
-                      <path d="M24 4.557c-.883.392-1.832.656-2.828.775 1.017-.609 1.798-1.574 2.165-2.724-.951.564-2.005.974-3.127 1.195-.897-.957-2.178-1.555-3.594-1.555-3.179 0-5.515 2.966-4.797 6.045-4.091-.205-7.719-2.165-10.148-5.144-1.29 2.213-.669 5.108 1.523 6.574-.806-.026-1.566-.247-2.229-.616-.054 2.281 1.581 4.415 3.949 4.89-.693.188-1.452.232-2.224.084.626 1.956 2.444 3.379 4.6 3.419-2.07 1.623-4.678 2.348-7.29 2.04 2.179 1.397 4.768 2.212 7.548 2.212 9.142 0 14.307-7.721 13.995-14.646.962-.695 1.797-1.562 2.457-2.549z" />
+                    <svg role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" id="X--Streamline-Simple-Icons" height="24" width="24">
+                      <desc>
+                        X Streamline Icon: https://streamlinehq.com
+                      </desc>
+                      <title>X</title>
+                      <path d="M18.901 1.153h3.68l-8.04 9.19L24 22.846h-7.406l-5.8 -7.584 -6.638 7.584H0.474l8.6 -9.83L0 1.154h7.594l5.243 6.932ZM17.61 20.644h2.039L6.486 3.24H4.298Z" fill="#152946" stroke-width="1"></path>
                     </svg>
                   </a>
                   <a href="#" className="text-terra-navy hover:text-terra-blue">
                     <svg
-                      className="w-5 h-5"
-                      fill="currentColor"
+                      xmlns="http://www.w3.org/2000/svg"
                       viewBox="0 0 24 24"
+                      fill="currentColor"
+                      stroke="white"
+                      strokeWidth="2"
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      className="w-6 h-6"
                     >
-                      <path d="M22.46 6c-.77.35-1.6.58-2.46.69.88-.53 1.56-1.37 1.88-2.38-.83.5-1.75.85-2.72 1.05C18.37 4.5 17.26 4 16 4c-2.35 0-4.27 1.92-4.27 4.29 0 .34.04.67.11.98C8.28 9.09 5.11 7.38 3 4.79c-.37.63-.58 1.37-.58 2.15 0 1.49.75 2.81 1.91 3.56-.71 0-1.37-.2-1.95-.5v.03c0 2.08 1.48 3.82 3.44 4.21a4.22 4.22 0 0 1-1.93.07 4.28 4.28 0 0 0 4 2.98 8.521 8.521 0 0 1-5.33 1.84c-.34 0-.68-.02-1.02-.06C3.44 20.29 5.7 21 8.12 21 16 21 20.33 14.46 20.33 8.79c0-.19 0-.37-.01-.56.84-.6 1.56-1.36 2.14-2.23z" />
+                      <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
+                      <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
+                      <line x1="17.5" y1="6.5" x2="17.5" y2="6.5"></line>
                     </svg>
                   </a>
                   <a href="#" className="text-terra-navy hover:text-terra-blue">
@@ -757,6 +766,11 @@ export default function Index() {
                       <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z" />
                     </svg>
                   </a>
+                </div>
+                <div className="space-y-2 text-sm font-lexend">
+                  <p>📍 Endereço: Rua São Paulo, 1568 - Vila Gomes CEP 79022-140 / Campo Grande - MS</p>
+                  <p>📞 Telefone: (67) 3026-3442</p>
+                  <p>✉️ Email: contato@terradesenvolvimento.com.br</p>
                 </div>
               </div>
             </div>
