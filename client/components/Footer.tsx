@@ -8,7 +8,7 @@ import { Button } from "@/components/ui/button";
             {/* Company Info */}
             <div className="space-y-4">
               <img
-                src="https://api.builder.io/api/v1/image/assets/TEMP/1d24384ce6f1f402995d9f1497ed944557f962dd?width=590"
+                src="/images/terra logo.png"
                 alt="Terra Logo"
                 className="h-12 w-auto mb-4"
               />

@@ -348,7 +348,7 @@ export default function Index() {
               <span className="font-bold">Terra</span>
             </h3>
             <p className="text-xl font-lexend text-terra-navy mt-4">
-              Veja os depoimentos sobre nossas parceirias
+              Veja os depoimentos sobre nossas parcerias
             </p>
           </div>
 
