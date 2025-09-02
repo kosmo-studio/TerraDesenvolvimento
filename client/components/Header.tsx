@@ -1,4 +1,5 @@
 import { Button } from "@/components/ui/button";
+import { Link } from "react-router-dom";
 
 export default function Header() {
   return (
@@ -6,51 +7,53 @@ export default function Header() {
       <div className="max-w-7xl mx-auto flex items-center justify-between">
         {/* Logo */}
         <div className="flex-shrink-0">
+          <Link to="/">
           <img
             src="https://api.builder.io/api/v1/image/assets/TEMP/1d24384ce6f1f402995d9f1497ed944557f962dd?width=590"
             alt="Terra Logo"
             className="h-16 w-auto"
           />
+          </Link>
         </div>
 
         {/* Navigation - Hidden on mobile, shown on desktop */}
         <nav className="hidden md:flex items-center space-x-8">
-          <a
-            href="#servicos"
+          <Link
+            to="/Serviços"
             className="text-terra-navy text-sm font-lexend hover:text-terra-blue transition-colors"
           >
             Serviços
-          </a>
-          <a
-            href="#resultados"
+          </Link>
+          <Link
+            to="/resultados"
             className="text-terra-navy text-sm font-lexend hover:text-terra-blue transition-colors"
           >
             Resultados
-          </a>
-          <a
-            href="#cursos"
+          </Link>
+          <Link
+            to="/cursos-e-eventos"
             className="text-terra-navy text-sm font-lexend hover:text-terra-blue transition-colors"
           >
             Cursos e Eventos
-          </a>
-          <a
-            href="#noticias"
+          </Link>
+          <Link
+            to="/notícias"
             className="text-terra-navy text-sm font-lexend hover:text-terra-blue transition-colors"
           >
             Notícias
-          </a>
-          <a
-            href="#trabalhe"
+          </Link>
+          <Link
+            to="/trabalhe-conosco"
             className="text-terra-navy text-sm font-lexend hover:text-terra-blue transition-colors"
           >
             Trabalhe Conosco
-          </a>
-          <a
-            href="#contato"
+          </Link>
+          <Link
+            to="/contato"
             className="text-terra-navy text-sm font-lexend hover:text-terra-blue transition-colors"
           >
             Contato
-          </a>
+          </Link>
         </nav>
 
         {/* CTA Button */}
