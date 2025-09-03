@@ -7,7 +7,7 @@ export default function Pagina() {
     <div className="min-h-screen bg-white">
       <Header />
         
-
+        
       <Footer />
     </div>
     );
