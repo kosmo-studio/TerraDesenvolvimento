@@ -14,6 +14,7 @@ import CursoseEventos from "./pages/CursoseEventos";
 import Noticias from "./pages/notícias";
 import TrabalheConosco from "./pages/trabalhe-conosco";
 import Contato from "./pages/contato";
+import DiagnosticoGlobal from "./pages/internasServiços/DiagnosticoGlobal";
 
 const queryClient = new QueryClient();
 
@@ -31,6 +32,9 @@ const App = () => (
           <Route path="/notícias" element={<Noticias />} />
           <Route path="/trabalhe-conosco" element={<TrabalheConosco />} />
           <Route path="/contato" element={<Contato />} />
+          <Route path="/servicos/diagnostico-global" element={<DiagnosticoGlobal />} />
+
+
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
         </Routes>

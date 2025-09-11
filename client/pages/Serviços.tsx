@@ -2,6 +2,7 @@ import Header from "../components/Header";
 import Footer from "../components/Footer";
 import { Button } from "@/components/ui/button";
 import { ArrowRight } from "lucide-react";
+import { Link } from "react-router-dom";
 
 const servicos = [
   {
@@ -9,6 +10,7 @@ const servicos = [
     descricao:
       "Apresentar e discutir onde sua fazenda está, o “Ponto A” e onde poderá chegar, mostrando com clareza a atual situação financeira, produtiva e gerencial da empresa através de indicadores parametrizados.",
     imagem: "/images/Diagnostico-desempenho.png",
+    link: "/servicos/Diagnostico-Global",
   },
   {
     titulo: "Implementação de Controle",
@@ -70,10 +72,12 @@ const ServicoCard = ({
         {servico.titulo}
       </h3>
       <p className="text-terra-gray leading-relaxed">{servico.descricao}</p>
+    <Link to={servico.link} asChild>
       <Button variant="outline" className="text-white bg-terra-navy hover:border-terra-navy hover:bg-white hover:text-terra-navy">
         Saiba mais
         <ArrowRight className="ml-2 h-4 w-4" />
       </Button>
+    </Link>
     </div>
   </div>
 );
