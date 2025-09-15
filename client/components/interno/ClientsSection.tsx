@@ -30,28 +30,6 @@ export default function ClientsSection() {
   
   return (
     <section className="bg-white py-16 md:py-24 flex flex-col items-center text-center gap-10 md:gap-12 w-full">
-      
-      {/* --- Textos e Divisor --- */}
-      <div className="max-w-6xl px-4 flex flex-col gap-6 items-center">
-        <h2 className="text-[#162946] text-3xl sm:text-4xl md:text-3xl lg:text-4xl xl:text-5xl font-semibold leading-tight">
-          Com um diagnóstico preciso e estratégias
-          <br className='hidden md:flex' />
-          bem definidas, sua fazenda ganha clareza
-          <br className='hidden md:flex' />
-          de rumo e solidez nas decisões.
-        </h2>
-
-        <p className="text-[#162946] text-lg sm:text-xl lg:text-2xl font-light leading-relaxed max-w-3xl">
-          Mais do que números, entregamos caminhos
-          <br className='hidden md:flex' />
-          para transformar potencial em resultado real,
-          <br className='hidden md:flex' />
-          garantindo evolução constante e
-          <br className='hidden md:flex' />
-          sustentabilidade do negócio.
-        </p>
-      </div>
-
       <div className="flex items-center justify-center gap-6 w-full max-w-4xl px-4">
         <div className="flex-grow h-px bg-[#162946]" />
         <img src="/images/terra logo.png" alt="Ícone Terra" className="w-10 h-10 object-contain" />

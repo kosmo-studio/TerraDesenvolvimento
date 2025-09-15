@@ -1,11 +1,20 @@
 import React from 'react';
 
-const HeroSection: React.FC = () => {
+
+interface HeroSectionProps {
+  backgroundImage: string;
+  title: React.ReactNode; 
+  subtitle: string;
+}
+
+// 2. O componente agora recebe as props como argumento
+const HeroSection: React.FC<HeroSectionProps> = ({ backgroundImage, title, subtitle }) => {
   return (
     <section className="relative w-full h-[80vh] text-white">
       <div
         className="absolute inset-0 bg-cover bg-center"
-        style={{ backgroundImage: "url('https://api.builder.io/api/v1/image/assets/TEMP/818e128346cf42096e292aada00dd79b09fd7bb2?width=1920')" }}
+        // 3. A imagem de fundo agora vem da prop 'backgroundImage'
+        style={{ backgroundImage: `url('${backgroundImage}')` }}
         aria-hidden="true"
       />
 
@@ -13,12 +22,14 @@ const HeroSection: React.FC = () => {
         <h1 
           className="text-terra-navy text-4xl md:text-4xl xl:text-6xl font-bold xl:font-semibold leading-tight mb-4"
         >
-          Diagnóstico de desempenho global
+         
+          {title}
         </h1>
         <p 
           className="text-terra-navy text-md md:text-2xl max-w-4xl font-light"
         >
-          Apresentar e discutir onde sua fazenda está, o "Ponto A" e onde poderá chegar, mostrando com clareza a atual situação financeira, produtiva e gerencial da empresa através de indicadores parametrizados.
+          
+          {subtitle}
         </p>
       </div>
     </section>
