@@ -1,7 +1,6 @@
 import Footer from "@/components/Footer";
 import Header from "@/components/Header";
 import { Button } from "@/components/ui/button";
-import { Check } from "lucide-react";
 import { Link } from "react-router-dom";
 
 // Dados para a secção "O que entregamos?" em formato de blocos
@@ -63,90 +62,126 @@ export default function DiagnosticoGlobal() {
       <main>
         {/* Hero Section */}
         <section
-          className="relative bg-cover bg-center h-[500px] text-white flex items-center justify-center"
+          className="relative bg-cover bg-center h-[768px] text-white flex items-center justify-center"
           style={{
             backgroundImage:
-              "url('https://placehold.co/1920x500/152A43/FFFFFF?text=Imagem+de+Fundo')",
+              "url('/images/BackgroundCabeçalhoDesempenho.png')",
           }}
         >
-          <div className="absolute inset-0 bg-black opacity-40"></div>
           <div className="relative z-10 text-center max-w-4xl mx-auto px-4">
-            <h1 className="text-4xl md:text-6xl font-bold font-lexend mb-4">
-              Título Principal da Página
+            <h1 className="text-4xl md:text-6xl font-bold font-lexend mb-4 text-terra-navy">
+              Diagnóstico de Desempenho Global
             </h1>
-            <p className="text-lg md:text-xl font-light">
-              Subtítulo ou breve descrição que complementa o título principal da
-              página.
+            <p className="text-lg md:text-xl font-light text-terra-navy">
+              Apresentar e discutir onde sua fazenda está, o “Ponto A” e onde
+              poderá chegar, mostrando com clareza a atual situação financeira,
+              produtiva e gerencial da empresa através de indicadores
+              parametrizados.
             </p>
           </div>
         </section>
 
         {/* Intro Section */}
-        <section className="py-16 md:py-24">
-          <div className="container mx-auto px-4 max-w-4xl text-center">
-            <h2 className="text-3xl md:text-4xl font-bold font-lexend text-terra-navy mb-6">
-              Título da Secção de Introdução
-            </h2>
-            <p className="text-lg text-terra-gray leading-relaxed">
-              Parágrafo introdutório explicando o conceito principal do serviço
-              ou da página. Este texto serve para dar um contexto geral ao
-              visitante.
-            </p>
-          </div>
-        </section>
-
-        {/* "O que entregamos?" Section */}
-        <section className="pb-16 md:pb-24">
-          <div className="container mx-auto px-4">
-            <div className="grid md:grid-cols-3 gap-12 md:gap-16 items-center">
-              <div className="space-y-6">
-                <h2 className="text-3xl md:text-4xl font-bold font-lexend text-terra-navy">
-                  O que entregamos?
+        <section className="py-16 md:py-24 z-20">
+          <div className="container mx-auto pt-14 max-w-7xl text-center bg-white relative -mt-40">
+            <div className="flex flex-col md:flex-row items-center md:items-start gap-4">
+              <div className="flex-shrink-0 pt-1 ">
+                <img
+                  src="/images/terra logo.png"
+                  alt="Descrição da imagem"
+                  className="w-28 h-28 md:w-40 md:h-40 mx-auto md:mx-20"/>
+              </div>
+              <div className="space-y-3 ">
+                <h2 className="text-3xl md:text-4xl text-center font-light font-lexend text-white">
+                  <span className="bg-terra-navy text-white px-2">
+                    A partir das conclusões do diagnóstico e desafios
+                  </span>
                 </h2>
-                <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-                  {entregaveis.map((item) => (
-                    <div
-                      key={item.titulo}
-                      className="bg-terra-light-gray/50 p-6 rounded-xl border"
-                    >
-                      <Check className="h-6 w-6 text-terra-green mb-3" />
-                      <h3 className="font-bold text-terra-navy mb-1">
-                        {item.titulo}
-                      </h3>
-                      <p className="text-terra-gray text-sm">
-                        {item.descricao}
-                      </p>
-                    </div>
-                  ))}
-                </div>
+                <h2 className="text-3xl md:text-4xl text-center font-light font-lexend text-white">
+                  <span className="bg-terra-navy text-white px-2">
+                    definidos no planejamento estratégico,
+                  </span>
+                </h2>
+                <h2 className="text-3xl md:text-4xl text-center font-bold font-lexend text-white">
+                  <span className="bg-terra-navy text-white px-2">
+                    a Terra Desenvolvimento coordenará:
+                  </span>
+                </h2>
               </div>
             </div>
+              <p className="text-3xl md:text-4xl center font-bold font-lexend text-terra-navy mt-24 -mb-14 ">
+                Definição dos indicadores que serão monitorados referentes a:
+              </p>
           </div>
         </section>
 
-        {/* "Como funciona?" Section */}
-        <section className="py-16 md:py-24 bg-terra-light-gray">
-          <div className="container mx-auto px-4">
-            <div className="text-center mb-12">
-              <h2 className="text-3xl md:text-4xl font-bold font-lexend text-terra-navy">
-                Como funciona?
-              </h2>
-            </div>
-            <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-8">
-              {comoFunciona.map((item) => (
-                <div
-                  key={item.passo}
-                  className="bg-white p-8 rounded-2xl shadow-sm text-center"
-                >
-                  <div className="text-5xl font-bold font-lexend text-terra-green mb-4">
-                    {item.passo}
-                  </div>
-                  <h3 className="text-xl font-bold font-lexend text-terra-navy mb-2">
-                    {item.titulo}
-                  </h3>
-                  <p className="text-terra-gray">{item.descricao}</p>
+        {/* Indicadores Section */}
+        <section className="px-6 pb-8 bg-gray-50">
+          <div className="max-w-5xl mx-auto">
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+              <div className="text-center">
+                <div className="bg-terra-navy shadow-lg rounded-3xl w-full h-0 pt-[100%] relative">
+
                 </div>
-              ))}
+                <p className="font-light text-lg text-terra-navy mt-4">Movimentação e 
+                  estoque pecuário;
+                </p>
+              </div>
+
+              <div className="text-center">
+                <div className="bg-terra-navy shadow-lg rounded-3xl w-full h-0 pt-[100%] relative">
+                  
+                </div>
+                <p className="font-light text-lg text-terra-navy mt-4">Utilização de insumos 
+                  agrícolas, pecuários e 
+                  controle de estoques 
+                  em geral;
+                </p>
+              </div>
+
+              <div className="text-center">
+                <div className="bg-terra-navy shadow-lg rounded-3xl w-full h-0 pt-[100%] relative">
+                  
+                </div>
+                <p className="font-light text-lg text-terra-navy mt-4">Fatores Climáticos;</p>
+              </div>
+
+              <div className="text-center">
+                <div className="bg-terra-navy shadow-lg rounded-3xl w-full h-0 pt-[100%] relative">
+                  
+                </div>
+                <p className="font-light text-lg text-terra-navy mt-4"> Parque de máquinas 
+                  (operações, consumo 
+                  e manutenções);
+                </p>
+              </div>
+              
+              <div className="text-center">
+                <div className="bg-terra-navy shadow-lg rounded-3xl w-full h-0 pt-[100%] relative">
+                  
+                </div>
+                <p className="font-light text-lg text-terra-navy mt-4">Equipe</p>
+              </div>
+              
+              <div className="text-center">
+                <div className="bg-terra-navy shadow-lg rounded-3xl w-full h-0 pt-[100%] relative">
+                  
+                </div>
+                <p className="font-light text-lg text-terra-navy mt-4">Fluxo de Caixa e 
+                  indicadores financeiros.
+                </p>
+              </div>
+
+              <div className="text-center">
+                <div className="bg-terra-navy shadow-lg rounded-3xl w-full h-0 pt-[100%] relative">
+              
+                </div>
+                <p className="font-light text-lg text-terra-navy mt-4">Treinamento da equipe 
+                  de campo na coleta de 
+                  dados por função, setor 
+                  e hierarquia.
+                </p>
+              </div>
             </div>
           </div>
         </section>
@@ -177,4 +212,3 @@ export default function DiagnosticoGlobal() {
     </div>
   );
 }
-
