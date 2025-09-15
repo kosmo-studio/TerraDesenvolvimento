@@ -3,13 +3,13 @@ import { Link } from "react-router-dom";
 
 export default function Header() {
   return (
-    <header className="w-full bg-white py-4 px-4 lg:px-8">
+    <header className="w-full py-4 px-4 lg:px-8">
       <div className="max-w-7xl mx-auto flex items-center justify-between">
         {/* Logo */}
         <div className="flex-shrink-0">
           <Link to="/">
           <img
-            src="https://api.builder.io/api/v1/image/assets/TEMP/1d24384ce6f1f402995d9f1497ed944557f962dd?width=590"
+            src="/images/terra.svg"
             alt="Terra Logo"
             className="h-16 w-auto"
           />
