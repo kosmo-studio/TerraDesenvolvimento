@@ -186,25 +186,69 @@ export default function DiagnosticoGlobal() {
           </div>
         </section>
 
+        {/*colaboradores section*/}
+
+                <section className="py-16 bg-white text-center px-4">
+        {/* Título principal */}
+        <div className="max-w-4xl mx-auto">
+          <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold text-terra-navy leading-snug">
+            Com um diagnóstico preciso e estratégias <br className="hidden md:block" />
+            bem definidas, sua fazenda ganha clareza <br className="hidden md:block" />
+            de rumo e solidez nas decisões.
+          </h2>
+
+          {/* Subtítulo */}
+          <p className="mt-6 text-base md:text-lg text-terra-navy/80 leading-relaxed">
+            Mais do que números, entregamos caminhos <br className="hidden md:block" />
+            para transformar potencial em resultado real, <br className="hidden md:block" />
+            garantindo evolução constante e <br className="hidden md:block" />
+            sustentabilidade do negócio.
+          </p>
+        </div>
+
+        {/* Ícone com linhas */}
+        <div className="flex items-center justify-center gap-6 mt-10">
+          <div className="flex-grow h-px bg-terra-navy/100 max-w-[420px]" />
+          <img
+            src="/images/terra logo.png"
+            alt="Ícone Terra"
+            className="w-10 h-10 object-contain"
+          />
+          <div className="flex-grow h-px bg-terra-navy/100 max-w-[420px]" />
+        </div>
+
+        {/* Citação */}
+        <p className="text-xl md:text-4xl font-bold text-terra-navy mt-10">
+          "Quem já transformou <br/>
+          resultados conosco"
+        </p>
+
+        {/* Logos */}
+        <div className="mt-10 grid grid-cols-2 md:grid-cols-4 gap-6 justify-items-center max-w-5xl mx-auto">
+          <img src="" />
+          <img src="" />
+          <img src="" />
+          <img src="" />
+        </div>
+      </section>
+
+
         {/* CTA Section */}
         <section className="py-16 px-4 lg:px-8">
           <div className="max-w-4xl mx-auto text-center">
             <h2 className="text-3xl sm:text-4xl lg:text-5xl font-lexend text-terra-navy mb-8">
-              <span className="font-normal">Título do CTA, </span>
-              <span className="font-bold">com destaque</span>
+              <span className="font-normal">Seja você também um cliente </span>
+              <span className="font-bold">Terra!</span>
             </h2>
-            <p className="text-lg text-terra-gray mb-8 max-w-2xl mx-auto">
-              Texto de apoio para o apelo à ação, incentivando o usuário a
-              clicar no botão abaixo.
-            </p>
-            <Link to="/fale-com-um-consultor" asChild>
-              <Button
-                size="lg"
-                className="bg-terra-green hover:bg-green-600 text-white px-8 py-4 text-lg font-lexend rounded-lg flex items-center gap-3 mx-auto"
-              >
-                FALE COM UM CONSULTOR
-              </Button>
-            </Link>
+<Button
+  asChild
+  size="lg"
+  className="bg-terra-green hover:bg-green-600 text-white px-8 py-4 text-lg font-lexend rounded-lg flex items-center gap-3 mx-auto"
+>
+  <Link to="/fale-com-um-consultor">
+    FALE COM UM CONSULTOR
+  </Link>
+</Button>
           </div>
         </section>
       </main>
