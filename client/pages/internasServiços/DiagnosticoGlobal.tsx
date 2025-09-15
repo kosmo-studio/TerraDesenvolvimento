@@ -17,15 +17,15 @@ export default function DiagnosticoGlobal() {
         {/* --- Seção de Introdução --- */}
         <section className="py-0 md:py-24 z-20">
           <div className="container mx-auto pt-14 max-w-7xl shadow-[0px_-40px_40px_-20px_rgba(0,0,0,0.3)] text-center bg-white relative mt-[-20px] md:-mt-40">
-            <div className="flex flex-col md:flex-row items-center md:items-start gap-8 px-0 sm:px-6 md:px-0 lg:px-5 xl:px-8">
-              <div className="flex-shrink-0 pt-1">
+            <div className="flex flex-col md:flex-row items-center md:items-start gap-8 px-0 md:px-0 lg:px-5 xl:px-8">
+              <div className="flex-shrink-0">
                 <img
                   src="/images/terra logo.png"
                   alt="Descrição da imagem"
-                  className="w-28 h-28 md:w-20 md:h-20 lg:w-40 lg:h-40 mx-auto"
+                  className="w-28 h-28 md:w-20 md:h-20 lg:w-32 lg:h-32 mx-auto"
                 />
               </div>
-              <div className=" space-y-2 lg:space-y-2 xl:space-y-3 ">
+              <div className=" space-y-2 md:space-y-0 lg:space-y-2 xl:space-y-3 ">
                 <h2 className="text-2xl sm:text-3xl md:text-2xl lg:text-3xl xl:text-4xl md:text-left font-light font-lexend text-white">
                   <span className="bg-terra-navy text-white px-2">
                     A partir das conclusões do diagnóstico e desafios

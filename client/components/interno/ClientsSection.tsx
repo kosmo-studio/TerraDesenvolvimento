@@ -17,7 +17,6 @@ const ClientCard = ({ client }: { client: { name: string; image: string } }) => 
 );
 
 export default function ClientsSection() {
-  // Para um bom efeito, é ideal ter pelo menos 6-8 itens
   const clients = [
     { id: 1, name: "QUAGLIATO-R", image: "https://api.builder.io/api/v1/image/assets/TEMP/e9d654fef1eee76c0cf41bb928f639b3722fc408?width=494" },
     { id: 2, name: "NOMA-AGROPECUARIA", image: "https://api.builder.io/api/v1/image/assets/TEMP/4e2e0dd9c8c5e85fa080dd3997c2b1329877807a?width=508" },
@@ -69,7 +68,6 @@ export default function ClientsSection() {
           <div className="flex animate-marquee">
             {/* Renderiza a lista de clientes duas vezes para criar o loop contínuo */}
             {[...clients, ...clients].map((client, index) => (
-              // Cada item ocupa 1/4 da tela em telas médias e maiores, mostrando 4 logos
               <div key={index} className="flex-shrink-0 w-1/4 sm:w-1/3 md:w-1/4 p-2">
                 <ClientCard client={client} />
               </div>

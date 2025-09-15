@@ -2,7 +2,7 @@ import { useState, useEffect } from 'react';
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
 
-// Lista de links para evitar repetição de código (Princípio DRY)
+
 const navLinks = [
   { to: "/servicos", label: "Serviços" },
   { to: "/resultados", label: "Resultados" },
