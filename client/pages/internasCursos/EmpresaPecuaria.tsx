@@ -159,7 +159,7 @@ export default function EmpresaPecuaria() {
                     <section className="py-16">
                         <div>
                             <p className="text-5xl text-terra-navy">Faça sua <strong>inscrição!</strong></p>
-                            <button className="mt-4 px-16 py-3 bg-terra-navy text-white font-semibold rounded-lg hover:bg-[#0f1d39] transition">
+                            <button className="mt-9 px-16 py-3 bg-terra-navy text-white font-semibold rounded-lg hover:bg-[#0f1d39] transition">
                                 CLIQUE AQUI PARRA COMPRAR
                             </button>  
                         </div>
