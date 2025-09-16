@@ -7,20 +7,18 @@ interface HeroSectionProps {
   subtitle: string;
 }
 
-// 2. O componente agora recebe as props como argumento
 const HeroSection: React.FC<HeroSectionProps> = ({ backgroundImage, title, subtitle }) => {
   return (
     <section className="relative w-full h-[80vh] text-white">
       <div
         className="absolute inset-0 bg-cover bg-center"
-        // 3. A imagem de fundo agora vem da prop 'backgroundImage'
         style={{ backgroundImage: `url('${backgroundImage}')` }}
         aria-hidden="true"
       />
 
-      <div className="relative h-full flex flex-col items-center xl:pt-48 text-center p-4 md:p-8 ">
+      <div className="relative h-full flex flex-col items-center pt-28 md:pt-32 xl:pt-36 text-center p-4 md:p-8 ">
         <h1 
-          className="text-terra-navy text-4xl md:text-4xl xl:text-6xl font-bold xl:font-semibold leading-tight mb-4"
+          className="text-terra-navy text-4xl md:text-4xl xl:text-6xl lg:w-[1100px] font-bold xl:font-semibold leading-tight mb-4"
         >
          
           {title}

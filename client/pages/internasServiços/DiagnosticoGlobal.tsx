@@ -20,7 +20,7 @@ export default function DiagnosticoGlobal() {
 
         {/* --- Seção de Introdução --- */}
         <section className="py-0 md:py-24 z-20">
-          <div className="container mx-auto pt-14 max-w-7xl shadow-[0px_-40px_40px_-20px_rgba(0,0,0,0.3)] text-center bg-white relative mt-[-20px] md:-mt-40">
+          <div className="container mx-auto pt-14 max-w-7xl shadow-[0px_-40px_40px_-20px_rgba(0,0,0,0.3)] text-center bg-white relative  mt-[-20px] md:-mt-40">
             <div className="flex flex-col md:flex-row items-center md:items-start gap-8 px-0 md:px-0 lg:px-5 xl:px-8">
               <div className="flex-shrink-0">
                 <img
@@ -30,17 +30,17 @@ export default function DiagnosticoGlobal() {
                 />
               </div>
               <div className=" space-y-2 md:space-y-0 lg:space-y-2 xl:space-y-3 ">
-                <h2 className="text-2xl sm:text-3xl md:text-2xl lg:text-3xl xl:text-4xl md:text-left font-light font-lexend text-white">
+                <h2 className="text-2xl sm:text-3xl md:text-2xl lg:text-3xl xl:text-4xl text-left font-light font-lexend text-white">
                   <span className="bg-terra-navy text-white px-2">
                     A partir das conclusões do diagnóstico e desafios
                   </span>
                 </h2>
-                <h2 className="text-2xl sm:text-3xl md:text-2xl lg:text-3xl md:text-left font-light font-lexend text-white">
+                <h2 className="text-2xl sm:text-3xl md:text-2xl lg:text-3xl xl:text-4xl text-left font-light font-lexend text-white">
                   <span className="bg-terra-navy text-white px-2">
                     definidos no planejamento estratégico,
                   </span>
                 </h2>
-                <h2 className="text-2xl sm:text-3xl md:text-2xl lg:text-3xl md:text-left font-bold font-lexend text-white">
+                <h2 className="text-2xl sm:text-3xl md:text-2xl lg:text-3xl xl:text-4xl text-left font-bold font-lexend text-white">
                   <span className="bg-terra-navy text-white px-2">
                     a Terra Desenvolvimento coordenará:
                   </span>
@@ -100,19 +100,14 @@ export default function DiagnosticoGlobal() {
       <div className="max-w-6xl px-4 flex flex-col gap-6 mt-40 mx-auto items-center">
         <h2 className="text-[#162946] text-3xl sm:text-4xl md:text-3xl lg:text-4xl xl:text-5xl text-center font-semibold leading-tight">
           Com um diagnóstico preciso e estratégias
-          <br className='hidden md:flex' />
           bem definidas, sua fazenda ganha clareza
-          <br className='hidden md:flex' />
           de rumo e solidez nas decisões.
         </h2>
 
         <p className="text-[#162946] text-lg sm:text-xl lg:text-2xl font-light text-center leading-relaxed max-w-3xl">
           Mais do que números, entregamos caminhos
-          <br className='hidden md:flex' />
           para transformar potencial em resultado real,
-          <br className='hidden md:flex' />
           garantindo evolução constante e
-          <br className='hidden md:flex' />
           sustentabilidade do negócio.
         </p>
       </div>
