@@ -240,15 +240,15 @@ export default function DiagnosticoGlobal() {
               <span className="font-normal">Seja você também um cliente </span>
               <span className="font-bold">Terra!</span>
             </h2>
-<Button
-  asChild
-  size="lg"
-  className="bg-terra-green hover:bg-green-600 text-white px-8 py-4 text-lg font-lexend rounded-lg flex items-center gap-3 mx-auto"
->
-  <Link to="/fale-com-um-consultor">
-    FALE COM UM CONSULTOR
-  </Link>
-</Button>
+              <Button
+                asChild
+                size="lg"
+                className="bg-terra-green hover:bg-green-600 text-white px-8 py-4 text-lg font-lexend rounded-lg flex items-center gap-3 mx-auto"
+              >
+                <Link to="/fale-com-um-consultor">
+                  FALE COM UM CONSULTOR
+                </Link>
+              </Button>
           </div>
         </section>
       </main>
@@ -256,3 +256,5 @@ export default function DiagnosticoGlobal() {
     </div>
   );
 }
+
+{/* test */}
