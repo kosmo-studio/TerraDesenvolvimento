@@ -8,14 +8,15 @@ import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Index from "./pages/Index";
 import NotFound from "./pages/NotFound";
-import Servicos from "./pages/Servicos";
-import Resultados from "./pages/Resultados";
+import Servicos from "./pages/servicos";
+import Resultados from "./pages/resultados";
 import CursoseEventos from "./pages/cursos-e-eventos";
 import Noticias from "./pages/noticias";
 import TrabalheConosco from "./pages/trabalhe-conosco";
 import Contato from "./pages/contato";
 import DiagnosticoGlobal from "./pages/internasServiços/DiagnosticoGlobal";
-import ImplementacaoControle from "./pages/internasServiços/implementacaoDeControle";
+import ImplementacaoControle from "./pages/internasServiços/ImplementacaoDeControle";
+import PlanejamentoEstrategico from "./pages/internasServiços/PlanejamentoEstrategico";
 
 const queryClient = new QueryClient();
 
@@ -35,6 +36,7 @@ const App = () => (
           <Route path="/contato" element={<Contato />} />
           <Route path="/servicos/diagnostico-global" element={<DiagnosticoGlobal />} />
           <Route path="/servicos/implementacao-de-controle" element={<ImplementacaoControle />} />
+          <Route path="/servicos/planejamento-estrategico" element={<PlanejamentoEstrategico />} />
 
 
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
