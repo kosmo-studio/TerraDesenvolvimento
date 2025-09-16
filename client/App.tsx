@@ -22,6 +22,7 @@ import DesenvolvimentoGerencial from "./pages/internasServiços/DesenvolvimentoG
 import Prg from "./pages/internasServiços/Prg";
 import PerformaTerra from "./pages/internasServiços/PerformaTerra";
 import AnalisePlanoDeNegocio from "./pages/internasServiços/AnalisePlanoDeNegocio";
+import EmpresaPecuaria from "./pages/internasCursos/EmpresaPecuaria";
 
 const queryClient = new QueryClient();
 
@@ -47,6 +48,8 @@ const App = () => (
           <Route path="/servicos/ProgramaRecuperaçãoGerencial" element={<Prg />} />
           <Route path="/servicos/AnalisePlanoDeNegocio" element={<AnalisePlanoDeNegocio />} />
           <Route path="/servicos/PerformaTerra" element={<PerformaTerra />} />
+          <Route path="/EmpresaPecuaria" element={<EmpresaPecuaria />} />
+
 
 
           
