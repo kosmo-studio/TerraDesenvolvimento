@@ -18,7 +18,7 @@ const HeroSection: React.FC<HeroSectionProps> = ({ backgroundImage, title, subti
         aria-hidden="true"
       />
 
-      <div className="relative h-full flex flex-col items-center justify-center text-center p-4 md:p-8">
+      <div className="relative h-full flex flex-col items-center xl:pt-48 text-center p-4 md:p-8 ">
         <h1 
           className="text-terra-navy text-4xl md:text-4xl xl:text-6xl font-bold xl:font-semibold leading-tight mb-4"
         >
