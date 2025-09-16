@@ -5,7 +5,7 @@ import CTASection from "@/components/interno/CTASection";
 import HeroSection from "@/components/interno/HeroSection";
 import ServiceCard from "@/components/interno/ServiceCard";
 
-export default function DiagnosticoGlobal() {
+export default function ImplementacaoDeControle() {
   return (
     <div className="bg-white overflow-x-hidden">
       <main>

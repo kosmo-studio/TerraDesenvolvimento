@@ -1,19 +1,27 @@
 import React from 'react';
 
-interface ServiceCardProps {
-  title: string;
-  description: string;
+interface InfoCardProps {
+  label: string;
   icon: string;
+  text: string;
 }
 
-const ServiceCard: React.FC<ServiceCardProps> = ({ title, description, icon }) => {
+const ServiceCard: React.FC<InfoCardProps> = ({ label, icon, text }) => {
   return (
-    <div className="bg-white rounded-lg shadow-lg p-6 flex flex-col items-center text-center max-w-sm">
-      <div className="w-16 h-16 mb-4 flex items-center justify-center">
-        <img src={icon} alt={title} className="w-full h-full object-contain" />
+    <div className="text-center">
+      <div className="bg-terra-navy shadow-lg rounded-3xl w-full h-0 pt-[100%] relative text-white">
+        
+        <span className="absolute text-[26px] top-4 left-4 text-lg font-light">{label}</span>
+      
+        <img 
+          src={icon} 
+          alt={text} 
+          className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 h-16 w-16 md:w-20 md:h-20 invert" 
+        />
+
       </div>
-      <h3 className="text-[#162946] text-lg font-semibold mb-3">{title}</h3>
-      <p className="text-[#162946] text-sm leading-relaxed">{description}</p>
+
+      <p className="font-light sm:text-lg text-terra-navy mt-4">{text}</p>
     </div>
   );
 };

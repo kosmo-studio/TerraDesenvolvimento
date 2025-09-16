@@ -106,3 +106,6 @@
     @apply bg-background text-foreground font-lexend;
   }
 }
+/* * {
+  border: 1px solid red !important;
+} */
