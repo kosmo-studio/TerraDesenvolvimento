@@ -13,9 +13,9 @@ export default function ImplementacaoDeControle() {
         
         {/* Hero Section */}
          <HeroSection
-          backgroundImage="/images/desempenho.png"
-          title="Diagnóstico de Desempenho Global"
-          subtitle="Apresentar e discutir onde sua fazenda está, o 'Ponto A' e onde poderá chegar, mostrando com clareza a atual situação financeira, produtiva e gerencial da empresa através de indicadores parametrizados."
+          backgroundImage="/images/bg-implantacao.png"
+          title="Implantação de Controle"
+          subtitle="Acesso pelos gestores e equipe dos dados e informações essenciais, com rapidez e confiabilidade, através da otimização dos controles existentes na fazenda, implantação de sistemas e outros métodos que se façam necessários para ter “a fazenda em suas mãos”."
         />
 
         {/* --- Seção de Introdução --- */}
@@ -28,6 +28,7 @@ export default function ImplementacaoDeControle() {
                   alt="Descrição da imagem"
                   className="w-28 h-28 md:w-20 md:h-20 lg:w-32 lg:h-32 mx-auto"
                 />
+                
               </div>
               <div className=" space-y-2 md:space-y-0 lg:space-y-2 xl:space-y-3 ">
                 <h2 className="text-2xl sm:text-3xl md:text-2xl lg:text-3xl xl:text-4xl md:text-left font-light font-lexend text-white">
@@ -93,27 +94,61 @@ export default function ImplementacaoDeControle() {
                 icon="/images/treinamento.svg"  
                 text="Treinamento da equipe de campo na coleta de dados por função, setor e hierarquia." 
               />
+              <ServiceCard 
+                label="h." 
+                icon="/images/montagem.svg"  
+                text="Montagem de painéis para que as equipes visualizem as realizações e metas." 
+              />
+              
             </div>
+            {/* Tipografia mais fluida */}
+            <p className="text-2xl sm:text-3xl md:text-4xl px-4 lg:px-[19%] xl:px-[20%] justify-center text-center font-bold font-lexend text-terra-navy mt-24 mb-10 sm:mb-[-35px]">
+              Desenvolvimento Gerencial:
+            </p>
+            <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 mt-32 gap-8">
+              <ServiceCard 
+                label="a." 
+                icon="/images/capacitacao.svg" 
+                text="Capacitação dos gestores para utilização das ferramentas de gestão implantadas;" 
+              />
+              <ServiceCard 
+                label="b." 
+                icon="/images/aplicacao.svg"  
+                text="Aplicação e desenvolvimento de técnicas de meta gerenciamento;" 
+              />
+              <ServiceCard 
+                label="c." 
+                icon="/images/rotinas.svg"  
+                text="Implementação de rotinas gerenciais eficazes para o alcance da metas estabelecidas;" 
+              />
+              <ServiceCard 
+                label="d." 
+                icon="/images/meritocracia.svg"  
+                text="Meritocracia e monitoramento da execução das tarefas determinadas;" 
+              />
+              <ServiceCard 
+                label="e." 
+                icon="/images/gestaoTempo.svg"  
+                text="Gestão baseada em informação no tempo e forma adequada, garantindo a execução dos processos com excelência." 
+              />
+              
+            </div>
+            
+
+
           </div>
         </section>
         {/* --- Textos e Divisor --- */}
       <div className="max-w-6xl px-4 flex flex-col gap-6 mt-40 mx-auto items-center">
-        <h2 className="text-[#162946] text-3xl sm:text-4xl md:text-3xl lg:text-4xl xl:text-5xl text-center font-semibold leading-tight">
-          Com um diagnóstico preciso e estratégias
-          <br className='hidden md:flex' />
-          bem definidas, sua fazenda ganha clareza
-          <br className='hidden md:flex' />
-          de rumo e solidez nas decisões.
+        <h2 className="text-[#162946] text-2xl sm:text-4xl md:text-3xl lg:text-4xl xl:text-5xl text-center font-semibold leading-tight">
+          Com controles bem estruturados,
+          sua fazenda alcança maior organização,
+          transparência e segurança nas informações.
         </h2>
 
         <p className="text-[#162946] text-lg sm:text-xl lg:text-2xl font-light text-center leading-relaxed max-w-3xl">
-          Mais do que números, entregamos caminhos
-          <br className='hidden md:flex' />
-          para transformar potencial em resultado real,
-          <br className='hidden md:flex' />
-          garantindo evolução constante e
-          <br className='hidden md:flex' />
-          sustentabilidade do negócio.
+          Isso significa decisões mais rápidas, gestão profissional
+          e resultados que fortalecem o futuro do seu negócio.
         </p>
       </div>
         <ClientsSection />

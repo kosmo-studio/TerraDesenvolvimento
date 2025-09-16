@@ -100,19 +100,14 @@ export default function DiagnosticoGlobal() {
       <div className="max-w-6xl px-4 flex flex-col gap-6 mt-40 mx-auto items-center">
         <h2 className="text-[#162946] text-3xl sm:text-4xl md:text-3xl lg:text-4xl xl:text-5xl text-center font-semibold leading-tight">
           Com um diagnóstico preciso e estratégias
-          <br className='hidden md:flex' />
           bem definidas, sua fazenda ganha clareza
-          <br className='hidden md:flex' />
           de rumo e solidez nas decisões.
         </h2>
 
         <p className="text-[#162946] text-lg sm:text-xl lg:text-2xl font-light text-center leading-relaxed max-w-3xl">
           Mais do que números, entregamos caminhos
-          <br className='hidden md:flex' />
           para transformar potencial em resultado real,
-          <br className='hidden md:flex' />
           garantindo evolução constante e
-          <br className='hidden md:flex' />
           sustentabilidade do negócio.
         </p>
       </div>

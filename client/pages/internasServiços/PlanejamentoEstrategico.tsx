@@ -10,7 +10,6 @@ export default function PlanejamentoEstrategico() {
     <div className="bg-white overflow-x-hidden">
       <main>
         <Header />
-        
         {/* Hero Section */}
          <HeroSection
           backgroundImage="/images/bg-planejamento.png"
@@ -30,90 +29,128 @@ export default function PlanejamentoEstrategico() {
                 />
               </div>
               <div className=" space-y-2 md:space-y-0 lg:space-y-2 xl:space-y-3 ">
-                <h2 className="text-2xl sm:text-3xl md:text-2xl lg:text-3xl xl:text-4xl md:text-left font-light font-lexend text-white">
+                <h2 className="text-2xl sm:text-3xl md:text-2xl lg:text-4xl md:text-left font-light font-lexend text-white">
                   <span className="bg-terra-navy text-white px-2">
-                    A partir das conclusões do diagnóstico e desafios
+                   Coordenação, método, confecção e apoio aos
                   </span>
                 </h2>
-                <h2 className="text-2xl sm:text-3xl md:text-2xl lg:text-3xl md:text-left font-light font-lexend text-white">
+                <h2 className="text-2xl sm:text-3xl md:text-2xl lg:text-4xl md:text-left font-light font-lexend text-white">
                   <span className="bg-terra-navy text-white px-2">
-                    definidos no planejamento estratégico,
+                   gestores para definir o projeto da fazenda pronta,
                   </span>
                 </h2>
-                <h2 className="text-2xl sm:text-3xl md:text-2xl lg:text-3xl md:text-left font-bold font-lexend text-white">
+                <h2 className="text-2xl sm:text-3xl md:text-2xl lg:text-4xl md:text-left font-light font-lexend text-white">
                   <span className="bg-terra-navy text-white px-2">
-                    a Terra Desenvolvimento coordenará:
+                    onde ela chegará no curto, médio e longo prazo.
+                  </span>
+                </h2>
+                <h2 className="text-2xl sm:text-3xl md:text-2xl lg:text-4xl md:text-left font-light font-lexend text-white">
+                  <span className="bg-terra-navy text-white px-2">
+                    Determinar as metas produtivas, financeiras e
+                  </span>
+                </h2>
+                <h2 className="text-2xl sm:text-3xl md:text-2xl lg:text-4xl md:text-left font-light font-lexend text-white">
+                  <span className="bg-terra-navy text-white px-2">
+                    gerenciais bem como o plano de ação.
+                  </span>
+                </h2>
+                <h2 className="text-2xl sm:text-3xl md:text-2xl lg:text-4xl md:text-left font-light font-lexend text-white">
+                  <span className="bg-terra-navy text-white px-2">
+                    para alcançá-las.
                   </span>
                 </h2>
               </div>
             </div>
-            {/* Tipografia mais fluida */}
-            <p className="text-2xl sm:text-3xl md:text-4xl px-4 lg:px-[19%] xl:px-[25%] font-bold font-lexend text-terra-navy mt-24 mb-10 sm:mb-[-35px]">
-              Definição dos indicadores que serão monitorados referentes a:
+            <p className="text-2xl sm:text-3xl md:text-4xl px-4 lg:px-[19%] xl:px-[30%] font-bold font-lexend text-terra-navy mt-24 mb-10 sm:mb-[-35px]">
+              Reuniões com os gestores para definirmos:
             </p>
           </div>
         </section>
 
-        {/* --- Seção de Indicadores --- */}
+        {/* --- Seção de Indicadores (para a troca de icones o icone deve ser totalmente preto) --- */}
         <section className="px-6 py-0">
-          <div className="max-w-5xl mx-auto">
-            <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8">
+          <div className="max-w-3xl mx-auto">
+            <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-3 gap-8">
               <ServiceCard 
                 label="a." 
-                icon="/images/movimentacao.svg" 
-                text="Movimentação e estoque pecuário;" 
+                icon="/images/missão.svg" 
+                text="Apresentamos e auxiliamos na Visão, missão, objetivo e metas estratégicas plurianuais da fazenda;" 
               />
               <ServiceCard 
                 label="b." 
-                icon="/images/insumos.svg"  
-                text="Utilização de insumos agrícolas, pecuários e controle de estoques em geral;" 
+                icon="/images/lucro.svg"  
+                text=" Lucro por hectare, resultado de caixa, resultado operacional e produtivo;" 
               />
               <ServiceCard 
                 label="c." 
-                icon="/images/clima.svg"  
-                text="Fatores climáticos;" 
-              />
-              <ServiceCard 
-                label="d." 
-                icon="/images/maquina.svg"  
-                text="Parque de máquinas (operações, consumo e manutenções);" 
-              />
-              <ServiceCard 
-                label="e." 
-                icon="/images/equipe.svg"  
-                text="Equipe;" 
-              />
-              <ServiceCard 
-                label="f." 
-                icon="/images/indicadores.svg"  
-                text="Fluxo de Caixa e indicadores financeiros;" 
-              />
-              <ServiceCard 
-                label="g." 
-                icon="/images/treinamento.svg"  
-                text="Treinamento da equipe de campo na coleta de dados por função, setor e hierarquia." 
+                icon="/images/desdobramento.svg"  
+                text="Desdobramento, modelagens e exemplos de casos reais de outras fazendas." 
               />
             </div>
           </div>
+            <div className="max-w-5xl mx-auto"> 
+              <p className="text-2xl sm:text-3xl md:text-4xl px-4 lg:px-[19%] xl:px-[20%] justify-center text-center font-bold font-lexend text-terra-navy mt-24 mb-10 sm:mb-[-35px]">
+                 Com a equipe gerencial e técnica da fazenda, elaboramos:
+              </p>
+                <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 mt-32 gap-8">
+                    <ServiceCard 
+                      label="a." 
+                      icon="/images/metas.svg" 
+                      text="Metas táticas e Projeto produtivo;" 
+                    />
+                    <ServiceCard 
+                      label="b." 
+                      icon="/images/rotinas.svg"  
+                      text="Plano de ação de médio prazo;" 
+                    />
+                    <ServiceCard 
+                      label="c." 
+                      icon="/images/orcamento.svg"  
+                      text="Orçamento e fluxo de caixa previsto para os 12 meses subsequentes;" 
+                    />
+                    <ServiceCard 
+                      label="d." 
+                      icon="/images/producao.svg"  
+                      text="sProdução e balanço previsto para 24 e 36 meses, com a validação dos gestores." 
+                    />
+                </div>
+            </div>
+            <div className="max-w-3xl mx-auto"> 
+              <p className="text-2xl sm:text-3xl md:text-4xl px-4 lg:px-[19%] xl:px-[20%] justify-center text-center font-bold font-lexend text-terra-navy mt-24 mb-10 sm:mb-[-35px]">
+                 Definimos e auxiliamos na decisão:
+              </p>
+                <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-3 mt-32 gap-8">
+                    <ServiceCard 
+                      label="a." 
+                      icon="/images/capacitacao.svg" 
+                      text="Habilidades gerenciais a serem desenvolvidas nas pessoas chaves da fazenda;" 
+                    />
+                    <ServiceCard 
+                      label="b." 
+                      icon="/images/formatoGestao.svg"  
+                      text="Formatos de gestão" 
+                    />
+                    <ServiceCard 
+                      label="c." 
+                      icon="/images/metas.svg"  
+                      text="Plano de capacitação permanente da equipe e desdobramento das metas individuais." 
+                    />
+                </div>
+            </div>
         </section>
         {/* --- Textos e Divisor --- */}
-      <div className="max-w-6xl px-4 flex flex-col gap-6 mt-40 mx-auto items-center">
-        <h2 className="text-[#162946] text-3xl sm:text-4xl md:text-3xl lg:text-4xl xl:text-5xl text-center font-semibold leading-tight">
-          Com um diagnóstico preciso e estratégias
-          <br className='hidden md:flex' />
-          bem definidas, sua fazenda ganha clareza
-          <br className='hidden md:flex' />
-          de rumo e solidez nas decisões.
+      <div className="max-w-6xl px-3 flex flex-col gap-6 mt-40 mx-auto items-center">
+        <h2 className="text-[#162946] text-2xl sm:text-4xl md:text-3xl lg:text-4xl xl:text-5xl text-center font-semibold leading-relaxed">
+          Com um planejamento estratégico
+          estruturado,sua fazenda ganha direção,
+          foco e segurança para alcançar cada objetivo.
         </h2>
 
-        <p className="text-[#162946] text-lg sm:text-xl lg:text-2xl font-light text-center leading-relaxed max-w-3xl">
-          Mais do que números, entregamos caminhos
-          <br className='hidden md:flex' />
-          para transformar potencial em resultado real,
-          <br className='hidden md:flex' />
-          garantindo evolução constante e
-          <br className='hidden md:flex' />
-          sustentabilidade do negócio.
+        <p className="text-[#162946] text-lg sm:text-xl lg:text-3xl font-light text-center leading-relaxed max-w-3xl">
+          Transformamos metas em planos concretos, guiando
+          gestores rumo ao crescimento sustentável e à
+          lucratividade contínua. Conheça os clientes
+          que já avançaramconosco nessa jornada.
         </p>
       </div>
         <ClientsSection />

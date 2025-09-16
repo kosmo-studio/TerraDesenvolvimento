@@ -11,7 +11,7 @@ const ServiceCard: React.FC<InfoCardProps> = ({ label, icon, text }) => {
     <div className="text-center">
       <div className="bg-terra-navy shadow-lg rounded-3xl w-full h-0 pt-[100%] relative text-white">
         
-        <span className="absolute text-[26px] top-4 left-4 text-lg font-light">{label}</span>
+        <span className="absolute text-[27px] top-4 left-4 text-lg font-light">{label}</span>
       
         <img 
           src={icon} 
