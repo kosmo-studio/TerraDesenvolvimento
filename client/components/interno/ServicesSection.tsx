@@ -2,14 +2,8 @@ import React from 'react';
 
 const ServicesSection: React.FC = () => {
   return (
-    // ALTERAÇÕES PRINCIPAIS NA LINHA ABAIXO:
-    // 1. 'relative': Necessário para que o 'z-index' funcione.
-    // 2. 'z-10': Garante que esta seção fique *na frente* da anterior.
-    // 3. '-mt-40': Move a seção inteira 160px para CIMA, criando a sobreposição.
-    //    (Você pode ajustar este valor, ex: -mt-32, -mt-48, para controlar o quanto sobrepõe).
     <section className="relative z-10 -mt-40 px-4">
-      <div className="container mx-auto">
-        
+      <div className="container mx-auto"> 
         {/* Banner Superior */}
         <div className="bg-cover bg-center rounded-lg p-8 flex items-center justify-center min-h-[350px]">
           

@@ -7,49 +7,47 @@ import { Link } from "react-router-dom";
 const servicos = [
   {
     titulo: "Diagnóstico de Desempenho Global",
-    descricao:
-      "Apresentar e discutir onde sua fazenda está, o “Ponto A” e onde poderá chegar, mostrando com clareza a atual situação financeira, produtiva e gerencial da empresa através de indicadores parametrizados.",
+    descricao: "Apresentar e discutir onde sua fazenda está, o “Ponto A” e onde poderá chegar...",
     imagem: "/images/Diagnostico-desempenho.png",
-    link: "/servicos/Diagnostico-Global",
+    link: "/servicos/diagnostico-global",
   },
   {
     titulo: "Implementação de Controle",
-    descricao:
-      "Acesso pelos gestores e equipe dos dados e informações essenciais, com rapidez e confiabilidade, através da otimização dos controles existentes na fazenda, implantação de sistemas e outros métodos que se façam necessários para ter “a fazenda em suas mãos”. ",
+    descricao: "Acesso pelos gestores e equipe dos dados e informações essenciais...",
     imagem: "/images/Controle.png",
+    link: "/servicos/implementacao-de-controle",
   },
   {
     titulo: "Planejamento Estratégico",
-    descricao:
-      "O PROJETO é o elemento determinante para o sucesso da atividade em questão. Foco e clareza nos objetivos, “Ponto B”, determinando o caminho para o crescimento sustentável da lucratividade e gerenciabilidade da fazenda.",
+    descricao: "O PROJETO é o elemento determinante para o sucesso da atividade em questão...",
     imagem: "/images/planejamento.png",
+    link: "/servicos/planejamento-estrategico",
   },
   {
     titulo: "PRG: Programa de Recuperação Gerencial",
-    descricao:
-      "O Programa de Recuperação (ou intervenção) Gerencial tem por missão gerar lucro para seus acionistas e investidores através da transformação de áreas, valorização de ativos e desenvolvimento da atividade agropecuária.",
+    descricao: "O Programa de Recuperação (ou intervenção) Gerencial tem por missão gerar lucro...",
     imagem: "/images/prg.png",
+    link: "/servicos/prg-recuperacao-gerencial",
   },
   {
     titulo: "Desenvolvimento Gerencial",
-    descricao:
-      "Construir equipe realizadora capaz de assumir e bater as metas estabelecidas. Tomar ações eficientes no propósito de “forjar” uma cultura gerencial objetiva, duradoura e que respeite seus valores na conquista de seus objetivos. Aumentar a gerenciabilidade e o lucro da empresa.",
+    descricao: "Construir equipe realizadora capaz de assumir e bater as metas estabelecidas...",
     imagem: "/images/gerencial.png",
+    link: "/servicos/desenvolvimento-gerencial",
   },
   {
     titulo: "Performa Terra",
-    descricao:
-      "O Performa Terra é a nossa mais nova modalidade de produto, sob medida para sua fazenda e foi criada a partir do pedido de diversos produtores que buscavam uma solução de curto prazo.",
+    descricao: "O Performa Terra é a nossa mais nova modalidade de produto...",
     imagem: "/images/reforma.png",
+    link: "/servicos/performa-terra",
   },
   {
     titulo: "Análise e Plano de Negócios: Aquisição de Fazendas",
-    descricao:
-      "Suporte na análise e decisão de investimento e compra de propriedade rural, baseado nas principais variáveis envolvidas na produção, projeção de resultados, rentabilidade e viabilidade econômica.",
+    descricao: "Suporte na análise e decisão de investimento e compra de propriedade rural...",
     imagem: "/images/analise.png",
+    link: "/servicos/analise-plano-de-negocios",
   },
 ];
-
 const ServicoCard = ({
   servico,
 }: {
@@ -72,16 +70,18 @@ const ServicoCard = ({
         {servico.titulo}
       </h3>
       <p className="text-terra-gray leading-relaxed">{servico.descricao}</p>
-    <Link to={servico.link} asChild>
-      <Button variant="outline" className="text-white bg-terra-navy hover:border-terra-navy hover:bg-white hover:text-terra-navy">
-        Saiba mais
-        <ArrowRight className="ml-2 h-4 w-4" />
-      </Button>
-    </Link>
+      
+      {servico.link && (
+        <Link to={servico.link}>
+          <Button variant="outline" className="text-white bg-terra-navy hover:border-terra-navy hover:bg-white hover:text-terra-navy">
+            Saiba mais
+            <ArrowRight className="ml-2 h-4 w-4" />
+          </Button>
+        </Link>
+      )}
     </div>
   </div>
 );
-
 export default function Servicos() {
   return (
     <div className="min-h-screen bg-white ">

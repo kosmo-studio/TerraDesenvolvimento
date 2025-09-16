@@ -8,7 +8,7 @@ export default function Index() {
       <Header />
 
       {/* Hero Section */}
-      <section className="relative w-full">
+      <section className="relative mt-[110px] w-full">
         <div className="relative bg-terra-red rounded-3xl mx-4 lg:mx-8 mt-8 overflow-hidden">
           {/* Background Image */}
           <div className="relative h-[500px] lg:h-[700px]">
