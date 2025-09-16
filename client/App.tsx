@@ -20,6 +20,8 @@ import ImplementacaoControle from "./pages/internasServiços/ImplementacaoDeCont
 import PlanejamentoEstrategico from "./pages/internasServiços/PlanejamentoEstrategico";
 import DesenvolvimentoGerencial from "./pages/internasServiços/DesenvolvimentoGerencial";
 import Prg from "./pages/internasServiços/Prg";
+import PerformaTerra from "./pages/internasServiços/PerformaTerra";
+import AnalisePlanoDeNegocio from "./pages/internasServiços/AnalisePlanoDeNegocio";
 
 const queryClient = new QueryClient();
 
@@ -43,6 +45,8 @@ const App = () => (
           <Route path="/servicos/PlanejamentoEstrategico" element={<PlanejamentoEstrategico />} />
           <Route path="/servicos/DesenvolvimentoGerencial" element={<DesenvolvimentoGerencial />} />
           <Route path="/servicos/ProgramaRecuperaçãoGerencial" element={<Prg />} />
+          <Route path="/servicos/AnalisePlanoDeNegocio" element={<AnalisePlanoDeNegocio />} />
+          <Route path="/servicos/PerformaTerra" element={<PerformaTerra />} />
 
 
           

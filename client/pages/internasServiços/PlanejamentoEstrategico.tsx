@@ -29,32 +29,32 @@ export default function PlanejamentoEstrategico() {
                 />
               </div>
               <div className=" space-y-2 md:space-y-0 lg:space-y-2 xl:space-y-3 ">
-                <h2 className="text-2xl sm:text-3xl md:text-2xl lg:text-4xl md:text-left font-light font-lexend text-white">
+                <h2 className="text-2xl sm:text-3xl md:text-2xl lg:text-4xl text-left font-light font-lexend text-white">
                   <span className="bg-terra-navy text-white px-2">
                    Coordenação, método, confecção e apoio aos
                   </span>
                 </h2>
-                <h2 className="text-2xl sm:text-3xl md:text-2xl lg:text-4xl md:text-left font-light font-lexend text-white">
+                <h2 className="text-2xl sm:text-3xl md:text-2xl lg:text-4xl text-left font-light font-lexend text-white">
                   <span className="bg-terra-navy text-white px-2">
                    gestores para definir o projeto da fazenda pronta,
                   </span>
                 </h2>
-                <h2 className="text-2xl sm:text-3xl md:text-2xl lg:text-4xl md:text-left font-light font-lexend text-white">
+                <h2 className="text-2xl sm:text-3xl md:text-2xl lg:text-4xl text-left font-light font-lexend text-white">
                   <span className="bg-terra-navy text-white px-2">
                     onde ela chegará no curto, médio e longo prazo.
                   </span>
                 </h2>
-                <h2 className="text-2xl sm:text-3xl md:text-2xl lg:text-4xl md:text-left font-light font-lexend text-white">
+                <h2 className="text-2xl sm:text-3xl md:text-2xl lg:text-4xl text-left font-light font-lexend text-white">
                   <span className="bg-terra-navy text-white px-2">
                     Determinar as metas produtivas, financeiras e
                   </span>
                 </h2>
-                <h2 className="text-2xl sm:text-3xl md:text-2xl lg:text-4xl md:text-left font-light font-lexend text-white">
+                <h2 className="text-2xl sm:text-3xl md:text-2xl lg:text-4xl text-left font-light font-lexend text-white">
                   <span className="bg-terra-navy text-white px-2">
                     gerenciais bem como o plano de ação.
                   </span>
                 </h2>
-                <h2 className="text-2xl sm:text-3xl md:text-2xl lg:text-4xl md:text-left font-light font-lexend text-white">
+                <h2 className="text-2xl sm:text-3xl md:text-2xl lg:text-4xl text-left font-light font-lexend text-white">
                   <span className="bg-terra-navy text-white px-2">
                     para alcançá-las.
                   </span>

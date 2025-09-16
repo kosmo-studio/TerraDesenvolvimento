@@ -39,13 +39,13 @@ const servicos = [
     titulo: "Performa Terra",
     descricao: "O Performa Terra é a nossa mais nova modalidade de produto...",
     imagem: "/images/reforma.png",
-    link: "/servicos/performa-terra",
+    link: "/servicos/PerformaTerra",
   },
   {
     titulo: "Análise e Plano de Negócios: Aquisição de Fazendas",
     descricao: "Suporte na análise e decisão de investimento e compra de propriedade rural...",
     imagem: "/images/analise.png",
-    link: "/servicos/analise-plano-de-negocios",
+    link: "/servicos/AnalisePlanoDeNegocio",
   },
 ];
 const ServicoCard = ({

@@ -31,17 +31,17 @@ export default function ImplementacaoDeControle() {
                 
               </div>
               <div className=" space-y-2 md:space-y-0 lg:space-y-2 xl:space-y-3 ">
-                <h2 className="text-2xl sm:text-3xl md:text-2xl lg:text-3xl xl:text-4xl md:text-left font-light font-lexend text-white">
+                <h2 className="text-2xl sm:text-3xl md:text-2xl lg:text-3xl xl:text-4xl text-left font-light font-lexend text-white">
                   <span className="bg-terra-navy text-white px-2">
                     A partir das conclusões do diagnóstico e desafios
                   </span>
                 </h2>
-                <h2 className="text-2xl sm:text-3xl md:text-2xl lg:text-3xl md:text-left font-light font-lexend text-white">
+                <h2 className="text-2xl sm:text-3xl md:text-2xl lg:text-3xl xl:text-4xl text-left font-light font-lexend text-white">
                   <span className="bg-terra-navy text-white px-2">
                     definidos no planejamento estratégico,
                   </span>
                 </h2>
-                <h2 className="text-2xl sm:text-3xl md:text-2xl lg:text-3xl md:text-left font-bold font-lexend text-white">
+                <h2 className="text-2xl sm:text-3xl md:text-2xl lg:text-3xl xl:text-4xl text-left font-bold font-lexend text-white">
                   <span className="bg-terra-navy text-white px-2">
                     a Terra Desenvolvimento coordenará:
                   </span>

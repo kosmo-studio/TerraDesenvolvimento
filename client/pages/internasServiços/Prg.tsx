@@ -3,7 +3,25 @@ import Header from "@/components/Header";
 import ClientsSection from "@/components/interno/ClientsSection";
 import CTASection from "@/components/interno/CTASection";
 import HeroSection from "@/components/interno/HeroSection";
-import ServiceCard from "@/components/interno/ServiceCard";
+const passos = [
+  {
+    titulo: "EFICIÊNCIA PRODUTIVA",
+    descricao: "Ciclo curto de produção em escala, desenvolvida com excelência na operação e administração dos recursos existentes."
+  },
+  {
+    titulo: "FLUXO DE CAIXA",
+    descricao: "Gestão de fluxo de caixa eficiente garantida pela alta liquidez dos ativos, mercado com baixas oscilações nos valores de venda e utilização de ferramentas comerciais de segurança."
+  },
+  {
+    titulo: "OPERAÇÃO",
+    descricao: "Operação e gestão de processos realizada por empresa e profissionais com experiência e tempo de mercado. Conhecimento profundo do negócio em toda cadeia produtiva."
+  },
+  {
+    titulo: "TRANSPARÊNCIA",
+    descricao: "Rotinas gerenciais que garantam uma prestação de contas constante e confiável, levando transparência e aproveitando o conhecimento dos gestores para o melhor desempenho."
+  },
+];
+
 
 export default function Prg() {
   return (
@@ -11,17 +29,27 @@ export default function Prg() {
       <main>
         <Header />
         {/* Hero Section */}
-         <HeroSection
-          backgroundImage="/images/bg-desenvolvimentogerencial.png"
-          title="Desenvolvimento Gerencial"
-          subtitle="Construir equipe realizadora capaz de assumir e bater as metas estabelecidas. Tomar ações eficientes no propósito de “forjar” uma cultura gerencial objetiva,  duradoura e que respeite seus valores na conquista de seus objetivos."
+        <section className="relative w-full h-[80vh] text-white">
+        <div
+          className="absolute inset-0 bg-cover bg-center"
+          style={{ backgroundImage: `url('/images/bg-prg.png')` }}
+          aria-hidden="true"
         />
+        <div className="relative h-full flex flex-col items-center pt-20 md:pt-32 xl:pt-32 text-center p-4 ">
+          <img src="/images/PRG.svg" alt="PRG LOGO" className="w-72 h-auto mb-6" />
+          <p 
+            className="text-terra-navy text-md md:text-2xl max-w-4xl px-5 font-light"
+          >
+            O Programa de Recuperação (ou intervenção) Gerencial tem por missão gerar lucro para seus acionistas e investidores através da transformação de áreas, valorização de ativos e desenvolvimento da atividade agropecuária.
+          </p>
+        </div>
+      </section>
 
         {/* --- Seção de Introdução --- */}
         <section className="py-0 md:py-24 z-20">
           <div className="container mx-auto pt-14 max-w-7xl shadow-[0px_-40px_40px_-20px_rgba(0,0,0,0.3)] text-center bg-white relative mt-[-20px] md:-mt-40">
             <div className="flex flex-col md:flex-row items-center gap-8 px-0 md:px-0 lg:px-5 xl:px-8">
-              <div className="flex-shrink-0">
+              <div className="flex-shrink-0 ">
                 <img
                   src="/images/terra logo.png"
                   alt="Descrição da imagem"
@@ -29,139 +57,65 @@ export default function Prg() {
                 />
               </div>
               <div className=" space-y-2 md:space-y-0 lg:space-y-2 xl:space-y-3 ">
-                <h2 className="text-2xl sm:text-3xl md:text-2xl lg:text-4xl md:text-left font-light font-lexend text-white">
+                <h2 className="text-2xl sm:text-3xl md:text-xl lg:text-2xl xl:text-4xl md:text-left font-light font-lexend text-white">
                   <span className="bg-terra-navy text-white px-2">
-                   Aumente a gerenciabilidade e o lucro de empresa.
+                   Após decisão e aquisição da propriedade, coordenamos
+                  </span>
+                </h2>
+                <h2 className="text-2xl sm:text-3xl md:text-xl lg:text-2xl xl:text-4xl md:text-left font-light font-lexend text-white">
+                  <span className="bg-terra-navy text-white px-2">
+                   projeto de exploração agropecuária para atender as 
+                  </span>
+                </h2>
+                <h2 className="text-2xl sm:text-3xl md:text-xl lg:text-2xl xl:text-4xl md:text-left font-light font-lexend text-white">
+                  <span className="bg-terra-navy text-white px-2">
+                   expectativas financeiras e gerenciais dos investidores.
                   </span>
                 </h2>
               </div>
             </div>
-            <p className="text-2xl sm:text-3xl md:text-4xl px-4 lg:px-[19%] xl:px-[30%] font-bold font-lexend text-terra-navy mt-24 mb-10 sm:mb-[-35px]">
-              Rotinas mensais focadas na gestão operacional:
+            <p className="text-2xl sm:text-3xl md:text-4xl px-4 lg:px-[5%] xl:px-[5%] font-bold font-lexend text-terra-navy mt-24 mb-10 sm:mb-[-35px]">
+              Afinal, uma avaliação prévia criteriosa do investimento garante a certeza ao investidor da melhor relação benefício custo no uso do seu recurso.
+            </p>
+            <p className="text-2xl sm:text-3xl md:text-4xl px-4 lg:px-[10%] xl:px-[0%] font-bold font-lexend text-terra-navy mt-24 mb-20 sm:mb-[-35px]">
+                Executamos a Análise e Plano de Negócio em 05 etapas:
             </p>
           </div>
         </section>
 
-        {/* --- Seção de Indicadores (para a troca de icones o icone deve ser totalmente preto) --- */}
-        <section className="px-6 py-0">
-          <div className="max-w-5xl mx-auto">
-            <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8">
-              <ServiceCard 
-                label="a." 
-                icon="/images/rotinas.svg" 
-                text="Coleta de dados  a campo, estoques e fluxo de caixa;" 
-              />
-              <ServiceCard 
-                label="b." 
-                icon="/images/planejamento.svg"  
-                text="Planejamento: Financeiro; Pecuário; Máquinas; Agrícola; Estoques; Climáticas." 
-              />
-              <ServiceCard 
-                label="c." 
-                icon="/images/balança.svg"  
-                text="Detecção de inconsistências dos dados lançados. Correções e ajustes;" 
-              />
-              <ServiceCard 
-                label="d." 
-                icon="/images/internet.svg"  
-                text="Exportação dos dados pela internet;" 
-              />
-              <ServiceCard 
-                label="e." 
-                icon="/images/boletim.svg"  
-                text="Envio de Boletim Mensal comparando o Realizado versus Meta prevista;" 
-              />
-              <ServiceCard 
-                label="f." 
-                icon="/images/livro.svg"  
-                text="Envio e atualização do Plano de Ação e Cronogramas;" 
-              />
-              <ServiceCard 
-                label="g." 
-                icon="/images/montagem.svg"  
-                text="Atualização dos Quadros de Gestão à Vista." 
-              />
-            </div>
+        <section className="px-4 py-16">
+        <div className="max-w-5xl mx-auto">
+          <div className="flex flex-col items-center space-y-8">
+            {passos.map((passo) => (
+              // A CAIXA PRINCIPAL COM A BORDA
+              <div key={passo.titulo} className="border rounded-2xl border-terra-navy p-6 md:p-8 w-full">
+                {/* GRID INTERNO PARA AS DUAS COLUNAS DE TEXTO */}
+                <div className="grid grid-cols-1 md:grid-cols-[1fr_2fr] gap-6 md:gap-8 items-center">
+                  
+                  {/* Coluna 1: Título */}
+                  <h3 className="text-xl md:text-3xl font-bold font-lexend text-terra-navy text-center">
+                    {passo.titulo}
+                  </h3>
+
+                  {/* Coluna 2: Descrição */}
+                  <p className="text-base md:text-lg text-terra-gray text-center md:text-left">
+                    {passo.descricao}
+                  </p>
+
+                </div>
+              </div>
+            ))}
           </div>
-            <div className="max-w-5xl mx-auto"> 
-              <p className="text-2xl sm:text-3xl md:text-4xl px-4 lg:px-[19%] xl:px-[20%] justify-center text-center font-bold font-lexend text-terra-navy mt-24 mb-10 sm:mb-[-35px]">
-                 Rotinas trimestrais focadas na gestão tática:
-              </p>
-                <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 mt-32 gap-8">
-                    <ServiceCard 
-                      label="a." 
-                      icon="/images/desdobramento.svg" 
-                      text="Avaliação dos resultados acumulado da safra;" 
-                    />
-                    <ServiceCard 
-                      label="b." 
-                      icon="/images/lucro.svg"  
-                      text="Análise das projeções em relação às metas e ao projeto nas frentes: Mercado Finanças / Fluxo de Caixa; Processos / Operações; RH / Aprendizado - Gestão" 
-                    />
-                    <ServiceCard 
-                      label="c." 
-                      icon="/images/equipe.svg"  
-                      text="Alinhamento tático com gestores e gerência;" 
-                    />
-                    <ServiceCard 
-                      label="d." 
-                      icon="/images/meritocracia.svg"  
-                      text="Novos planos de ação e cronogramas para os próximos meses." 
-                    />
-                </div>
-            </div>
-            <div className="max-w-5xl mx-auto"> 
-              <p className="text-2xl sm:text-3xl md:text-4xl px-4 lg:px-[19%] xl:px-[20%] justify-center text-center font-bold font-lexend text-terra-navy mt-24 mb-10 sm:mb-[-35px]">
-                 Rotinas anuais focadas na gestão estratégica:
-              </p>
-                <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 mt-32 gap-8">
-                    <ServiceCard 
-                        label="a." 
-                        icon="/images/balança.svg" 
-                        text="Balanço produtivo financeira anual ou safra." 
-                    />
-                    <ServiceCard 
-                        label="b." 
-                        icon="/images/capacitacao.svg"  
-                        text="Desenvolver a equipe a ponto de através de indicadores tomar as ações necessárias de correção ou ajuste do projeto." 
-                    />
-                    <ServiceCard 
-                        label="c." 
-                        icon="/images/rotinas.svg"  
-                        text="Estabelecer plano de desenvolvimento técnico e pessoal." 
-                    />
-                    <ServiceCard 
-                        label="d." 
-                        icon="/images/equipe.svg"  
-                        text="Estar lado a lado com a equipe e gestores na implementação da cultura gerencial desenhada." 
-                    />
-                    <ServiceCard 
-                        label="e." 
-                        icon="/images/missão.svg"  
-                        text="Análises, conclusões e aprendizados." 
-                    />
-                    <ServiceCard 
-                        label="f." 
-                        icon="/images/livro.svg"  
-                        text="Reiniciamos o ciclo PDCA, através de novo Planejamento Estratégico Global" 
-                    />
-                </div>
-            </div>
-        </section>
+        </div>
+      </section>
         {/* --- Textos e Divisor --- */}
-      <div className="max-w-6xl px-3 flex flex-col gap-6 mt-40 mx-auto items-center">
+      <div className="max-w-6xl px-3 flex flex-col gap-6 mt-20 sm:mt-40 mx-auto items-center">
         <h2 className="text-[#162946] text-2xl sm:text-4xl md:text-3xl lg:text-4xl xl:text-5xl text-center font-semibold leading-relaxed">
-            Ao desenvolver equipes realizadoras,
-            sua fazenda ganha mais do que
-            resultados: constrói uma cultura sólida,
-            capaz de sustentar o crescimento
-            a longo prazo.
+            Com uma gestão orientada para resultados, garantimos a recuperação da performance e a valorização dos ativos da fazenda.
         </h2>
 
         <p className="text-[#162946] text-lg sm:text-xl lg:text-3xl font-light text-center leading-relaxed max-w-3xl">
-            A experiência de nossos clientes mostra que pessoas
-            engajadas, com metas claras, são a chave para maior
-            gerenciabilidade e lucratividade.
+           Nossa experiência mostra que, com transparência e inovação, é possível transformar desafios em crescimento sólido e lucrativo.
         </p>
       </div>
         <ClientsSection />
