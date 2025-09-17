@@ -9,7 +9,7 @@ export default function Index() {
 
       {/* Hero Section */}
       <section className="relative mt-[110px] w-full">
-        <div className="relative bg-terra-red rounded-3xl mx-4 lg:mx-8 mt-8 overflow-hidden">
+        <div className="relative  rounded-3xl mx-4 lg:mx-8 mt-8 overflow-hidden">
           {/* Background Image */}
           <div className="relative h-[500px] lg:h-[700px]">
             <img
@@ -35,7 +35,7 @@ export default function Index() {
       </section>
 
       {/* Innovation Cards Section */}
-      <section className="py-8 px-4 lg:px-8 bg-gray-50">
+      <section className="py-8 px-4 lg:px-8">
         <div className="max-w-7xl mx-auto">
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-2">
             {/* Card 1 */}
@@ -177,7 +177,7 @@ export default function Index() {
 
 
       {/* Services Section */}
-        <section className="py-16 px-4 lg:px-8 bg-gray-50">
+        <section className="py-16 px-4 lg:px-8">
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-12">
               <h2 className="text-4xl lg:text-6xl font-lexend text-terra-navy">

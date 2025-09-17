@@ -26,6 +26,7 @@ export default {
           green: "#37BC69",
           blue: "#0261D6",
           gray: "#666666",
+          beige: '#ccb481',
           "light-gray": "#F2F2F2",
         },
         border: "hsl(var(--border))",
