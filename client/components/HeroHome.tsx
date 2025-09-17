@@ -45,7 +45,7 @@ export default function HeroHome() {
               src={animatedTexts[currentIndex]}
               alt="O futuro está plantado"
               className={`
-                w-auto hidden md:flex md:w-[220px] lg:w-[320px] xl:w-[380px] 2xl:w-[500px] md:mb-44 lg:mb-80 xl:mb-0 transition-opacity duration-500
+                w-auto hidden md:flex md:w-[220px] lg:w-[320px] xl:w-[380px] 2xl:w-[500px] md:mb-44 lg:mb-80 xl:mb-0 transition-opacity duration-1000
                 ${isFading ? 'opacity-0' : 'opacity-100'}
               `}
             />
