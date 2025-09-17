@@ -103,7 +103,7 @@ export default {
   },
   plugins: [
     require("tailwindcss-animate"),
-    // 2. ENVOLVA SUA FUNÇÃO COM O 'plugin()'
+    require("@tailwindcss/typography"), 
     plugin(function ({ addUtilities }) {
       addUtilities({
         '.pause': {
