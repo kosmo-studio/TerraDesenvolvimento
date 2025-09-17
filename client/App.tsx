@@ -10,7 +10,7 @@ import ScrollToTop from './components/ScrollToTop';
 import Index from "./pages/Index";
 import NotFound from "./pages/NotFound";
 import Servicos from "./pages/servicos";
-import Resultados from "./pages/Resultados";
+import Resultados from "./pages/resultados";
 import CursoseEventos from "./pages/cursosEventos";
 import Noticias from "./pages/noticias";
 import TrabalheConosco from "./pages/trabalhe-conosco";
@@ -23,6 +23,7 @@ import Prg from "./pages/internasServiços/Prg";
 import PerformaTerra from "./pages/internasServiços/PerformaTerra";
 import AnalisePlanoDeNegocio from "./pages/internasServiços/AnalisePlanoDeNegocio";
 import EmpresaPecuaria from "./pages/internasCursos/EmpresaPecuaria";
+import DetalheNoticia from "./pages/internaNoticias.tsx/DetalheNoticia";
 
 const queryClient = new QueryClient();
 
@@ -49,6 +50,7 @@ const App = () => (
           <Route path="/servicos/AnalisePlanoDeNegocio" element={<AnalisePlanoDeNegocio />} />
           <Route path="/servicos/PerformaTerra" element={<PerformaTerra />} />
           <Route path="/EmpresaPecuaria" element={<EmpresaPecuaria />} />
+          <Route path="/noticias/:slug" element={<DetalheNoticia />} />
 
 
 
