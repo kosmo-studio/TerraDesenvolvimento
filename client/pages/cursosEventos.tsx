@@ -5,6 +5,8 @@ import CTASection from "@/components/interno/CTASection";
 import HeroSection from "@/components/interno/HeroSection";
 import ServiceCard from "@/components/interno/ServiceCard";
 import DivisorTerra from '@/components/interno/DivisorTerra';
+import { Link } from "react-router-dom";
+
 
 export default function CursoseEventos() {
   return (
@@ -21,7 +23,7 @@ export default function CursoseEventos() {
         {/* --- Seção de Introdução --- */}
             <section className="py-0 md:pt-24 z-20">
               <div className="container mx-auto pt-14 max-w-7xl shadow-[0px_-40px_40px_-20px_rgba(0,0,0,0.3)] text-center bg-white relative mt-[-20px] md:-mt-40">
-                  <div className=" space-y-2 md:space-y-0 lg:space-y-2 xl:space-y-3 mb-10">
+                  <div className="md:mt-6 space-y-2 md:space-y-0 lg:space-y-2 xl:space-y-3 mb-10">
                     <h2 className="text-2xl sm:text-3xl md:text-5xl lg:text-3xl xl:text-5xl md:text-center font-bold font-lexend text-white">
                       <span className="text-terra-navy px-2">
                         Curso de Gestão da Empresa Pecuária
@@ -69,12 +71,16 @@ export default function CursoseEventos() {
                     </div>
                   </div>
                 </div>
+
                 {/* Botão */}
+              <Link to="/EmpresaPecuaria">
                 <button className="mt-4 px-8 py-3 bg-terra-navy text-white font-semibold rounded-xl hover:bg-[#0f1d39] transition">
                   SAIBA MAIS
-                </button>  
+                </button>
+              </Link>  
             </div>
           </section>
+
         <DivisorTerra />
           <section className="py-0 md:pt-24 z-20">
             <div className="container mx-auto pt-14 max-w-7xl text-center bg-white relative mt-[-20px] md:-mt-40">

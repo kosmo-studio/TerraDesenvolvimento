@@ -10,7 +10,7 @@ import ScrollToTop from './components/ScrollToTop';
 import Index from "./pages/Index";
 import NotFound from "./pages/NotFound";
 import Servicos from "./pages/servicos";
-import Resultados from "./pages/resultados";
+import Resultados from "./pages/Resultados";
 import CursoseEventos from "./pages/cursosEventos";
 import Noticias from "./pages/noticias";
 import TrabalheConosco from "./pages/trabalhe-conosco";

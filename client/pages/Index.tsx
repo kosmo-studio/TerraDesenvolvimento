@@ -1,6 +1,8 @@
 import Header from "../components/Header";
 import Footer from "../components/Footer";
 import { Button } from "@/components/ui/button";
+import DivisorTerra from '@/components/interno/DivisorTerra';
+
 
 export default function Index() {
   return (
@@ -116,6 +118,7 @@ export default function Index() {
         </div>
       </section>
 
+
       {/* Methodologies Section */}
       <section className="lg:px-8 ">
         <div className="mx-auto">
@@ -173,7 +176,6 @@ export default function Index() {
           </div>
         </div>
       </section>
-
 
 
       {/* Services Section */}
@@ -305,6 +307,7 @@ export default function Index() {
           </div>
         </div>
       </section>
+
 
       {/* Client Testimonials Section */}
       <section className="py-16 px-4 lg:px-8 bg-white">
@@ -440,6 +443,7 @@ export default function Index() {
           </div>
         </div>
       </section>
+
 
       {/* Rodrigo Patussi Section */}
       <section className="py-16 px-4 lg:px-8 ">
