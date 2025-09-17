@@ -3,6 +3,8 @@ import Header from "@/components/Header";
 import HeroSection from "@/components/interno/HeroSection";
 import DivisorTerra from '@/components/interno/DivisorTerra';
 import React from 'react';
+import { Link } from "lucide-react";
+
 const dadosInvestimento = {
   lotes: ["1º Lote", "2º Lote", "3º Lote"],
   categorias: [
@@ -40,10 +42,15 @@ const modulos = [
 ];
 const patrocinadores = [
   { src: "/images/espaçorural.png", alt: "Logo Espaço Rural" },
-  { src: "/images/metryx-logo.png", alt: "Logo Metryx" },
   { src: "/images/agroceres.png", alt: "Logo Agroceres" },
-  { src: "/images/castros.png", alt: "Logo Castros" },
+  { src: "/images/MOINHO-MAQUINAS.png", alt: "Logo Moinho" },
 ];
+
+const parceria = [
+  { src: "/images/castros.png", alt: "Logo castros" },
+  { src: "/images/metryx-logo.png", alt: "Logo metryx" },
+];
+
 export default function EmpresaPecuaria() {
   return (
     <div className="bg-white overflow-x-hidden">
@@ -157,12 +164,15 @@ export default function EmpresaPecuaria() {
                     ))}
                     </div>
                     <section className="py-16">
-                        <div>
-                            <p className="text-5xl text-terra-navy">Faça sua <strong>inscrição!</strong></p>
+                      <div>
+                        <a href="https://www.sympla.com.br/evento/curso-gestao-da-empresa-pecuaria/3056367" target="_blank" rel="noopener noreferrer">
+                          <p className="text-5xl text-terra-navy">Faça sua <strong>inscrição!</strong></p>
+                          
                             <button className="mt-9 px-16 py-3 bg-terra-navy text-white font-semibold rounded-lg hover:bg-[#0f1d39] transition">
-                                CLIQUE AQUI PARRA COMPRAR
+                                CLIQUE AQUI PARA COMPRAR
                             </button>  
-                        </div>
+                        </a>
+                      </div>
                     </section>
                     <section className="py-10 px-4 sm:px-6 lg:px-8">
                     <div className="max-w-5xl mx-auto text-center">
@@ -171,12 +181,31 @@ export default function EmpresaPecuaria() {
                         </h2>
                         
                         
-                        <div className="grid grid-cols-2 md:grid-cols-4 gap-2 items-center">
+                        <div className="grid grid-cols-1 md:grid-cols-3 gap-2 items-center">
                         {patrocinadores.map((patrocinador) => (
                             <div key={patrocinador.alt} className="flex justify-center items-center p-4 w-auto h-40 ">
                             <img
                                 src={patrocinador.src}
                                 alt={patrocinador.alt}
+                                className="w-full h-full object-contain transition-all duration-300 "
+                            />
+                            </div>
+                        ))}
+                        </div>
+                    </div>
+                    </section>
+
+                    <section className="py-10 px-4 sm:px-6 lg:px-8">
+                    <div className="max-w-lg mx-auto text-center">
+                        <h2 className="text-4xl font-medium text-terra-navy mb-6">
+                        Parceria
+                        </h2>
+                        <div className="grid grid-cols-1 md:grid-cols-2 gap-0 items-center">
+                        {parceria.map((parceria) => (
+                            <div key={parceria.alt} className="flex justify-center items-center p-4 w-auto h-40 ">
+                            <img
+                                src={parceria.src}
+                                alt={parceria.alt}
                                 className="w-full h-full object-contain transition-all duration-300 "
                             />
                             </div>
