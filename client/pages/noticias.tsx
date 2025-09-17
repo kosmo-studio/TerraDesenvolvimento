@@ -72,12 +72,12 @@ export default function Noticias() {
       <main>
         <Header />
         <HeroSection
-          backgroundImage="/images/noticiaHeader.png"
+          backgroundImage="/images/bg-noticias.jpg"
           title=""
           subtitle=""
         />
         <section className="z-20">
-          <div className="container mx-auto pt-14 max-w-7xl shadow-[0px_-40px_40px_-20px_rgba(0,0,0,0.3)] text-center bg-white relative -mt-24 md:-mt-48">
+          <div className="container mx-auto pt-14 max-w-7xl shadow-[0px_-30px_15px_-10px_rgba(0,0,0,0.3)] text-center bg-white relative -mt-24 md:-mt-48">
             <div className="py-10">
               <h2 className="text-3xl md:text-4xl lg:text-5xl md:text-center font-bold font-lexend text-terra-navy">
                 Notícias
