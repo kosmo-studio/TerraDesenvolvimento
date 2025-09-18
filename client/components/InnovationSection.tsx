@@ -29,7 +29,7 @@ export default function InnovationSection() {
       <section className="py-16 px-4 lg:px-8">
         <div className="max-w-7xl mx-auto text-center">
           <h2 className="text-4xl lg:text-6xl font-lexend text-terra-navy mb-8">
-            <span className="font-bold">Inovação </span>
+            <span className="font-bold">Inovaçã </span>
             <span className="font-normal">para transformar</span>
             <br />
             <span className="font-normal">sua fazenda em</span>
