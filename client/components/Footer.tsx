@@ -67,11 +67,11 @@ export default function Footer() {
 
           {/* Coluna 4: Contato */}
           <div className="space-y-4 flex flex-col items-center md:items-start">
-            <h3 className="text-lg font-lexend font-bold text-terra-navy">Contato</h3>
+            <h3 className="text-lg font-lexend font-bold text-terra-navy">Contato</h3><a target="_blank" href="https://wa.me/556730263442">
             <Button className="bg-terra-green hover:bg-green-600 text-white px-2 py-2 w-56 text-sm font-lexend rounded-lg flex items-center gap-2s max-w-xs">
               <IconWhatsapp /> WhatsApp
             </Button>
-
+              </a> 
             <div className="flex space-x-3 pt-2 justify-center md:justify-start">
               <a href="#" className="text-terra-navy hover:text-terra-blue" aria-label="X"><IconX /></a>
               <a href="#" className="text-terra-navy hover:text-terra-blue" aria-label="Instagram"><IconInstagram /></a>

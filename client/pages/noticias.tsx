@@ -19,7 +19,7 @@ const ArticleCard = ({ image, title, date, link }) => {
       <div className="p-6 flex flex-col flex-grow">
         <h3 className="text-xl font-semibold text-terra-navy flex-grow">{title}</h3>
         <p className="text-sm text-gray-500 mt-2">{date}</p>
-        <span className="text-terra-blue group-hover:underline mt-4 block font-semibold">
+        <span className="text-terra-blue mt-4 block font-semibold">
           Leia mais
         </span>
       </div>
