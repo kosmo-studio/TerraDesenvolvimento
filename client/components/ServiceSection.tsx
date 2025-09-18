@@ -9,7 +9,7 @@ const servicesData = [
   { title: ["Gestão", "de fazendas"], icon: <IconGestao /> },
   { title: ["Planejamento", "estratégico"], icon: <IconPlanejamento /> },
   { title: ["Consultoria", "técnica"], icon: <IconConsultoria /> },
-  { title: ["Diagnóstico", "produtivo"], icon: <IconDiagnostico /> },
+  { title: ["Plano De aquisição", "de Fazendas"], icon: <IconDiagnostico /> },
   { title: ["Treinamento", "de equipes"], icon: <IconTreinamento /> },
 ];
 
