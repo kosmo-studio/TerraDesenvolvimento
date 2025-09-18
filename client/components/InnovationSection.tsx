@@ -12,7 +12,7 @@ const innovationCards = [
     title: ["Resultados", "mensuráveis", "em produtividade", "e lucro"],
   },
   {
-    imgSrc: "https://api.builder.io/api/v1/image/assets/TEMP/b235a756c1a6ba66ccb2e8b1a7714f4379864397?width=2310",
+    imgSrc: "/images/EquipeTecnica.png",
     alt: "Equipe técnica",
     title: ["Equipe", "técnica", "especializada"],
   },
