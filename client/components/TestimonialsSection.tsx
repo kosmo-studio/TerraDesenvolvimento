@@ -1,7 +1,7 @@
 import React from "react";
 
 const clientsData = [
-  { imgSrc: "https://api.builder.io/api/v1/image/assets/TEMP/167d9d5be0b7a32e8a957e91ad9b3ddc29a5bc43?width=976", name: ["João Flavio", "Ribeiro"] },
+  { imgSrc: "/images/carmem.jpeg", name: ["Carmem", "Perez"] },
   { imgSrc: "/images/elton.jpeg", name: ["Elton", "Silveira"] },
   { imgSrc: "/images/thiago.jpeg", name: ["Thiago", "Carminati"] },
   { imgSrc: "https://api.builder.io/api/v1/image/assets/TEMP/d6a113fdacb6ab6a2e890810ea54dee9a55fc46d?width=1336", name: ["Fernando", "Pinheiro", "Carneiro"] },
