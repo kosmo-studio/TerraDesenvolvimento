@@ -2,30 +2,11 @@ import Footer from "@/components/Footer";
 import Header from "@/components/Header";
 import HeroSection from "@/components/interno/HeroSection";
 import { Link } from "react-router-dom";
+// 1. Importamos os dados do nosso arquivo central
+import { todasAsNoticias } from "@/components/data/noticias";
 
-const noticiasData = [
-  {
-    slug: "5-anos-covid-agro",
-    image: "https://api.builder.io/api/v1/image/assets/TEMP/4afcf9b3e3244ee38a3c8a36490ca3801377faa2?width=1130",
-    title: "5 Anos da Covid-19 no Brasil: Lições de Resiliência e Inovação no Agronegócio",
-    date: "08 de dezembro de 2021",
-  },
-  {
-    slug: "passos-para-uma-gestao-eficiente",
-    image: "https://api.builder.io/api/v1/image/assets/TEMP/b0f43d8df013d60e4ead90c956d34aa52002d4aa?width=1650",
-    title: "Passos para uma gestão eficiente",
-    date: "27 de fevereiro de 2025",
-  },
-  {
-    slug: "gestao-baseada-em-numeros",
-    image: "https://api.builder.io/api/v1/image/assets/TEMP/3d1aa2e8f24ed563d6d90dc53929a40cc40cdd60?width=1600",
-    title: "Gestão baseada em números: um alicerce fundamental para novos gestores",
-    date: "14 de junho de 2021",
-  },
-];
-
-// --- COMPONENTE ARTICLECARD ATUALIZADO ---
-// O card inteiro agora é um componente <Link>
+// --- COMPONENTE ARTICLECARD ---
+// Este componente é o "molde" para cada card de notícia.
 const ArticleCard = ({ image, title, date, link }) => {
   return (
     <Link 
@@ -46,18 +27,21 @@ const ArticleCard = ({ image, title, date, link }) => {
   );
 };
 
+// --- COMPONENTE ARTICLESECTION ---
+// Esta seção agora lê a lista de notícias e cria um card para cada uma.
 const ArticleSection = () => {
   return (
     <section className="py-12">
       <div className="container mx-auto px-4">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {noticiasData.map((noticia) => (
+          {/* 2. Usamos .map() para criar os cards a partir dos dados importados */}
+          {todasAsNoticias.map((noticia) => (
             <ArticleCard
-              key={noticia.slug}
-              image={noticia.image}
-              title={noticia.title}
-              date={noticia.date}
-              link={`/noticias/${noticia.slug}`}
+              key={noticia.id}
+              image={noticia.imagemDestaque}
+              title={noticia.titulo}
+              date={noticia.dataPublicacao}
+              link={`/noticias/${noticia.slug}`} // O link é criado dinamicamente
             />
           ))}
         </div>
@@ -66,6 +50,7 @@ const ArticleSection = () => {
   );
 };
 
+// --- PÁGINA PRINCIPAL ---
 export default function Noticias() {
   return (
     <div className="bg-white overflow-x-hidden">
@@ -83,6 +68,7 @@ export default function Noticias() {
                 Notícias
               </h2>
             </div>
+            {/* 3. A seção de artigos agora é preenchida dinamicamente */}
             <ArticleSection />
           </div>
         </section>

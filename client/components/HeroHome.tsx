@@ -30,7 +30,7 @@ export default function HeroHome() {
   return (
     <section className="relative pt-28">
       <div className="mx-4 lg:mx-8 overflow-hidden rounded-3xl">
-        <div className="relative h-[500px] lg:h-[700px]">
+        <div className="relative h-[200px] md:h-[500px] lg:h-[560px] xl:h-[830px]">
           {/* IMAGEM DE FUNDO PRINCIPAL */}
           <img
             src="/images/fundoBanner.png"
@@ -45,7 +45,7 @@ export default function HeroHome() {
               src={animatedTexts[currentIndex]}
               alt="O futuro está plantado"
               className={`
-                w-auto hidden md:flex md:w-[220px] lg:w-[320px] xl:w-[380px] 2xl:w-[500px] md:mb-44 lg:mb-80 xl:mb-0 transition-opacity duration-1000
+                w-auto hidden md:flex md:w-[220px] lg:w-[320px] xl:w-[380px] 2xl:w-[500px] md:mb-44 lg:mb-20 xl:mb-0 transition-opacity duration-1000
                 ${isFading ? 'opacity-0' : 'opacity-100'}
               `}
             />

@@ -66,7 +66,7 @@ export default function Header() {
 
         {/* CTA Button: Alterado para 'lg:flex' */}
         <Button className="hidden lg:flex bg-terra-dark-blue hover:bg-terra-navy text-white px-4 xl:px-6 py-3 text-xs xl:text-sm font-lexend rounded-lg transition-colors">
-          FALE COM UM CONSULTOR
+         <a target="_blank" href="https://wa.me/556730263442">FALE COM UM CONSULTOR</a>
         </Button>
 
         <button className="lg:hidden p-2" aria-label="Menu" onClick={toggleMenu}>
