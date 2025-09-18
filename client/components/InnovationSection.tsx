@@ -12,7 +12,7 @@ const innovationCards = [
     title: ["Resultados", "mensuráveis", "em produtividade", "e lucro"],
   },
   {
-    imgSrc: "https://api.builder.io/api/v1/image/assets/TEMP/b235a756c1a6ba66ccb2e8b1a7714f4379864397?width=2310",
+    imgSrc: "/images/EquipeTecnica.png",
     alt: "Equipe técnica",
     title: ["Equipe", "técnica", "especializada"],
   },
@@ -29,7 +29,7 @@ export default function InnovationSection() {
       <section className="py-16 px-4 lg:px-8">
         <div className="max-w-7xl mx-auto text-center">
           <h2 className="text-4xl lg:text-6xl font-lexend text-terra-navy mb-8">
-            <span className="font-bold">Inovação </span>
+            <span className="font-bold">Inovaçã </span>
             <span className="font-normal">para transformar</span>
             <br />
             <span className="font-normal">sua fazenda em</span>

@@ -4,7 +4,8 @@ import { Button } from "@/components/ui/button";
         return (
         <footer className="relative py-16 px-4 lg:px-8 bg-terra-light-gray overflow-hidden">
         <div className="relative max-w-7xl mx-auto">
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 text-terra-navy">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-8 text-terra-navy">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             {/* Company Info */}
             <div className="space-y-4">
               <img
@@ -18,7 +19,7 @@ import { Button } from "@/components/ui/button";
               </p>
             </div>
 
-            {/* Services */}
+            {/* Menu */}
             <div className="space-y-4">
               <h3 className="text-lg font-lexend font-bold">Menu</h3>
               <ul className="space-y-2 text-sm font-lexend">
@@ -28,12 +29,7 @@ import { Button } from "@/components/ui/button";
                   </a>
                 </li>
                 <li>
-                  <a href="#" className="hover:text-terra-blue">
-                    Capacitação
-                  </a>
-                </li>
-                <li>
-                  <a href="#" className="hover:text-terra-blue">
+                  <a href="/noticias" className="hover:text-terra-blue">
                     Notícias
                   </a>
                 </li>
@@ -42,62 +38,65 @@ import { Button } from "@/components/ui/button";
                     Trabalhe conosco
                   </a>
                 </li>
-                <li>
-                  <a href="#" className="hover:text-terra-blue">
-                    Área Do Associado
+                 <li>
+                  <a href="/servicos" className="hover:text-terra-blue">
+                    Resultado
                   </a>
                 </li>
                 <li>
-                  <a href="#" className="hover:text-terra-blue">
-                    Portal da LGPD
+                  <a href="/cursosEventos" className="hover:text-terra-blue">
+                    Cursos e Eventos
                   </a>
                 </li>
               </ul>
             </div>
-
-            {/* Company */}
+          </div>
+          
+         {/*coluna direita*/} 
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-20 md:-ml-24">
+            {/* Serviços */}
             <div className="space-y-4">
-              <h3 className="text-lg font-lexend font-bold">Produtos</h3>
+              <h3 className="text-lg font-lexend font-bold">Serviços</h3>
               <ul className="space-y-2 text-sm font-lexend">
                 <li>
                   <a href="#" className="hover:text-terra-blue">
-                    Gestão de Fazendas
+                    Diagnóstico de Desempenho Global
                   </a>
                 </li>
                 <li>
                   <a href="#" className="hover:text-terra-blue">
-                    Planejamento Estratégico Rural
+                    Implementação de Controle
                   </a>
                 </li>
                 <li>
                   <a href="#" className="hover:text-terra-blue">
-                    Consultoria Técnica Agropecuária
+                    Planejamento Estratégico
                   </a>
                 </li>
                 <li>
                   <a href="#" className="hover:text-terra-blue">
-                    Diagnóstico Produtivo
+                    PRG: Programa de Recuperação Gerencial
                   </a>
                 </li>
                 <li>
                   <a href="#" className="hover:text-terra-blue">
-                    Treinamento de Equipes
+                    Desenvolvimento Gerencial
                   </a>
                 </li>
                 <li>
                   <a href="#" className="hover:text-terra-blue">
-                    Monitoramento de Indicadores
+                    Performa Terra
                   </a>
                 </li>
                 <li>
                   <a href="#" className="hover:text-terra-blue">
-                    Avaliação de Desempenho Operacional
+                   Plano de Aquisição de Fazendas
                   </a>
                 </li>
               </ul>
             </div>
 
-            {/* Contact */}
+            {/* Contato */}
             <div className="space-y-4">
               <h3 className="text-lg font-lexend font-bold">Contato</h3>
               <div className="space-y-3">
@@ -147,14 +146,31 @@ import { Button } from "@/components/ui/button";
                     </svg>
                   </a>
                 </div>
-                <div className="space-y-2 text-sm font-lexend">
-                  <p>📍 Endereço: Rua São Paulo, 1568 - Vila Gomes CEP 79022-140 / Campo Grande - MS</p>
-                  <p>📞 Telefone: (67) 3026-3442</p>
-                  <p>✉️ Email: contato@terradesenvolvimento.com.br</p>
+                <div className="space-y-2 text-sm font-lexend leading-relaxed">
+                  <p> 📍 Endereço: Rua São Paulo, 1568 - Vila Gomes CEP 79022-140 / Campo Grande - MS</p>
+                  <p> ✉️ contato@terradesenvolvimento.com.br</p>
+                  <p>
+                  <img src="https://flagcdn.com/w20/br.png" alt="Brasil" className="inline align-middle mr-2" />📞 55 (67) 3026-3442<strong> (Campo Grande-MS)</strong><br/>
+                  <img src="https://flagcdn.com/w20/br.png" alt="Brasil" className="inline align-middle mr-2" />📞 55 (44) 3031-8844<strong> (Maringá-PR)</strong><br/>
+                  <img src="https://flagcdn.com/w20/br.png" alt="Brasil" className="inline align-middle mr-2" />📞 55 (62) 99688-1105<strong> (Goiânia-GO)</strong><br/>
+                  <img src="https://flagcdn.com/w20/br.png" alt="Brasil" className="inline align-middle mr-2" />📞 55 (16) 99630-1209<strong> (Ribeirão Preto-SP)</strong><br/>
+                  <img src="https://flagcdn.com/w20/br.png" alt="Brasil" className="inline align-middle mr-2" />📞 55 (65) 99692-1046<strong> (Cuiabá-MT)</strong><br/>
+                  <img src="https://flagcdn.com/w20/br.png" alt="Brasil" className="inline align-middle mr-2" />📞 55 (55) 99669-2703<strong> (Uruguaiana-RS)</strong> 
+                  </p>
+                  <p> 
+                  <img src="https://flagcdn.com/w20/py.png" alt="Paraguai" className="inline align-middle mr-2" />📞 +595 9851-92143<strong> (Assunción)</strong><br/>
+                  <img src="https://flagcdn.com/w20/py.png" alt="Paraguai" className="inline align-middle mr-2" />📞 +595 986 923995<strong> (Assunción)</strong>
+                  </p>
+                  <p>
+                  <img src="https://flagcdn.com/w20/bo.png" alt="Bolívia" className="inline align-middle mr-2" />📞 +591 76685231<strong> (Santa Cruz de la Sierra)</strong><br/>
+                  <img src="https://flagcdn.com/w20/bo.png" alt="Bolívia" className="inline align-middle mr-2" />📞 +591 77694853<strong> (Santa Cruz de la Sierra)</strong>
+                  </p>
+
                 </div>
               </div>
             </div>
           </div>
+        </div>
 
           {/* Copyright */}
           <div className="border-t border-terra-navy/20 mt-12 pt-8 text-center">
