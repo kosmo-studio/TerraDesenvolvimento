@@ -1,9 +1,8 @@
-// src/pages/Index.tsx
-
 import Header from "../components/Header";
 import Footer from "../components/Footer";
 
-// Importando as novas seções da página inicial
+import AnimatedSection from "@/components/AnimatedSection";
+
 import HeroHome from "@/components/HeroHome";
 import InnovationSection from "@/components/InnovationSection";
 import MethodologiesSection from "@/components/MethodologiesSection";
@@ -18,14 +17,37 @@ export default function Index() {
     <div className="bg-white overflow-x-hidden">
       <Header />
       <main>
-        <HeroHome />
-        <InnovationSection />
-        <MethodologiesSection />
-        <ServicesSection />
-        <TestimonialsSection />
-        <AboutSection />
-        <CtaSection />
-        <NewsSection />
+        <AnimatedSection>
+          <HeroHome />
+        </AnimatedSection>
+        
+        <AnimatedSection>
+          <InnovationSection />
+        </AnimatedSection>
+        
+        <AnimatedSection>
+          <MethodologiesSection />
+        </AnimatedSection>
+        
+        <AnimatedSection>
+          <ServicesSection />
+        </AnimatedSection>
+        
+        <AnimatedSection>
+          <TestimonialsSection />
+        </AnimatedSection>
+        
+        <AnimatedSection>
+          <AboutSection />
+        </AnimatedSection>
+        
+        <AnimatedSection>
+          <CtaSection />
+        </AnimatedSection>
+
+        <AnimatedSection>
+          <NewsSection />
+        </AnimatedSection>
       </main>
       <Footer />
     </div>

@@ -2,9 +2,9 @@ import React from "react";
 
 const clientsData = [
   { imgSrc: "/images/carmem.jpeg", name: ["Carmem", "Perez"] },
-  { imgSrc: "/images/elton.jpeg", name: ["Elton", "Silveira"] },
   { imgSrc: "/images/thiago.jpeg", name: ["Thiago", "Carminati"] },
-  { imgSrc: "https://api.builder.io/api/v1/image/assets/TEMP/d6a113fdacb6ab6a2e890810ea54dee9a55fc46d?width=1336", name: ["Fernando", "Pinheiro", "Carneiro"] },
+  { imgSrc: "/images/elton.jpeg", name: ["Elton", "Silveira"] },
+  { imgSrc: "/images/gustavoArfux.jpeg", name: ["Gustavo", "Arfux"] },
   { imgSrc: "https://api.builder.io/api/v1/image/assets/TEMP/ec671130f158f4501e49d9aa387e004ef26316ce?width=1450", name: ["Duarte de", "Castro", "Cunha"] },
 ];
 

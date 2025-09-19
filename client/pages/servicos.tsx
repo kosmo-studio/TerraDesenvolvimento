@@ -3,6 +3,7 @@ import Footer from "../components/Footer";
 import { Button } from "@/components/ui/button";
 import { ArrowRight } from "lucide-react";
 import { Link } from "react-router-dom";
+import AnimatedSection from "@/components/AnimatedSection"; 
 
 const servicos = [
   {
@@ -48,6 +49,7 @@ const servicos = [
     link: "/servicos/AnalisePlanoDeNegocio",
   },
 ];
+
 const ServicoCard = ({
   servico,
 }: {
@@ -82,55 +84,58 @@ const ServicoCard = ({
     </div>
   </div>
 );
+
 export default function Servicos() {
   return (
     <div className="min-h-screen bg-white ">
       <Header />
       <main>
         {/* Hero Section */}
-        <section className="relative text-gray-900 flex items-center justify-center pt-24 pb-12 md:pt-32 md:pb-16">
-          <div className="relative z-10 text-center max-w-4xl mx-auto px-4">
-            <h1 className="text-4xl sm:text-5xl lg:text-7xl font-bold font-lexend mb-4">
-              Serviços
-            </h1>
-            <p className="text-base sm:text-lg lg:text-xl font-light">
-              Soluções completas para a sua fazenda, 
-              <br></br>
-              sempre com foco em produtividade, eficiência e melhores resultados.
-            </p>
-          </div>
-        </section>
+        <AnimatedSection>
+          <section className="relative text-terra-navy flex items-center justify-center pt-24 pb-12 md:pt-32 md:pb-16">
+            <div className="relative z-10 text-center max-w-4xl mx-auto px-4">
+              <h1 className="text-4xl sm:text-5xl lg:text-7xl font-bold font-lexend mb-4">
+                Serviços
+              </h1>
+              <p className="text-base sm:text-lg lg:text-xl font-light">
+                Soluções completas para a sua fazenda, 
+                <br></br>
+                sempre com foco em produtividade, eficiência e melhores resultados.
+              </p>
+            </div>
+          </section>
+        </AnimatedSection>
 
         {/* Services List */}
         <section className="py-12 md:py-20 px-4 lg:px-8">
           <div className="max-w-7xl mx-auto space-y-16 md:space-y-20">
-            {servicos.map((servico) => (
-              <ServicoCard
-                key={servico.titulo}
-                servico={servico}
-              />
+            {servicos.map((servico, index) => (
+              <AnimatedSection key={servico.titulo} delay={index * 150}>
+                <ServicoCard servico={servico} />
+              </AnimatedSection>
             ))}
           </div>
         </section>
 
         {/* CTA Section */}
-        <section className="py-16 px-4 lg:px-8 bg-terra-light-gray">
-          <div className="max-w-4xl mx-auto text-center">
-            <h2 className="text-3xl sm:text-4xl lg:text-5xl font-lexend text-terra-navy mb-8">
-              <span className="font-normal">Seja você também um cliente </span>
-              <span className="font-bold">Terra!</span>
-            </h2>
-            <Button
-              size="lg"
-              className="bg-terra-green hover:bg-green-600 text-white px-8 py-4 text-lg font-lexend rounded-lg flex items-center gap-3 mx-auto"
-            >
-              FALE COM UM CONSULTOR
-            </Button>
-          </div>
-        </section>
+        <AnimatedSection>
+          <section className="py-16 px-4 lg:px-8 bg-terra-light-gray">
+            <div className="max-w-4xl mx-auto text-center">
+              <h2 className="text-3xl sm:text-4xl lg:text-5xl font-lexend text-terra-navy mb-8">
+                <span className="font-normal">Seja você também um cliente </span>
+                <span className="font-bold">Terra!</span>
+              </h2>
+              <Button
+                size="lg"
+                className="bg-terra-green hover:bg-green-600 text-white px-8 py-4 text-lg font-lexend rounded-lg flex items-center gap-3 mx-auto"
+              >
+                FALE COM UM CONSULTOR
+              </Button>
+            </div>
+          </section>
+        </AnimatedSection>
       </main>
       <Footer />
     </div>
   );
 }
-
