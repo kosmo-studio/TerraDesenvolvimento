@@ -2,11 +2,10 @@ import Footer from "@/components/Footer";
 import Header from "@/components/Header";
 import HeroSection from "@/components/interno/HeroSection";
 import { Link } from "react-router-dom";
-// 1. Importamos os dados do nosso arquivo central
 import { todasAsNoticias } from "@/components/data/noticias";
+import AnimatedSection from "@/components/AnimatedSection"; 
 
 // --- COMPONENTE ARTICLECARD ---
-// Este componente é o "molde" para cada card de notícia.
 const ArticleCard = ({ image, title, date, link }) => {
   return (
     <Link 
@@ -28,21 +27,21 @@ const ArticleCard = ({ image, title, date, link }) => {
 };
 
 // --- COMPONENTE ARTICLESECTION ---
-// Esta seção agora lê a lista de notícias e cria um card para cada uma.
 const ArticleSection = () => {
   return (
     <section className="py-12">
       <div className="container mx-auto px-4">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {/* 2. Usamos .map() para criar os cards a partir dos dados importados */}
-          {todasAsNoticias.map((noticia) => (
-            <ArticleCard
-              key={noticia.id}
-              image={noticia.imagemDestaque}
-              title={noticia.titulo}
-              date={noticia.dataPublicacao}
-              link={`/noticias/${noticia.slug}`} // O link é criado dinamicamente
-            />
+          {/* 2. Cada card agora é envolvido pelo AnimatedSection com um atraso */}
+          {todasAsNoticias.map((noticia, index) => (
+            <AnimatedSection key={noticia.id} delay={index * 100}>
+              <ArticleCard
+                image={noticia.imagemDestaque}
+                title={noticia.titulo}
+                date={noticia.dataPublicacao}
+                link={`/noticias/${noticia.slug}`}
+              />
+            </AnimatedSection>
           ))}
         </div>
       </div>
@@ -56,24 +55,28 @@ export default function Noticias() {
     <div className="bg-white overflow-x-hidden">
       <main>
         <Header />
-        <HeroSection
-          backgroundImage="/images/bg-noticias.jpg"
-          title=""
-          subtitle=""
-        />
+        <AnimatedSection variant="fade">
+          <HeroSection
+            backgroundImage="/images/bg-noticias.jpg"
+            title=""
+            subtitle=""
+          />
+        </AnimatedSection>
+        <AnimatedSection>
         <section className="z-20">
-          <div className="container mx-auto pt-14 max-w-7xl shadow-[0px_-30px_15px_-10px_rgba(0,0,0,0.3)] text-center bg-white relative -mt-24 md:-mt-48">
-            <div className="py-10">
-              <h2 className="text-3xl md:text-4xl lg:text-5xl md:text-center font-bold font-lexend text-terra-navy">
-                Notícias
-              </h2>
-            </div>
-            {/* 3. A seção de artigos agora é preenchida dinamicamente */}
+          <div className="container mx-auto pt-14 max-w-7xl shadow-[0px_-30px_15px_-10px_rgba(0,0,0,0.3)] text-center bg-white relative -mt-24 md:-mt-36">
+              <div className="py-10">
+                <h2 className="text-3xl md:text-4xl lg:text-5xl md:text-center font-bold font-lexend text-terra-navy">
+                  Notícias
+                </h2>
+              </div>
             <ArticleSection />
           </div>
         </section>
+      </AnimatedSection>
       </main>
       <Footer />
     </div>
   );
 }
+

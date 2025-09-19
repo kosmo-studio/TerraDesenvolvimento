@@ -31,12 +31,14 @@ export default function MethodologiesSection() {
 
           {/* Parte de baixo: botão */}
           <div className="mt-8">
+             <a target="_blank" href="https://wa.me/556730263442">
             <button className="inline-flex items-center bg-terra-navy text-white px-5 py-3 rounded-lg shadow-lg hover:bg-terra-navy/90 transition w-fit">
               <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 24 24" className="w-5 h-5 mr-2">
                 <path d="M16.75 2h-9.5C5.23 2 4 3.23 4 4.75v14.5C4 20.77 5.23 22 6.75 22h9.5c1.52 0 2.75-1.23 2.75-2.75V4.75C19.5 3.23 18.27 2 16.75 2zM12 21c-.69 0-1.25-.56-1.25-1.25S11.31 18.5 12 18.5s1.25.56 1.25 1.25S12.69 21 12 21zM17 17H7V5h10v12z" />
               </svg>
-              <a target="_blank" href="https://wa.me/556730263442">SOLICITE UM PLANO DE AÇÃO PERSONALIZADO</a>
+             SOLICITE UM PLANO DE AÇÃO PERSONALIZADO
             </button>
+            </a>
           </div>
         </div>
       </div>

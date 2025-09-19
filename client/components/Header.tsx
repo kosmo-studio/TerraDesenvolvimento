@@ -5,7 +5,7 @@ import { Link } from "react-router-dom";
 
 const navLinks = [
   { to: "/servicos", label: "Serviços" },
-  { to: "/resultados", label: "Resultados" },
+  { to: "", label: "Resultados" },
   { to: "/cursosEventos", label: "Cursos e Eventos" },
   { to: "/noticias", label: "Notícias" },
   { to: "/trabalhe-conosco", label: "Trabalhe Conosco" },
@@ -65,10 +65,11 @@ export default function Header() {
         </nav>
 
         {/* CTA Button: Alterado para 'lg:flex' */}
+        <a target="_blank" href="https://wa.me/556730263442">
         <Button className="hidden lg:flex bg-terra-dark-blue hover:bg-terra-navy text-white px-4 xl:px-6 py-3 text-xs xl:text-sm font-lexend rounded-lg transition-colors">
-         <a target="_blank" href="https://wa.me/556730263442">FALE COM UM CONSULTOR</a>
+         FALE COM UM CONSULTOR
         </Button>
-
+        </a>
         <button className="lg:hidden p-2" aria-label="Menu" onClick={toggleMenu}>
           <svg
             className={`w-6 h-6 transition-transform duration-300 ${isScrolled || isMenuOpen ? 'text-terra-navy' : 'text-terra-navy'}`}
@@ -98,9 +99,11 @@ export default function Header() {
               {link.label}
             </Link>
           ))}
+        <a target="_blank" href="https://wa.me/556730263442">
           <Button className="w-full bg-terra-dark-blue hover:bg-terra-navy text-white px-6 py-3 text-sm font-lexend rounded-lg transition-colors">
             FALE COM UM CONSULTOR
           </Button>
+          </a>
         </div>
       )}
     </header>

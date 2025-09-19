@@ -1,3 +1,4 @@
+import AnimatedSection from "@/components/AnimatedSection";
 import Footer from "@/components/Footer";
 import Header from "@/components/Header";
 import ClientsSection from "@/components/interno/ClientsSection";
@@ -9,17 +10,19 @@ export default function ImplementacaoDeControle() {
   return (
     <div className="bg-white overflow-x-hidden">
       <main>
-        <Header />
         
+        <Header />
+        <AnimatedSection variant="fade">
         {/* Hero Section */}
          <HeroSection
           backgroundImage="/images/bg-implantacao.png"
           title="Implantação de Controle"
           subtitle="Acesso pelos gestores e equipe dos dados e informações essenciais, com rapidez e confiabilidade, através da otimização dos controles existentes na fazenda, implantação de sistemas e outros métodos que se façam necessários para ter “a fazenda em suas mãos”."
         />
-
+        </AnimatedSection>
         {/* --- Seção de Introdução --- */}
         <section className="py-0 md:py-24 z-20">
+          <AnimatedSection>
           <div className="container mx-auto pt-14 max-w-7xl shadow-[0px_-40px_40px_-20px_rgba(0,0,0,0.3)] text-center bg-white relative mt-[-20px] md:-mt-40">
             <div className="flex flex-col md:flex-row items-center md:items-start gap-8 px-0 md:px-0 lg:px-5 xl:px-8">
               <div className="flex-shrink-0">
@@ -53,10 +56,12 @@ export default function ImplementacaoDeControle() {
               Definição dos indicadores que serão monitorados referentes a:
             </p>
           </div>
+         </AnimatedSection>
         </section>
 
         {/* --- Seção de Indicadores --- */}
         <section className="px-6 py-0">
+          <AnimatedSection>
           <div className="max-w-5xl mx-auto">
             <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8">
               <ServiceCard 
@@ -101,6 +106,7 @@ export default function ImplementacaoDeControle() {
               />
               
             </div>
+            
             {/* Tipografia mais fluida */}
             <p className="text-2xl sm:text-3xl md:text-4xl px-4 lg:px-[19%] xl:px-[20%] justify-center text-center font-bold font-lexend text-terra-navy mt-24 mb-10 sm:mb-[-35px]">
               Desenvolvimento Gerencial:
@@ -130,29 +136,32 @@ export default function ImplementacaoDeControle() {
                 label="e." 
                 icon="/images/gestaoTempo.svg"  
                 text="Gestão baseada em informação no tempo e forma adequada, garantindo a execução dos processos com excelência." 
-              />
-              
+              />   
             </div>
-            
-
-
           </div>
+          </AnimatedSection>
         </section>
         {/* --- Textos e Divisor --- */}
-      <div className="max-w-6xl px-4 flex flex-col gap-6 mt-40 mx-auto items-center">
-        <h2 className="text-[#162946] text-2xl sm:text-4xl md:text-3xl lg:text-4xl xl:text-5xl text-center font-semibold leading-tight">
-          Com controles bem estruturados,
-          sua fazenda alcança maior organização,
-          transparência e segurança nas informações.
-        </h2>
+        <AnimatedSection>
+        <div className="max-w-6xl px-4 flex flex-col gap-6 mt-40 mx-auto items-center">
+          <h2 className="text-[#162946] text-2xl sm:text-4xl md:text-3xl lg:text-4xl xl:text-5xl text-center font-semibold leading-tight">
+            Com controles bem estruturados,
+            sua fazenda alcança maior organização,
+            transparência e segurança nas informações.
+          </h2>
 
-        <p className="text-[#162946] text-lg sm:text-xl lg:text-2xl font-light text-center leading-relaxed max-w-3xl">
-          Isso significa decisões mais rápidas, gestão profissional
-          e resultados que fortalecem o futuro do seu negócio.
-        </p>
-      </div>
+          <p className="text-[#162946] text-lg sm:text-xl lg:text-2xl font-light text-center leading-relaxed max-w-3xl">
+            Isso significa decisões mais rápidas, gestão profissional
+            e resultados que fortalecem o futuro do seu negócio.
+          </p>
+        </div>
+        </AnimatedSection>
+        <AnimatedSection>
         <ClientsSection />
+        </AnimatedSection>
+        <AnimatedSection>
         <CTASection />
+        </AnimatedSection>
       </main>
       <Footer />
     </div>
