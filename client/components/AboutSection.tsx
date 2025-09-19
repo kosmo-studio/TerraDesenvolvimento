@@ -15,7 +15,7 @@ export default function AboutSection() {
               </h2>
               <p className="text-xl font-lexend text-terra-navy font-light">Sócio-diretor Terra</p>
             </div>
-            <div className="space-y-4 text-lg font-lexend text-terra-navy leading-relaxed">
+            <div className="space-y-4 text-center lg:text-left text-lg font-lexend text-terra-navy leading-relaxed">
               <p>Nos últimos 25 anos, a pecuária e o agronegócio brasileiro evoluíram significativamente, impulsionados pela necessidade de mudanças e maior eficiência "da porteira pra dentro". Nesse cenário, a Terra Desenvolvimento se destacou ao identificar a carência de segurança na tomada de decisões do setor.</p>
               <p>Enquanto práticas de gestão já consolidadas em outros segmentos ainda eram pouco aplicadas no campo, desenvolvemos, junto aos nossos clientes, uma metodologia sólida e prática, indo além da consultoria tradicional. Assumimos o papel de assessoria, atuando lado a lado com o produtor para implementar ferramentas de gestão eficientes e capacitá-lo a tomar decisões com autonomia.</p>
             </div>

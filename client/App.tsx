@@ -24,6 +24,7 @@ import PerformaTerra from "./pages/internasServiços/PerformaTerra";
 import AnalisePlanoDeNegocio from "./pages/internasServiços/AnalisePlanoDeNegocio";
 import EmpresaPecuaria from "./pages/internasCursos/EmpresaPecuaria";
 import DetalheNoticia from "./pages/internaNoticias.tsx/DetalheNoticia";
+import NossaHistoria from "./pages/nossaHistoria";
 
 const queryClient = new QueryClient();
 
@@ -43,14 +44,17 @@ const App = () => (
           <Route path="/trabalhe-conosco" element={<TrabalheConosco />} />
           <Route path="/contato" element={<Contato />} />
           <Route path="/servicos/DiagnosticoGlobal" element={<DiagnosticoGlobal />} />
-          <Route path="/servicos/ImplementaçãoDeControle" element={<ImplementacaoControle />} />
+          <Route path="/servicos/ImplementacaoDeControle" element={<ImplementacaoControle />} />
           <Route path="/servicos/PlanejamentoEstrategico" element={<PlanejamentoEstrategico />} />
           <Route path="/servicos/DesenvolvimentoGerencial" element={<DesenvolvimentoGerencial />} />
           <Route path="/servicos/ProgramaRecuperaçãoGerencial" element={<Prg />} />
           <Route path="/servicos/AnalisePlanoDeNegocio" element={<AnalisePlanoDeNegocio />} />
           <Route path="/servicos/PerformaTerra" element={<PerformaTerra />} />
           <Route path="/EmpresaPecuaria" element={<EmpresaPecuaria />} />
+          <Route path="/nossaHistoria" element={<NossaHistoria />} />
           <Route path="/noticias/:slug" element={<DetalheNoticia />} />
+          <Route path="/Resultados" element={<Resultados />} />
+
 
 
 
