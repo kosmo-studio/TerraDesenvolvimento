@@ -4,21 +4,21 @@ import React from "react";
 
 // --- DADOS (sem alterações) ---
 const menuLinks = [
-  { href: "/institucional", label: "Institucional" },
+  { href: "", label: "Institucional" },
   { href: "/noticias", label: "Notícias" },
   { href: "/trabalhe-conosco", label: "Trabalhe conosco" },
-  { href: "/resultados", label: "Resultados" },
-  { href: "/cursos-e-eventos", label: "Cursos e Eventos" },
+  { href: "", label: "Resultados" },
+  { href: "/cursosEventos", label: "Cursos e Eventos" },
 ];
 
 const servicosLinks = [
-  { href: "/servicos/diagnostico-global", label: "Diagnóstico de Desempenho Global" },
-  { href: "/servicos/implementacao-de-controle", label: "Implementação de Controle" },
-  { href: "/servicos/planejamento-estrategico", label: "Planejamento Estratégico" },
-  { href: "/servicos/prg", label: "PRG: Prog. de Recuperação Gerencial" },
-  { href: "/servicos/desenvolvimento-gerencial", label: "Desenvolvimento Gerencial" },
-  { href: "/servicos/performa-terra", label: "Performa Terra" },
-  { href: "/servicos/plano-aquisicao", label: "Plano de Aquisição de Fazendas" },
+  { href: "/servicos/DiagnosticoGlobal", label: "Diagnóstico de Desempenho Global" },
+  { href: "/servicos/ImplementaçãoDeControle", label: "Implementação de Controle" },
+  { href: "/servicos/PlanejamentoEstrategico", label: "Planejamento Estratégico" },
+  { href: "/servicos/ProgramaRecuperaçãoGerencial", label: "PRG: Prog. de Recuperação Gerencial" },
+  { href: "/servicos/DesenvolvimentoGerencial", label: "Desenvolvimento Gerencial" },
+  { href: "/servicos/PerformaTerra", label: "Performa Terra" },
+  { href: "/servicos/AnalisePlanoDeNegocio", label: "Plano de Aquisição de Fazendas" },
 ];
 
 const contactInfo = {
