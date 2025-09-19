@@ -3,36 +3,41 @@ import Footer from "../components/Footer";
 import { Button } from "@/components/ui/button";
 import { ArrowRight } from "lucide-react";
 import { Link } from "react-router-dom";
-import AnimatedSection from "@/components/AnimatedSection"; 
+import AnimatedSection from "@/components/AnimatedSection";
 
 const servicos = [
   {
     titulo: "Diagnóstico de Desempenho Global",
-    descricao: "Apresentar e discutir onde sua fazenda está, o “Ponto A” e onde poderá chegar...",
+    descricao:
+      "Apresentar e discutir onde sua fazenda está, o “Ponto A” e onde poderá chegar...",
     imagem: "/images/Diagnostico-desempenho.png",
     link: "/servicos/DiagnosticoGlobal",
   },
   {
     titulo: "Implementação de Controle",
-    descricao: "Acesso pelos gestores e equipe dos dados e informações essenciais...",
+    descricao:
+      "Acesso pelos gestores e equipe dos dados e informações essenciais...",
     imagem: "/images/Controle.png",
     link: "/servicos/ImplementaçãoDeControle",
   },
   {
     titulo: "Planejamento Estratégico",
-    descricao: "O PROJETO é o elemento determinante para o sucesso da atividade em questão...",
+    descricao:
+      "O PROJETO é o elemento determinante para o sucesso da atividade em questão...",
     imagem: "/images/planejamentoEstrategico.jpeg",
     link: "/servicos/PlanejamentoEstrategico",
   },
   {
     titulo: "PRG: Programa de Recuperação Gerencial",
-    descricao: "O Programa de Recuperação (ou intervenção) Gerencial tem por missão gerar lucro...",
+    descricao:
+      "O Programa de Recuperação (ou intervenção) Gerencial tem por missão gerar lucro...",
     imagem: "/images/Prg.jpeg",
     link: "/servicos/ProgramaRecuperaçãoGerencial",
   },
   {
     titulo: "Desenvolvimento Gerencial",
-    descricao: "Construir equipe realizadora capaz de assumir e bater as metas estabelecidas...",
+    descricao:
+      "Construir equipe realizadora capaz de assumir e bater as metas estabelecidas...",
     imagem: "/images/desenvolvimentoGen.png",
     link: "/servicos/DesenvolvimentoGerencial",
   },
@@ -44,20 +49,15 @@ const servicos = [
   },
   {
     titulo: "Análise e Plano de Negócios: Aquisição de Fazendas",
-    descricao: "Suporte na análise e decisão de investimento e compra de propriedade rural...",
+    descricao:
+      "Suporte na análise e decisão de investimento e compra de propriedade rural...",
     imagem: "/images/planoNegocio.jpeg",
     link: "/servicos/AnalisePlanoDeNegocio",
   },
 ];
 
-const ServicoCard = ({
-  servico,
-}: {
-  servico: (typeof servicos)[0];
-}) => (
-  <div
-    className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12 items-center px-4 sm:px-8 md:px-12 lg:px-24"
-  >
+const ServicoCard = ({ servico }: { servico: (typeof servicos)[0] }) => (
+  <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12 items-center px-4 sm:px-8 md:px-12 lg:px-24">
     {/* Image on the left */}
     <div>
       <img
@@ -72,10 +72,13 @@ const ServicoCard = ({
         {servico.titulo}
       </h3>
       <p className="text-terra-gray leading-relaxed">{servico.descricao}</p>
-      
+
       {servico.link && (
         <Link to={servico.link}>
-          <Button variant="outline" className="text-white bg-terra-navy hover:border-terra-navy hover:bg-white hover:text-terra-navy">
+          <Button
+            variant="outline"
+            className="text-white bg-terra-navy hover:border-terra-navy hover:bg-white hover:text-terra-navy"
+          >
             Saiba mais
             <ArrowRight className="ml-2 h-4 w-4" />
           </Button>
@@ -98,9 +101,10 @@ export default function Servicos() {
                 Serviços
               </h1>
               <p className="text-base sm:text-lg lg:text-xl font-light">
-                Soluções completas para a sua fazenda, 
+                Soluções completas para a sua fazenda,
                 <br></br>
-                sempre com foco em produtividade, eficiência e melhores resultados.
+                sempre com foco em produtividade, eficiência e melhores
+                resultados.
               </p>
             </div>
           </section>
@@ -122,16 +126,18 @@ export default function Servicos() {
           <section className="py-16 px-4 lg:px-8 bg-terra-light-gray">
             <div className="max-w-4xl mx-auto text-center">
               <h2 className="text-3xl sm:text-4xl lg:text-5xl font-lexend text-terra-navy mb-8">
-                <span className="font-normal">Seja você também um cliente </span>
+                <span className="font-normal">
+                  Seja você também um cliente{" "}
+                </span>
                 <span className="font-bold">Terra!</span>
               </h2>
               <a target="_blank" href="https://wa.me/556730263442">
-              <Button
-                size="lg"
-                className="bg-terra-navy hover:bg-terra-dark-blue/95 text-white px-8 py-4 text-lg font-lexend rounded-lg flex items-center gap-3 mx-auto"
-              >
-                FALE COM UM CONSULTOR
-              </Button>
+                <Button
+                  size="lg"
+                  className="bg-terra-navy hover:bg-terra-dark-blue/95 text-white px-8 py-4 text-lg font-lexend rounded-lg flex items-center gap-3 mx-auto"
+                >
+                  FALE COM UM CONSULTOR
+                </Button>
               </a>
             </div>
           </section>
