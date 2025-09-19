@@ -111,7 +111,7 @@ export default function ServicesSection() {
             <span className="font-bold">Terra</span>
           </h2>
         </div>
-        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-6">
+        <div className="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 w-50 md:w-90 gap-6">
           {servicesData.map((service) => (
             // 3. O card agora é um componente <Link> clicável
             <Link
@@ -122,7 +122,7 @@ export default function ServicesSection() {
               <div className="mb-6 h-16 w-16 flex items-center justify-center transition-transform duration-300 group-hover:scale-110">
                 {service.icon}
               </div>
-              <h3 className="text-xl font-lexend">
+              <h3 className="text-xs xl:text-xl font-lexend">
                 {service.title.map((line, i) => (
                   <React.Fragment key={i}>
                     {line}

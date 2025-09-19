@@ -1,16 +1,33 @@
 import React from "react";
+import { useNavigate } from "react-router-dom"; // se estiver usando React Router
 
 const clientsData = [
-  { imgSrc: "/images/carmem.jpeg", name: ["Carmem", "Perez"] },
-  { imgSrc: "/images/thiago.jpeg", name: ["Thiago", "Carminati"] },
-  { imgSrc: "/images/elton.jpeg", name: ["Elton", "Silveira"] },
-  { imgSrc: "/images/gustavoArfux.jpeg", name: ["Gustavo", "Arfux"] },
-  { imgSrc: "https://api.builder.io/api/v1/image/assets/TEMP/ec671130f158f4501e49d9aa387e004ef26316ce?width=1450", name: ["Duarte de", "Castro", "Cunha"] },
+  { imgSrc: "/images/carmem.jpeg", name: ["Carmem", "Perez"], link: "/resultados#carmem-perez" },
+  { imgSrc: "/images/thiago.jpeg", name: ["Thiago", "Carminati"], link: "/resultados#thiago-carminati" },
+  { imgSrc: "/images/gustavoArfux.jpeg", name: ["Gustavo", "Arfux"], link: "/resultados#gustavo-arfux" },
+  { imgSrc: "/images/elton.jpeg", name: ["Elton", "Silveira"], link: "/resultados#elton-silveira" },
 ];
 
 export default function TestimonialsSection() {
-
   const videoLink = "https://www.youtube.com/embed/Z0nEGV2h8ng?si=hDpB0haB_oCDpNXA";
+  const navigate = useNavigate(); // para navegação programática
+
+  // Função para lidar com click nos clientes
+  const handleClientClick = (link) => {
+    if (link.startsWith("/resultados#")) {
+      const [path, hash] = link.split("#");
+      navigate(path); // navega para a página resultados
+      setTimeout(() => {
+        const element = document.getElementById(hash);
+        if (element) {
+          element.scrollIntoView({ behavior: "smooth", block: "start" });
+        }
+      }, 100); 
+    } else {
+      
+      window.location.href = link;
+    }
+  };
 
   return (
     <section className="py-16 px-4 lg:px-8 bg-white">
@@ -22,11 +39,9 @@ export default function TestimonialsSection() {
           </h2>
         </div>
 
-        {/* --- SEÇÃO DO VÍDEO ATUALIZADA --- */}
+        {/* --- SEÇÃO DO VÍDEO --- */}
         <div className="mb-16">
-          {/* 1. Wrapper responsivo que mantém a proporção 16:9 */}
           <div className="relative w-full max-w-4xl mx-auto overflow-hidden rounded-3xl shadow-lg aspect-video">
-            {/* 2. O iframe do YouTube que preenche o wrapper */}
             <iframe
               className="absolute top-0 left-0 w-full h-full"
               src={videoLink}
@@ -44,16 +59,24 @@ export default function TestimonialsSection() {
           <p className="text-xl font-lexend text-terra-navy mt-4">Veja os depoimentos sobre nossas parcerias</p>
         </div>
 
-        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-4">
+        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 px-32 gap-4">
           {clientsData.map((client) => (
-            <div key={client.name.join(' ')} className="text-center">
+            <button
+              key={client.name.join(' ')}
+              onClick={() => handleClientClick(client.link)}
+              className="text-center hover:opacity-80 transition"
+            >
               <div className="bg-terra-darker-blue rounded-3xl overflow-hidden mb-4">
-                <img src={client.imgSrc} alt={client.name.join(' ')} className="w-full h-80 object-cover" />
+                <img
+                  src={client.imgSrc}
+                  alt={client.name.join(' ')}
+                  className="w-full h-80 object-cover"
+                />
               </div>
               <h4 className="text-lg font-lexend text-terra-navy">
                 {client.name.map((line, i) => <React.Fragment key={i}>{line}<br /></React.Fragment>)}
               </h4>
-            </div>
+            </button>
           ))}
         </div>
       </div>

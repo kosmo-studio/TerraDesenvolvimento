@@ -26,10 +26,10 @@ const unidades = [
     telefone: ["55 (62) 99688-1105"],
   },
   {
-    cidade: "Ribeirão Preto - SP",
-    imagem: "/images/ribeirao.png",
-    endereco: "Rua do Professor, 370 sala 51 Jardim Irajá - Cep: 14020-280 / Ribeirão Preto - SP",
-    telefone: ["55 (16) 99630-1209"],
+    cidade: "Ji-Paraná - RO",
+    imagem: "/images/jiparana.jpeg",
+    endereco: "Av. Mal. Rondon, 334 - Centro - CEP: 76900-036 / Ji-Paraná - RO",
+    telefone: ["55 (65) 98429-8379"],
   },
   {
     cidade: "Cuiabá - MT",
@@ -38,10 +38,10 @@ const unidades = [
     telefone: ["55 (65) 99692-1046"],
   },
   {
-    cidade: "Uruguaiana - RS",
-    imagem: "/images/uruguaiana.png",
-    endereco: "Domingo de Almeida, 3134 Bairro São Miguel - Cep: 97502-768 / Uruguaiana - RS",
-    telefone: ["55 (55) 99669-2703"],
+    cidade: "Araguaína - TO",
+    imagem: "/images/araguaina.jpeg",
+    endereco: "Rua Gonçalves Ledo, 264 - Cep: 77805-060 / Araguaína - TO",
+    telefone: ["55 (44) 99126-6268"],
   },
   {
     cidade: "Assunção - Paraguai",

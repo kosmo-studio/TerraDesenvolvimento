@@ -44,17 +44,16 @@ export default function InnovationSection() {
         </div>
       </section>
 
-      <section className="py-8 px-4 lg:px-8">
+      <section className="py-2 px-4 lg:px-8">
         <div className="max-w-7xl mx-auto">
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
+          <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-4 gap-4">
             {innovationCards.map((card) => (
-              // 2. O card inteiro agora é um componente <Link>.
               <Link to={card.href} key={card.alt} className="text-left group block transition-transform duration-300 hover:scale-105">
-                <div className="relative h-[550px] mb-6 rounded-3xl overflow-hidden">
-                  {/* 3. Efeito de zoom na imagem ao passar o mouse no card. */}
+                <div className="relative h-[300px] md:h-[500px] lg:h-[550px] mb-6 rounded-3xl overflow-hidden">
+             
                   <img src={card.imgSrc} alt={card.alt} className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-110" />
                 </div>
-                <h3 className="text-2xl font-lexend text-terra-navy leading-tight">
+                <h3 className="text-lg lg:text-2xl font-lexend text-terra-navy leading-tight">
                   {card.title.map((line, index) => (
                     <React.Fragment key={index}>
                       {line}

@@ -18,7 +18,7 @@ const servicos = [
     descricao:
       "Acesso pelos gestores e equipe dos dados e informações essenciais...",
     imagem: "/images/Controle.png",
-    link: "/servicos/ImplementaçãoDeControle",
+    link: "/servicos/ImplementacaoDeControle",
   },
   {
     titulo: "Planejamento Estratégico",
@@ -123,7 +123,7 @@ export default function Servicos() {
 
         {/* CTA Section */}
         <AnimatedSection>
-          <section className="py-16 px-4 lg:px-8 bg-terra-light-gray">
+          <section className="py-16 px-4 lg:px-8">
             <div className="max-w-4xl mx-auto text-center">
               <h2 className="text-3xl sm:text-4xl lg:text-5xl font-lexend text-terra-navy mb-8">
                 <span className="font-normal">
