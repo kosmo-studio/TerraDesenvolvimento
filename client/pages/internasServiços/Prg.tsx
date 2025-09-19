@@ -1,3 +1,4 @@
+import AnimatedSection from "@/components/AnimatedSection";
 import Footer from "@/components/Footer";
 import Header from "@/components/Header";
 import ClientsSection from "@/components/interno/ClientsSection";
@@ -29,6 +30,7 @@ export default function Prg() {
       <main>
         <Header />
         {/* Hero Section */}
+        <AnimatedSection variant="fade">
         <section className="relative w-full h-[80vh] text-white">
         <div
           className="absolute inset-0 bg-cover bg-center"
@@ -44,9 +46,11 @@ export default function Prg() {
           </p>
         </div>
       </section>
+      </AnimatedSection>
 
         {/* --- Seção de Introdução --- */}
         <section className="py-0 md:py-24 z-20">
+          <AnimatedSection>
           <div className="container mx-auto pt-14 max-w-7xl shadow-[0px_-40px_40px_-20px_rgba(0,0,0,0.3)] text-center bg-white relative mt-[-20px] md:-mt-40">
             <div className="flex flex-col md:flex-row items-center gap-8 px-0 md:px-0 lg:px-5 xl:px-8">
               <div className="flex-shrink-0 ">
@@ -81,9 +85,11 @@ export default function Prg() {
                 Executamos a Análise e Plano de Negócio em 05 etapas:
             </p>
           </div>
+          </AnimatedSection>
         </section>
 
         <section className="px-4 py-16">
+        <AnimatedSection>
         <div className="max-w-5xl mx-auto">
           <div className="flex flex-col items-center space-y-8">
             {passos.map((passo) => (
@@ -107,19 +113,26 @@ export default function Prg() {
             ))}
           </div>
         </div>
+      </AnimatedSection>
       </section>
         {/* --- Textos e Divisor --- */}
-      <div className="max-w-6xl px-3 flex flex-col gap-6 mt-20 sm:mt-40 mx-auto items-center">
-        <h2 className="text-[#162946] text-2xl sm:text-4xl md:text-3xl lg:text-4xl xl:text-5xl text-center font-semibold leading-relaxed">
-            Com uma gestão orientada para resultados, garantimos a recuperação da performance e a valorização dos ativos da fazenda.
-        </h2>
+        <AnimatedSection>
+        <div className="max-w-6xl px-3 flex flex-col gap-6 mt-20 sm:mt-40 mx-auto items-center">
+          <h2 className="text-[#162946] text-2xl sm:text-4xl md:text-3xl lg:text-4xl xl:text-5xl text-center font-semibold leading-relaxed">
+              Com uma gestão orientada para resultados, garantimos a recuperação da performance e a valorização dos ativos da fazenda.
+          </h2>
 
-        <p className="text-[#162946] text-lg sm:text-xl lg:text-3xl font-light text-center leading-relaxed max-w-3xl">
-           Nossa experiência mostra que, com transparência e inovação, é possível transformar desafios em crescimento sólido e lucrativo.
-        </p>
-      </div>
+          <p className="text-[#162946] text-lg sm:text-xl lg:text-3xl font-light text-center leading-relaxed max-w-3xl">
+            Nossa experiência mostra que, com transparência e inovação, é possível transformar desafios em crescimento sólido e lucrativo.
+          </p>
+        </div>
+        </AnimatedSection>
+        <AnimatedSection>
         <ClientsSection />
+        </AnimatedSection>
+        <AnimatedSection>
         <CTASection />
+        </AnimatedSection>
       </main>
       <Footer />
     </div>

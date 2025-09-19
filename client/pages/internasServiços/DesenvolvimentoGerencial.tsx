@@ -1,3 +1,4 @@
+import AnimatedSection from "@/components/AnimatedSection";
 import Footer from "@/components/Footer";
 import Header from "@/components/Header";
 import ClientsSection from "@/components/interno/ClientsSection";
@@ -11,14 +12,16 @@ export default function DesenvolvimentoGerencial() {
       <main>
         <Header />
         {/* Hero Section */}
+        <AnimatedSection variant="fade">
          <HeroSection
           backgroundImage="/images/bg-desenvolvimentogerencial.png"
           title="Desenvolvimento Gerencial"
           subtitle="Construir equipe realizadora capaz de assumir e bater as metas estabelecidas. Tomar ações eficientes no propósito de “forjar” uma cultura gerencial objetiva,  duradoura e que respeite seus valores na conquista de seus objetivos."
         />
-
+        </AnimatedSection>
         {/* --- Seção de Introdução --- */}
         <section className="py-0 md:py-24 z-20">
+          <AnimatedSection>
           <div className="container mx-auto pt-14 max-w-7xl shadow-[0px_-40px_40px_-20px_rgba(0,0,0,0.3)] text-center bg-white relative mt-[-20px] md:-mt-40">
             <div className="flex flex-col md:flex-row items-center gap-8 px-0 md:px-0 lg:px-5 xl:px-8">
               <div className="flex-shrink-0">
@@ -40,10 +43,12 @@ export default function DesenvolvimentoGerencial() {
               Rotinas mensais focadas na gestão operacional:
             </p>
           </div>
+          </AnimatedSection>
         </section>
 
         {/* --- Seção de Indicadores (para a troca de icones o icone deve ser totalmente preto) --- */}
         <section className="px-6 py-0">
+          <AnimatedSection>
           <div className="max-w-5xl mx-auto">
             <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8">
               <ServiceCard 
@@ -147,25 +152,32 @@ export default function DesenvolvimentoGerencial() {
                     />
                 </div>
             </div>
+          </AnimatedSection>
         </section>
         {/* --- Textos e Divisor --- */}
-      <div className="max-w-6xl px-3 flex flex-col gap-6 mt-40 mx-auto items-center">
-        <h2 className="text-[#162946] text-2xl sm:text-4xl md:text-3xl lg:text-4xl xl:text-5xl text-center font-semibold leading-relaxed">
-            Ao desenvolver equipes realizadoras,
-            sua fazenda ganha mais do que
-            resultados: constrói uma cultura sólida,
-            capaz de sustentar o crescimento
-            a longo prazo.
-        </h2>
+        <AnimatedSection>
+        <div className="max-w-6xl px-3 flex flex-col gap-6 mt-40 mx-auto items-center">
+          <h2 className="text-[#162946] text-2xl sm:text-4xl md:text-3xl lg:text-4xl xl:text-5xl text-center font-semibold leading-relaxed">
+              Ao desenvolver equipes realizadoras,
+              sua fazenda ganha mais do que
+              resultados: constrói uma cultura sólida,
+              capaz de sustentar o crescimento
+              a longo prazo.
+          </h2>
 
-        <p className="text-[#162946] text-lg sm:text-xl lg:text-3xl font-light text-center leading-relaxed max-w-3xl">
-            A experiência de nossos clientes mostra que pessoas
-            engajadas, com metas claras, são a chave para maior
-            gerenciabilidade e lucratividade.
-        </p>
-      </div>
+          <p className="text-[#162946] text-lg sm:text-xl lg:text-3xl font-light text-center leading-relaxed max-w-3xl">
+              A experiência de nossos clientes mostra que pessoas
+              engajadas, com metas claras, são a chave para maior
+              gerenciabilidade e lucratividade.
+          </p>
+        </div>
+        </AnimatedSection>
+        <AnimatedSection>
         <ClientsSection />
+        </AnimatedSection>
+        <AnimatedSection>
         <CTASection />
+        </AnimatedSection>
       </main>
       <Footer />
     </div>

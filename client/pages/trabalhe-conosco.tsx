@@ -42,7 +42,7 @@ export default function TrabalheConosco() {
                   <input
                     type="text"
                     placeholder="Seu nome completo"
-                    className="w-full border-gray-300 rounded-md px-3 py-2 focus:outline-none focus:ring-2 focus:ring-terra-navy"
+                    className="w-full border border-terra-navy rounded-md px-3 py-2  focus:ring-2 focus:ring-terra-navy"
                     required
                   />
                 </div>
@@ -54,7 +54,7 @@ export default function TrabalheConosco() {
                     <input
                       type="email"
                       placeholder="seu.email@exemplo.com"
-                      className="w-full border-gray-300 rounded-md px-3 py-2 focus:outline-none focus:ring-2 focus:ring-terra-navy"
+                      className="w-full border border-terra-navy rounded-md px-3 py-2  focus:ring-terra-navy"
                       required
                     />
                   </div>
@@ -63,7 +63,7 @@ export default function TrabalheConosco() {
                     <input
                       type="tel"
                       placeholder="(xx) xxxxx-xxxx"
-                      className="w-full border-gray-300 rounded-md px-3 py-2 focus:outline-none focus:ring-2 focus:ring-terra-navy"
+                      className="w-full border border-terra-navy text-sm rounded-md px-3 py-2  focus:ring-2 focus:ring-terra-navy"
                       required
                     />
                   </div>
@@ -77,7 +77,7 @@ export default function TrabalheConosco() {
                   <textarea
                     rows={5}
                     placeholder="Conte-nos como você pode contribuir para nossa equipe..."
-                    className="w-full border-gray-300 rounded-md px-3 py-2 focus:outline-none focus:ring-2 focus:ring-terra-navy"
+                    className="w-full border border-terra-navy rounded-md px-3 py-2  focus:ring-2 focus:ring-terra-navy"
                   />
                 </div>
 
@@ -89,7 +89,7 @@ export default function TrabalheConosco() {
                   <input
                     type="file"
                     accept=".pdf"
-                    className="w-full text-sm text-slate-500 border border-gray-300 rounded-md cursor-pointer
+                    className="w-full border border-terra-navy text-sm text-slate-500  rounded-md cursor-pointer
                     file:mr-4 file:py-2 file:px-4
                     file:rounded-l-md file:border-0
                     file:bg-terra-navy file:text-white hover:file:bg-terra-green"

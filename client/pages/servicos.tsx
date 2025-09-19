@@ -21,31 +21,31 @@ const servicos = [
   {
     titulo: "Planejamento Estratégico",
     descricao: "O PROJETO é o elemento determinante para o sucesso da atividade em questão...",
-    imagem: "/images/planejamento.png",
+    imagem: "/images/planejamentoEstrategico.jpeg",
     link: "/servicos/PlanejamentoEstrategico",
   },
   {
     titulo: "PRG: Programa de Recuperação Gerencial",
     descricao: "O Programa de Recuperação (ou intervenção) Gerencial tem por missão gerar lucro...",
-    imagem: "/images/prg.png",
+    imagem: "/images/Prg.jpeg",
     link: "/servicos/ProgramaRecuperaçãoGerencial",
   },
   {
     titulo: "Desenvolvimento Gerencial",
     descricao: "Construir equipe realizadora capaz de assumir e bater as metas estabelecidas...",
-    imagem: "/images/gerencial.png",
+    imagem: "/images/desenvolvimentoGen.png",
     link: "/servicos/DesenvolvimentoGerencial",
   },
   {
     titulo: "Performa Terra",
     descricao: "O Performa Terra é a nossa mais nova modalidade de produto...",
-    imagem: "/images/reforma.png",
+    imagem: "/images/performa.png",
     link: "/servicos/PerformaTerra",
   },
   {
     titulo: "Análise e Plano de Negócios: Aquisição de Fazendas",
     descricao: "Suporte na análise e decisão de investimento e compra de propriedade rural...",
-    imagem: "/images/analise.png",
+    imagem: "/images/planoNegocio.jpeg",
     link: "/servicos/AnalisePlanoDeNegocio",
   },
 ];
@@ -125,12 +125,14 @@ export default function Servicos() {
                 <span className="font-normal">Seja você também um cliente </span>
                 <span className="font-bold">Terra!</span>
               </h2>
+              <a target="_blank" href="https://wa.me/556730263442">
               <Button
                 size="lg"
-                className="bg-terra-green hover:bg-green-600 text-white px-8 py-4 text-lg font-lexend rounded-lg flex items-center gap-3 mx-auto"
+                className="bg-terra-navy hover:bg-terra-dark-blue/95 text-white px-8 py-4 text-lg font-lexend rounded-lg flex items-center gap-3 mx-auto"
               >
                 FALE COM UM CONSULTOR
               </Button>
+              </a>
             </div>
           </section>
         </AnimatedSection>

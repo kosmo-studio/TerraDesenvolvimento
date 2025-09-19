@@ -1,8 +1,10 @@
+import AnimatedSection from "@/components/AnimatedSection";
 import Footer from "@/components/Footer";
 import Header from "@/components/Header";
 import ClientsSection from "@/components/interno/ClientsSection";
 import CTASection from "@/components/interno/CTASection";
 import HeroSection from "@/components/interno/HeroSection";
+
 const passos = [
   {
     imagem: "/images/01.png",
@@ -35,6 +37,7 @@ export default function AnalisePlanoDeNegocio() {
   return (
     <div className="bg-white overflow-x-hidden">
       <main>
+        <AnimatedSection variant="fade">
         <Header />
         {/* Hero Section */}
          <HeroSection
@@ -42,9 +45,11 @@ export default function AnalisePlanoDeNegocio() {
           title="Análise e Plano de Negócios: Aquisição de fazendas"
           subtitle="Suporte na análise e decisão de investimento e compra de propriedade rural, baseado nas principais variáveis envolvidas na produção, projeção de resultados, rentabilidade e viabilidade econômica."
         />
-
+        </AnimatedSection>
         {/* --- Seção de Introdução --- */}
         <section className="py-0 md:py-24 z-20">
+        <AnimatedSection>
+          
           <div className="container mx-auto pt-14 max-w-7xl shadow-[0px_-40px_40px_-20px_rgba(0,0,0,0.3)] text-center bg-white relative  mt-[-20px] md:-mt-40">
             <div className="flex flex-col md:flex-row items-center gap-8 px-0 md:px-0 lg:px-5 xl:px-8">
               <div className="flex-shrink-0 ">
@@ -79,11 +84,12 @@ export default function AnalisePlanoDeNegocio() {
                 Executamos a Análise e Plano de Negócio em 05 etapas:
             </p>
           </div>
+        </AnimatedSection>
         </section>
 
         <section className="px-6 py-0">
-          <div className="max-w-5xl mx-auto">
-            
+        <AnimatedSection>
+          <div className="max-w-5xl mx-auto">           
                 <div className="flex flex-col items-center space-y-8">
                 {passos.map((passo) => (
                     <div key={passo.alt} className="flex flex-col md:flex-row items-center gap-8 w-full max-w-4xl">
@@ -96,23 +102,28 @@ export default function AnalisePlanoDeNegocio() {
                     </p>
                     </div>
                 ))}
-               
-              
             </div>
           </div>
+        </AnimatedSection>
         </section>
+        <AnimatedSection>
         {/* --- Textos e Divisor --- */}
-      <div className="max-w-6xl px-3 flex flex-col gap-6 mt-20 sm:mt-40 mx-auto items-center">
-        <h2 className="text-[#162946] text-2xl sm:text-4xl md:text-3xl lg:text-4xl xl:text-5xl text-center font-semibold leading-relaxed">
-            Com uma análise criteriosa e um plano de negócios sólido, garantimos que cada decisão de aquisição seja segura, estratégica e rentável.
-        </h2>
+        <div className="max-w-6xl px-3 flex flex-col gap-6 mt-20 sm:mt-40 mx-auto items-center">
+          <h2 className="text-[#162946] text-2xl sm:text-4xl md:text-3xl lg:text-4xl xl:text-5xl text-center font-semibold leading-relaxed">
+              Com uma análise criteriosa e um plano de negócios sólido, garantimos que cada decisão de aquisição seja segura, estratégica e rentável.
+          </h2>
 
-        <p className="text-[#162946] text-lg sm:text-xl lg:text-3xl font-light text-center leading-relaxed max-w-3xl">
-            Nossa experiência mostra que, com dados consistentes e gestão estruturada, é possível transformar investimentos em patrimônios de alto desempenho.
-        </p>
-      </div>
+          <p className="text-[#162946] text-lg sm:text-xl lg:text-3xl font-light text-center leading-relaxed max-w-3xl">
+              Nossa experiência mostra que, com dados consistentes e gestão estruturada, é possível transformar investimentos em patrimônios de alto desempenho.
+          </p>
+        </div>
+        </ AnimatedSection>
+        <AnimatedSection>
         <ClientsSection />
+        </AnimatedSection>
+        <AnimatedSection>
         <CTASection />
+        </ AnimatedSection>
       </main>
       <Footer />
     </div>
