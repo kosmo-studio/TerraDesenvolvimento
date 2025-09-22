@@ -40,7 +40,7 @@ export default function TestimonialsSection() {
 
         {/* --- SEÇÃO DO VÍDEO --- */}
         <div className="mb-16">
-          <div className="relative w-full max-w-4xl mx-auto overflow-hidden rounded-3xl shadow-lg aspect-video">
+          <div className="relative w-full max-w-4xl mx-auto overflow-hidden rounded-lg md:rounded-3xl shadow-lg aspect-video">
             <iframe
               className="absolute top-0 left-0 w-full h-full"
               src={videoLink}

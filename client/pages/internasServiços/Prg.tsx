@@ -69,17 +69,17 @@ export default function Prg() {
                   />
                 </div>
                 <div className=" space-y-2 md:space-y-0 lg:space-y-2 xl:space-y-3 ">
-                  <h2 className="text-2xl sm:text-3xl md:text-xl lg:text-2xl xl:text-4xl md:text-left font-light font-lexend text-white">
+                  <h2 className="text-xl sm:text-3xl md:text-xl lg:text-2xl xl:text-4xl text-left font-light font-lexend text-white">
                     <span className="bg-terra-navy text-white px-2">
                       Após decisão e aquisição da propriedade, coordenamos
                     </span>
                   </h2>
-                  <h2 className="text-2xl sm:text-3xl md:text-xl lg:text-2xl xl:text-4xl md:text-left font-light font-lexend text-white">
+                  <h2 className="text-xl sm:text-3xl md:text-xl lg:text-2xl xl:text-4xl text-left font-light font-lexend text-white">
                     <span className="bg-terra-navy text-white px-2">
                       projeto de exploração agropecuária para atender as
                     </span>
                   </h2>
-                  <h2 className="text-2xl sm:text-3xl md:text-xl lg:text-2xl xl:text-4xl md:text-left font-light font-lexend text-white">
+                  <h2 className="text-xl sm:text-3xl md:text-xl lg:text-2xl xl:text-4xl text-left font-light font-lexend text-white">
                     <span className="bg-terra-navy text-white px-2">
                       expectativas financeiras e gerenciais dos investidores.
                     </span>

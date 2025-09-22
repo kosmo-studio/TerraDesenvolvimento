@@ -32,7 +32,7 @@ export default function DesenvolvimentoGerencial() {
                   />
                 </div>
                 <div className=" space-y-2 md:space-y-0 lg:space-y-2 xl:space-y-3 ">
-                  <h2 className="text-2xl sm:text-3xl md:text-2xl lg:text-4xl md:text-left font-light font-lexend text-white">
+                  <h2 className="text-xl sm:text-3xl md:text-2xl lg:text-4xl text-left font-light font-lexend text-white">
                     <span className="bg-terra-navy text-white px-2">
                       Aumente a gerenciabilidade e o lucro de empresa.
                     </span>
