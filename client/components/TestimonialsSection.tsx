@@ -59,7 +59,7 @@ export default function TestimonialsSection() {
           <p className="text-xl font-lexend text-terra-navy mt-4">Veja os depoimentos sobre nossas parcerias</p>
         </div>
 
-        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 px-32 gap-4">
+        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 md:px-12 lg:px-32 gap-4">
           {clientsData.map((client) => (
             <button
               key={client.name.join(' ')}

@@ -17,11 +17,11 @@ export default function MethodologiesSection() {
           
           {/* Parte de cima: título + estatísticas */}
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
-            <h3 className="text-3xl lg:text-5xl font-bold w-96">
+            <h3 className="text-3xl lg:text-5xl font-bold md:w-96">
               Aplicadas nas fazendas mais bem-sucedidas do Brasil, Paraguai e Bolívia.
             </h3>
 
-            <div className="space-y-4 text-lg font-semibold lg:text-3xl w-full">
+            <div className="space-y-4 text-md font-semibold lg:text-3xlw-full">
               <p><span className="bg-terra-navy text-white px-2 py-1 rounded">31 Bilhões</span> administrados em ativos</p>
               <p><span className="bg-terra-navy text-white px-2 py-1 rounded">400</span> fazendas</p>
               <p><span className="bg-terra-navy text-white px-2 py-1 rounded">1,5 Milhão</span> de Cabeças de Gado</p>
