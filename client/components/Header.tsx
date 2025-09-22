@@ -44,7 +44,7 @@ export default function Header() {
             <img
               src="/images/terra.svg"
               alt="Terra Logo"
-              className="h-12 xl:h-16 w-auto" // Tamanho ajustado
+              className="h-12 xl:h-16 w-auto" 
             />
           </Link>
         </div>
