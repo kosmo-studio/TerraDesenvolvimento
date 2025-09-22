@@ -5,7 +5,7 @@ import { Link } from "react-router-dom";
 
 const navLinks = [
   { to: "/servicos", label: "Serviços" },
-  { to: "", label: "Resultados" },
+  { to: "/Resultados", label: "Resultados" },
   { to: "/cursosEventos", label: "Cursos e Eventos" },
   { to: "/noticias", label: "Notícias" },
   { to: "/trabalhe-conosco", label: "Trabalhe Conosco" },
@@ -44,7 +44,7 @@ export default function Header() {
             <img
               src="/images/terra.svg"
               alt="Terra Logo"
-              className="h-12 xl:h-16 w-auto" // Tamanho ajustado
+              className="h-12 xl:h-16 w-auto" 
             />
           </Link>
         </div>

@@ -10,13 +10,12 @@ const clientsData = [
 
 export default function TestimonialsSection() {
   const videoLink = "https://www.youtube.com/embed/Z0nEGV2h8ng?si=hDpB0haB_oCDpNXA";
-  const navigate = useNavigate(); // para navegação programática
+  const navigate = useNavigate(); 
 
-  // Função para lidar com click nos clientes
   const handleClientClick = (link) => {
     if (link.startsWith("/resultados#")) {
       const [path, hash] = link.split("#");
-      navigate(path); // navega para a página resultados
+      navigate(path);
       setTimeout(() => {
         const element = document.getElementById(hash);
         if (element) {
