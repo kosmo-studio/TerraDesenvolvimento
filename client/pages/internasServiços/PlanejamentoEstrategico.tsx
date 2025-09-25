@@ -117,7 +117,7 @@ export default function PlanejamentoEstrategico() {
                 <ServiceCard
                   label="d."
                   icon="/images/producao.svg"
-                  text="sProdução e balanço previsto para 24 e 36 meses, com a validação dos gestores."
+                  text="Produção e balanço previsto para 24 e 36 meses, com a validação dos gestores."
                 />
               </div>
             </div>
