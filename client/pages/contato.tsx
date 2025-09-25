@@ -94,7 +94,7 @@ export default function Contato() {
       <main className="pb-16">
         <AnimatedSection variant="fade">
           <HeroSection
-            backgroundImage="/images/bg-contato.png"
+            backgroundImage="/images/bg-contato.jpeg"
             title=""
             subtitle=""
           />
