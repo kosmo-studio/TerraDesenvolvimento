@@ -194,7 +194,7 @@ export default function CursoseEventos() {
                 <strong>Participe das próximas edições!</strong><br />
                 Entre em contato com nossa equipe para saber mais sobre datas, inscrições e como garantir sua vaga nos cursos e eventos da Terra Desenvolvimento.
               </p>
-              <a href="https://" target="_blank" rel="noopener noreferrer">
+              <a href="https://www.encontrogestores.agr.br/" target="_blank" rel="noopener noreferrer">
                 <button className="px-8 py-3 bg-terra-navy text-white font-semibold rounded-xl hover:bg-[#0f1d39] transition">
                   SAIBA MAIS
                 </button>
