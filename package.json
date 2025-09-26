@@ -11,14 +11,10 @@
     ]
   },
   "scripts": {
-    "dev": "vite",
+    "start": "serve -s build", 
     "build": "react-scripts build",
-    "build:client": "vite build",
-    "build:server": "vite build --config vite.config.server.ts",
-    "start": "serve -s build -l 8080",
-    "test": "vitest --run",
-    "format.fix": "prettier --write .",
-    "typecheck": "tsc"
+    "test": "react-scripts test",
+    "eject": "react-scripts eject"
   },
   "dependencies": {
     "dotenv": "^17.2.1",
