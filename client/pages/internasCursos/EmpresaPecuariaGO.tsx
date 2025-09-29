@@ -51,7 +51,7 @@ const parceria = [
   { src: "/images/metryx-logo.png", alt: "Logo metryx" },
 ];
 
-export default function EmpresaPecuaria() {
+export default function EmpresaPecuariaGO() {
   return (
     <div className="bg-white overflow-x-hidden">
       <main>
