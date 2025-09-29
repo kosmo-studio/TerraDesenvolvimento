@@ -11,6 +11,7 @@
     ]
   },
   "scripts": {
+    "dev": "vite",
     "start": "serve -s dist/spa -l 8080",   
     "build": "vite build",
     "test": "react-scripts test",
