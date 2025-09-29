@@ -4,6 +4,8 @@ import HeroSection from "@/components/interno/HeroSection";
 import AnimatedSection from "@/components/AnimatedSection"; 
 import CTASection from "@/components/interno/CTASection";
 import React from "react";
+import { Button } from "@/components/ui/button";
+import CtaSection from "@/components/CtaSection";
 
 // --- DADOS DOS DEPOIMENTOS ---
 const depoimentos = [
@@ -113,7 +115,7 @@ export default function Resultados() {
         </AnimatedSection>
         
         <AnimatedSection>
-          <CTASection />
+          <CtaSection />
         </AnimatedSection>
       </main>
       <Footer />
