@@ -15,7 +15,7 @@ const beneficiosEncontro = [
 
 // DADOS DO CURSO 1 (MANTÉM SOMBRA E SOBREPOSIÇÃO)
 const cursoGestaoData = {
-    title: "Curso de Gestão da Empresa Pecuária",
+    title: "Curso de Gestão da Empresa Pecuária <br> (Goiânia - Go)",
     imageSrc: "/images/goianiaCursoGestao.jpeg",
     description1: `Um dos cursos com maior sucesso em gestão pecuária do Brasil! <br /> Com mais de <strong>10.000 participantes</strong> formados em <strong>215 edições</strong>, já se consolidou como referência nacional, alcançando média de satisfação acima de <strong>9,0 pontos</strong>.`,
     description2: `Agora em um <strong>formato prático e dinâmico</strong>, você será o protagonista: aplicará os conceitos diretamente no seu próprio Excel, levando imediatamente as ferramentas de gestão para a realidade da sua fazenda.`,
@@ -29,7 +29,7 @@ const cursoGestaoData = {
 
 // DADOS DO CURSO 2 (REMOVENDO SOMBRA e ajustando padding/margin)
 const cursoGestaoData2 = {
-    title: "Curso de Gestão da Empresa Pecuária",
+    title: "Curso de Gestão da Empresa Pecuária <br> (Araguaína - TO)",
     imageSrc: "/images/araguainaCursoGestao.jpeg",
     description1: `Um dos cursos com maior sucesso em gestão pecuária do Brasil! <br /> Com mais de <strong>10.000 participantes</strong> formados em <strong>215 edições</strong>, já se consolidou como referência nacional, alcançando média de satisfação acima de <strong>9,0 pontos</strong>.`,
     description2: `Agora em um <strong>formato prático e dinâmico</strong>, você será o protagonista: aplicará os conceitos diretamente no seu próprio Excel, levando imediatamente as ferramentas de gestão para a realidade da sua fazenda.`,
