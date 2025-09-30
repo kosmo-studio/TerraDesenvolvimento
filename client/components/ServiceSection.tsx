@@ -85,8 +85,8 @@ const servicesData = [
     icon: <IconPlanejamento />,
   },
   {
-    href: "/servicos/DiagnosticoGlobal",
-    title: ["Diagnóstico de", "Desempenho Global"],
+    href: "/servicos/MapeamentodeOportunidades",
+    title: ["Mapeamento de", "Oportunidades"],
     icon: <IconConsultoria />,
   },
   {

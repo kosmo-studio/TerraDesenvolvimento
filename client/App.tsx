@@ -15,7 +15,7 @@ import CursoseEventos from "./pages/cursosEventos";
 import Noticias from "./pages/noticias";
 import TrabalheConosco from "./pages/trabalhe-conosco";
 import Contato from "./pages/contato";
-import DiagnosticoGlobal from "./pages/internasServiços/DiagnosticoGlobal";
+import DiagnosticoGlobal from "./pages/internasServiços/MapeamentodeOportunidades";
 import ImplementacaoControle from "./pages/internasServiços/ImplementacaoDeControle";
 import PlanejamentoEstrategico from "./pages/internasServiços/PlanejamentoEstrategico";
 import DesenvolvimentoGerencial from "./pages/internasServiços/DesenvolvimentoGerencial";
@@ -44,7 +44,7 @@ const App = () => (
           <Route path="/noticias" element={<Noticias />} />
           <Route path="/trabalhe-conosco" element={<TrabalheConosco />} />
           <Route path="/contato" element={<Contato />} />
-          <Route path="/servicos/DiagnosticoGlobal" element={<DiagnosticoGlobal />} />
+          <Route path="/servicos/MapeamentodeOportunidades" element={<DiagnosticoGlobal />} />
           <Route path="/servicos/ImplementacaoDeControle" element={<ImplementacaoControle />} />
           <Route path="/servicos/PlanejamentoEstrategico" element={<PlanejamentoEstrategico />} />
           <Route path="/servicos/DesenvolvimentoGerencial" element={<DesenvolvimentoGerencial />} />

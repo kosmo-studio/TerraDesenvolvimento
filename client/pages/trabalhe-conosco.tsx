@@ -13,7 +13,7 @@ export default function TrabalheConosco() {
       
         <AnimatedSection>
           <HeroSection
-            backgroundImage="/images/bg-trabalheConosco.jpeg"
+            backgroundImage="/images/bg-nossahistoria.png"
             title=""
             subtitle=""
           />

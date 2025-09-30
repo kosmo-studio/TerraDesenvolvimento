@@ -17,8 +17,8 @@ export default function ImplementacaoDeControle() {
         {/* Hero Section */}
          <HeroSection
           backgroundImage="/images/bg-implantacao.png"
-          title="Implantação de Controle"
-          subtitle="Acesso pelos gestores e equipe dos dados e informações essenciais, com rapidez e confiabilidade, através da otimização dos controles existentes na fazenda, implantação de sistemas e outros métodos que se façam necessários para ter “a fazenda em suas mãos”."
+          title="implantação de Controle"
+          subtitle="Metodologia de controle de dados e informações essenciais, com rapidez e confiabilidade, através da otimização dos controles existentes na fazenda, implantação de sistemas e outros métodos que se façam necessários para ter “a fazenda em suas mãos”."
         />
         </AnimatedSection>
         {/* --- Seção de Introdução --- */}

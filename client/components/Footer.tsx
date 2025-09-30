@@ -11,7 +11,7 @@ const menuLinks = [
 ];
 
 const servicosLinks = [
-  { href: "/servicos/DiagnosticoGlobal", label: "Diagnóstico de Desempenho Global" },
+  { href: "/servicos/MapeamentodeOportunidades", label: "Mapeamento de Oportunidades" },
   { href: "/servicos/ImplementacaoDeControle", label: "Implementação de Controle" },
   { href: "/servicos/PlanejamentoEstrategico", label: "Planejamento Estratégico" },
   { href: "/servicos/ProgramaRecuperaçãoGerencial", label: "PRG: Prog. de Recuperação Gerencial" },

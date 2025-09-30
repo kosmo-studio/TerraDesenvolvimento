@@ -17,7 +17,7 @@ export default function DiagnosticoGlobal() {
         <AnimatedSection variant="fade">
           <HeroSection
             backgroundImage="/images/desempenho.png"
-            title="Diagnóstico de Desempenho Global"
+            title="Mapeamento de Oportunidades"
             subtitle="Apresentar e discutir onde sua fazenda está, o 'Ponto A' e onde poderá chegar, mostrando com clareza a atual situação financeira, produtiva e gerencial da empresa através de indicadores parametrizados."
           />
         </AnimatedSection>
