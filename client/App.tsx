@@ -26,6 +26,7 @@ import DetalheNoticia from "./pages/internaNoticias.tsx/DetalheNoticia";
 import NossaHistoria from "./pages/nossaHistoria";
 import EmpresaPecuariaGO from "./pages/internasCursos/EmpresaPecuariaGO";
 import EmpresaPecuariaAG from "./pages/internasCursos/EmpresaPecuariaAG";
+import EmpresaPecuariaCG from "./pages/internasCursos/EmpresaPecuariaCG";
 
 const queryClient = new QueryClient();
 
@@ -53,6 +54,7 @@ const App = () => (
           <Route path="/servicos/PerformaTerra" element={<PerformaTerra />} />
           <Route path="/EmpresaPecuariaGO" element={<EmpresaPecuariaGO />} />
           <Route path="/EmpresaPecuariaAG" element={<EmpresaPecuariaAG />} />
+          <Route path="/EmpresaPecuariaCG" element={<EmpresaPecuariaCG />} />
           <Route path="/nossaHistoria" element={<NossaHistoria />} />
           <Route path="/noticias/:slug" element={<DetalheNoticia />} />
           <Route path="/Resultados" element={<Resultados />} />

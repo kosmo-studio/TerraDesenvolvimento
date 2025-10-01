@@ -8,7 +8,7 @@ import { Link } from "lucide-react";
 
 const dadosInvestimento = {
   lotes: [
-    { nome: "1º Lote", validade: "até 31/10/2025" },
+    { nome: "1º Lote", validade: "até x/x/2025" },
     { nome: "2º Lote", validade: "" },
     { nome: "3º Lote", validade: "" },
   ],
@@ -58,14 +58,14 @@ const parceria = [
   { src: "/images/metryx-logo.png", alt: "Logo metryx" },
 ];
 
-export default function EmpresaPecuariaAG() {
+export default function EmpresaPecuariaCG() {
   return (
     <div className="bg-white overflow-x-hidden">
       <main>
         <Header />
         {/* Hero Section */}
         <HeroSection
-          backgroundImage="/images/araguainaCursoGestao-banner.jpeg"
+          backgroundImage="/images/cgCursoGestao-banner.jpg"
           title=""
           subtitle=""
         />
@@ -153,20 +153,23 @@ export default function EmpresaPecuariaAG() {
             </div>
 
             {/* modulo */}
-            <section className="py-20 px-4 bg-white">
+            <section className="py-5 px-4 bg-white">
               <div className="max-w-4xl mx-auto">
                 <h2 className="text-4xl md:text-5xl font-bold font-lexend text-terra-navy mb-12 text-center">
                   Módulos
                 </h2>
 
+                {/* Container da lista com espaçamento entre os módulos */}
                 <div className="flex flex-col space-y-8">
                   {modulos.map((modulo) => (
                     <div key={modulo.titulo}>
+                      {/* Caixa do Título (bege) */}
                       <div className="bg-terra-beige p-4 rounded-t-xl">
                         <h3 className="text-xl font-bold text-white">
                           {modulo.titulo}
                         </h3>
                       </div>
+                      {/* Caixa da Descrição (branca com borda) */}
                       <div className="border border-t-0 border-gray-300 p-4 md:p-8 rounded-b-xl">
                         <p className="text-terra-navy text-lg font-medium">
                           {modulo.descricao}
@@ -178,11 +181,11 @@ export default function EmpresaPecuariaAG() {
 
                 <section className="py-16">
                   <div>
-                    <a href="https://www.sympla.com.br/evento/curso-gestao-da-empresa-pecuaria---araguainato/3141458" target="_blank" rel="noopener noreferrer">
+                    <a href="https://www.sympla.com.br/evento/curso-gestao-da-empresa-pecuaria/3056367" target="_blank" rel="noopener noreferrer">
                       <p className="text-5xl text-terra-navy">Faça sua <strong>inscrição!</strong></p>
                       <button className="mt-9 px-16 py-3 bg-terra-navy text-white font-semibold rounded-lg hover:bg-[#0f1d39] transition">
                         CLIQUE AQUI PARA COMPRAR
-                      </button>  
+                      </button>
                     </a>
                   </div>
                 </section>
