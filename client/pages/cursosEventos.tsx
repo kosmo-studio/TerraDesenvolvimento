@@ -13,7 +13,7 @@ const beneficiosEncontro = [
   "Espaços para fortalecer conexões e parcerias estratégicas.",
 ];
 
-// DADOS DO CURSO 1 (MANTÉM SOMBRA E SOBREPOSIÇÃO)
+
 const cursoGestaoData = {
     title: "Curso de Gestão da Empresa Pecuária <br> (Goiânia - Go)",
     imageSrc: "/images/goianiaCursoGestao.jpeg",
@@ -22,12 +22,11 @@ const cursoGestaoData = {
     targetAudience: "Produtores rurais, gestores, técnicos e estudantes que desejam aprofundar seus conhecimentos em gestão agropecuária.",
     differential: "Metodologias e métricas comprovadas em fazendas de sucesso no Brasil, Paraguai e Bolívia.",
     linkTo: "/EmpresaPecuariaGO",
-    // MANTÉM: Sombra e Margem Negativa para sobrepor o Hero
     containerClass: 'shadow-[0px_-40px_40px_-20px_rgba(0,0,0,0.3)] text-center bg-white relative mt-[-20px] md:-mt-64', 
     sectionPaddingClass: 'py-0 md:pt-24'
 };
 
-// DADOS DO CURSO 2 (REMOVENDO SOMBRA e ajustando padding/margin)
+
 const cursoGestaoData2 = {
     title: "Curso de Gestão da Empresa Pecuária <br> (Araguaína - TO)",
     imageSrc: "/images/araguainaCursoGestao.jpeg",
@@ -36,7 +35,17 @@ const cursoGestaoData2 = {
     targetAudience: "Produtores rurais, gestores, técnicos e estudantes que desejam aprofundar seus conhecimentos em gestão agropecuária.",
     differential: "Metodologias e métricas comprovadas em fazendas de sucesso no Brasil, Paraguai e Bolívia.",
     linkTo: "/EmpresaPecuariaAG",
-    // CORREÇÃO: REMOVIDA A SOMBRA. Mantida a Margem Negativa e ajustado o padding superior do slot para 'pt-44'.
+    containerClass: 'text-center bg-white relative mt-[-20px] md:-mt-64', 
+    sectionPaddingClass: 'py-0 pt-44' 
+};
+const cursoGestaoData3 = {
+    title: "Curso de Gestão da Empresa Pecuária <br> (Campo Grande - MS)",
+    imageSrc: "/images/cgGestaoCurso.jpg",
+    description1: `Um dos cursos com maior sucesso em gestão pecuária do Brasil! <br /> Com mais de <strong>10.000 participantes</strong> formados em <strong>215 edições</strong>, já se consolidou como referência nacional, alcançando média de satisfação acima de <strong>9,0 pontos</strong>.`,
+    description2: `Agora em um <strong>formato prático e dinâmico</strong>, você será o protagonista: aplicará os conceitos diretamente no seu próprio Excel, levando imediatamente as ferramentas de gestão para a realidade da sua fazenda.`,
+    targetAudience: "Produtores rurais, gestores, técnicos e estudantes que desejam aprofundar seus conhecimentos em gestão agropecuária.",
+    differential: "Metodologias e métricas comprovadas em fazendas de sucesso no Brasil, Paraguai e Bolívia.",
+    linkTo: "/EmpresaPecuariaCG",
     containerClass: 'text-center bg-white relative mt-[-20px] md:-mt-64', 
     sectionPaddingClass: 'py-0 pt-44' 
 };
@@ -50,7 +59,6 @@ const cursoPersonalizadoData = {
     targetAudience: "Produtores e equipes que buscam soluções práticas e específicas.",
     differential: "Conteúdo exclusivo, construído lado a lado, com foco nos resultados estratégicos da sua fazenda.",
     linkTo: null,
-    // MANTÉM: Margem Negativa menor para posicionamento
     containerClass: 'text-center bg-white relative mt-[-20px] md:-mt-40', 
     sectionPaddingClass: 'py-0 md:pt-24'
 };
@@ -139,6 +147,9 @@ export default function CursoseEventos() {
 
                 {/* --- Seção Curso de Gestão (Slot 2) - SEM SOMBRA (APENAS CONTEÚDO) --- */}
                 <CourseSection {...cursoGestaoData2} />
+                <DivisorTerra />
+
+                <CourseSection {...cursoGestaoData3} />
                 <DivisorTerra />
 
                 {/* --- Seção Curso Personalizado (Slot 3) --- */}
