@@ -174,7 +174,7 @@ export default function EmpresaPecuariaAG() {
                         </a>
                       </div>
                     </section>
-                    <section className="py-10 px-4 sm:px-6 lg:px-8">
+                    <section className="py-10 px-4 sm:px-6 lg:px-8 hidden">
                     <div className="max-w-5xl mx-auto text-center">
                         <h2 className="text-4xl font-medium text-terra-navy mb-6">
                         Patrocinadores
@@ -195,7 +195,7 @@ export default function EmpresaPecuariaAG() {
                     </div>
                     </section>
 
-                    <section className="py-10 px-4 sm:px-6 lg:px-8">
+                    <section className="py-10 px-4 sm:px-6 lg:px-8 hidden">
                     <div className="max-w-lg mx-auto text-center">
                         <h2 className="text-4xl font-medium text-terra-navy mb-6">
                         Parceria
