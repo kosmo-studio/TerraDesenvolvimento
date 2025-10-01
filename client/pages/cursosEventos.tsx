@@ -13,7 +13,7 @@ const beneficiosEncontro = [
   "Espaços para fortalecer conexões e parcerias estratégicas.",
 ];
 
-// DADOS DO CURSO 1 (MANTÉM SOMBRA E SOBREPOSIÇÃO)
+
 const cursoGestaoData = {
     title: "Curso de Gestão da Empresa Pecuária <br> (Goiânia - Go)",
     imageSrc: "/images/goianiaCursoGestao.jpeg",
@@ -22,12 +22,11 @@ const cursoGestaoData = {
     targetAudience: "Produtores rurais, gestores, técnicos e estudantes que desejam aprofundar seus conhecimentos em gestão agropecuária.",
     differential: "Metodologias e métricas comprovadas em fazendas de sucesso no Brasil, Paraguai e Bolívia.",
     linkTo: "/EmpresaPecuariaGO",
-    // MANTÉM: Sombra e Margem Negativa para sobrepor o Hero
     containerClass: 'shadow-[0px_-40px_40px_-20px_rgba(0,0,0,0.3)] text-center bg-white relative mt-[-20px] md:-mt-64', 
     sectionPaddingClass: 'py-0 md:pt-24'
 };
 
-// DADOS DO CURSO 2 (REMOVENDO SOMBRA e ajustando padding/margin)
+
 const cursoGestaoData2 = {
     title: "Curso de Gestão da Empresa Pecuária <br> (Araguaína - TO)",
     imageSrc: "/images/araguainaCursoGestao.jpeg",
@@ -36,7 +35,6 @@ const cursoGestaoData2 = {
     targetAudience: "Produtores rurais, gestores, técnicos e estudantes que desejam aprofundar seus conhecimentos em gestão agropecuária.",
     differential: "Metodologias e métricas comprovadas em fazendas de sucesso no Brasil, Paraguai e Bolívia.",
     linkTo: "/EmpresaPecuariaAG",
-    // CORREÇÃO: REMOVIDA A SOMBRA. Mantida a Margem Negativa e ajustado o padding superior do slot para 'pt-44'.
     containerClass: 'text-center bg-white relative mt-[-20px] md:-mt-64', 
     sectionPaddingClass: 'py-0 pt-44' 
 };
@@ -48,7 +46,6 @@ const cursoGestaoData3 = {
     targetAudience: "Produtores rurais, gestores, técnicos e estudantes que desejam aprofundar seus conhecimentos em gestão agropecuária.",
     differential: "Metodologias e métricas comprovadas em fazendas de sucesso no Brasil, Paraguai e Bolívia.",
     linkTo: "/EmpresaPecuariaCG",
-    // CORREÇÃO: REMOVIDA A SOMBRA. Mantida a Margem Negativa e ajustado o padding superior do slot para 'pt-44'.
     containerClass: 'text-center bg-white relative mt-[-20px] md:-mt-64', 
     sectionPaddingClass: 'py-0 pt-44' 
 };
@@ -62,7 +59,6 @@ const cursoPersonalizadoData = {
     targetAudience: "Produtores e equipes que buscam soluções práticas e específicas.",
     differential: "Conteúdo exclusivo, construído lado a lado, com foco nos resultados estratégicos da sua fazenda.",
     linkTo: null,
-    // MANTÉM: Margem Negativa menor para posicionamento
     containerClass: 'text-center bg-white relative mt-[-20px] md:-mt-40', 
     sectionPaddingClass: 'py-0 md:pt-24'
 };
