@@ -181,7 +181,7 @@ export default function EmpresaPecuariaCG() {
 
                 <section className="py-16">
                   <div>
-                    <a href="" target="_blank" rel="noopener noreferrer">
+                    <a href="https://www.sympla.com.br/evento/curso-gestao-da-empresa-pecuaria---campo-grande--ms/3153277" target="_blank" rel="noopener noreferrer">
                       <p className="text-5xl text-terra-navy">Faça sua <strong>inscrição!</strong></p>
                       <button className="mt-9 px-16 py-3 bg-terra-navy text-white font-semibold rounded-lg hover:bg-[#0f1d39] transition">
                         CLIQUE AQUI PARA COMPRAR
