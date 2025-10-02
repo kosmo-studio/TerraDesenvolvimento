@@ -8,18 +8,18 @@ import { Link } from "lucide-react";
 
 const dadosInvestimento = {
   lotes: [
-    { nome: "1º Lote", validade: "até x/x/2025" },
-    { nome: "2º Lote", validade: "" },
-    { nome: "3º Lote", validade: "" },
+    { nome: "1º Lote", validade: "até 25/10/2025" },
+    { nome: "2º Lote", validade: "até 31/10/2025" },
+    { nome: "3º Lote", validade: "05/11/2025" },
   ],
   categorias: [
     {
       nome: "Profissionais e Produtores",
-      valores: ["R$500,00", "R$600,00", "R$700,00"],
+      valores: ["R$693,00", "R$815,00", "R$960,00"],
     },
     {
       nome: "Estudantes e Clientes Terra",
-      valores: ["R$500,00", "R$600,00", "R$700,00"],
+      valores: ["R$590,00", "R$693,00", "R$815,00"],
     },
   ],
 };
