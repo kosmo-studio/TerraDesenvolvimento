@@ -76,13 +76,13 @@ function CourseSection({ title, imageSrc, description1, description2, targetAudi
                         </h2>
                     </div>
                     
-                    <div className="flex justify-center mb-10">
+                    <Link to={linkTo} className="flex justify-center mb-10">
                         <img
                             src={imageSrc}
                             alt={title.replace(/<br\s*\/?>/gi, ' ')}
                             className="rounded-3xl shadow-lg w-full max-w-4xl"
                         />
-                    </div>
+                    </Link>
                     
                     <div className="max-w-4xl mx-auto text-left px-4">
                         <p className="text-lg sm:text-xl text-terra-navy font-light leading-relaxed mb-6" dangerouslySetInnerHTML={{ __html: description1 }} />
