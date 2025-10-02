@@ -127,7 +127,6 @@ function CourseSection({ title, imageSrc, description1, description2, targetAudi
 
 // --- COMPONENTE PRINCIPAL ---
 export default function CursoseEventos() {
-    // Não precisamos mais do cursoGestaoDataSlot2, pois o cursoGestaoData2 já está configurado.
     
     return (
         <div className="bg-white overflow-x-hidden">
@@ -141,11 +140,11 @@ export default function CursoseEventos() {
                     />
                 </AnimatedSection>
 
-                {/* --- Seção Curso de Gestão (Slot 1) - SOMBRA APLICADA AQUI --- */}
+                {/* --- Seção Curso de Gestão (Slot 1) ---- */}
                 <CourseSection {...cursoGestaoData} />
                 <DivisorTerra />
 
-                {/* --- Seção Curso de Gestão (Slot 2) - SEM SOMBRA (APENAS CONTEÚDO) --- */}
+                {/* --- Seção Curso de Gestão (Slot 2) ---- */}
                 <CourseSection {...cursoGestaoData2} />
                 <DivisorTerra />
 
@@ -163,13 +162,13 @@ export default function CursoseEventos() {
                             <h1 className="text-3xl md:text-5xl sm:text-4xl font-extrabold text-terra-navy mb-10">
                                 Encontro de Gestores
                             </h1>
-                            <div className="flex justify-center mb-10">
+                            <Link to={"https://www.encontrogestores.agr.br/"} className="flex justify-center mb-10">
                                 <img
                                     src="/images/InfoEncontroGestores.png"
                                     alt="Encontro de Gestores"
                                     className="rounded-3xl shadow-lg w-full max-w-4xl"
                                 />
-                            </div>
+                            </Link >
                             <p className="text-terra-navy text-lg sm:text-xl font-light leading-relaxed mb-12 text-left">
                                 Um dos eventos mais aguardados do setor! Realizado a cada dois anos, o <strong>Encontro de Gestores</strong> reúne <strong>grandes produtores, clientes e especialistas</strong> em um ambiente de troca de experiências, aprendizado e networking de alto nível.
                             </p>
