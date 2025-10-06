@@ -50,11 +50,15 @@ const patrocinadores = [
   { src: "/images/espaçorural.png", alt: "Logo Espaço Rural" },
   { src: "/images/agroceres.png", alt: "Logo Agroceres" },
   { src: "/images/MOINHO-MAQUINAS.png", alt: "Logo Moinho" },
+  { src: "/images/LogodeHeus.png", alt: "Logo de Heus" },
+  { src: "/images/LogoBoagro.png", alt: "Logo Boagro" },
+  { src: "/images/logoAnimalltag.png", alt: "Logo AnimallTag" },
 ];
 
 const parceria = [
   { src: "/images/castros.png", alt: "Logo castros" },
   { src: "/images/metryx-logo.png", alt: "Logo metryx" },
+  { src: "/images/UniAraguaia.png", alt: "Logo UniAraguaia" },
 ];
 
 export default function EmpresaPecuariaGO() {
@@ -227,7 +231,7 @@ export default function EmpresaPecuariaGO() {
                 <section className="py-10 px-4 sm:px-6 lg:px-8">
                   <div className="max-w-lg mx-auto text-center">
                     <h2 className="text-4xl font-medium text-terra-navy mb-6">Parceria</h2>
-                    <div className="grid grid-cols-1 md:grid-cols-2 gap-0 items-center">
+                    <div className="grid grid-cols-1 md:grid-cols-3 gap-0 items-center">
                       {parceria.map((parceria) => (
                         <div key={parceria.alt} className="flex justify-center items-center p-4 w-auto h-40">
                           <img
