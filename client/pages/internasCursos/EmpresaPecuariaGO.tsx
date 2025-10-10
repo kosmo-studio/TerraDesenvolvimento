@@ -5,6 +5,7 @@ import DivisorTerra from '@/components/interno/DivisorTerra';
 import React from 'react';
 import { Link } from "lucide-react";
 
+// --- DADOS DE INVESTIMENTO PERMANECEM IGUAIS ---
 const dadosInvestimento = {
   lotes: [
     { nome: "1º Lote", validade: "até 17/10/2025" },
@@ -23,6 +24,7 @@ const dadosInvestimento = {
   ],
 };
 
+// --- DADOS DE MÓDULOS PERMANECEM IGUAIS ---
 const modulos = [
   {
     titulo: "Análise de potencialidades:",
@@ -46,15 +48,23 @@ const modulos = [
   },
 ];
 
-const patrocinadores = [
-  { src: "/images/espaçorural.png", alt: "Logo Espaço Rural" },
-  { src: "/images/agroceres.png", alt: "Logo Agroceres" },
-  { src: "/images/MOINHO-MAQUINAS.png", alt: "Logo Moinho" },
-  { src: "/images/LogodeHeus.png", alt: "Logo de Heus" },
-  { src: "/images/LogoBoagro.png", alt: "Logo Boagro" },
-  { src: "/images/logoAnimalltag.png", alt: "Logo AnimallTag" },
-];
+// --- ESTRUTURA DE PATROCINADORES EM OURO E BRONZE ---
+const patrocinadores = {
+  ouro: [
+    { src: "/images/SumitomoLogo.png", alt: "Logo Sumitomo" },
+    
+  ],
+  bronze: [
+    { src: "/images/espaçorural.png", alt: "Logo Espaço Rural" },
+    { src: "/images/agroceres.png", alt: "Logo Agroceres" },
+    { src: "/images/MOINHO-MAQUINAS.png", alt: "Logo Moinho" },
+    { src: "/images/LogodeHeus.png", alt: "Logo de Heus" },
+    { src: "/images/LogoBoagro.png", alt: "Logo Boagro" },
+    { src: "/images/logoAnimalltag.png", alt: "Logo AnimallTag" },
+  ],
+};
 
+// --- DADOS DE PARCERIA PERMANECEM IGUAIS ---
 const parceria = [
   { src: "/images/castros.png", alt: "Logo castros" },
   { src: "/images/metryx-logo.png", alt: "Logo metryx" },
@@ -73,7 +83,7 @@ export default function EmpresaPecuariaGO() {
           subtitle=""
         />
 
-        {/* --- Seção de Introdução --- */}
+        {/* ... (Seção de Introdução e Tabela de Investimento - Código não alterado) ... */}
         <section className="py-0 md:pt-24 z-20">
           <div className="container mx-auto pt-14 max-w-7xl shadow-[0px_-40px_40px_-20px_rgba(0,0,0,0.3)] text-center bg-white relative mt-[-20px] md:-mt-40">
             <div className=" space-y-2 md:space-y-0 lg:space-y-2 xl:space-y-3 mb-10">
@@ -209,12 +219,38 @@ export default function EmpresaPecuariaGO() {
                   </div>
                 </section>
 
-                {/* Patrocinadores */}
+                {/* --- SEÇÃO DE PATROCINADORES GERAL (AGORA COM OS TÍTULOS ORO E BRONZE INTERNOS) --- */}
                 <section className="py-10 px-4 sm:px-6 lg:px-8">
                   <div className="max-w-5xl mx-auto text-center">
+                    {/* Título principal Patrocinadores */}
                     <h2 className="text-4xl font-medium text-terra-navy mb-6">Patrocinadores</h2>
-                    <div className="grid grid-cols-1 md:grid-cols-3 gap-2 items-center">
-                      {patrocinadores.map((patrocinador) => (
+                    
+                    {/* --- Rótulo Ouro --- */}
+                    <p className="text-lg font-bold text-terra-beige  border-2 border-terra-beige inline-block px-6 py-2 mb-8 uppercase tracking-widest">
+                      Ouro
+                    </p>
+
+                    {/* Patrocinadores Ouro */}
+                    <div className="grid grid-cols-1 md:grid-cols-1 gap-2 items-center mb-12">
+                      {patrocinadores.ouro.map((patrocinador) => (
+                        <div key={patrocinador.alt} className="flex justify-center items-center p-4 w-auto h-40">
+                          <img
+                            src={patrocinador.src}
+                            alt={patrocinador.alt}
+                            className="w-full h-full object-contain transition-all duration-300"
+                          />
+                        </div>
+                      ))}
+                    </div>
+
+                    {/* --- Rótulo Bronze --- */}
+                    <p className="text-lg font-bold text-orange-800  border-2 border-orange-800 inline-block px-6 py-2 mb-8 uppercase tracking-widest">
+                      Bronze
+                    </p>
+
+                    {/* Patrocinadores Bronze */}
+                    <div className="grid grid-cols-1 md:grid-cols-3 gap-2 items-center mb-12">
+                      {patrocinadores.bronze.map((patrocinador) => (
                         <div key={patrocinador.alt} className="flex justify-center items-center p-4 w-auto h-40">
                           <img
                             src={patrocinador.src}
@@ -226,7 +262,7 @@ export default function EmpresaPecuariaGO() {
                     </div>
                   </div>
                 </section>
-
+                
                 {/* Parceria */}
                 <section className="py-10 px-4 sm:px-6 lg:px-8">
                   <div className="max-w-lg mx-auto text-center">

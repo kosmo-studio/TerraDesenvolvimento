@@ -1,4 +1,3 @@
-
 import Footer from "@/components/Footer";
 import Header from "@/components/Header";
 import HeroSection from "@/components/interno/HeroSection";
@@ -47,11 +46,20 @@ const modulos = [
   },
 ];
 
-const patrocinadores = [
-  { src: "/images/espaçorural.png", alt: "Logo Espaço Rural" },
-  { src: "/images/agroceres.png", alt: "Logo Agroceres" },
-  { src: "/images/MOINHO-MAQUINAS.png", alt: "Logo Moinho" },
-];
+/**
+ * Estrutura de dados para patrocinadores, dividida em categorias Ouro, Prata e Bronze.
+ * Os patrocinadores existentes foram alocados em 'ouro' provisoriamente.
+ */
+const patrocinadores = {
+  ouro: [
+  ],
+  prata: [
+    { src: "/images/logonutroncargill.png", alt: "Logo nutroncargill" },
+  ],
+  bronze: [
+    // Array de bronze está vazia, pronta para novos dados
+  ],
+};
 
 const parceria = [
   { src: "/images/castros.png", alt: "Logo castros" },
@@ -182,31 +190,76 @@ export default function EmpresaPecuariaAG() {
                       <p className="text-5xl text-terra-navy">Faça sua <strong>inscrição!</strong></p>
                       <button className="mt-9 px-16 py-3 bg-terra-navy text-white font-semibold rounded-lg hover:bg-[#0f1d39] transition">
                         CLIQUE AQUI PARA COMPRAR
-                      </button>  
+                      </button> 
                     </a>
                   </div>
                 </section>
 
-                {/* Patrocinadores */}
-                <section className="py-10 px-4 sm:px-6 lg:px-8 hidden">
+                {/* --- SEÇÃO DE PATROCINADORES COM LAYOUT ESTILIZADO (OURO, PRATA E BRONZE) --- */}
+                <section className="py-10 px-4 sm:px-6 lg:px-8">
                   <div className="max-w-5xl mx-auto text-center">
-                    <h2 className="text-4xl font-medium text-terra-navy mb-6">
+                    {/* Título principal Patrocinadores */}
+                    <h2 className="text-4xl font-medium font-lexend text-terra-navy mb-10">
                       Patrocinadores
                     </h2>
-                    <div className="grid grid-cols-1 md:grid-cols-3 gap-2 items-center">
-                      {patrocinadores.map((patrocinador) => (
-                        <div key={patrocinador.alt} className="flex justify-center items-center p-4 w-auto h-40 ">
+
+                    {/* --- Rótulo Ouro --- */}
+                    <p className="text-lg font-bold text-terra-beige border-terra-beige hidden px-6 py-2 mb-8 uppercase tracking-widest">
+                      Ouro
+                    </p>
+
+                    {/* Patrocinadores Ouro */}
+                    <div className="grid grid-cols-1 md:grid-cols-3 gap-2 items-center mb-12">
+                      {patrocinadores.ouro.map((patrocinador) => (
+                        <div key={patrocinador.alt} className="flex justify-center items-center p-4 w-auto h-40">
                           <img
                             src={patrocinador.src}
                             alt={patrocinador.alt}
-                            className="w-full h-full object-contain transition-all duration-300 "
+                            className="w-full h-full object-contain transition-all duration-300"
+                          />
+                        </div>
+                      ))}
+                    </div>
+                    
+                    {/* --- Rótulo Prata --- */}
+                    <p className="text-lg font-bold text-slate-700  border-2 border-slate-700 inline-block px-6 py-2 mb-8 uppercase tracking-widest">
+                      Prata
+                    </p>
+
+                    {/* Patrocinadores Prata */}
+                    <div className="grid grid-cols-1 md:grid-cols-1 gap-2 items-center mb-12">
+                      {patrocinadores.prata.map((patrocinador) => (
+                        <div key={patrocinador.alt} className="flex justify-center items-center p-4 w-auto h-40">
+                          <img
+                            src={patrocinador.src}
+                            alt={patrocinador.alt}
+                            className="w-full h-full object-contain transition-all duration-300"
+                          />
+                        </div>
+                      ))}
+                    </div>
+
+                    {/* colocar inline-block */}
+                    {/* --- Rótulo Bronze --- */}
+                    <p className=" hidden text-lg font-bold text-orange-800 border-2 border-orange-800 px-6 py-2 mb-8 uppercase tracking-widest">
+                      Bronze
+                    </p>
+                        
+                    {/* Patrocinadores Bronze */}
+                    <div className="grid grid-cols-1 md:grid-cols-4 gap-2 items-center mb-12 ">
+                      {patrocinadores.bronze.map((patrocinador) => (
+                        <div key={patrocinador.alt} className="flex justify-center items-center p-4 w-auto h-40">
+                          <img
+                            src={patrocinador.src}
+                            alt={patrocinador.alt}
+                            className="w-full h-full object-contain transition-all duration-300"
                           />
                         </div>
                       ))}
                     </div>
                   </div>
                 </section>
-
+                
                 {/* Parceria */}
                 <section className="py-10 px-4 sm:px-6 lg:px-8 hidden">
                   <div className="max-w-lg mx-auto text-center">
@@ -235,4 +288,3 @@ export default function EmpresaPecuariaAG() {
     </div>
   );
 }
-
