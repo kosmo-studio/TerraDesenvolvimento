@@ -50,6 +50,7 @@ const modulos = [
 const patrocinadores = [
   { src: "/images/SICREDI.png", alt: "Logo Sicredi" },
   { src: "/images/GADOMAIS.png", alt: "Logo Gado Mais" },
+  { src: "/images/logoCrv.png", alt: "Logo CRV" },
 ];
 
 const parceria = [
@@ -195,7 +196,7 @@ export default function EmpresaPecuariaCG() {
                     <h2 className="text-4xl font-medium text-terra-navy mb-6">
                       Patrocinadores
                     </h2>
-                    <div className="grid grid-cols-1 md:grid-cols-2 gap-2 items-center">
+                    <div className="grid grid-cols-1 md:grid-cols-3 gap-2 items-center">
                       {patrocinadores.map((patrocinador) => (
                         <div key={patrocinador.alt} className="flex justify-center items-center p-4 w-auto h-40 ">
                           <img
