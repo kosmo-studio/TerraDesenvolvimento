@@ -1,6 +1,61 @@
 export const todasAsNoticias = [
-  {
+   {
+    id:8,
+    slug: 'Parceiros-da-Terra',
+    titulo: "Parceiros da Terra: um encontro para falar sobre o que realmente gera resultado no campo.",
+    resumo: "No dia 17 de outubro, em Tocantins, realizamos o evento “Parceiros da Terra”, que reuniu empresas fundamentais para o agronegócio da nossa região...",
+    imagemDestaque: "/images/parceirosTerra.png",
+    dataPublicacao: "23 de outubro de 2025",
+    autor: "Por Equipe Terra",
+    conteudo: `<p>No dia 17 de outubro, em Tocantins, realizamos o evento “Parceiros da Terra”, que reuniu empresas fundamentais para o agronegócio da nossa região.</p>
+            <p>Foi uma manhã de troca, estratégia e conexão com quem faz a diferença na produção.</p>
+
+            <h4>Foco em Lucratividade e Estratégia no Campo</h4>
+
+            <p>O encontro teve um foco claro: quais indicadores realmente influenciam a lucratividade nas fazendas?</p>
+            <p>Durante as discussões, temas essenciais para o sucesso no campo estiveram em pauta, como sanidade, nutrição, gestão financeira e tomada de decisão técnica.</p>
+
+            <h4>Debate sobre a Safra 25/26</h4>
+
+            <p>Além disso, o grupo também voltou o olhar para a safra 25/26, debatendo desafios e tendências que devem marcar o próximo ciclo, com destaque para custos e margens, eficiência produtiva, integração entre áreas e decisões cada vez mais estratégicas.</p>
+
+            <h4>Parceiros que Impulsionam o Agronegócio</h4>
+
+            <p>O evento contou com a presença e contribuição de importantes parceiros: MSD, Cargill Nutron, Sumitomo, Nádia Rural, Premix, Purinitre, AgroAmazonia e AgroMinas.</p>
+            <p>Juntos, construímos uma rede mais forte para o desenvolvimento do setor.</p>
+
+            <p>Porque parceria se constrói com troca, escuta e alinhamento de propósito — e é isso que seguimos cultivando em cada evento da Terra.</p>
+            <p>Que venha a safra 25/26, com mais gestão, mais conexão e mais resultado.</p>`
+},
+   {
     id:1,
+    slug: '5-anos-covid-agro',
+    titulo: "5 Anos da Covid-19 no Brasil: Lições de Resiliência e Inovação no Agronegócio",
+    resumo: "Uma análise das mudanças no agronegócio desde o início da pandemia...",
+    imagemDestaque: "/images/covid.webp",
+    dataPublicacao: "27 de fevereiro de 2025",
+    autor: "Por Equipe Terra",
+    conteudo: `<p>Em 26 de fevereiro de 2020, o Brasil registrava o primeiro caso de Covid-19, um marco que transformou a sociedade e, de forma contundente, o agronegócio brasileiro. Há cinco anos, iniciávamos uma jornada de adaptação e aprendizado em um cenário global inédito. Enquanto o mundo enfrentava lockdowns e paralisações, o setor agropecuário do Brasil se destacava como atividade essencial, garantindo o abastecimento de alimentos para a população brasileira e diversos mercados internacionais. Este artigo analisa as mudanças no agronegócio desde então, os aprendizados da pandemia e como a resiliência do agro molda um futuro mais forte e inovador para o setor.</p>
+
+            <h4>O Agronegócio Brasileiro como Pilar Essencial na Pandemia</h4>
+
+            <p>A pandemia de Covid-19 evidenciou a importância estratégica do agronegócio para a segurança alimentar. Em um período de incertezas e restrições, a produção de alimentos não poderia parar. A demanda se manteve aquecida, impulsionando o setor agro a buscar soluções ágeis para garantir a continuidade da produção no campo. Essa resposta demonstra a resiliência do agronegócio brasileiro e sua capacidade de adaptação diante de crises, consolidando sua imagem como um pilar fundamental da economia nacional e global.</p>
+
+            <h4>Transformações e Adaptações no Campo Pós-Covid-19</h4>
+
+            <p>A crise sanitária acelerou diversas tendências no agronegócio, com destaque para a digitalização do campo. A necessidade de otimizar processos e reduzir o contato físico impulsionou a adoção de tecnologias digitais na agricultura, desde o monitoramento da produção agrícola até a gestão da cadeia logística. Ferramentas de agricultura de precisão, marketplaces online para o agro e sistemas de gestão remota ganharam protagonismo, otimizando a eficiência no agronegócio.</p>
+
+            <p>No dia a dia das fazendas, os protocolos sanitários se tornaram padrão. A saúde e segurança dos trabalhadores rurais ganharam prioridade, com a implementação de medidas de higiene e monitoramento da saúde no campo. Essa conscientização elevou os padrões de cuidado e bem-estar nas operações agrícolas. A pandemia também expôs vulnerabilidades nas cadeias de suprimentos do agronegócio e a importância da diversificação de mercados. Gargalos logísticos e restrições de circulação demandaram novas estratégias de distribuição e logística no agro. A valorização da produção local e a busca por mercados regionais se fortaleceram, assim como a atenção à rastreabilidade e segurança dos alimentos, temas cada vez mais relevantes para o consumidor moderno.</p>
+
+            <h4>Lições da Pandemia para o Futuro do Agronegócio</h4>
+
+            <p>A crise da Covid-19 reforçou que a inovação e a capacidade de adaptação são diferenciais competitivos no agronegócio. O investimento em tecnologia no agro, a diversificação de mercados e o fortalecimento das cadeias de suprimentos são estratégias essenciais para mitigar riscos no agronegócio e construir um setor mais robusto e preparado para o futuro. A colaboração no agronegócio também se mostrou crucial. Produtores rurais, cooperativas agropecuárias, indústrias de insumos, agroindústrias e o governo uniram forças para garantir o abastecimento alimentar e superar os desafios impostos pela pandemia. Essa sinergia demonstra a força do agronegócio brasileiro e a importância de manter essa união para enfrentar os próximos desafios do setor agro.</p>
+
+            <p>Cinco anos após o primeiro caso de Covid-19, o agronegócio do Brasil emerge mais forte, resiliente e inovador. As lições aprendidas na pandemia impulsionam o setor a seguir em frente, com a certeza de sua importância vital para o desenvolvimento do Brasil e para a segurança alimentar global.</p>`
+  },
+  {
+    
+    id:2,
     slug: 'passos-para-uma-gestao-eficiente',
     titulo: "Passos para uma gestão eficiente",
     resumo: "Com o passar dos anos, várias mudanças aconteceram e vem acontecendo na pecuária...",
@@ -54,32 +109,7 @@ export const todasAsNoticias = [
         <li><strong>Controle:</strong> (mensuração e avaliação dos resultados).</li>
         </ul>`
   },
-  {
-    id:2,
-    slug: '5-anos-covid-agro',
-    titulo: "5 Anos da Covid-19 no Brasil: Lições de Resiliência e Inovação no Agronegócio",
-    resumo: "Uma análise das mudanças no agronegócio desde o início da pandemia...",
-    imagemDestaque: "/images/covid.webp",
-    dataPublicacao: "27 de fevereiro de 2025",
-    autor: "Por Equipe Terra",
-    conteudo: `<p>Em 26 de fevereiro de 2020, o Brasil registrava o primeiro caso de Covid-19, um marco que transformou a sociedade e, de forma contundente, o agronegócio brasileiro. Há cinco anos, iniciávamos uma jornada de adaptação e aprendizado em um cenário global inédito. Enquanto o mundo enfrentava lockdowns e paralisações, o setor agropecuário do Brasil se destacava como atividade essencial, garantindo o abastecimento de alimentos para a população brasileira e diversos mercados internacionais. Este artigo analisa as mudanças no agronegócio desde então, os aprendizados da pandemia e como a resiliência do agro molda um futuro mais forte e inovador para o setor.</p>
-
-            <h4>O Agronegócio Brasileiro como Pilar Essencial na Pandemia</h4>
-
-            <p>A pandemia de Covid-19 evidenciou a importância estratégica do agronegócio para a segurança alimentar. Em um período de incertezas e restrições, a produção de alimentos não poderia parar. A demanda se manteve aquecida, impulsionando o setor agro a buscar soluções ágeis para garantir a continuidade da produção no campo. Essa resposta demonstra a resiliência do agronegócio brasileiro e sua capacidade de adaptação diante de crises, consolidando sua imagem como um pilar fundamental da economia nacional e global.</p>
-
-            <h4>Transformações e Adaptações no Campo Pós-Covid-19</h4>
-
-            <p>A crise sanitária acelerou diversas tendências no agronegócio, com destaque para a digitalização do campo. A necessidade de otimizar processos e reduzir o contato físico impulsionou a adoção de tecnologias digitais na agricultura, desde o monitoramento da produção agrícola até a gestão da cadeia logística. Ferramentas de agricultura de precisão, marketplaces online para o agro e sistemas de gestão remota ganharam protagonismo, otimizando a eficiência no agronegócio.</p>
-
-            <p>No dia a dia das fazendas, os protocolos sanitários se tornaram padrão. A saúde e segurança dos trabalhadores rurais ganharam prioridade, com a implementação de medidas de higiene e monitoramento da saúde no campo. Essa conscientização elevou os padrões de cuidado e bem-estar nas operações agrícolas. A pandemia também expôs vulnerabilidades nas cadeias de suprimentos do agronegócio e a importância da diversificação de mercados. Gargalos logísticos e restrições de circulação demandaram novas estratégias de distribuição e logística no agro. A valorização da produção local e a busca por mercados regionais se fortaleceram, assim como a atenção à rastreabilidade e segurança dos alimentos, temas cada vez mais relevantes para o consumidor moderno.</p>
-
-            <h4>Lições da Pandemia para o Futuro do Agronegócio</h4>
-
-            <p>A crise da Covid-19 reforçou que a inovação e a capacidade de adaptação são diferenciais competitivos no agronegócio. O investimento em tecnologia no agro, a diversificação de mercados e o fortalecimento das cadeias de suprimentos são estratégias essenciais para mitigar riscos no agronegócio e construir um setor mais robusto e preparado para o futuro. A colaboração no agronegócio também se mostrou crucial. Produtores rurais, cooperativas agropecuárias, indústrias de insumos, agroindústrias e o governo uniram forças para garantir o abastecimento alimentar e superar os desafios impostos pela pandemia. Essa sinergia demonstra a força do agronegócio brasileiro e a importância de manter essa união para enfrentar os próximos desafios do setor agro.</p>
-
-            <p>Cinco anos após o primeiro caso de Covid-19, o agronegócio do Brasil emerge mais forte, resiliente e inovador. As lições aprendidas na pandemia impulsionam o setor a seguir em frente, com a certeza de sua importância vital para o desenvolvimento do Brasil e para a segurança alimentar global.</p>`
-  },
+ 
   {
     id:3,
     slug: 'gestao-baseada-em-numeros',
