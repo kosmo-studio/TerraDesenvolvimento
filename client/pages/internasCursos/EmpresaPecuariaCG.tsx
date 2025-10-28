@@ -8,9 +8,9 @@ import { Link } from "lucide-react";
 
 const dadosInvestimento = {
   lotes: [
-    { nome: "1º Lote", validade: "até 25/10/2025" },
-    { nome: "2º Lote", validade: "até 31/10/2025" },
-    { nome: "3º Lote", validade: "05/11/2025" },
+    { nome: "1º Lote", validade: "até 25/11/2025" },
+    { nome: "2º Lote", validade: "até 30/11/2025" },
+    { nome: "3º Lote", validade: "05/12/2025" },
   ],
   categorias: [
     {
@@ -65,7 +65,7 @@ export default function EmpresaPecuariaCG() {
         <Header />
         {/* Hero Section */}
         <HeroSection
-          backgroundImage="/images/cgCursoGestao-banner.jpg"
+          backgroundImage="/images/cgGestaoCurso-banner.jpg"
           title=""
           subtitle=""
         />
