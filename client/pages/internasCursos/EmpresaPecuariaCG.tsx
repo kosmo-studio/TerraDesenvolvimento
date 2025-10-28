@@ -54,8 +54,7 @@ const patrocinadores = [
 ];
 
 const parceria = [
-  { src: "/images/castros.png", alt: "Logo castros" },
-  { src: "/images/metryx-logo.png", alt: "Logo metryx" },
+  { src: "/images/MACAL.png", alt: "Logo Macal" },
 ];
 
 export default function EmpresaPecuariaCG() {
@@ -211,12 +210,12 @@ export default function EmpresaPecuariaCG() {
                 </section>
 
                 {/* Parceria */}
-                <section className="py-10 px-4 sm:px-6 lg:px-8 hidden">
+                <section className="py-10 px-4 sm:px-6 lg:px-8">
                   <div className="max-w-lg mx-auto text-center">
                     <h2 className="text-4xl font-medium text-terra-navy mb-6">
-                      Parceria
+                      Apoio
                     </h2>
-                    <div className="grid grid-cols-1 md:grid-cols-2 gap-0 items-center">
+                    <div className="grid grid-cols-1 md:grid-cols-1 gap-0 items-center">
                       {parceria.map((parceria) => (
                         <div key={parceria.alt} className="flex justify-center items-center p-4 w-auto h-40 ">
                           <img
