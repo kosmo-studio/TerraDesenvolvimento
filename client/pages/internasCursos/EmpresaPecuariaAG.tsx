@@ -52,6 +52,7 @@ const modulos = [
  */
 const patrocinadores = {
   ouro: [
+    { src: "/images/msd.png", alt: "Logo MSD" },
   ],
   prata: [
     { src: "/images/logonutroncargill.png", alt: "Logo nutroncargill" },
@@ -204,12 +205,12 @@ export default function EmpresaPecuariaAG() {
                     </h2>
 
                     {/* --- Rótulo Ouro --- */}
-                    <p className="text-lg font-bold text-terra-beige border-terra-beige hidden px-6 py-2 mb-8 uppercase tracking-widest">
+                    <p className=" inline-block text-lg font-bold text-terra-beige border-terra-beige border-2 px-4 py-2 mb-8 mx-auto uppercase tracking-widest">
                       Ouro
                     </p>
 
                     {/* Patrocinadores Ouro */}
-                    <div className="grid grid-cols-1 md:grid-cols-3 gap-2 items-center mb-12">
+                    <div className="grid grid-cols-1 md:grid-cols-1 gap-2 items-center mb-12">
                       {patrocinadores.ouro.map((patrocinador) => (
                         <div key={patrocinador.alt} className="flex justify-center items-center p-4 w-auto h-40">
                           <img
