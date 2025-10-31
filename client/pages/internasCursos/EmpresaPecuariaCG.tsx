@@ -8,9 +8,9 @@ import { Link } from "lucide-react";
 
 const dadosInvestimento = {
   lotes: [
-    { nome: "1º Lote", validade: "até 25/11/2025" },
-    { nome: "2º Lote", validade: "até 30/11/2025" },
-    { nome: "3º Lote", validade: "05/12/2025" },
+    { nome: "1º Lote", validade: "até 21/11/2025" },
+    { nome: "2º Lote", validade: "até 28/11/2025" },
+    { nome: "3º Lote", validade: "03/12/2025" },
   ],
   categorias: [
     {
