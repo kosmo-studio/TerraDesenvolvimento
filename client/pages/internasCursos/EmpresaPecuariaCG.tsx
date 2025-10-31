@@ -54,7 +54,6 @@ const patrocinadores = [
 ];
 
 const parceria = [
-  { src: "/images/MACAL.png", alt: "Logo Macal" },
 ];
 
 export default function EmpresaPecuariaCG() {
@@ -212,7 +211,7 @@ export default function EmpresaPecuariaCG() {
                 {/* Parceria */}
                 <section className="py-10 px-4 sm:px-6 lg:px-8">
                   <div className="max-w-lg mx-auto text-center">
-                    <h2 className="text-4xl font-medium text-terra-navy mb-6">
+                    <h2 className="text-4xl font-medium text-terra-navy hidden mb-6">
                       Apoio
                     </h2>
                     <div className="grid grid-cols-1 md:grid-cols-1 gap-0 items-center">
