@@ -1,5 +1,5 @@
 export const todasAsNoticias = [
-   {
+  {
         "id": 9,
         "slug": "terceirizacao-gestao-pecuaria-viabilidade-cases-sucesso",
         "titulo": "Terceirizar a Gestão da Fazenda de Pecuária é Viável?",
@@ -125,6 +125,57 @@ export const todasAsNoticias = [
             <p>Para o pesquisador da Embrapa Gado de Corte, Guilherme Malafaia, a terceirização é uma <strong>estratégia viável</strong> para produtores que buscam profissionalização, eficiência e melhor uso dos recursos, desde que haja uma escolha criteriosa da empresa parceira e acompanhamento rigoroso dos resultados.</p>
         `
     },
+   {
+  "id": 8,
+  "slug": "Parceiros-da-Terra",
+  "titulo": "Parceiros da Terra: um encontro para falar sobre o que realmente gera resultado no campo.",
+  "resumo": "No dia 17 de outubro, em Tocantins, realizamos o evento “Parceiros da Terra”, que reuniu empresas fundamentais para o agronegócio da nossa região...",
+  "imagemDestaque": "/images/parceirosTerra.png",
+  "dataPublicacao": "23 de outubro de 2025",
+  "autor": "Por Equipe Terra",
+  "conteudo": `
+    <p>No dia 17 de outubro, em Tocantins, realizamos o evento “Parceiros da Terra”, que reuniu empresas fundamentais para o agronegócio da nossa região.</p>
+    <p>Foi uma manhã de troca, estratégia e conexão com quem faz a diferença na produção.</p>
+
+    <div style="display: flex; flex-direction: row; flex-wrap: wrap; gap: 20px; margin-bottom: 20px;">
+        
+        <div style="flex: 0 0 300px; max-width: 100%;">
+            
+            <video 
+              controls 
+              poster="/images/parceiros-terra-capa-video-vertical.jpg" 
+              style="width: 100%; height: auto; border-radius: 8px; box-shadow: 0 4px 8px rgba(0,0,0,0.2);"
+              
+              /* 💡 ATRIBUTOS MOVIDOS PARA CÁ */
+              autoplay
+              muted
+              loop
+              >
+              <source src="/videos/parceirosTerraVideo.mp4" type="video/mp4">
+              
+              Seu navegador não suporta a tag de vídeo.
+          </video>
+        </div>
+
+        <div style="flex: 1; min-width: 300px;">
+            <h4>Foco em Lucratividade e Estratégia no Campo</h4>
+
+            <p>O encontro teve um foco claro: quais indicadores realmente influenciam a lucratividade nas fazendas?</p>
+            <p>Durante as discussões, temas essenciais para o sucesso no campo estiveram em pauta, como sanidade, nutrição, gestão financeira e tomada de decisão técnica.</p>
+
+            <h4>Debate sobre a Safra 25/26</h4>
+
+            <p>Além disso, o grupo também voltou o olhar para a safra 25/26, debatendo desafios e tendências que devem marcar o próximo ciclo, com destaque para custos e margens, eficiência produtiva, integração entre áreas e decisões cada vez mais estratégicas.</p>
+        </div>
+    </div>
+    <h4>Parceiros que Impulsionam o Agronegócio</h4>
+
+    <p>O evento contou com a presença e contribuição de importantes parceiros: MSD, Cargill Nutron, Sumitomo, Nádia Rural, Premix, Purinitre, AgroAmazonia e AgroMinas.</p>
+    <p>Juntos, construímos uma rede mais forte para o desenvolvimento do setor.</p>
+
+    <p>Porque parceria se constrói com troca, escuta e alinhamento de propósito — e é isso que seguimos cultivando em cada evento da Terra.</p>
+    <p>Que venha a safra 25/26, com mais gestão, mais conexão e mais resultado.</p>`
+},
    {
     id:1,
     slug: '5-anos-covid-agro',
