@@ -1,55 +1,130 @@
 export const todasAsNoticias = [
    {
-  "id": 8,
-  "slug": "Parceiros-da-Terra",
-  "titulo": "Parceiros da Terra: um encontro para falar sobre o que realmente gera resultado no campo.",
-  "resumo": "No dia 17 de outubro, em Tocantins, realizamos o evento “Parceiros da Terra”, que reuniu empresas fundamentais para o agronegócio da nossa região...",
-  "imagemDestaque": "/images/parceirosTerra.png",
-  "dataPublicacao": "23 de outubro de 2025",
-  "autor": "Por Equipe Terra",
-  "conteudo": `
-    <p>No dia 17 de outubro, em Tocantins, realizamos o evento “Parceiros da Terra”, que reuniu empresas fundamentais para o agronegócio da nossa região.</p>
-    <p>Foi uma manhã de troca, estratégia e conexão com quem faz a diferença na produção.</p>
+        "id": 9,
+        "slug": "terceirizacao-gestao-pecuaria-viabilidade-cases-sucesso",
+        "titulo": "Terceirizar a Gestão da Fazenda de Pecuária é Viável?",
+        "resumo": "A terceirização da gestão total de fazendas de pecuária é uma alternativa crescente no Brasil. A Feed&Food apresenta dois cases de sucesso do Grupo FA Agro e Grupo Virginia, destacando que o modelo exige confiança e participação ativa do proprietário nas decisões.",
+        "imagemDestaque": "/images/materiaRevista.png", 
+        "dataPublicacao": "04 de novembro de 2025", 
+        "autor": "Por Ariosto Mesquita (Especial para a Feed&Food)",
+        "conteudo": `
+            <h1>TERCEIRIZAR A GESTÃO DA FAZENDA DE PECUÁRIA É VIÁVEL?</h1>
+            <p><strong>FEED&FOOD MOSTRA DOIS CASES BEM-SUCEDIDOS. MODELO, NO ENTANTO, EXIGE CONFIANÇA E PARTICIPAÇÃO DO PROPRIETÁRIO NAS DECISÕES.</strong></p>
 
-    <div style="display: flex; flex-direction: row; flex-wrap: wrap; gap: 20px; margin-bottom: 20px;">
-        
-        <div style="flex: 0 0 300px; max-width: 100%;">
+            <p>Ter a fazenda “na mão” era coisa rara na pecuária brasileira e hoje passou a ser exigência diante dos novos desafios para se manter na atividade. No entanto, trilhar o caminho para o estabelecimento de processos de administração corporativa, planejamento estratégico e controle sobre indicadores de desempenho, quase sempre ficou longe da expertise dos pecuaristas. Uma das alternativas que ganhou corpo nas últimas décadas é a contratação de serviços de consultoria técnica. No entanto, alguns proprietários estão apostando em uma <strong>gestão terceirizada total</strong>, seja por falta de mão-de-obra especializada no campo, pelo aumento da complexidade da atividade (fortes exigências ambientais, tecnológicas, sanitárias e de mercado, por exemplo) ou por decisão de herdeiros, muitos com outras atividades nas cidades.</p>
+
+            <h2>Case 1: Grupo FA Agro - Profissionalização e Resultados</h2>
+
+            <p>Esta terceirização administrativa foi o caminho adotado, por exemplo, pelo <strong>Grupo FA Agro</strong>, com sede em Naviraí (MS) e fazendas no Paraguai e Brasil. O proprietário José Henrique Fabris Albuquerque buscou profissionalizar o negócio e ter acesso a métodos e controle sobre números e indicadores. A gestão externa total iniciou em 2020 com quatro fazendas, e hoje são seis (três no Paraguai).</p>
+
+            <h3>Modelo de Gestão e Evolução</h3>
+            <p>As propriedades estão inseridas no <strong>Programa de Recuperação Gerencial (PRG)</strong>, modelo de terceirização da gestão da <strong>Terra Desenvolvimento Agropecuário</strong>. A gestão começou em uma situação financeira complicada, com déficit de caixa e endividamento. Rodrigo Patussi, sócio-diretor da Terra, ressalta que a diretoria participa ativamente, garantindo que "A terceirização da gestão só alcança qualidade e sucesso com a participação do dono".</p>
             
-            <video 
-              controls 
-              poster="/images/parceiros-terra-capa-video-vertical.jpg" 
-              style="width: 100%; height: auto; border-radius: 8px; box-shadow: 0 4px 8px rgba(0,0,0,0.2);"
-              
-              /* 💡 ATRIBUTOS MOVIDOS PARA CÁ */
-              autoplay
-              muted
-              loop
-              >
-              <source src="/videos/parceirosTerraVideo.mp4" type="video/mp4">
-              
-              Seu navegador não suporta a tag de vídeo.
-          </video>
-        </div>
+            <p><strong>Evolução em 5 Anos (Segundo a Terra Desenvolvimento):</strong></p>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Indicador</th>
+                        <th>Antes</th>
+                        <th>Atual</th>
+                        <th>Evolução</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Rebanho Total (cabeças)</td>
+                        <td>15.778</td>
+                        <td>20.750</td>
+                        <td>+31,5%</td>
+                    </tr>
+                    <tr>
+                        <td>Produção (@/ha)</td>
+                        <td>2,90</td>
+                        <td>3,58</td>
+                        <td>+23,4%</td>
+                    </tr>
+                    <tr>
+                        <td>Animais Comercializados (bovinos)</td>
+                        <td>3.161</td>
+                        <td>6.851</td>
+                        <td>+116,7%</td>
+                    </tr>
+                    <tr>
+                        <td>Taxa de Desmame</td>
+                        <td>50,4%</td>
+                        <td>61,9%</td>
+                        <td>+22,8%</td>
+                    </tr>
+                </tbody>
+            </table>
+            
+            <p>O proprietário José Henrique destaca que as mudanças vieram com a profissionalização de sistemas e protocolos de trabalho, permitindo que ele continue "lá dentro do negócio, supervisionando e tomando a decisão final".</p>
 
-        <div style="flex: 1; min-width: 300px;">
-            <h4>Foco em Lucratividade e Estratégia no Campo</h4>
+            <h2>Case 2: Grupo Virginia - Reconstrução e Valorização do Ativo</h2>
 
-            <p>O encontro teve um foco claro: quais indicadores realmente influenciam a lucratividade nas fazendas?</p>
-            <p>Durante as discussões, temas essenciais para o sucesso no campo estiveram em pauta, como sanidade, nutrição, gestão financeira e tomada de decisão técnica.</p>
+            <p>O <strong>Grupo Virginia</strong>, de Maringá (PR), com atividade principal na distribuição de bebidas e alimentos, optou pela terceirização da Fazenda Estância Nova (10.700 ha, em Rio Verde de Mato Grosso/MS, em região peripantaneira), após o término de um contrato de arrendamento. A propriedade estava estagnada e em degradação.</p>
 
-            <h4>Debate sobre a Safra 25/26</h4>
+            <p>O grupo escolheu o modelo de investimento/trabalho e terceirizou a gestão com a Terra Desenvolvimento Agropecuário. O trabalho incluiu um processo intenso de construção e recuperação/formação de áreas, além de obras de infraestrutura.</p>
 
-            <p>Além disso, o grupo também voltou o olhar para a safra 25/26, debatendo desafios e tendências que devem marcar o próximo ciclo, com destaque para custos e margens, eficiência produtiva, integração entre áreas e decisões cada vez mais estratégicas.</p>
-        </div>
-    </div>
-    <h4>Parceiros que Impulsionam o Agronegócio</h4>
+            <h3>Investimentos e Avanços</h3>
+            <ul>
+                <li><strong>Investimento em Rebanho:</strong> R$ 18,5 milhões (compra de 8.795 cabeças).</li>
+                <li><strong>Investimento em Infraestrutura:</strong> R$ 12 milhões (incluindo formação de pastos).</li>
+            </ul>
 
-    <p>O evento contou com a presença e contribuição de importantes parceiros: MSD, Cargill Nutron, Sumitomo, Nádia Rural, Premix, Purinitre, AgroAmazonia e AgroMinas.</p>
-    <p>Juntos, construímos uma rede mais forte para o desenvolvimento do setor.</p>
+            <p><strong>Avanços Produtivos e Financeiros (2021 a 2025):</strong></p>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Indicador</th>
+                        <th>2021</th>
+                        <th>2025</th>
+                        <th>Avanço</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Taxa de Desmame</td>
+                        <td>49,10%</td>
+                        <td>70,20%</td>
+                        <td>+43%</td>
+                    </tr>
+                    <tr>
+                        <td>Produtividade (@/ha)</td>
+                        <td>1,32</td>
+                        <td>3,19</td>
+                        <td>+141,7%</td>
+                    </tr>
+                    <tr>
+                        <td>Resultado Operacional (R$/ha)</td>
+                        <td>R$ 179,52</td>
+                        <td>R$ 273,81</td>
+                        <td>+52,5%</td>
+                    </tr>
+                </tbody>
+            </table>
 
-    <p>Porque parceria se constrói com troca, escuta e alinhamento de propósito — e é isso que seguimos cultivando em cada evento da Terra.</p>
-    <p>Que venha a safra 25/26, com mais gestão, mais conexão e mais resultado.</p>`
-},
+            <h3>Valorização Patrimonial Acima da Média</h3>
+            <p>O empresário Waldemar Buosi destaca a forte valorização do ativo: a Terra calcula uma valorização de <strong>190,1%</strong> em quatro anos (terra, rebanho e maquinário), enquanto Buosi estima uma valorização de aproximadamente <strong>285%</strong>, muito acima da média nacional de 115% no período.</p>
+
+            <blockquote>
+                “O produtor precisa confiar na equipe de gestão terceirizada, manter alinhamento de expectativas e acompanhar resultados periodicamente. Não funciona simplesmente entregando a chave para outro. O processo exige parceria, confiança e transparência.” - Waldemar Buosi (Grupo Virginia)
+            </blockquote>
+            
+            <h2>Modelo de Remuneração e Considerações Finais</h2>
+
+            <p>Os modelos de gestão terceirizada variam. O PRG da Terra Desenvolvimento trabalha com equipe na fazenda, um líder e equipe de suporte. O processo exige rituais gerenciais periódicos e acompanhamento de resultados.</p>
+
+            <p><strong>Remuneração da Gestora (Terra Desenvolvimento):</strong></p>
+            <ul>
+                <li>Taxa mensal fixa (corrigida pela inflação).</li>
+                <li>Percentual sobre o resultado operacional, que pode variar entre <strong>8% e 12,5%</strong> ("Melhorando para o produtor a gente ganha junto").</li>
+                <li>Contratos, em geral, são de três anos de duração, renováveis por igual período.</li>
+            </ul>
+
+            <p>Para o pesquisador da Embrapa Gado de Corte, Guilherme Malafaia, a terceirização é uma <strong>estratégia viável</strong> para produtores que buscam profissionalização, eficiência e melhor uso dos recursos, desde que haja uma escolha criteriosa da empresa parceira e acompanhamento rigoroso dos resultados.</p>
+        `
+    },
    {
     id:1,
     slug: '5-anos-covid-agro',
