@@ -8,7 +8,7 @@ import AnimatedSection from "@/components/AnimatedSection";
 
 // --- DADOS E CONSTANTES GLOBAIS ---
 const beneficiosEncontro = [
-  "Palestras com profissionais de destaque no agro.",
+  "Palestras com profissionais de destaque no agronegócio.",
   "Discussões sobre tendências e desafios do setor.",
   "Espaços para fortalecer conexões e parcerias estratégicas.",
 ];
