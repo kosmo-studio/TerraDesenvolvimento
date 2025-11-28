@@ -14,17 +14,6 @@ const beneficiosEncontro = [
 ];
 
 
-const cursoGestaoData = {
-    title: "Curso de Gestão da Empresa Pecuária <br> (Goiânia - Go)",
-    imageSrc: "/images/goianiaCursoGestao.jpeg",
-    description1: `Um dos cursos com maior sucesso em gestão pecuária do Brasil! <br /> Com mais de <strong>10.000 participantes</strong> formados em <strong>215 edições</strong>, já se consolidou como referência nacional, alcançando média de satisfação acima de <strong>9,0 pontos</strong>.`,
-    description2: `Agora em um <strong>formato prático e dinâmico</strong>, você será o protagonista: aplicará os conceitos diretamente no seu próprio Excel, levando imediatamente as ferramentas de gestão para a realidade da sua fazenda.`,
-    targetAudience: "Produtores rurais, gestores, técnicos e estudantes que desejam aprofundar seus conhecimentos em gestão agropecuária.",
-    differential: "Metodologias e métricas comprovadas em fazendas de sucesso no Brasil, Paraguai e Bolívia.",
-    linkTo: "/EmpresaPecuariaGO",
-    containerClass: 'shadow-[0px_-40px_40px_-20px_rgba(0,0,0,0.3)] text-center bg-white relative mt-[-20px] md:-mt-64', 
-    sectionPaddingClass: 'py-0 md:pt-24'
-};
 
 
 const cursoGestaoData2 = {
@@ -139,14 +128,7 @@ export default function CursoseEventos() {
                         subtitle="Na Terra Desenvolvimento, acreditamos que conhecimento e relacionamento são pilares fundamentais para o crescimento sustentável do agronegócio. Por isso, oferecemos cursos e eventos que unem prática, inovação e networking, sempre com foco em resultados reais para o seu negócio."
                     />
                 </AnimatedSection>
-
-                {/* --- Seção Curso de Gestão (Slot 1) ---- */}
-                <CourseSection {...cursoGestaoData} />
-                <DivisorTerra />
-
-                {/* --- Seção Curso de Gestão (Slot 2) ---- */}
-                <CourseSection {...cursoGestaoData2} />
-                <DivisorTerra />
+        
 
                 <CourseSection {...cursoGestaoData3} />
                 <DivisorTerra />
