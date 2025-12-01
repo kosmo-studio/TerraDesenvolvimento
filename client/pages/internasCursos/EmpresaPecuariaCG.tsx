@@ -63,7 +63,7 @@ export default function EmpresaPecuariaCG() {
         <Header />
         {/* Hero Section */}
         <HeroSection
-          backgroundImage="/images/cgGestaoCurso-banner.jpg"
+          backgroundImage="/images/cgGestaoCurso-banner.png"
           title=""
           subtitle=""
         />
