@@ -31,8 +31,8 @@ const contactInfo = {
   },
   locations: [
     { country: "Brasil", flag: "br", phones: [{ number: "+55 (67) 3026-3442", location: "Campo Grande-MS" }, { number: "+55 (44) 3031-8844", location: "Maringá-PR" }, { number: "+55 (62) 99688-1105", location: "Goiânia-GO" }, { number: "+55 (65) 98429-8379", location: "Ji-Paraná - RO" }, { number: "+55 (65) 99692-1046", location: "Cuiabá-MT" }, { number: "+55 (44) 99126-6268", location: "Araguaína - TO" }] },
-    { country: "Paraguai", flag: "py", phones: [{ number: "+595 9851-92143", location: "Assunção" }, { number: "+595 986 923995", location: "Assunção" }] },
-    { country: "Bolívia", flag: "bo", phones: [{ number: "+591 76685231", location: "Santa Cruz" }, { number: "+591 77694853", location: "Santa Cruz" }] },
+    { country: "Paraguai", flag: "py", phones: [{ number: "+595 9851-92143", location: "Assunção" }, { number: "+595 981 503720", location: "Assunção" }] },
+    { country: "Bolívia", flag: "bo", phones: [{ number: "+591 77880226", location: "Santa Cruz" }, { number: "+591 77694853", location: "Santa Cruz" }] },
   ],
 };
 
