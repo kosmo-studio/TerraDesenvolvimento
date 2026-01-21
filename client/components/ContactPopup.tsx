@@ -5,7 +5,7 @@ import { supabase } from '../lib/supabase';
 const ContactPopup = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [loading, setLoading] = useState(false);
-  const [submitted, setSubmitted] = useState(false); // Estado para a tela de sucesso
+  const [submitted, setSubmitted] = useState(false);
   const [formData, setFormData] = useState({
     primeiro_nome: '',
     sobrenome: '',
@@ -17,7 +17,7 @@ const ContactPopup = () => {
 
   const togglePopup = () => {
     setIsOpen(!isOpen);
-    if (submitted) setTimeout(() => setSubmitted(false), 500); // Reseta após fechar
+    if (submitted) setTimeout(() => setSubmitted(false), 500);
   };
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
@@ -37,20 +37,27 @@ const ContactPopup = () => {
     if (error) {
       alert('Erro ao enviar: ' + error.message);
     } else {
-      setSubmitted(true); // Ativa a tela de sucesso
+      setSubmitted(true);
       setFormData({ primeiro_nome: '', sobrenome: '', email: '', telefone: '', cidade: '', observacao: '' });
     }
   };
 
   return (
     <div className="fixed bottom-6 right-6 z-50 font-lexend">
-      {/* Botão Flutuante */}
+      
+      {/* Botão Flutuante com Hover Animado */}
       {!isOpen && (
         <button
           onClick={togglePopup}
-          className="bg-[#0B1B32] text-white p-4 rounded-full shadow-2xl transition-all hover:scale-110 flex items-center gap-3 border-2 border-white group"
+          className="group flex items-center bg-[#0B1B32] text-white p-4 rounded-full shadow-2xl transition-all duration-500 ease-in-out hover:pr-6 border-2 border-white"
         >
-          <Calendar size={24} />
+          {/* Ícone fixo */}
+          <Calendar size={24} className="min-w-[24px]" />
+          
+          {/* Texto que expande no hover */}
+          <span className="max-w-0 overflow-hidden group-hover:max-w-xs group-hover:ml-3 transition-all duration-500 ease-in-out whitespace-nowrap text-sm font-medium">
+            Saiba mais sobre o Encontro com Gestores
+          </span>
         </button>
       )}
 
@@ -77,7 +84,6 @@ const ContactPopup = () => {
 
           <div className="min-h-[400px] flex flex-col justify-center bg-[#F9F9F9]">
             {!submitted ? (
-              /* Formulário */
               <form className="p-6 space-y-4 animate-in fade-in duration-500" onSubmit={handleSubmit}>
                 <p className="text-[#0B1B32] text-center text-sm font-semibold mb-2">
                   Preencha os dados para tirar dúvidas:
@@ -156,14 +162,13 @@ const ContactPopup = () => {
                 </div>
               </form>
             ) : (
-              /* Tela de Sucesso Estilizada */
               <div className="p-10 flex flex-col items-center text-center animate-in zoom-in duration-500">
                 <div className="w-20 h-20 bg-green-100 rounded-full flex items-center justify-center mb-6">
                   <CheckCircle2 size={48} className="text-green-600 animate-bounce" />
                 </div>
                 <h3 className="text-[#0B1B32] text-xl font-bold mb-2">Mensagem Enviada!</h3>
                 <p className="text-gray-500 text-sm mb-8 leading-relaxed">
-                  Obrigado pelo interesse. Em breve nossa equipe entrará em contato para mais detalhes sobre o Encontro com Gestores.
+                  Obrigado pelo interesse. Em breve nossa equipe entrará em contato.
                 </p>
                 <button
                   onClick={togglePopup}
