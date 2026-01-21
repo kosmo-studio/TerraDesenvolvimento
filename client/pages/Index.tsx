@@ -13,7 +13,7 @@ import CtaSection from "@/components/CtaSection";
 import NewsSection from "@/components/NewsSection";
 import { Modal } from "@/components/Modal";
 import { CtaModalStackedSpeakers } from "@/components/CtaModel";
-
+import ContactPopup from "@/components/ContactPopup";
 
 export default function Index() {
   const [isModalOpen, setIsModalOpen] = useState(false);
@@ -78,6 +78,7 @@ export default function Index() {
           <NewsSection />
         </AnimatedSection>
       </main>
+      <ContactPopup />
       <Footer />
     </div>
   );
