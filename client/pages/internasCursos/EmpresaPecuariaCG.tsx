@@ -48,9 +48,9 @@ const modulos = [
 ];
 
 const patrocinadores = [
-  { src: "/images/SICREDI.png", alt: "Logo Sicredi" },
-  { src: "/images/GADOMAIS.png", alt: "Logo Gado Mais" },
-  { src: "/images/logoCrv.png", alt: "Logo CRV" },
+  // { src: "/images/SICREDI.png", alt: "Logo Sicredi" },
+  // { src: "/images/GADOMAIS.png", alt: "Logo Gado Mais" },
+  // { src: "/images/logoCrv.png", alt: "Logo CRV" },
 ];
 
 const parceria = [
@@ -63,7 +63,7 @@ export default function EmpresaPecuariaCG() {
         <Header />
         {/* Hero Section */}
         <HeroSection
-          backgroundImage="/images/cgGestaoCurso-banner.png"
+          backgroundImage="/images/BANNERcuiaba.jpeg"
           title=""
           subtitle=""
         />
@@ -100,55 +100,7 @@ export default function EmpresaPecuariaCG() {
         {/* tabela */}
         <section className="py-16 px-4 bg-white">
           <div className="max-w-4xl mx-auto text-center">
-            <h2 className="text-4xl md:text-5xl font-bold font-lexend text-terra-navy mb-12">
-              Investimento
-            </h2>
-
-            {/* --- VISUALIZAÇÃO PARA DESKTOP (TABLET E MAIORES) --- */}
-            <div className="hidden md:grid grid-cols-4 gap-2 text-terra-navy">
-              {/* Cabeçalho */}
-              <div /> {/* Célula vazia no canto superior esquerdo */}
-              {dadosInvestimento.lotes.map((lote) => (
-                <div key={lote.nome} className="bg-terra-beige text-white font-bold text-xl p-3 rounded-lg flex flex-col items-center">
-                  <span>{lote.nome}</span>
-                  <span className="text-sm font-light text-gray-100">{lote.validade}</span>
-                </div>
-              ))}
-
-              {/* Linhas de Categoria */}
-              {dadosInvestimento.categorias.map((categoria) => (
-                <React.Fragment key={categoria.nome}>
-                  <div className="font-bold text-right text-lg p-3 pr-6 flex items-center justify-end">
-                    {categoria.nome}
-                  </div>
-                  {categoria.valores.map((valor, index) => (
-                    <div key={index} className="border font-bold border-gray-300 p-3 rounded-lg flex items-center justify-center">
-                      {valor}
-                    </div>
-                  ))}
-                </React.Fragment>
-              ))}
-            </div>
-
-            {/* --- VISUALIZAÇÃO PARA MOBILE --- */}
-            <div className="md:hidden space-y-8">
-              {dadosInvestimento.categorias.map((categoria) => (
-                <div key={categoria.nome} className="border border-gray-300 rounded-lg p-6 text-left">
-                  <h3 className="font-bold text-xl text-terra-navy mb-4">{categoria.nome}</h3>
-                  <div className="space-y-3">
-                    {dadosInvestimento.lotes.map((lote, index) => (
-                      <div key={lote.nome} className="flex justify-between items-center text-terra-navy">
-                        <div className="flex flex-col">
-                          <span className="bg-terra-beige font-bold py-1 px-3 rounded-md text-sm">{lote.nome}</span>
-                          <span className="text-xs text-gray-600">{lote.validade}</span>
-                        </div>
-                        <span className="font-medium">{categoria.valores[index]}</span>
-                      </div>
-                    ))}
-                  </div>
-                </div>
-              ))}
-            </div>
+            
 
             {/* modulo */}
             <section className="py-5 px-4 bg-white">
@@ -179,7 +131,7 @@ export default function EmpresaPecuariaCG() {
 
                 <section className="py-16">
                   <div>
-                    <a href="https://www.sympla.com.br/evento/curso-gestao-da-empresa-pecuaria---campo-grande--ms/3153277" target="_blank" rel="noopener noreferrer">
+                    <a href="https://www.sympla.com.br/evento/curso-gestao-da-empresa-pecuaria-cuiaba-mt/3289047" target="_blank" rel="noopener noreferrer">
                       <p className="text-5xl text-terra-navy">Faça sua <strong>inscrição!</strong></p>
                       <button className="mt-9 px-16 py-3 bg-terra-navy text-white font-semibold rounded-lg hover:bg-[#0f1d39] transition">
                         CLIQUE AQUI PARA COMPRAR
