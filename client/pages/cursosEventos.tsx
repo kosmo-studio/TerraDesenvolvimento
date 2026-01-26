@@ -28,13 +28,13 @@ const cursoGestaoData2 = {
     sectionPaddingClass: 'py-0 pt-44' 
 };
 const cursoGestaoData3 = {
-    title: "Curso de Gestão da Empresa Pecuária <br> (Campo Grande - MS)",
-    imageSrc: "/images/cgGestaoCurso.png",
+    title: "Curso de Gestão da Empresa Pecuária <br> (Cuiabá - MT)",
+    imageSrc: "/images/BANNERvuiabaCapa1600X838.jpeg",
     description1: `Um dos cursos com maior sucesso em gestão pecuária do Brasil! <br /> Com mais de <strong>10.000 participantes</strong> formados em <strong>215 edições</strong>, já se consolidou como referência nacional, alcançando média de satisfação acima de <strong>9,0 pontos</strong>.`,
     description2: `Agora em um <strong>formato prático e dinâmico</strong>, você será o protagonista: aplicará os conceitos diretamente no seu próprio Excel, levando imediatamente as ferramentas de gestão para a realidade da sua fazenda.`,
     targetAudience: "Produtores rurais, gestores, técnicos e estudantes que desejam aprofundar seus conhecimentos em gestão agropecuária.",
     differential: "Metodologias e métricas comprovadas em fazendas de sucesso no Brasil, Paraguai e Bolívia.",
-    linkTo: "/EmpresaPecuariaCG",
+    linkTo: "/EmpresaPecuariaMT",
     containerClass: 'text-center bg-white relative mt-[-20px] md:-mt-64', 
     sectionPaddingClass: 'py-0 pt-44' 
 };
