@@ -12,10 +12,10 @@ import { MapPin, Calendar, ArrowRight } from "lucide-react";
 const listaEventosCursos = [
     {
     id: "CUIABÁ-MT",
-    cidade: "CUIABÃ",
+    cidade: "CUIABÁ",
     estado: "MT",
     data: "26 e 27 de Março de 2026",
-    local: "Hotel Paiaguás",
+    local: "HOTEL PAIAGUÁS",
     imagem: "/images/BANNERvuiabaCapa1600X838.png",
     link: "/EmpresaPecuariaMT",
     status: "Inscrições Abertas"
