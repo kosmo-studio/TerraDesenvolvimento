@@ -13,32 +13,18 @@ const beneficiosEncontro = [
   "Espaços para fortalecer conexões e parcerias estratégicas.",
 ];
 
-
-
-
-const cursoGestaoData2 = {
-    title: "Curso de Gestão da Empresa Pecuária <br> (Araguaína - TO)",
-    imageSrc: "/images/araguainaCursoGestao.jpeg",
+// Unificado: Agora aponta para uma rota geral de cursos ou para a landing page principal do curso
+const cursoGestaoUnificado = {
+    title: "Curso de Gestão da Empresa Pecuária",
+    imageSrc: "/images/BANNERCURSOGESTAO.jpeg", // Sugestão: usar a imagem mais genérica ou a de Cuiabá que estava mais atualizada
     description1: `Um dos cursos com maior sucesso em gestão pecuária do Brasil! <br /> Com mais de <strong>10.000 participantes</strong> formados em <strong>215 edições</strong>, já se consolidou como referência nacional, alcançando média de satisfação acima de <strong>9,0 pontos</strong>.`,
     description2: `Agora em um <strong>formato prático e dinâmico</strong>, você será o protagonista: aplicará os conceitos diretamente no seu próprio Excel, levando imediatamente as ferramentas de gestão para a realidade da sua fazenda.`,
     targetAudience: "Produtores rurais, gestores, técnicos e estudantes que desejam aprofundar seus conhecimentos em gestão agropecuária.",
     differential: "Metodologias e métricas comprovadas em fazendas de sucesso no Brasil, Paraguai e Bolívia.",
-    linkTo: "/EmpresaPecuariaAG",
+    linkTo: "/EmpresaPecuaria", // Rota unificada
     containerClass: 'text-center bg-white relative mt-[-20px] md:-mt-64', 
     sectionPaddingClass: 'py-0 pt-44' 
 };
-const cursoGestaoData3 = {
-    title: "Curso de Gestão da Empresa Pecuária <br> (Cuiabá - MT)",
-    imageSrc: "/images/BANNERvuiabaCapa1600X838.png",
-    description1: `Um dos cursos com maior sucesso em gestão pecuária do Brasil! <br /> Com mais de <strong>10.000 participantes</strong> formados em <strong>215 edições</strong>, já se consolidou como referência nacional, alcançando média de satisfação acima de <strong>9,0 pontos</strong>.`,
-    description2: `Agora em um <strong>formato prático e dinâmico</strong>, você será o protagonista: aplicará os conceitos diretamente no seu próprio Excel, levando imediatamente as ferramentas de gestão para a realidade da sua fazenda.`,
-    targetAudience: "Produtores rurais, gestores, técnicos e estudantes que desejam aprofundar seus conhecimentos em gestão agropecuária.",
-    differential: "Metodologias e métricas comprovadas em fazendas de sucesso no Brasil, Paraguai e Bolívia.",
-    linkTo: "/EmpresaPecuariaMT",
-    containerClass: 'text-center bg-white relative mt-[-20px] md:-mt-64', 
-    sectionPaddingClass: 'py-0 pt-44' 
-};
-
 
 const cursoPersonalizadoData = {
     title: "Curso Personalizado em<br /> Gestão Agropecuária",
@@ -52,10 +38,9 @@ const cursoPersonalizadoData = {
     sectionPaddingClass: 'py-0 md:pt-24'
 };
 
-// --- COMPONENTE LOCAL REUTILIZÁVEL para as Seções de Curso ---
+// --- COMPONENTE LOCAL REUTILIZÁVEL ---
 function CourseSection({ title, imageSrc, description1, description2, targetAudience, differential, linkTo, containerClass, sectionPaddingClass }) {
     return (
-        // O z-20 em conjunto com a margem negativa do containerClass cria a sobreposição
         <section className={`${sectionPaddingClass} z-20`}>
             <div className={`container mx-auto pt-14 max-w-7xl ${containerClass}`}>
                 <AnimatedSection>
@@ -65,13 +50,15 @@ function CourseSection({ title, imageSrc, description1, description2, targetAudi
                         </h2>
                     </div>
                     
-                    <Link to={linkTo} className="flex justify-center mb-10">
-                        <img
-                            src={imageSrc}
-                            alt={title.replace(/<br\s*\/?>/gi, ' ')}
-                            className="rounded-3xl shadow-lg w-full max-w-4xl"
-                        />
-                    </Link>
+                    {linkTo ? (
+                        <Link to={linkTo} className="flex justify-center mb-10">
+                            <img src={imageSrc} alt={title.replace(/<br\s*\/?>/gi, ' ')} className="rounded-3xl shadow-lg w-full max-w-4xl hover:opacity-95 transition-opacity" />
+                        </Link>
+                    ) : (
+                        <div className="flex justify-center mb-10">
+                            <img src={imageSrc} alt={title} className="rounded-3xl shadow-lg w-full max-w-4xl" />
+                        </div>
+                    )}
                     
                     <div className="max-w-4xl mx-auto text-left px-4">
                         <p className="text-lg sm:text-xl text-terra-navy font-light leading-relaxed mb-6" dangerouslySetInnerHTML={{ __html: description1 }} />
@@ -97,16 +84,12 @@ function CourseSection({ title, imageSrc, description1, description2, targetAudi
                 </AnimatedSection>
                 
                 <AnimatedSection>
-                    {linkTo ? (
+                    {linkTo && (
                         <Link to={linkTo}>
                             <button className="mb-12 px-8 py-3 bg-terra-navy text-white font-semibold rounded-xl hover:bg-[#0f1d39] transition">
                                 SAIBA MAIS
                             </button>
                         </Link>
-                    ) : (
-                        <button className="mb-12 px-8 py-3 bg-terra-navy text-white font-semibold rounded-xl hover:bg-[#0f1d39] transition">
-                            SAIBA MAIS
-                        </button>
                     )}
                 </AnimatedSection>
             </div>
@@ -116,41 +99,38 @@ function CourseSection({ title, imageSrc, description1, description2, targetAudi
 
 // --- COMPONENTE PRINCIPAL ---
 export default function CursoseEventos() {
-    
     return (
         <div className="bg-white overflow-x-hidden">
             <main>
                 <Header />
-                <AnimatedSection>
-                    <HeroSection
-                        backgroundImage="/images/HeroCursoEvento.png"
-                        title="Cursos e Eventos"
-                        subtitle="Na Terra Desenvolvimento, acreditamos que conhecimento e relacionamento são pilares fundamentais para o crescimento sustentável do agronegócio. Por isso, oferecemos cursos e eventos que unem prática, inovação e networking, sempre com foco em resultados reais para o seu negócio."
-                    />
-                </AnimatedSection>
-        
+                <HeroSection
+                    backgroundImage="/images/HeroCursoEvento.png"
+                    title="Cursos e Eventos"
+                    subtitle="Na Terra Desenvolvimento, acreditamos que conhecimento e relacionamento são pilares fundamentais para o crescimento sustentável do agronegócio. Por isso, oferecemos cursos e eventos que unem prática, inovação e networking, sempre com foco em resultados reais para o seu negócio."
+                />
 
-                <CourseSection {...cursoGestaoData3} />
+                {/* Agora apenas uma seção para o Curso de Gestão */}
+                <CourseSection {...cursoGestaoUnificado} />
                 <DivisorTerra />
 
-                {/* --- Seção Curso Personalizado (Slot 3) --- */}
+                {/* Seção Curso Personalizado */}
                 <CourseSection {...cursoPersonalizadoData} />
                 <DivisorTerra />
 
-                {/* --- Encontro de gestores --- */}
+                {/* Encontro de gestores */}
                 <section className="bg-white py-24 px-6 md:px-12">
                     <div className="max-w-4xl mx-auto text-center">
                         <AnimatedSection>
                             <h1 className="text-3xl md:text-5xl sm:text-4xl font-extrabold text-terra-navy mb-10">
                                 Encontro de Gestores
                             </h1>
-                            <Link to={"https://www.encontrogestores.agr.br/"} className="flex justify-center mb-10">
+                            <a href="https://www.encontrogestores.agr.br/" target="_blank" rel="noopener noreferrer" className="flex justify-center mb-10">
                                 <img
                                     src="/images/InfoEncontroGestores.png"
                                     alt="Encontro de Gestores"
                                     className="rounded-3xl shadow-lg w-full max-w-4xl"
                                 />
-                            </Link >
+                            </a>
                             <p className="text-terra-navy text-lg sm:text-xl font-light leading-relaxed mb-12 text-left">
                                 Um dos eventos mais aguardados do setor! Realizado a cada dois anos, o <strong>Encontro de Gestores</strong> reúne <strong>grandes produtores, clientes e especialistas</strong> em um ambiente de troca de experiências, aprendizado e networking de alto nível.
                             </p>

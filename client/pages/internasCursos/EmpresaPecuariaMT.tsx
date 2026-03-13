@@ -5,26 +5,24 @@ import DivisorTerra from '@/components/interno/DivisorTerra';
 import React from 'react';
 import { Link } from "lucide-react";
 
-// --- DADOS DE INVESTIMENTO PERMANECEM IGUAIS ---
 const dadosInvestimento = {
   lotes: [
-    { nome: "1º Lote", validade: "até 17/10/2025" },
-    { nome: "2º Lote", validade: "até 31/10/2025" },
-    { nome: "3º Lote", validade: "até 12/11/2025" },
+    // { nome: "1º Lote", validade: "até 31/10/2025" },
+    // { nome: "2º Lote", validade: "até 14/11/2025" },
+    // { nome: "3º Lote", validade: "até 27/11/2025" },
   ],
   categorias: [
-    {
-      nome: "Profissionais e Produtores",
-      valores: ["R$500,00", "R$600,00", "R$700,00"],
-    },
-    {
-      nome: "Estudantes e Clientes Terra",
-      valores: ["R$425,00", "R$510,00", "R$595,00"],
-    },
+    // {
+    //   nome: "Profissionais e Produtores",
+    //   valores: ["R$500,00", "R$600,00", "R$700,00"],
+    // },
+    // {
+    //   nome: "Estudantes e Clientes Terra",
+    //   valores: ["R$425,00", "R$510,00", "R$595,00"],
+    // },
   ],
 };
 
-// --- DADOS DE MÓDULOS PERMANECEM IGUAIS ---
 const modulos = [
   {
     titulo: "Análise de potencialidades:",
@@ -48,42 +46,40 @@ const modulos = [
   },
 ];
 
-// --- ESTRUTURA DE PATROCINADORES EM OURO E BRONZE ---
+/**
+ * Estrutura de dados para patrocinadores, dividida em categorias Ouro, Prata e Bronze.
+ * Os patrocinadores existentes foram alocados em 'ouro' provisoriamente.
+ */
 const patrocinadores = {
   ouro: [
-    { src: "/images/SumitomoLogo.png", alt: "Logo Sumitomo" },
-    
+    { src: "/images/msd.png", alt: "Logo MSD" },
+  ],
+  prata: [
+    { src: "/images/logonutroncargill.png", alt: "Logo nutroncargill" },
   ],
   bronze: [
-    { src: "/images/espaçorural.png", alt: "Logo Espaço Rural" },
-    { src: "/images/agroceres.png", alt: "Logo Agroceres" },
-    { src: "/images/MOINHO-MAQUINAS.png", alt: "Logo Moinho" },
-    { src: "/images/LogodeHeus.png", alt: "Logo de Heus" },
-    { src: "/images/LogoBoagro.png", alt: "Logo Boagro" },
-    { src: "/images/logoAnimalltag.png", alt: "Logo AnimallTag" },
+    // Array de bronze está vazia, pronta para novos dados
   ],
 };
 
-// --- DADOS DE PARCERIA PERMANECEM IGUAIS ---
 const parceria = [
   { src: "/images/castros.png", alt: "Logo castros" },
   { src: "/images/metryx-logo.png", alt: "Logo metryx" },
-  { src: "/images/UniAraguaia.png", alt: "Logo UniAraguaia" },
 ];
 
-export default function EmpresaPecuariaGO() {
+export default function EmpresaPecuariaMT() {
   return (
     <div className="bg-white overflow-x-hidden">
       <main>
         <Header />
         {/* Hero Section */}
         <HeroSection
-          backgroundImage="/images/bg-empresapecuaria.png"
+          backgroundImage="/images/BANNERvuiabaCapa1600X838.png"
           title=""
           subtitle=""
         />
 
-        {/* ... (Seção de Introdução e Tabela de Investimento - Código não alterado) ... */}
+        {/* --- Seção de Introdução --- */}
         <section className="py-0 md:pt-24 z-20">
           <div className="container mx-auto pt-14 max-w-7xl shadow-[0px_-40px_40px_-20px_rgba(0,0,0,0.3)] text-center bg-white relative mt-[-20px] md:-mt-40">
             <div className=" space-y-2 md:space-y-0 lg:space-y-2 xl:space-y-3 mb-10">
@@ -115,19 +111,16 @@ export default function EmpresaPecuariaGO() {
         {/* tabela */}
         <section className="py-16 px-4 bg-white">
           <div className="max-w-4xl mx-auto text-center">
-            <h2 className="text-4xl md:text-5xl font-bold font-lexend text-terra-navy mb-12">
+            {/* <h2 className="text-4xl md:text-5xl font-bold font-lexend text-terra-navy mb-12">
               Investimento
-            </h2>
+            </h2> */}
 
             {/* --- VISUALIZAÇÃO PARA DESKTOP (TABLET E MAIORES) --- */}
             <div className="hidden md:grid grid-cols-4 gap-2 text-terra-navy">
               {/* Cabeçalho */}
               <div /> {/* Célula vazia no canto superior esquerdo */}
               {dadosInvestimento.lotes.map((lote) => (
-                <div
-                  key={lote.nome}
-                  className="bg-terra-beige text-white font-bold text-2xl p-3 rounded-lg flex flex-col items-center"
-                >
+                <div key={lote.nome} className="bg-terra-beige text-white font-bold text-xl p-3 rounded-lg flex flex-col items-center">
                   <span>{lote.nome}</span>
                   <span className="text-sm font-light text-gray-100">{lote.validade}</span>
                 </div>
@@ -140,10 +133,7 @@ export default function EmpresaPecuariaGO() {
                     {categoria.nome}
                   </div>
                   {categoria.valores.map((valor, index) => (
-                    <div
-                      key={index}
-                      className="border font-bold border-gray-300 p-3 rounded-lg flex items-center justify-center"
-                    >
+                    <div key={index} className="border font-bold border-gray-300 p-3 rounded-lg flex items-center justify-center">
                       {valor}
                     </div>
                   ))}
@@ -154,17 +144,11 @@ export default function EmpresaPecuariaGO() {
             {/* --- VISUALIZAÇÃO PARA MOBILE --- */}
             <div className="md:hidden space-y-8">
               {dadosInvestimento.categorias.map((categoria) => (
-                <div
-                  key={categoria.nome}
-                  className="border border-gray-300 rounded-lg p-6 text-left"
-                >
+                <div key={categoria.nome} className="border border-gray-300 rounded-lg p-6 text-left">
                   <h3 className="font-bold text-xl text-terra-navy mb-4">{categoria.nome}</h3>
                   <div className="space-y-3">
                     {dadosInvestimento.lotes.map((lote, index) => (
-                      <div
-                        key={lote.nome}
-                        className="flex justify-between items-center text-terra-navy"
-                      >
+                      <div key={lote.nome} className="flex justify-between items-center text-terra-navy">
                         <div className="flex flex-col">
                           <span className="bg-terra-beige font-bold py-1 px-3 rounded-md text-sm">{lote.nome}</span>
                           <span className="text-xs text-gray-600">{lote.validade}</span>
@@ -184,17 +168,14 @@ export default function EmpresaPecuariaGO() {
                   Módulos
                 </h2>
 
-                {/* Container da lista com espaçamento entre os módulos */}
                 <div className="flex flex-col space-y-8">
                   {modulos.map((modulo) => (
                     <div key={modulo.titulo}>
-                      {/* Caixa do Título (bege) */}
                       <div className="bg-terra-beige p-4 rounded-t-xl">
                         <h3 className="text-xl font-bold text-white">
                           {modulo.titulo}
                         </h3>
                       </div>
-                      {/* Caixa da Descrição (branca com borda) */}
                       <div className="border border-t-0 border-gray-300 p-4 md:p-8 rounded-b-xl">
                         <p className="text-terra-navy text-lg font-medium">
                           {modulo.descricao}
@@ -206,27 +187,25 @@ export default function EmpresaPecuariaGO() {
 
                 <section className="py-16">
                   <div>
-                    <a
-                      href="https://www.sympla.com.br/evento/curso-gestao-da-empresa-pecuaria/3056367"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                    >
+                    <a href="https://www.sympla.com.br/evento/curso-gestao-da-empresa-pecuaria---araguainato/3141458" target="_blank" rel="noopener noreferrer">
                       <p className="text-5xl text-terra-navy">Faça sua <strong>inscrição!</strong></p>
                       <button className="mt-9 px-16 py-3 bg-terra-navy text-white font-semibold rounded-lg hover:bg-[#0f1d39] transition">
                         CLIQUE AQUI PARA COMPRAR
-                      </button>
+                      </button> 
                     </a>
                   </div>
                 </section>
 
-                {/* --- SEÇÃO DE PATROCINADORES GERAL (AGORA COM OS TÍTULOS ORO E BRONZE INTERNOS) --- */}
+                {/* --- SEÇÃO DE PATROCINADORES COM LAYOUT ESTILIZADO (OURO, PRATA E BRONZE) --- */}
                 <section className="py-10 px-4 sm:px-6 lg:px-8">
                   <div className="max-w-5xl mx-auto text-center">
                     {/* Título principal Patrocinadores */}
-                    <h2 className="text-4xl font-medium text-terra-navy mb-6">Patrocinadores</h2>
-                    
+                    <h2 className="text-4xl font-medium font-lexend text-terra-navy mb-10">
+                      Patrocinadores
+                    </h2>
+
                     {/* --- Rótulo Ouro --- */}
-                    <p className="text-lg font-bold text-terra-beige  border-2 border-terra-beige inline-block px-6 py-2 mb-8 uppercase tracking-widest">
+                    <p className=" inline-block text-lg font-bold text-terra-beige border-terra-beige border-2 px-4 py-2 mb-8 mx-auto uppercase tracking-widest">
                       Ouro
                     </p>
 
@@ -242,14 +221,33 @@ export default function EmpresaPecuariaGO() {
                         </div>
                       ))}
                     </div>
-
-                    {/* --- Rótulo Bronze --- */}
-                    <p className="text-lg font-bold text-orange-800  border-2 border-orange-800 inline-block px-6 py-2 mb-8 uppercase tracking-widest">
-                      Bronze
+                    
+                    {/* --- Rótulo Prata --- */}
+                    <p className="text-lg font-bold text-slate-700  border-2 border-slate-700 inline-block px-6 py-2 mb-8 uppercase tracking-widest">
+                      Prata
                     </p>
 
+                    {/* Patrocinadores Prata */}
+                    <div className="grid grid-cols-1 md:grid-cols-1 gap-2 items-center mb-12">
+                      {patrocinadores.prata.map((patrocinador) => (
+                        <div key={patrocinador.alt} className="flex justify-center items-center p-4 w-auto h-40">
+                          <img
+                            src={patrocinador.src}
+                            alt={patrocinador.alt}
+                            className="w-full h-full object-contain transition-all duration-300"
+                          />
+                        </div>
+                      ))}
+                    </div>
+
+                    {/* colocar inline-block */}
+                    {/* --- Rótulo Bronze --- */}
+                    <p className=" hidden text-lg font-bold text-orange-800 border-2 border-orange-800 px-6 py-2 mb-8 uppercase tracking-widest">
+                      Bronze
+                    </p>
+                        
                     {/* Patrocinadores Bronze */}
-                    <div className="grid grid-cols-1 md:grid-cols-3 gap-2 items-center mb-12">
+                    <div className="grid grid-cols-1 md:grid-cols-4 gap-2 items-center mb-12 ">
                       {patrocinadores.bronze.map((patrocinador) => (
                         <div key={patrocinador.alt} className="flex justify-center items-center p-4 w-auto h-40">
                           <img
@@ -264,16 +262,18 @@ export default function EmpresaPecuariaGO() {
                 </section>
                 
                 {/* Parceria */}
-                <section className="py-10 px-4 sm:px-6 lg:px-8">
+                <section className="py-10 px-4 sm:px-6 lg:px-8 hidden">
                   <div className="max-w-lg mx-auto text-center">
-                    <h2 className="text-4xl font-medium text-terra-navy mb-6">Parceria</h2>
-                    <div className="grid grid-cols-1 md:grid-cols-3 gap-0 items-center">
+                    <h2 className="text-4xl font-medium text-terra-navy mb-6">
+                      Parceria
+                    </h2>
+                    <div className="grid grid-cols-1 md:grid-cols-2 gap-0 items-center">
                       {parceria.map((parceria) => (
-                        <div key={parceria.alt} className="flex justify-center items-center p-4 w-auto h-40">
+                        <div key={parceria.alt} className="flex justify-center items-center p-4 w-auto h-40 ">
                           <img
                             src={parceria.src}
                             alt={parceria.alt}
-                            className="w-full h-full object-contain transition-all duration-300"
+                            className="w-full h-full object-contain transition-all duration-300 "
                           />
                         </div>
                       ))}

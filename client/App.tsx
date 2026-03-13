@@ -24,9 +24,10 @@ import PerformaTerra from "./pages/internasServiços/PerformaTerra";
 import AnalisePlanoDeNegocio from "./pages/internasServiços/AnalisePlanoDeNegocio";
 import DetalheNoticia from "./pages/internaNoticias.tsx/DetalheNoticia";
 import NossaHistoria from "./pages/nossaHistoria";
-import EmpresaPecuariaGO from "./pages/internasCursos/EmpresaPecuariaGO";
-import EmpresaPecuariaAG from "./pages/internasCursos/EmpresaPecuariaAG";
-import EmpresaPecuariaCG from "./pages/internasCursos/EmpresaPecuariaCG";
+import EmpresaPecuaria from "./pages/internasCursos/EmpresaPecuaria";
+import EmpresaPecuariaGO from "./pages/internasCursos/EmpresaPecuariaAG";
+import EmpresaPecuariaXG from "./pages/internasCursos/EmpresaPecuariaXG";
+import EmpresaPecuariaMT from "./pages/internasCursos/EmpresaPecuariaMT";
 
 const queryClient = new QueryClient();
 
@@ -52,9 +53,11 @@ const App = () => (
           <Route path="/servicos/ProgramaRecuperaçãoGerencial" element={<Prg />} />
           <Route path="/servicos/AnalisePlanoDeNegocio" element={<AnalisePlanoDeNegocio />} />
           <Route path="/servicos/PerformaTerra" element={<PerformaTerra />} />
+          <Route path="/EmpresaPecuaria" element={<EmpresaPecuaria />} />
           <Route path="/EmpresaPecuariaGO" element={<EmpresaPecuariaGO />} />
-          <Route path="/EmpresaPecuariaAG" element={<EmpresaPecuariaAG />} />
-          <Route path="/EmpresaPecuariaMT" element={<EmpresaPecuariaCG />} />
+          <Route path="/EmpresaPecuariaXG" element={<EmpresaPecuariaXG />} />
+          <Route path="/EmpresaPecuariaMT" element={<EmpresaPecuariaMT />} />
+
           <Route path="/nossaHistoria" element={<NossaHistoria />} />
           <Route path="/noticias/:slug" element={<DetalheNoticia />} />
           <Route path="/Resultados" element={<Resultados />} />
