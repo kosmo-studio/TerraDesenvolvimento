@@ -24,7 +24,7 @@ const listaEventosCursos = [
     id: "GOIÂNIA-GO",
     cidade: "GOIÂNIA",
     estado: "GO",
-    data: "11 e 10 de junho de 2026",
+    data: "10 e 11 de junho de 2026",
     local: "SHOPPING LOZÂNDES",
     imagem: "/images/GESTAOGOIANIA.jpeg",
     link: "/EmpresaPecuariaGO", // Rota específica que você já criou
