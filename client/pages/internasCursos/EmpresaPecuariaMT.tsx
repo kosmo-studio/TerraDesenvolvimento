@@ -200,14 +200,14 @@ export default function EmpresaPecuariaMT() {
                 <section className="py-10 px-4 sm:px-6 lg:px-8">
                   <div className="max-w-5xl mx-auto text-center">
                     {/* Título principal Patrocinadores */}
-                    <h2 className="text-4xl font-medium font-lexend text-terra-navy mb-10">
+                    {/* <h2 className="text-4xl font-medium font-lexend text-terra-navy mb-10">
                       Patrocinadores
-                    </h2>
+                    </h2> */}
 
                     {/* --- Rótulo Ouro --- */}
-                    <p className=" inline-block text-lg font-bold text-terra-beige border-terra-beige border-2 px-4 py-2 mb-8 mx-auto uppercase tracking-widest">
+                    {/* <p className=" inline-block text-lg font-bold text-terra-beige border-terra-beige border-2 px-4 py-2 mb-8 mx-auto uppercase tracking-widest">
                       Ouro
-                    </p>
+                    </p> */}
 
                     {/* Patrocinadores Ouro */}
                     <div className="grid grid-cols-1 md:grid-cols-1 gap-2 items-center mb-12">
@@ -223,9 +223,9 @@ export default function EmpresaPecuariaMT() {
                     </div>
                     
                     {/* --- Rótulo Prata --- */}
-                    <p className="text-lg font-bold text-slate-700  border-2 border-slate-700 inline-block px-6 py-2 mb-8 uppercase tracking-widest">
+                    {/* <p className="text-lg font-bold text-slate-700  border-2 border-slate-700 inline-block px-6 py-2 mb-8 uppercase tracking-widest">
                       Prata
-                    </p>
+                    </p> */}
 
                     {/* Patrocinadores Prata */}
                     <div className="grid grid-cols-1 md:grid-cols-1 gap-2 items-center mb-12">
@@ -242,9 +242,9 @@ export default function EmpresaPecuariaMT() {
 
                     {/* colocar inline-block */}
                     {/* --- Rótulo Bronze --- */}
-                    <p className=" hidden text-lg font-bold text-orange-800 border-2 border-orange-800 px-6 py-2 mb-8 uppercase tracking-widest">
+                    {/* <p className=" hidden text-lg font-bold text-orange-800 border-2 border-orange-800 px-6 py-2 mb-8 uppercase tracking-widest">
                       Bronze
-                    </p>
+                    </p> */}
                         
                     {/* Patrocinadores Bronze */}
                     <div className="grid grid-cols-1 md:grid-cols-4 gap-2 items-center mb-12 ">
@@ -264,9 +264,9 @@ export default function EmpresaPecuariaMT() {
                 {/* Parceria */}
                 <section className="py-10 px-4 sm:px-6 lg:px-8 hidden">
                   <div className="max-w-lg mx-auto text-center">
-                    <h2 className="text-4xl font-medium text-terra-navy mb-6">
+                    {/* <h2 className="text-4xl font-medium text-terra-navy mb-6">
                       Parceria
-                    </h2>
+                    </h2> */}
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-0 items-center">
                       {parceria.map((parceria) => (
                         <div key={parceria.alt} className="flex justify-center items-center p-4 w-auto h-40 ">
