@@ -74,7 +74,7 @@ export default function EmpresaPecuariaXG() {
         <Header />
         {/* Hero Section */}
         <HeroSection
-          backgroundImage="/images/GESTAOXINGUARA.jpeg"
+          backgroundImage="/images/GESTAOXINGUARA.png"
           title=""
           subtitle=""
         />
