@@ -34,9 +34,9 @@ const listaEventosCursos = [
     id: "XINGUARA-PA",
     cidade: "XINGUARA",
     estado: "PA",
-    data: "16 e 17 de junho de 2026",
+    data: "17 e 18 de junho de 2026",
     local: "SINDICATO RURAL SRX",
-    imagem: "/images/GESTAOXINGUARA.jpeg",
+    imagem: "/images/GESTAOXINGUARA.png",
     link: "/EmpresaPecuariaXG",
     status: "Inscrições Abertas"
   },
