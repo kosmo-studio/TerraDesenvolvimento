@@ -187,7 +187,7 @@ export default function EmpresaPecuariaXG() {
 
                 <section className="py-16">
                   <div>
-                    <a href="https://www.sympla.com.br/evento/curso-gestao-da-empresa-pecuaria---araguainato/3141458" target="_blank" rel="noopener noreferrer">
+                    <a href="https://www.sympla.com.br/evento/curso-gestao-da-empresa-pecuaria-xinguara-pa/3346645" target="_blank" rel="noopener noreferrer">
                       <p className="text-5xl text-terra-navy">Faça sua <strong>inscrição!</strong></p>
                       <button className="mt-9 px-16 py-3 bg-terra-navy text-white font-semibold rounded-lg hover:bg-[#0f1d39] transition">
                         CLIQUE AQUI PARA COMPRAR
