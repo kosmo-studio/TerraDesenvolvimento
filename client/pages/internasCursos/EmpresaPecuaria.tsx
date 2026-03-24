@@ -40,6 +40,16 @@ const listaEventosCursos = [
     link: "/EmpresaPecuariaXG",
     status: "Inscrições Abertas"
   },
+  {
+    id: "PRESIDENTE PRUDENTE-SP",
+    cidade: "PRESIDENTE PRUDENTE",
+    estado: "SP",
+    data: "20, 21 e 22 de maio de 2026",
+    local: "IBIS STYLES",
+    imagem: "/images/GESTAOXINGUARA.png",
+    link: "/EmpresaPecuariaPP",
+    status: "Inscrições Abertas"
+  },
   
  
 ];
@@ -62,7 +72,7 @@ function EventCard({ evento }) {
       <div className="p-6 flex flex-col flex-1">
         <div className="flex items-center text-terra-navy mb-2">
           <MapPin size={18} className="mr-2 text-terra-beige" />
-          <span className="font-lexend font-bold text-xl">{evento.cidade} - {evento.estado}</span>
+          <span className="font-lexend font-bold text-lg">{evento.cidade} - {evento.estado}</span>
         </div>
         
         <div className="flex items-center text-gray-600 mb-6">
