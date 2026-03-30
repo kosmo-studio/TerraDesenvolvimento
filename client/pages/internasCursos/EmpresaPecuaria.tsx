@@ -10,16 +10,6 @@ import { MapPin, Calendar, ArrowRight } from "lucide-react";
 // --- BANCO DE DADOS DE EVENTOS ---
 // Adicione ou remova cidades aqui para atualizar a tela automaticamente
 const listaEventosCursos = [
-    {
-    id: "CUIABÁ-MT",
-    cidade: "CUIABÁ",
-    estado: "MT",
-    data: "26 e 27 de Março de 2026",
-    local: "HOTEL PAIAGUÁS",
-    imagem: "/images/BANNERvuiabaCapa1600X838.png",
-    link: "/EmpresaPecuariaMT",
-    status: "Inscrições Abertas"
-  },
   {
     id: "GOIÂNIA-GO",
     cidade: "GOIÂNIA",
@@ -27,7 +17,7 @@ const listaEventosCursos = [
     data: "10 e 11 de junho de 2026",
     local: "SHOPPING LOZÂNDES",
     imagem: "/images/GESTAOGOIANIA.jpeg",
-    link: "/EmpresaPecuariaGO", // Rota específica que você já criou
+    link: "/EmpresaPecuariaGO", 
     status: "Inscrições Abertas"
   },
   {
@@ -40,16 +30,16 @@ const listaEventosCursos = [
     link: "/EmpresaPecuariaXG",
     status: "Inscrições Abertas"
   },
-  {
-    id: "PRESIDENTE PRUDENTE-SP",
-    cidade: "PRESIDENTE PRUDENTE",
-    estado: "SP",
-    data: "20, 21 e 22 de maio de 2026",
-    local: "IBIS STYLES",
-    imagem: "/images/GESTAOXINGUARA.png",
-    link: "/EmpresaPecuariaPP",
-    status: "Inscrições Abertas"
-  },
+  // {
+  //   id: "PRESIDENTE PRUDENTE-SP",
+  //   cidade: "PRESIDENTE PRUDENTE",
+  //   estado: "SP",
+  //   data: "20, 21 e 22 de maio de 2026",
+  //   local: "IBIS STYLES",
+  //   imagem: "/images/GESTAOXINGUARA.png",
+  //   link: "/EmpresaPecuariaPP",
+  //   status: "Inscrições Abertas"
+  // },
   
  
 ];
