@@ -28,6 +28,7 @@ import EmpresaPecuaria from "./pages/internasCursos/EmpresaPecuaria";
 import EmpresaPecuariaGO from "./pages/internasCursos/EmpresaPecuariaAG";
 import EmpresaPecuariaXG from "./pages/internasCursos/EmpresaPecuariaXG";
 import EmpresaPecuariaMT from "./pages/internasCursos/EmpresaPecuariaMT";
+import EmpresaPecuariaPP from "./pages/internasCursos/EmpresaPecuariaPP";
 
 const queryClient = new QueryClient();
 
@@ -57,6 +58,7 @@ const App = () => (
           <Route path="/EmpresaPecuariaGO" element={<EmpresaPecuariaGO />} />
           <Route path="/EmpresaPecuariaXG" element={<EmpresaPecuariaXG />} />
           <Route path="/EmpresaPecuariaMT" element={<EmpresaPecuariaMT />} />
+          <Route path="/EmpresaPecuariaPP" element={<EmpresaPecuariaPP />} />
 
           <Route path="/nossaHistoria" element={<NossaHistoria />} />
           <Route path="/noticias/:slug" element={<DetalheNoticia />} />
