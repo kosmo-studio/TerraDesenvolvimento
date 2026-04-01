@@ -30,16 +30,16 @@ const listaEventosCursos = [
     link: "/EmpresaPecuariaXG",
     status: "Inscrições Abertas"
   },
-  // {
-  //   id: "PRESIDENTE PRUDENTE-SP",
-  //   cidade: "PRESIDENTE PRUDENTE",
-  //   estado: "SP",
-  //   data: "20, 21 e 22 de maio de 2026",
-  //   local: "IBIS STYLES",
-  //   imagem: "/images/GESTAOXINGUARA.png",
-  //   link: "/EmpresaPecuariaPP",
-  //   status: "Inscrições Abertas"
-  // },
+  {
+    id: "PRESIDENTE PRUDENTE-SP",
+    cidade: "PRESIDENTE PRUDENTE",
+    estado: "SP",
+    data: "20, 21 e 22 de maio de 2026",
+    local: "IBIS STYLES",
+    imagem: "/images/bannerPP.jpeg",
+    link: "/EmpresaPecuariaPP",
+    status: "Inscrições Abertas"
+  },
   
  
 ];
@@ -124,7 +124,7 @@ export default function EmpresaPecuaria() {
             <DivisorTerra />
 
             {/* Seção de Aviso de Interesse */}
-            <section className="py-20 bg-gray-50 rounded-b-[3rem]">
+            {/* <section className="py-20 bg-gray-50 rounded-b-[3rem]">
               <AnimatedSection>
                 <div className="max-w-3xl mx-auto px-6 text-center">
                   <h3 className="text-2xl md:text-3xl font-bold text-terra-navy mb-6">
@@ -144,7 +144,7 @@ export default function EmpresaPecuaria() {
                   </a>
                 </div>
               </AnimatedSection>
-            </section>
+            </section> */}
           </div>
         </section>
       </main>
