@@ -14,8 +14,18 @@ export default defineConfig(({ mode }) => ({
     },
   },
   build: {
-    outDir: "dist/spa",
-  },
+    outDir: 'dist/spa', // Garante a saída correta
+    chunkSizeWarningLimit: 1600, // Aumenta o limite do aviso para 1.6MB
+    rollupOptions: {
+      output: {
+        // Divide as bibliotecas em arquivos menores para carregar mais rápido
+        manualChunks(id) {
+          if (id.includes('node_modules')) {
+            return id.toString().split('node_modules/')[1].split('/')[0].toString();
+          }
+        }
+      }
+    },
   plugins: [react(), expressPlugin()],
   resolve: {
     alias: {

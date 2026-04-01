@@ -1,7 +1,11 @@
 {
   "version": 2,
-  "cleanUrls": true,
+  "public": true,
+  "github": {
+    "silent": true
+  },
   "rewrites": [
     { "source": "/(.*)", "destination": "/index.html" }
-  ]
+  ],
+  "outputDirectory": "dist/spa"
 }
