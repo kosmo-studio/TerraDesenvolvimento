@@ -14,8 +14,19 @@ export default defineConfig(({ mode }) => ({
     },
   },
   build: {
-    outDir: "dist/spa",
-  },
+    outDir: 'dist/spa', // Direciona para a pasta que a Vercel espera
+    chunkSizeWarningLimit: 2000, 
+    rollupOptions: {
+      output: {
+        // Otimização de chunks para evitar o aviso de 500kb
+        manualChunks(id) {
+          if (id.includes('node_modules')) {
+            return id.toString().split('node_modules/')[1].split('/')[0].toString();
+          }
+        }
+      }
+    }
+  }, // <--- AQUI: Estava faltando fechar essa chave corretamente
   plugins: [react(), expressPlugin()],
   resolve: {
     alias: {
@@ -28,11 +39,9 @@ export default defineConfig(({ mode }) => ({
 function expressPlugin(): Plugin {
   return {
     name: "express-plugin",
-    apply: "serve", // Only apply during development (serve mode)
+    apply: "serve", 
     configureServer(server) {
       const app = createServer();
-
-      // Add Express app as middleware to Vite dev server
       server.middlewares.use(app);
     },
   };

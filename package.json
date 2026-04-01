@@ -17,6 +17,9 @@
     "test": "react-scripts test",
     "eject": "react-scripts eject"
   },
+  "build": {
+    "outDir": "dist/spa"
+  },
   "dependencies": {
     "@supabase/supabase-js": "^2.91.0",
     "dotenv": "^17.2.1",

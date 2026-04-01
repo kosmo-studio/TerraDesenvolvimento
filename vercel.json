@@ -1,9 +1,11 @@
 {
-  "outputDirectory": "dist/spa",
+  "version": 2,
+  "public": true,
+  "github": {
+    "silent": true
+  },
   "rewrites": [
-    {
-      "source": "/api/(.*)",
-      "destination": "/api/$1"
-    }
-  ]
+    { "source": "/(.*)", "destination": "/index.html" }
+  ],
+  "outputDirectory": "dist/spa"
 }
