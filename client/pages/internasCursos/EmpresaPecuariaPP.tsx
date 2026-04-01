@@ -74,7 +74,7 @@ export default function EmpresaPecuariaPP() {
         <Header />
         {/* Hero Section */}
         <HeroSection
-          backgroundImage="/images/GESTAOGOIANIA.jpeg"
+          backgroundImage="/images/bannerppInterno.jpeg"
           title=""
           subtitle=""
         />
@@ -187,7 +187,7 @@ export default function EmpresaPecuariaPP() {
 
                 <section className="py-16">
                   <div>
-                    <a href="https://www.sympla.com.br/evento/curso-gestao-da-empresa-pecuaria-goiania-go/3346601" target="_blank" rel="noopener noreferrer">
+                    <a href="https://www.sympla.com.br/evento/curso-gestao-da-empresa-pecuaria-presidente-prudente-sp/3369747" target="_blank" rel="noopener noreferrer">
                       <p className="text-5xl text-terra-navy">Faça sua <strong>inscrição!</strong></p>
                       <button className="mt-9 px-16 py-3 bg-terra-navy text-white font-semibold rounded-lg hover:bg-[#0f1d39] transition">
                         CLIQUE AQUI PARA COMPRAR
