@@ -12,7 +12,7 @@ import AboutSection from "@/components/AboutSection";
 import CtaSection from "@/components/CtaSection";
 import NewsSection from "@/components/NewsSection";
 import { Modal } from "@/components/Modal";
-import { CtaModalStackedSpeakers } from "@/components/CtaModel";
+import { CtaModalTerraVideo } from "@/components/CtaModel";
 import ContactPopup from "@/components/ContactPopup";
 
 export default function Index() {
@@ -40,7 +40,7 @@ export default function Index() {
     <div className="bg-white overflow-x-hidden">
       <Modal isOpen={isModalOpen} onClose={handleCloseModal}>
                 {/* O conteúdo da sua oferta */}
-                <CtaModalStackedSpeakers onClose={handleCloseModal} />
+                <CtaModalTerraVideo onClose={handleCloseModal} />
             </Modal>
       <Header />
       
