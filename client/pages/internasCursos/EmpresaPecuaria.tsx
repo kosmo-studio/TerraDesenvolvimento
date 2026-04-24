@@ -15,8 +15,8 @@ const listaEventosCursos = [
     cidade: "GOIÂNIA",
     estado: "GO",
     data: "10 e 11 de junho de 2026",
-    local: "SHOPPING LOZÂNDES",
-    imagem: "/images/GESTAOGOIANIA.jpeg",
+    local: "CASTRO'S PARK HOTEL",
+    imagem: "/images/GESTAOGOIANIA.png",
     link: "/EmpresaPecuariaGO", 
     status: "Inscrições Abertas"
   },

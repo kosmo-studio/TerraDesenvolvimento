@@ -74,7 +74,7 @@ export default function EmpresaPecuariaGO() {
         <Header />
         {/* Hero Section */}
         <HeroSection
-          backgroundImage="/images/GESTAOGOIANIA.jpeg"
+          backgroundImage="/images/GESTAOGOIANIA.png"
           title=""
           subtitle=""
         />
