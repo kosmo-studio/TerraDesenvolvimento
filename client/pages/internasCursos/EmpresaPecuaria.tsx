@@ -25,7 +25,7 @@ const listaEventosCursos = [
     cidade: "XINGUARA",
     estado: "PA",
     data: "17 e 18 de junho de 2026",
-    local: "SINDICATO RURAL SRX",
+    local: "UNIFESSPA - UNIDADE 2",
     imagem: "/images/GESTAOXINGUARA.png",
     link: "/EmpresaPecuariaXG",
     status: "Inscrições Abertas"
