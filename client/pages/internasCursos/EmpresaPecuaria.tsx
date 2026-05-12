@@ -34,9 +34,9 @@ const listaEventosCursos = [
     id: "PRESIDENTE PRUDENTE-SP",
     cidade: "PRESIDENTE PRUDENTE",
     estado: "SP",
-    data: "20, 21 e 22 de maio de 2026",
+    data: "06 e 07 de julho de 2026",
     local: "IBIS STYLES",
-    imagem: "/images/bannerPP.jpeg",
+    imagem: "/images/bannerPP.png",
     link: "/EmpresaPecuariaPP",
     status: "Inscrições Abertas"
   },
