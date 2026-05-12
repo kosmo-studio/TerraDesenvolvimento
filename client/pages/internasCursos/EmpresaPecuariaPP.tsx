@@ -74,7 +74,7 @@ export default function EmpresaPecuariaPP() {
         <Header />
         {/* Hero Section */}
         <HeroSection
-          backgroundImage="/images/bannerppInterno.jpeg"
+          backgroundImage="/images/bannerppInterno.png"
           title=""
           subtitle=""
         />
