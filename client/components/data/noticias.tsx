@@ -395,4 +395,102 @@ export const todasAsNoticias = [
     <p>E baseado na experiência de 40 anos de pesquisa sobre o comportamento humano e hábitos de consumo, Dado alerta: “mudar é necessário, não por gostar ou aceitar o novo, mas mudar é necessário para entender a nova realidade. Quem não tiver a capacidade de se atualizar e se adaptar, está fora”, finaliza.</p>
   `
 },
+{
+    "id": 10,
+    "slug": "gestao-intencional-conhecimento-lucro-pecuaria",
+    "titulo": "“Conhecimento é a base do sucesso das fazendas”, diz especialista em gestão no campo",
+    "resumo": "O zootecnista Rodrigo Patussi, CEO da Terra Desenvolvimento, defende que a pecuária moderna exige uma gestão intencional, onde o conhecimento técnico é simplificado para garantir uma execução impecável.",
+    "imagemDestaque": "/images/noticias/giroboi.png", 
+    "dataPublicacao": "08 de abril de 2026", 
+    "autor": "Com base em entrevista concedida ao Giro do Boi",
+    "conteudo": `
+      <div style="margin-bottom: 24px; border-radius: 8px; overflow: hidden;">
+        <iframe 
+          width="100%" 
+          height="400" 
+          src="https://www.youtube.com/embed/1Nft823qsbk" 
+          title="Entrevista Rodrigo Patussi no Giro do Boi" 
+          frameborder="0" 
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+          allowfullscreen>
+        </iframe>
+      </div>
+
+      <p>O amadorismo na pecuária ficou no passado. Hoje, o sucesso de uma propriedade rural depende de uma <strong>gestão intencional</strong> — um modelo focado em transformar o conhecimento técnico em processos simples e de execução impecável no campo. A análise é do zootecnista Rodrigo Patussi, CEO da Terra Desenvolvimento Agropecuário, em recente entrevista concedida ao portal Giro do Boi.</p>
+
+      <h2>O “Capricho” na Execução</h2>
+      <p>Segundo Patussi, a chave para virar o jogo da rentabilidade está em encurtar a distância entre a decisão do gestor e a execução da equipe. <em>“Quanto mais conhecemos um processo, mais simples podemos torná-lo”</em>, destaca. O objetivo é criar métodos tão claros que o time de campo consiga aplicá-los sem margem para falhas.</p>
+      
+      <p>A falta dessa precisão custa muito caro. Dados levantados mostram que uma simples queda de <strong>100 gramas no Ganho Médio Diário (GMD)</strong> pode fazer o lucro final da fazenda despencar em até oito vezes.</p>
+
+      <h2>O Abismo entre o Lucro e o Prejuízo</h2>
+      <p>Um benchmarking realizado com <strong>940 fazendas monitoradas</strong> revela um cenário de contrastes. Enquanto cerca de 30% das propriedades ainda amargam prejuízos por não terem processos bem definidos, fazendas de alta performance — onde o conhecimento estratégico dita as regras — chegam a registrar um faturamento impressionante de <strong>R$ 13.000 por hectare</strong>. A principal diferença entre elas? A atitude do gestor.</p>
+
+      <h2>A “Super Cria” e a Sustentabilidade</h2>
+      <p>Outro ponto alto da gestão moderna é a valorização da fase de cria. Tratada muitas vezes como o elo fraco da cadeia, a vaca matriz passa a ser vista como o negócio de ponta. O uso de manejos intensivos e biológicos tem dado origem ao modelo de <strong>“Super Cria Regenerativa”</strong>, capaz de gerar faturamentos de até R$ 3.500 por hectare.</p>
+      
+      <p>No cenário de 2026, com os desafios climáticos do El Niño e a instabilidade no fornecimento de fertilizantes químicos, a saída estratégica tem sido o uso de <strong>bioinsumos e remineralizadores (pó de rocha)</strong> para manter a alta produtividade de forma mais independente e sustentável.</p>
+
+      <h2>Encontro de Gestores 2026</h2>
+      <p>Esses temas serão o foco principal do <strong>Encontro de Gestores 2026</strong>, agendado para os dias 14 e 15 de abril em Campo Grande (MS). O evento reunirá mais de mil líderes do setor produtivo para debater não apenas estratégias técnicas e sustentáveis, mas também ferramentas para a <strong>sucessão familiar</strong> — incluindo os aspectos jurídicos e humanos necessários para atrair as novas gerações para fazendas com gestão altamente profissionalizada.</p>
+    `
+  },
+  {
+    "id": 11,
+    "slug": "novo-perfil-produtor-rural-2030",
+    "titulo": "Um novo homem do campo: qual será o perfil do produtor rural até 2030?",
+    "resumo": "Com o avanço tecnológico e a pressão por eficiência, o perfil do gestor rural está mudando. Rodrigo Patussi, diretor da Terra Desenvolvimento, aponta as habilidades essenciais para a pecuária do futuro.",
+    "imagemDestaque": "/images/noticias/umNovoHomem.webp", 
+    "dataPublicacao": "10 de abril de 2026", 
+    "autor": "Equipe Terra (Com informações do portal A Tarde)",
+    "conteudo": `
+      <p>A revolução tecnológica, que historicamente associamos aos grandes centros urbanos e às indústrias, chegou definitivamente ao agronegócio. A pecuária brasileira passa por uma transformação silenciosa, mas profunda, que está redefinindo o conceito tradicional de trabalho e gestão no campo.</p>
+
+      <h2>O Gestor de 2030: Novas Habilidades</h2>
+      <p>Diante de um cenário marcado por custos de produção mais altos, exigência por máxima eficiência e o rápido avanço de soluções agropecuárias, o perfil do líder rural precisou evoluir. Mais do que dominar a lida diária e o conhecimento técnico da atividade, especialistas apontam que o gestor das fazendas até 2030 precisará reunir quatro competências vitais:</p>
+
+      <ul>
+        <li><strong>Capacidade analítica;</strong></li>
+        <li><strong>Visão estratégica de negócios;</strong></li>
+        <li><strong>Habilidade para formar e engajar equipes;</strong></li>
+        <li><strong>Competência para transformar dados em decisões ágeis e práticas.</strong></li>
+      </ul>
+
+      <h2>Para Além da Produção de Commodities</h2>
+      <p>Para Rodrigo Patussi, diretor da Terra Desenvolvimento Agropecuário, a pecuária moderna exige uma liderança altamente preparada para navegar em cenários complexos e lidar com variáveis cada vez mais sensíveis ao caixa da empresa rural. Segundo ele, o novo gestor precisa ter uma visão muito mais sistêmica da sua propriedade.</p>
+
+      <blockquote>
+        "O produtor deve ter um entendimento mais abrangente do seu negócio e a consciência de que a sua fazenda vai muito além de apenas produzir boi ou grão; o foco é gerar resultados e rentabilidade. Ele terá muito mais conhecimento de gestão e, principalmente, de conexão com as pessoas", destaca Patussi.
+      </blockquote>
+
+      <p>O diretor da Terra Desenvolvimento reforça ainda que a objetividade e a participação ativa serão as marcas dessa nova liderança. O produtor da próxima década será alguém que <strong>delega com eficiência</strong>, compreende com clareza os grandes objetivos do negócio e direciona estrategicamente as ações de sua equipe para que as metas sejam plenamente atingidas.</p>
+    `
+  }
 ];
+
+const monthNames: Record<string, number> = {
+  janeiro: 0,
+  fevereiro: 1,
+  março: 2,
+  abril: 3,
+  maio: 4,
+  junho: 5,
+  julho: 6,
+  agosto: 7,
+  setembro: 8,
+  outubro: 9,
+  novembro: 10,
+  dezembro: 11,
+};
+
+const parseDataPublicacao = (dateString: string): number => {
+  const match = dateString.toLowerCase().match(/(\d{1,2})\s+de\s+([a-zçã]+)\s+de\s+(\d{4})/i);
+  if (!match) return 0;
+  const [, day, monthName, year] = match;
+  const month = monthNames[monthName] ?? 0;
+  return new Date(Number(year), month, Number(day)).getTime();
+};
+
+export const todasAsNoticiasOrdenadas = [...todasAsNoticias].sort(
+  (a, b) => parseDataPublicacao(b.dataPublicacao) - parseDataPublicacao(a.dataPublicacao)
+);
