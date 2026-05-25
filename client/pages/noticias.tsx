@@ -2,7 +2,7 @@ import Footer from "@/components/Footer";
 import Header from "@/components/Header";
 import HeroSection from "@/components/interno/HeroSection";
 import { Link } from "react-router-dom";
-import { todasAsNoticias } from "@/components/data/noticias";
+import { todasAsNoticiasOrdenadas } from "@/components/data/noticias";
 import AnimatedSection from "@/components/AnimatedSection"; 
 
 // --- COMPONENTE ARTICLECARD ---
@@ -33,7 +33,7 @@ const ArticleSection = () => {
       <div className="container mx-auto px-4">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {/* 2. Cada card agora é envolvido pelo AnimatedSection com um atraso */}
-          {todasAsNoticias.map((noticia, index) => (
+          {todasAsNoticiasOrdenadas.map((noticia, index) => (
             <AnimatedSection key={noticia.id} delay={index * 100}>
               <ArticleCard
                 image={noticia.imagemDestaque}
