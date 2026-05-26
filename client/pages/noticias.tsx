@@ -1,9 +1,15 @@
 import Footer from "@/components/Footer";
 import Header from "@/components/Header";
 import HeroSection from "@/components/interno/HeroSection";
+import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
-import { todasAsNoticiasOrdenadas } from "@/components/data/noticias";
+import {
+  noticiasExternas,
+  noticiasInternasOrdenadas,
+} from "@/components/data/noticias";
 import AnimatedSection from "@/components/AnimatedSection"; 
+import { ExternalLink } from "lucide-react";
+import type { ExternalNewsMetadataResponse } from "@shared/api";
 
 // --- COMPONENTE ARTICLECARD ---
 const ArticleCard = ({ image, title, date, link }) => {
@@ -26,6 +32,112 @@ const ArticleCard = ({ image, title, date, link }) => {
   );
 };
 
+const ExternalArticleCard = ({ image, title, source, link }) => {
+  return (
+    <a
+      href={link}
+      target="_blank"
+      rel="noopener noreferrer"
+      className="bg-white rounded-lg shadow-lg overflow-hidden flex flex-col h-full group transition-transform duration-300 hover:scale-105 hover:shadow-xl"
+    >
+      <div className="overflow-hidden">
+        <img src={image || "/images/noticiaHeader.png"} alt={title} className="w-full h-48 object-cover transition-transform duration-300 group-hover:scale-110" />
+      </div>
+      <div className="p-6 flex flex-col flex-grow">
+        <span className="text-xs font-semibold uppercase tracking-[0.12em] text-terra-blue mb-3">
+          {source}
+        </span>
+        <h3 className="text-xl font-semibold text-terra-navy flex-grow">{title}</h3>
+        <span className="text-terra-blue mt-4 inline-flex items-center gap-2 font-semibold">
+          Ler na fonte
+          <ExternalLink className="h-4 w-4" aria-hidden="true" />
+        </span>
+      </div>
+    </a>
+  );
+};
+
+const ExternalArticleSection = () => {
+  const [externalArticles, setExternalArticles] = useState<
+    ExternalNewsMetadataResponse["articles"]
+  >([]);
+
+  useEffect(() => {
+    if (!noticiasExternas.length) return;
+
+    const controller = new AbortController();
+    const externalUrls = noticiasExternas.map((noticia) => noticia.url);
+
+    const loadExternalArticles = async () => {
+      try {
+        const response = await fetch("/api/external-news-metadata", {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify({ urls: externalUrls }),
+          signal: controller.signal,
+        });
+        if (!response.ok) throw new Error("Falha ao carregar notícias externas");
+        const data: ExternalNewsMetadataResponse = await response.json();
+        setExternalArticles(
+          noticiasExternas.map((noticia) => {
+            const metadata = data.articles.find((article) => article.url === noticia.url);
+
+            return {
+              url: noticia.url,
+              title: noticia.titulo,
+              image: metadata?.image ?? "",
+              source: metadata?.source ?? new URL(noticia.url).hostname.replace(/^www\./, ""),
+            };
+          }),
+        );
+      } catch (error) {
+        if (!controller.signal.aborted) {
+          setExternalArticles(
+            noticiasExternas.map((noticia) => ({
+              url: noticia.url,
+              title: noticia.titulo,
+              image: "",
+              source: new URL(noticia.url).hostname.replace(/^www\./, ""),
+            })),
+          );
+        }
+      }
+    };
+
+    loadExternalArticles();
+
+    return () => controller.abort();
+  }, []);
+
+  if (!noticiasExternas.length) return null;
+
+  return (
+    <section className="px-4 pb-12">
+      <div className="mx-auto max-w-7xl text-left">
+        <div className="mb-8 text-center">
+          <h3 className="font-lexend text-2xl md:text-3xl font-bold text-terra-navy">
+            Notícias externas
+          </h3>
+        </div>
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          {externalArticles.map((noticia, index) => (
+            <AnimatedSection key={noticia.url} delay={index * 100}>
+              <ExternalArticleCard
+                image={noticia.image}
+                title={noticia.title}
+                source={noticia.source}
+                link={noticia.url}
+              />
+            </AnimatedSection>
+          ))}
+        </div>
+      </div>
+    </section>
+  );
+};
+
 // --- COMPONENTE ARTICLESECTION ---
 const ArticleSection = () => {
   return (
@@ -33,7 +145,7 @@ const ArticleSection = () => {
       <div className="container mx-auto px-4">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {/* 2. Cada card agora é envolvido pelo AnimatedSection com um atraso */}
-          {todasAsNoticiasOrdenadas.map((noticia, index) => (
+          {noticiasInternasOrdenadas.map((noticia, index) => (
             <AnimatedSection key={noticia.id} delay={index * 100}>
               <ArticleCard
                 image={noticia.imagemDestaque}
@@ -70,7 +182,13 @@ export default function Noticias() {
                   Notícias
                 </h2>
               </div>
+            <div className="px-4 pb-8 text-center">
+              <h3 className="font-lexend text-2xl md:text-3xl font-bold text-terra-navy">
+                Notícias Terra
+              </h3>
+            </div>
             <ArticleSection />
+            <ExternalArticleSection />
           </div>
         </section>
       </AnimatedSection>

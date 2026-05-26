@@ -3,7 +3,7 @@ import React, { useCallback } from 'react';
 import useEmblaCarousel from 'embla-carousel-react';
 import { ChevronLeft, ChevronRight } from 'lucide-react';
 // 1. Importamos os dados do nosso arquivo central
-import { todasAsNoticiasOrdenadas } from './data/noticias';
+import { noticiasInternasOrdenadas } from './data/noticias';
 // 2. Importamos o componente de botão correto
 import { Button } from '@/components/ui/button';
 
@@ -53,7 +53,7 @@ export default function NewsSection() {
         {/* Estrutura do Carrossel Embla */}
         <div className="overflow-hidden py-4" ref={emblaRef}>
           <div className="flex -ml-4">
-            {todasAsNoticiasOrdenadas.map((article) => (
+            {noticiasInternasOrdenadas.map((article) => (
               <div className="flex-shrink-0 w-full sm:w-1/2 lg:w-1/3 xl:w-1/4 pl-4" key={article.id}>
                 <ArticleCard
                   image={article.imagemDestaque}
