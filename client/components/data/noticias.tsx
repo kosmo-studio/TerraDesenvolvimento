@@ -403,30 +403,37 @@ export const todasAsNoticias = [
 export const noticiasExternas = [
   {
     titulo: "Conhecimento é a base do sucesso das fazendas",
+    imagem: "/images/noticias/giroboi.png",
     url: "https://girodoboi.canalrural.com.br/pecuaria/conhecimento-e-a-base-do-sucesso-das-fazendas-diz-especialista-em-gestao-no-campo/",
   },
   {
     titulo: "Um novo homem do campo: qual será o perfil do produtor rural até 2030?",
+    imagem: "/images/noticias/umNovoHomem.webp",
     url: "https://atarde.com.br/agro/um-novo-homem-do-campo-qual-sera-o-perfil-do-produtor-rural-ate-2030-1385487",
   },
   {
     titulo: "Tecnologia sozinha não transforma uma fazenda",
+    imagem: "/images/noticias/insta.png",
     url: "https://www.instagram.com/p/DXEehaJjNP0/?igsh=aHJ1ZDMzZDR1djl0",
   },
   {
     titulo: "Encontro de Gestores traz foco em pessoas, tecnologia e resultado na pecuária",
+    imagem: "/images/noticias/oestado.png",
     url: "https://oestadoonline.com.br/agronegocio/encontro-de-gestores-traz-foco-em-pessoas-tecnologia-e-resultado-na-pecuaria/",
   },
   {
     titulo: "Terra desenvolvimento é uma das empresas participantes do encontro de gestores",
+    imagem: "",
     url: "https://www.diariodigital.com.br/terra-desenvolvimento-e-uma-das-empresas-participantes-do-encontro-de-gestores",
   },
   {
     titulo: "Gestão ganha protagonismo no agro e vira foco de evento em Campo Grande",
+    imagem: "",
     url: "https://www.rcn67.com.br/campo-grande/gestao-ganha-protagonismo-no-agro-e-vira-foco-de-evento-em-campo-grande/",
   },
   {
     titulo: "Rodrigo Patussi diz que fazenda precisa ser tratada como negócio",
+    imagem: "",
     url: "https://www.rcn67.com.br/tres-lagoas/rodrigo-patussi-fazenda-como-negocio/",
   },
 ];
