@@ -87,7 +87,7 @@ const ExternalArticleSection = () => {
             return {
               url: noticia.url,
               title: noticia.titulo,
-              image: metadata?.image ?? "",
+              image: noticia.imagem || metadata?.image || "",
               source: metadata?.source ?? new URL(noticia.url).hostname.replace(/^www\./, ""),
             };
           }),
@@ -98,7 +98,7 @@ const ExternalArticleSection = () => {
             noticiasExternas.map((noticia) => ({
               url: noticia.url,
               title: noticia.titulo,
-              image: "",
+              image: noticia.imagem || "",
               source: new URL(noticia.url).hostname.replace(/^www\./, ""),
             })),
           );
