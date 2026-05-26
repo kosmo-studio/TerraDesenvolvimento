@@ -428,12 +428,12 @@ export const noticiasExternas = [
   },
   {
     titulo: "Gestão ganha protagonismo no agro e vira foco de evento em Campo Grande",
-    imagem: "",
+    imagem: "/images/noticias/gestaoGanha.png",
     url: "https://www.rcn67.com.br/campo-grande/gestao-ganha-protagonismo-no-agro-e-vira-foco-de-evento-em-campo-grande/",
   },
   {
     titulo: "Rodrigo Patussi diz que fazenda precisa ser tratada como negócio",
-    imagem: "",
+    imagem: "/images/noticias/patussi.png",
     url: "https://www.rcn67.com.br/tres-lagoas/rodrigo-patussi-fazenda-como-negocio/",
   },
 ];
