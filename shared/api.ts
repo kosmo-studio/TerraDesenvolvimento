@@ -10,3 +10,14 @@
 export interface DemoResponse {
   message: string;
 }
+
+export interface ExternalNewsMetadata {
+  url: string;
+  title: string;
+  image: string;
+  source: string;
+}
+
+export interface ExternalNewsMetadataResponse {
+  articles: ExternalNewsMetadata[];
+}
