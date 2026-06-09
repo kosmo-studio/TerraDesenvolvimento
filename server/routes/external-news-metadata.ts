@@ -24,8 +24,37 @@ const getMetaContent = (html: string, attribute: string, value: string): string 
   return decodeHtml(pattern.exec(html)?.[1]?.trim() ?? "");
 };
 
+const getMetaContents = (html: string, selectors: Array<[string, string]>): string =>
+  selectors.reduce((publishedAt, [attribute, value]) => {
+    if (publishedAt) return publishedAt;
+    return getMetaContent(html, attribute, value);
+  }, "");
+
 const getTitle = (html: string): string =>
   decodeHtml(/<title[^>]*>([^<]+)<\/title>/i.exec(html)?.[1]?.trim() ?? "");
+
+const normalizePublishedAt = (value: string): string => {
+  if (!value) return "";
+
+  const timestamp = Date.parse(value);
+  return Number.isNaN(timestamp) ? "" : new Date(timestamp).toISOString();
+};
+
+const getPublishedAt = (html: string): string => {
+  const metadataDate = getMetaContents(html, [
+    ["property", "article:published_time"],
+    ["property", "og:published_time"],
+    ["name", "article:published_time"],
+    ["name", "pubdate"],
+    ["name", "publishdate"],
+    ["name", "date"],
+    ["name", "datePublished"],
+    ["itemprop", "datePublished"],
+  ]);
+  const timeDate = /<time[^>]+datetime=["']([^"']+)["'][^>]*>/i.exec(html)?.[1]?.trim() ?? "";
+
+  return normalizePublishedAt(metadataDate || timeDate);
+};
 
 const normalizeImageUrl = (image: string, pageUrl: string): string => {
   if (!image) return "";
@@ -70,12 +99,14 @@ const fetchMetadata = async (url: string): Promise<ExternalNewsMetadata> => {
   );
   const source =
     getMetaContent(html, "property", "og:site_name") || getHostnameSource(url);
+  const publishedAt = getPublishedAt(html);
 
   return {
     url,
     title,
     image,
     source,
+    ...(publishedAt ? { publishedAt } : {}),
   };
 };
 
