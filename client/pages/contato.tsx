@@ -46,8 +46,8 @@ const unidades = [
   {
     cidade: "Assunção - Paraguai",
     imagem: "/images/assuncion.png",
-    endereco: "Rua Francis Morices 470/2, casi Victor Heyn, Asunción.",
-    telefone: ["+595 986 923995", "+595 9851-92143"],
+    endereco: "Antolin Irala, 3029, Sala 1D - Assunçã-Paraguai",
+    telefone: ["+595 986 923995", "+595 981 503720"],
   },
   {
     cidade: "Santa Cruz de la Sierra - Bolívia",
