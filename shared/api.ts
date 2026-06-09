@@ -16,6 +16,7 @@ export interface ExternalNewsMetadata {
   title: string;
   image: string;
   source: string;
+  publishedAt?: string;
 }
 
 export interface ExternalNewsMetadataResponse {

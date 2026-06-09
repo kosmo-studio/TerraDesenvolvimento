@@ -453,7 +453,7 @@ const monthNames: Record<string, number> = {
   dezembro: 11,
 };
 
-const parseDataPublicacao = (dateString: string): number => {
+export const parseDataPublicacao = (dateString: string): number => {
   const match = dateString.toLowerCase().match(/(\d{1,2})\s+de\s+([a-zçã]+)\s+de\s+(\d{4})/i);
   if (!match) return 0;
   const [, day, monthName, year] = match;
