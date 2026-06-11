@@ -397,7 +397,29 @@ export const todasAsNoticias = [
     <p>E baseado na experiência de 40 anos de pesquisa sobre o comportamento humano e hábitos de consumo, Dado alerta: “mudar é necessário, não por gostar ou aceitar o novo, mas mudar é necessário para entender a nova realidade. Quem não tiver a capacidade de se atualizar e se adaptar, está fora”, finaliza.</p>
   `
 },
+{
+  id: 8,
+  slug: 'futuro-do-agro-comeca-na-infancia',
+  titulo: "O futuro do Agro começa na infância: A importância de aproximar as novas gerações da realidade do campo ",
+  resumo: "Um exemplo recente e de muito destaque é o livro infantil 'A Fazenda dos Bezerros', escrito pela Lygia Pimentel. A obra utiliza uma linguagem leve e lúdica para aproximar os pequenos da rotina do campo.",
+  imagemDestaque: "/images/noticias/livroAberto.webp",
+  dataPublicacao: "11 de junho de 2026",
+  autor: "Por Terra Desenvolvimento",
+  conteudo: `
+    <blockquote>“O agronegócio atual é sinônimo de tecnologia, ciência, gestão de ponta e sustentabilidade.” </blockquote>
+    <p>Quem acompanha o dia a dia da porteira para dentro sabe que o agronegócio moderno é construído com base em dados, planejamento, dedicação e muita paixão. No entanto, fora do ambiente rural, especialmente nos grandes centros urbanos, ainda persistem visões distorcidas ou incompletas sobre a real rotina e a importância de uma propriedade de alta performance.</p>
 
+    <img src="/images/noticias/livroBlog.webp" alt="Capa do livro infantil A Fazenda dos Bezerros" style="max-width: 100%; height: auto; display: block; margin: 20px auto; border-radius: 50px;" />
+    
+    <h2>Educação lúdica para formar a base do setor </h2>
+    <p>Desmistificar o agro e mostrar a sua verdadeira essência é um compromisso coletivo de todo o setor. Diante disso, iniciativas que traduzem essa realidade para o público em geral ganham grande relevância. Lançada com o objetivo de conectar o público infantil ao universo da pecuária, a obra utiliza uma linguagem leve e lúdica para aproximar os pequenos da rotina do campo. Em vez de termos técnicos complexos, as páginas humanizam o processo produtivo, ensinando sobre o cuidado com os animais, o respeito à terra e o caminho que o alimento percorre até chegar à mesa da população.</p>
+    
+    <h2>Apoio à desmistificação e valorização do campo </h2>
+    <p>Projetos dessa natureza possuem um valor estratégico imensurável. Embora a gestão eficiente de uma fazenda dependa diretamente de análises de demonstrativos de resultados, ajustes de fluxo de caixa e planejamento orçamentário rígido, a sustentabilidade do setor a longo prazo está atrelada a como as próximas gerações irão enxergar a atividade rural.</p>
+    
+    <p>O apoio a iniciativas como o livro da Lygia Pimentel reforça a premissa de que o conhecimento é a ferramenta mais poderosa para quebrar barreiras. Quando uma criança compreende, desde cedo, o valor e a complexidade do trabalho do produtor rural, ela cresce com uma percepção clara sobre o setor que move a economia do país. A Terra Desenvolvimento parabeniza a autora pela excelente contribuição ao setor e reforça o compromisso de sempre apoiar e divulgar ações que elevem, valorizem e defendam a verdade sobre o agronegócio brasileiro.</p>
+  `
+}
 ];
 
 export const noticiasExternas = [
