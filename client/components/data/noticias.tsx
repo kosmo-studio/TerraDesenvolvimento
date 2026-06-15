@@ -1,5 +1,47 @@
 export const todasAsNoticias = [
   {
+    id: 10,
+    slug: "sem-execucao-sem-fazenda-gestao-intencional",
+    titulo: "“Sem Execução, Sem Fazenda”: Rodrigo Patussi Explica por que Grandes Projetos Agropecuários Dependem da Gestão Intencional",
+    resumo: "CEO da Terra Desenvolvimento defende que o sucesso de grandes fazendas de agricultura e pecuária não está no papel, mas na capacidade da liderança de campo de simplificar o conhecimento técnico e eliminar o ruído da operação.",
+    imagemDestaque: "/images/noticias/patussi.jpeg",
+    dataPublicacao: "15 de junho de 2026",
+    autor: "Por Terra Desenvolvimento",
+    conteudo: `
+      <p>No dia a dia da Terra Desenvolvimento, uma máxima conduz a rotina das mais de 400 propriedades e dos bilhões de reais em ativos administrados pela consultoria no Brasil, Paraguai e Bolívia: “Sem execução, sem fazenda”. A frase, defendida com frequência pelo zootecnista e CEO da empresa, Rodrigo Patussi, resume o divisor de águas entre propriedades rurais que apenas sobrevivem e aquelas que se consolidaram como potências de alta performance.</p>
+
+      <p>Para o especialista, a execução não é um conceito abstrato ou uma folha que se anexa ao final de um belo planejamento estratégico. Pelo contrário: executar é algo simples de entender e difícil de sustentar na poeira e no calor do dia a dia. Trata-se do compromisso de que “o que eu prometo e planejo, eu vou entregar”.</p>
+
+      <p>Essa abordagem da Terra Desenvolvimento joga luz sobre o papel crucial da liderança de campo. Não basta que a diretoria corporativa ou os acionistas definam metas ambiciosas para a safra ou para o ciclo pecuário; o papel dos gestores é estruturar o ambiente e criar as condições diárias para que as entregas aconteçam de forma consistente, traduzindo números complexos em tarefas claras na ponta da linha.</p>
+
+      <blockquote>“A estratégia nunca está completamente nos documentos. Sem prioridades e tarefas bem definidas na rotina, ela simplesmente nunca vai funcionar. Se a estratégia da fazenda depende de interpretação por parte do operador ou do vaqueiro, a execução vira ruído.”<br />— Rodrigo Patussi, CEO da Terra Desenvolvimento</blockquote>
+
+      <h2>O Perigo dos Documentos Extensos e o Ruído na Operação</h2>
+      <p>Na realidade das grandes fazendas — com milhares de hectares de lavoura ou rebanhos que passam de dezenas de milhares de cabeças —, é comum ver planejamentos estratégicos densos, cheios de jargões mercadológicos, tabelas financeiras e metas macro de produtividade. O grande gargalo, alerta Patussi, ocorre quando esses planos ficam presos nos escritórios e não se transformam em ações práticas na rotina operacional.</p>
+
+      <p>Se o plano de safra exige que o tratorista interprete a velocidade ideal de plantio ou que a equipe do confinamento decida por conta própria o momento do trato, o resultado final será comprometido. Para o sucesso da agricultura de precisão ou de uma pecuária de alta rentabilidade, a estratégia precisa virar rotina explícita: manutenção preventiva da frota mapeada por horas de uso, janelas de pulverização rigidamente respeitadas e leitura de cocho executada sem oscilações de horário.</p>
+
+      <p>Quando a liderança não traduz o plano em metas diárias e responsáveis diretos, o que chega ao campo é ruído. E no agronegócio de larga escala, ruído gera atraso, desperdício de insumos e perda de margem.</p>
+
+      <h2>Liderança Desenvolvida: As Pessoas Certas nos Lugares Certos</h2>
+      <p>A metodologia da Terra Desenvolvimento também foca fortemente em estruturas e na capacitação de pessoas. A excelência da execução depende de posicionar “as pessoas certas nos trabalhos certos”. Uma liderança mal posicionada, uma função desenhada sem escopo claro ou um gerente de fazenda sem capacidade de entrega contínua pode comprometer o desempenho de setores inteiros, destruindo o nível de competitividade do negócio.</p>
+
+      <p>Com a rápida profissionalização e a transição do agro familiar para estruturas corporativas, o setor passou a enfrentar um apagão de lideranças intermediárias, como gerentes operacionais, capatazes de retiros e encarregados de frota. Muitas vezes, promove-se o colaborador pelo seu excelente conhecimento técnico prático, mas esquece-se de formá-lo como um gestor de processos.</p>
+
+      <p>Alocar o profissional certo na função certa significa garantir que o líder de campo saiba como orientar seu time, cobrar resultados e manter o padrão operacional exigido pelo nível tecnológico da fazenda.</p>
+
+      <h2>“Clareza é a chave para o sucesso”</h2>
+      <p>As grandes organizações e holdings do agro não falham em seus resultados por falta de inteligência, falta de acesso a tecnologias ou falta de capital. Elas falham porque as pessoas que estão executando o trabalho na linha de frente não entendem com precisão o que precisa ser feito, quem é o dono daquela tarefa, qual é a prioridade máxima do dia e como o sucesso será medido.</p>
+
+      <p>Como pontua Rodrigo Patussi, na gestão agropecuária, “clareza é a chave para o sucesso”. Trazer clareza para o campo significa adotar uma gestão intencional e simplificar os comandos. Em vez de repassar relatórios técnicos complexos para a equipe de manejo, o gestor eficiente estabelece diretrizes diretas:</p>
+
+      <blockquote>“Nossa prioridade número um esta semana é o manejo sanitário do lote X; o responsável pelo fechamento da mangueira é o Fulano; e o sucesso do nosso dia será medido pelo cumprimento do protocolo vacinal sem estresse ou lesões no gado.”</blockquote>
+
+      <h2>Conclusão: A Disciplina que Garante a Sustentabilidade</h2>
+      <p>Sustentar uma execução impecável ao longo de 365 dias do ano, enfrentando as janelas climáticas apertadas e as oscilações do mercado de commodities, é o grande desafio das fazendas. A estratégia aponta para onde o negócio quer ir, mas é a disciplina da execução no dia a dia, defendida e implementada pela Terra Desenvolvimento, que transforma o potencial da terra em resultado financeiro e crescimento sustentável de longo prazo.</p>
+    `
+  },
+  {
         "id": 9,
         "slug": "terceirizacao-gestao-pecuaria-viabilidade-cases-sucesso",
         "titulo": "Terceirizar a Gestão da Fazenda de Pecuária é Viável?",
