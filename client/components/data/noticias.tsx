@@ -1,5 +1,59 @@
 export const todasAsNoticias = [
   {
+    id: 11,
+    slug: "gestao-do-futuro-adaptacao-lideranca-execucao-consistente",
+    titulo: "Gestão do futuro exige adaptação, liderança e execução consistente, destaca Antônio Chaker no Encontro de Gestores",
+    resumo: "Especialista defende que resultados sustentáveis dependem menos de fórmulas prontas e mais da capacidade das empresas de evoluir, desenvolver pessoas e transformar estratégia em execução.",
+    imagemDestaque: "/images/noticias/gestaodoFuturo.jpeg",
+    dataPublicacao: "01 de julho de 2026",
+    autor: "Por Terra Desenvolvimento",
+    conteudo: `
+      <p>O ambiente de negócios nunca mudou tão rápido. Novas tecnologias, transformações no mercado, mudanças no perfil das equipes e um cenário cada vez mais dinâmico vêm exigindo uma postura diferente de quem lidera empresas agropecuárias.</p>
+
+      <p>Esse foi um dos principais temas abordados por Antônio Chaker durante sua participação no Encontro de Gestores, promovido pela Terra Desenvolvimento. Ao longo da palestra, a discussão foi conduzida em torno de um ponto central: o sucesso das empresas passa menos pela capacidade de prever o futuro e mais pela habilidade de construir organizações preparadas para evoluir continuamente.</p>
+
+      <h2>O desafio já não é entender por que mudar. É descobrir como mudar.</h2>
+      <p>Segundo Chaker, boa parte das empresas já compreende onde quer chegar. O desafio está em transformar objetivos em ações consistentes dentro da rotina.</p>
+
+      <p>Ter metas ambiciosas, buscar maior produtividade ou aumentar a rentabilidade são objetivos comuns em praticamente qualquer negócio. A diferença está na capacidade de estruturar processos, desenvolver equipes e criar um ambiente que permita que essas metas sejam efetivamente alcançadas.</p>
+
+      <p>Essa reflexão reforça um princípio cada vez mais presente na gestão empresarial: estratégia, por si só, não produz resultados. É a execução que transforma planejamento em desempenho.</p>
+
+      <h2>A liderança deixa de controlar para criar condições de crescimento</h2>
+      <p>Outro ponto destacado durante a apresentação foi o papel da liderança.</p>
+
+      <p>Mais do que centralizar decisões ou resolver problemas operacionais, o líder precisa criar condições para que sua equipe tenha autonomia, domínio sobre suas responsabilidades e clareza sobre os objetivos do negócio.</p>
+
+      <p>Nesse contexto, liderar significa antecipar desafios, desenvolver pessoas, estabelecer prioridades e conduzir conversas difíceis quando necessário. Também significa formar equipes preparadas para entregar resultados de forma consistente, sem depender exclusivamente da presença do gestor em todas as decisões.</p>
+
+      <h2>Projetos consistentes reduzem riscos e aumentam a capacidade de execução</h2>
+      <p>Durante a palestra, Chaker também chamou atenção para a importância do planejamento estruturado.</p>
+
+      <p>Antes da execução, ideias precisam ser transformadas em projetos claros, capazes de antecipar riscos, definir prioridades e organizar responsabilidades. Segundo ele, é preferível identificar falhas durante o planejamento do que descobrir problemas apenas quando a operação já está em andamento.</p>
+
+      <p>Na prática, essa visão aproxima o planejamento da gestão cotidiana, permitindo que decisões sejam tomadas com mais segurança e menos improvisação.</p>
+
+      <h2>Gerenciar é acompanhar, corrigir e agir</h2>
+      <p>Outro aspecto abordado foi a diferença entre administrar tarefas e gerenciar resultados.</p>
+
+      <p>Para Chaker, gestão exige acompanhamento constante da execução, monitoramento de indicadores e capacidade de agir rapidamente diante dos desvios.</p>
+
+      <p>Em vez de esperar que pequenos problemas cresçam, organizações de alta performance desenvolvem rotinas de acompanhamento que permitem corrigir o rumo continuamente, fortalecendo a disciplina operacional e aumentando a previsibilidade dos resultados.</p>
+
+      <h2>Empresas preparadas evoluem continuamente</h2>
+      <p>Ao longo da apresentação, ficou evidente que a adaptação deixou de ser uma vantagem competitiva para se tornar uma necessidade.</p>
+
+      <p>Mudanças tecnológicas, novas ferramentas de gestão e o avanço da inteligência artificial tendem a transformar ainda mais a forma como decisões serão tomadas nos próximos anos. Nesse cenário, empresas que investem em aprendizado contínuo, gestão estruturada e desenvolvimento de pessoas ampliam sua capacidade de responder aos desafios e construir resultados sustentáveis.</p>
+
+      <h2>Gestão é um processo permanente</h2>
+      <p>A principal reflexão deixada pela palestra é que crescimento sustentável não acontece por acaso.</p>
+
+      <p>Ele é consequência de decisões bem estruturadas, liderança preparada, equipes alinhadas e uma gestão capaz de transformar estratégia em rotina.</p>
+
+      <p>Mais do que acompanhar as mudanças do mercado, empresas que desejam permanecer competitivas precisam desenvolver uma cultura de aprendizado, adaptação e melhoria contínua — princípios que hoje fazem parte da agenda das organizações que buscam resultados consistentes no longo prazo.</p>
+    `
+  },
+  {
     id: 10,
     slug: "sem-execucao-sem-fazenda-gestao-intencional",
     titulo: "“Sem Execução, Sem Fazenda”: Rodrigo Patussi Explica por que Grandes Projetos Agropecuários Dependem da Gestão Intencional",
