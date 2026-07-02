@@ -1,5 +1,69 @@
 export const todasAsNoticias = [
   {
+    id: 12,
+    slug: "plano-safra-2026-2027-recursos-planejamento-empresas-rurais",
+    titulo: "Plano Safra 2026/2027 amplia recursos para o agronegócio e reforça importância do planejamento nas empresas rurais",
+    resumo: "Novo ciclo disponibiliza R$ 525,1 bilhões para agricultura empresarial e amplia oportunidades de investimento, modernização e crescimento sustentável.",
+    imagemDestaque: "/images/noticias/plano-safra-2026-2027.jpeg",
+    dataPublicacao: "02 de julho de 2026",
+    autor: "Por Terra Desenvolvimento",
+    conteudo: `
+      <p>O Governo Federal anunciou o Plano Safra 2026/2027 para a agricultura empresarial, disponibilizando <strong>R$ 525,1 bilhões</strong> em crédito para apoiar o desenvolvimento do agronegócio brasileiro. Os recursos contemplam operações de custeio, comercialização e investimentos, fortalecendo a capacidade de expansão e modernização das empresas rurais.</p>
+
+      <p>Mais do que um volume expressivo de recursos, o novo Plano Safra reforça um aspecto cada vez mais presente na gestão agropecuária: a necessidade de alinhar decisões financeiras ao planejamento estratégico do negócio.</p>
+
+      <h2>Recursos crescem e ampliam possibilidades de investimento</h2>
+      <p>Do total anunciado, <strong>R$ 384,9 bilhões</strong> serão destinados às operações de custeio e comercialização, garantindo capital para o desenvolvimento das atividades produtivas durante a safra.</p>
+
+      <p>Já outros <strong>R$ 140,2 bilhões</strong> serão direcionados para investimentos em infraestrutura, irrigação, armazenagem, máquinas, inovação e modernização das propriedades.</p>
+
+      <p>O aumento dos recursos demonstra a continuidade do apoio ao desenvolvimento do setor e cria novas oportunidades para empresas que desejam ampliar sua eficiência operacional e sua capacidade produtiva.</p>
+
+      <h2>Crédito deve apoiar estratégia, não apenas atender necessidades imediatas</h2>
+      <p>Embora o acesso ao crédito seja um importante instrumento para impulsionar o crescimento das propriedades, sua utilização exige planejamento.</p>
+
+      <p>Cada decisão de investimento influencia diretamente o fluxo de caixa, a capacidade de pagamento e a competitividade da empresa nos próximos anos.</p>
+
+      <p>Por isso, mais do que avaliar taxas de juros ou limites de financiamento, produtores e gestores precisam analisar quais investimentos realmente contribuem para aumentar produtividade, reduzir custos operacionais e fortalecer a sustentabilidade financeira do negócio.</p>
+
+      <p>Quando utilizado de forma estratégica, o crédito deixa de ser apenas uma fonte de recursos e passa a atuar como uma ferramenta de crescimento.</p>
+
+      <h2>Investimentos em tecnologia e infraestrutura ganham protagonismo</h2>
+      <p>Entre os destaques do novo Plano Safra está o incentivo à modernização das propriedades.</p>
+
+      <p>Linhas voltadas para irrigação, armazenagem, renovação de máquinas, inovação tecnológica e projetos de sustentabilidade ampliam as possibilidades para empresas que desejam aumentar sua eficiência operacional.</p>
+
+      <p>Em um ambiente cada vez mais competitivo, investir em infraestrutura significa também investir em previsibilidade, segurança e capacidade de resposta às mudanças do mercado.</p>
+
+      <h2>Sustentabilidade e gestão de risco seguem como prioridades</h2>
+      <p>O Plano Safra 2026/2027 mantém estímulos para práticas sustentáveis e mecanismos de gestão de risco.</p>
+
+      <p>Entre as medidas anunciadas estão condições diferenciadas para iniciativas voltadas à recuperação de pastagens, conservação ambiental e sistemas produtivos sustentáveis.</p>
+
+      <p>Também permanecem instrumentos que incentivam a contratação de seguros e mecanismos de proteção da atividade agropecuária, fortalecendo a capacidade das empresas de enfrentar oscilações climáticas e de mercado.</p>
+
+      <p>Essas iniciativas reforçam uma tendência cada vez mais presente no agronegócio: crescimento e sustentabilidade caminham lado a lado.</p>
+
+      <h2>O momento exige planejamento financeiro</h2>
+      <p>A disponibilidade de recursos representa uma oportunidade importante para empresas que possuem objetivos claros de crescimento.</p>
+
+      <p>No entanto, ampliar investimentos exige análises consistentes sobre retorno esperado, capacidade de pagamento e impacto financeiro no longo prazo.</p>
+
+      <p>Cada propriedade possui uma realidade diferente. Por isso, a definição da melhor linha de crédito depende de um planejamento que considere indicadores econômicos, estrutura operacional, cronograma produtivo e estratégia de expansão.</p>
+
+      <p>Mais do que acessar crédito, o desafio é garantir que cada recurso aplicado contribua para aumentar a competitividade da empresa.</p>
+
+      <h2>Um novo ciclo para empresas que pensam no longo prazo</h2>
+      <p>O Plano Safra 2026/2027 reforça o compromisso com o fortalecimento da agricultura empresarial brasileira e cria condições para que produtores ampliem investimentos em tecnologia, infraestrutura e eficiência.</p>
+
+      <p>Para empresas agropecuárias, o novo ciclo representa uma oportunidade de transformar recursos em crescimento sustentável, desde que as decisões sejam tomadas com planejamento e visão de longo prazo.</p>
+
+      <p>Em um cenário de constantes transformações, o crédito continua sendo importante. Mas é a forma como ele é utilizado que determina seu impacto sobre os resultados da empresa.</p>
+
+      <p><strong>Cada empresa agropecuária possui uma realidade financeira, operacional e estratégica diferente. Antes de definir investimentos ou contratar novas linhas de crédito, vale analisar como esses recursos contribuem para os objetivos do negócio e para a sustentabilidade da operação no longo prazo.</strong></p>
+    `
+  },
+  {
     id: 11,
     slug: "gestao-do-futuro-adaptacao-lideranca-execucao-consistente",
     titulo: "Gestão do futuro exige adaptação, liderança e execução consistente, destaca Antônio Chaker no Encontro de Gestores",
