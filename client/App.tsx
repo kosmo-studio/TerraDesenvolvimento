@@ -29,6 +29,7 @@ import EmpresaPecuariaGO from "./pages/internasCursos/EmpresaPecuariaAG";
 import EmpresaPecuariaXG from "./pages/internasCursos/EmpresaPecuariaXG";
 import EmpresaPecuariaMT from "./pages/internasCursos/EmpresaPecuariaMT";
 import EmpresaPecuariaPP from "./pages/internasCursos/EmpresaPecuariaPP";
+import FloatingWhatsApp from "./components/FloatingWhatsApp";
 
 const queryClient = new QueryClient();
 
@@ -70,6 +71,7 @@ const App = () => (
           
           <Route path="*" element={<NotFound />} />
         </Routes>
+        <FloatingWhatsApp />
       </BrowserRouter>
     </TooltipProvider>
   </QueryClientProvider>
