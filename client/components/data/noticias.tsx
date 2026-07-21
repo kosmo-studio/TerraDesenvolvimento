@@ -1,5 +1,71 @@
 export const todasAsNoticias = [
   {
+    id: 13,
+    slug: "gestao-alem-da-producao-futuro-empresas-agropecuarias-decisoes-fundamentadas",
+    titulo: "Gestão além da produção: por que o futuro das empresas agropecuárias depende de decisões bem fundamentadas",
+    resumo: "Em entrevista à Revista DBO, Rodrigo Patussi compartilha reflexões sobre liderança, indicadores, tecnologia e governança, reforçando que a competitividade das empresas agropecuárias passa pela qualidade da gestão.",
+    imagemDestaque: "/images/noticias/rodrigo-patussi-dbo-entrevista.jpeg",
+    dataPublicacao: "21 de julho de 2026",
+    autor: "Por Terra Desenvolvimento",
+    conteudo: `
+      <p>Em entrevista à Revista DBO, Rodrigo Patussi, CEO da Terra Desenvolvimento, compartilha reflexões sobre liderança, indicadores, tecnologia e governança, reforçando que a competitividade das empresas agropecuárias passa, cada vez mais, pela qualidade da gestão.</p>
+
+      <p>Durante muitos anos, a excelência no agronegócio foi medida quase exclusivamente por indicadores produtivos. Produzir mais, aumentar a produtividade e alcançar melhores índices zootécnicos eram considerados os principais objetivos de uma fazenda de alta performance.</p>
+
+      <p>Esse cenário, no entanto, vem mudando.</p>
+
+      <p>Em entrevista concedida à Revista DBO, Rodrigo Patussi destaca que o sucesso das empresas agropecuárias depende de um conjunto muito mais amplo de fatores. Hoje, resultados consistentes exigem estratégia, liderança, organização e, principalmente, capacidade de tomar boas decisões.</p>
+
+      <h2>Gestão é criar um ambiente para boas decisões</h2>
+      <p>Segundo Rodrigo Patussi, o maior papel da gestão não está apenas em acompanhar números ou controlar processos.</p>
+
+      <p>Sua principal função é criar as condições para que as melhores decisões sejam tomadas ao longo de toda a operação.</p>
+
+      <p>Esse conceito muda a forma como muitas empresas enxergam a administração da fazenda. Mais do que reagir aos desafios do dia a dia, a gestão passa a atuar de forma preventiva, organizando informações, definindo prioridades e alinhando pessoas em torno dos mesmos objetivos.</p>
+
+      <p>Quando as decisões acontecem de maneira estruturada, a empresa reduz desperdícios, melhora a eficiência e aumenta sua capacidade de adaptação diante das mudanças do mercado.</p>
+
+      <h2>Indicadores precisam orientar, não apenas medir</h2>
+      <p>Outro tema abordado na entrevista foi o papel dos indicadores.</p>
+
+      <p>Na visão de Rodrigo, acompanhar dados produtivos e financeiros é importante, mas o verdadeiro valor dessas informações está na capacidade de orientar decisões.</p>
+
+      <p>Indicadores deixam de ser apenas relatórios quando ajudam o gestor a compreender onde estão os gargalos, quais processos precisam evoluir e quais oportunidades podem ser aproveitadas.</p>
+
+      <p>Mais do que acumular números, empresas de alta performance utilizam informações para transformar conhecimento em ação.</p>
+
+      <h2>Tecnologia amplia a capacidade de gestão</h2>
+      <p>O avanço de ferramentas digitais também foi tema da conversa com a Revista DBO.</p>
+
+      <p>Aplicativos, plataformas de gestão, inteligência artificial e análise de dados vêm ampliando significativamente a capacidade de monitorar operações e gerar informações estratégicas.</p>
+
+      <p>Entretanto, Rodrigo destaca que nenhuma tecnologia substitui o papel da liderança. Ferramentas potencializam decisões, mas continuam dependendo de pessoas preparadas para interpretar informações, estabelecer prioridades e conduzir equipes rumo aos objetivos da empresa.</p>
+
+      <h2>Governança fortalece empresas em crescimento</h2>
+      <p>Outro conceito que ganha espaço no agronegócio é a governança.</p>
+
+      <p>Embora muitas vezes associada apenas a grandes grupos empresariais, ela também desempenha um papel importante em propriedades familiares e empresas rurais em processo de expansão.</p>
+
+      <p>Definir responsabilidades, organizar processos, estabelecer critérios para tomada de decisão e criar ambientes mais transparentes fortalece a gestão e prepara a empresa para crescer de forma sustentável.</p>
+
+      <p>Mais do que uma exigência corporativa, governança representa maturidade na forma de administrar o negócio.</p>
+
+      <h2>Liderança e adaptação como diferencial competitivo</h2>
+      <p>Ao longo da entrevista, Rodrigo também reforça que o agronegócio vive um momento de transformação acelerada.</p>
+
+      <p>Mudanças tecnológicas, novas demandas do mercado, sucessão familiar, profissionalização das equipes e maior disponibilidade de informações exigem uma postura cada vez mais estratégica dos gestores.</p>
+
+      <p>Nesse contexto, liderança deixa de significar apenas coordenação de equipes. Passa a representar a capacidade de aprender continuamente, adaptar processos e conduzir pessoas em cenários cada vez mais dinâmicos.</p>
+
+      <h2>A fazenda como uma empresa preparada para o futuro</h2>
+      <p>As reflexões apresentadas na entrevista reforçam um movimento cada vez mais presente no agronegócio brasileiro: enxergar a propriedade rural como uma empresa, onde produtividade continua sendo fundamental, mas precisa caminhar ao lado da gestão.</p>
+
+      <p>Planejamento, indicadores, governança, tecnologia e liderança deixam de ser conceitos isolados para formar um sistema capaz de sustentar resultados de longo prazo.</p>
+
+      <p>Mais do que acompanhar as transformações do setor, empresas agropecuárias preparadas para o futuro são aquelas que desenvolvem a capacidade de transformar informação em decisão e estratégia em execução.</p>
+    `
+  },
+  {
     id: 12,
     slug: "plano-safra-2026-2027-recursos-planejamento-empresas-rurais",
     titulo: "Plano Safra 2026/2027 amplia recursos para o agronegócio e reforça importância do planejamento nas empresas rurais",
