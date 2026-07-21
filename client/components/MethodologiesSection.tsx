@@ -4,7 +4,7 @@ export default function MethodologiesSection() {
       <div className="relative rounded-3xl overflow-hidden w-full min-h-[600px] lg:h-[75vh] flex items-center">
         {/* Imagem de fundo */}
         <img
-          src="/images/metodologia.png"
+          src="/images/metodologia.webp"
           alt="Homem no campo de soja"
           className="absolute inset-0 w-full h-full object-cover"
         />

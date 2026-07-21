@@ -16,7 +16,7 @@ export default function DiagnosticoGlobal() {
         {/* Hero Section */}
         <AnimatedSection variant="fade">
           <HeroSection
-            backgroundImage="/images/desempenho.png"
+            backgroundImage="/images/desempenho.webp"
             title="Mapeamento de Oportunidades"
             subtitle="Apresentar e discutir onde sua fazenda está, o 'Ponto A' e onde poderá chegar, mostrando com clareza a atual situação financeira, produtiva e gerencial da empresa através de indicadores parametrizados."
           />
@@ -29,7 +29,7 @@ export default function DiagnosticoGlobal() {
               <div className="flex flex-col md:flex-row items-center md:items-start gap-8 px-0 md:px-0 lg:px-5 xl:px-8">
                 <div className="flex-shrink-0">
                   <img
-                    src="/images/terra logo.png"
+                    src="/images/terra logo.webp"
                     alt="Descrição da imagem"
                     className="w-28 h-28 md:w-20 md:h-20 lg:w-32 lg:h-32 mx-auto"
                   />

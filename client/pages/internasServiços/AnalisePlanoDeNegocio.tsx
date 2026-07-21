@@ -8,27 +8,27 @@ import { Button } from "@/components/ui/button";
 
 const passos = [
   {
-    imagem: "/images/01.png",
+    imagem: "/images/01.webp",
     alt: "Passo 01",
     texto: "Prospecção de propriedades que tenham o perfil do investidor, através de uma equipe parceira de corretores credenciados, garantindo assim objetividade e discrição."
   },
   {
-    imagem: "/images/02.png",
+    imagem: "/images/02.webp",
     alt: "Passo 02",
     texto: "Aprovação e autorização por parte do investidor, da vistoria técnica à propriedade."
   },
   {
-    imagem: "/images/03.png",
+    imagem: "/images/03.webp",
     alt: "Passo 03",
     texto: "Visita às propriedades para coleta de dados e reconhecimento."
   },
   {
-    imagem: "/images/04.png",
+    imagem: "/images/04.webp",
     alt: "Passo 04",
     texto: "Tabulação dos dados, análises de viabilidade e projeção  de resultados."
   },
   {
-    imagem: "/images/05.png",
+    imagem: "/images/05.webp",
     alt: "Passo 05",
     texto: "Apresentação do Plano de Negócio com modelagens produtivas desenhadas. Após escolha, decisão e aprovação do modelo produtivo e plano de negócio, enviamos o material escrito impresso e encadernado."
   },
@@ -42,7 +42,7 @@ export default function AnalisePlanoDeNegocio() {
         <Header />
         {/* Hero Section */}
          <HeroSection
-          backgroundImage="/images/bg-analise.png"
+          backgroundImage="/images/bg-analise.webp"
           title="Análise e Plano de Negócios: Aquisição de fazendas"
           subtitle="Suporte na análise e decisão de investimento e compra de propriedade rural, baseado nas principais variáveis envolvidas na produção, projeção de resultados, rentabilidade e viabilidade econômica."
         />
@@ -55,7 +55,7 @@ export default function AnalisePlanoDeNegocio() {
             <div className="flex flex-col md:flex-row items-center gap-8 px-0 md:px-0 lg:px-5 xl:px-8">
               <div className="flex-shrink-0 ">
                 <img
-                  src="/images/terra logo.png"
+                  src="/images/terra logo.webp"
                   alt="Descrição da imagem"
                   className="w-28 h-28 md:w-20 md:h-20 lg:w-32 lg:h-32 mx-auto"
                 />

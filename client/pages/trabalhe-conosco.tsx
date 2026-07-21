@@ -13,7 +13,7 @@ export default function TrabalheConosco() {
       
         <AnimatedSection>
           <HeroSection
-            backgroundImage="/images/bg-nossahistoria.png"
+            backgroundImage="/images/bg-nossahistoria.webp"
             title=""
             subtitle=""
           />

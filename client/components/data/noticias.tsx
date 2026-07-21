@@ -4,7 +4,7 @@ export const todasAsNoticias = [
     slug: "gestao-alem-da-producao-futuro-empresas-agropecuarias-decisoes-fundamentadas",
     titulo: "Gestão além da produção: por que o futuro das empresas agropecuárias depende de decisões bem fundamentadas",
     resumo: "Em entrevista à Revista DBO, Rodrigo Patussi compartilha reflexões sobre liderança, indicadores, tecnologia e governança, reforçando que a competitividade das empresas agropecuárias passa pela qualidade da gestão.",
-    imagemDestaque: "/images/noticias/rodrigo-patussi-dbo-entrevista.jpeg",
+    imagemDestaque: "/images/noticias/rodrigo-patussi-dbo-entrevista.webp",
     dataPublicacao: "21 de julho de 2026",
     autor: "Por Terra Desenvolvimento",
     conteudo: `
@@ -70,7 +70,7 @@ export const todasAsNoticias = [
     slug: "plano-safra-2026-2027-recursos-planejamento-empresas-rurais",
     titulo: "Plano Safra 2026/2027 amplia recursos para o agronegócio e reforça importância do planejamento nas empresas rurais",
     resumo: "Novo ciclo disponibiliza R$ 525,1 bilhões para agricultura empresarial e amplia oportunidades de investimento, modernização e crescimento sustentável.",
-    imagemDestaque: "/images/noticias/plano-safra-2026-2027.jpeg",
+    imagemDestaque: "/images/noticias/plano-safra-2026-2027.webp",
     dataPublicacao: "02 de julho de 2026",
     autor: "Por Terra Desenvolvimento",
     conteudo: `
@@ -134,7 +134,7 @@ export const todasAsNoticias = [
     slug: "gestao-do-futuro-adaptacao-lideranca-execucao-consistente",
     titulo: "Gestão do futuro exige adaptação, liderança e execução consistente, destaca Antônio Chaker no Encontro de Gestores",
     resumo: "Especialista defende que resultados sustentáveis dependem menos de fórmulas prontas e mais da capacidade das empresas de evoluir, desenvolver pessoas e transformar estratégia em execução.",
-    imagemDestaque: "/images/noticias/gestaodoFuturo.jpeg",
+    imagemDestaque: "/images/noticias/gestaodoFuturo.webp",
     dataPublicacao: "01 de julho de 2026",
     autor: "Por Terra Desenvolvimento",
     conteudo: `
@@ -188,7 +188,7 @@ export const todasAsNoticias = [
     slug: "sem-execucao-sem-fazenda-gestao-intencional",
     titulo: "“Sem Execução, Sem Fazenda”: Rodrigo Patussi Explica por que Grandes Projetos Agropecuários Dependem da Gestão Intencional",
     resumo: "CEO da Terra Desenvolvimento defende que o sucesso de grandes fazendas de agricultura e pecuária não está no papel, mas na capacidade da liderança de campo de simplificar o conhecimento técnico e eliminar o ruído da operação.",
-    imagemDestaque: "/images/noticias/patussi.jpeg",
+    imagemDestaque: "/images/noticias/patussi-jpeg.webp",
     dataPublicacao: "15 de junho de 2026",
     autor: "Por Terra Desenvolvimento",
     conteudo: `
@@ -230,7 +230,7 @@ export const todasAsNoticias = [
         "slug": "terceirizacao-gestao-pecuaria-viabilidade-cases-sucesso",
         "titulo": "Terceirizar a Gestão da Fazenda de Pecuária é Viável?",
         "resumo": "A terceirização da gestão total de fazendas de pecuária é uma alternativa crescente no Brasil. A Feed&Food apresenta dois cases de sucesso do Grupo FA Agro e Grupo Virginia, destacando que o modelo exige confiança e participação ativa do proprietário nas decisões.",
-        "imagemDestaque": "/images/materiaRevista.png", 
+        "imagemDestaque": "/images/materiaRevista.webp", 
         "dataPublicacao": "04 de novembro de 2025", 
         "autor": "Por Ariosto Mesquita (Especial para a Feed&Food)",
         "fonte": "Feed&Food",
@@ -358,7 +358,7 @@ export const todasAsNoticias = [
   "slug": "Parceiros-da-Terra",
   "titulo": "Parceiros da Terra: um encontro para falar sobre o que realmente gera resultado no campo.",
   "resumo": "No dia 17 de outubro, em Tocantins, realizamos o evento “Parceiros da Terra”, que reuniu empresas fundamentais para o agronegócio da nossa região...",
-  "imagemDestaque": "/images/parceirosTerra.png",
+  "imagemDestaque": "/images/parceirosTerra.webp",
   "dataPublicacao": "23 de outubro de 2025",
   "autor": "Por Equipe Terra",
   "conteudo": `
@@ -371,7 +371,7 @@ export const todasAsNoticias = [
             
             <video 
               controls 
-              poster="/images/parceiros-terra-capa-video-vertical.jpg" 
+              poster="/images/parceirosTerra.webp" 
               style="width: 100%; height: auto; border-radius: 8px; box-shadow: 0 4px 8px rgba(0,0,0,0.2);"
               
               /* 💡 ATRIBUTOS MOVIDOS PARA CÁ */
@@ -651,7 +651,7 @@ export const todasAsNoticias = [
 export const noticiasExternas = [
   {
     titulo: "Conhecimento é a base do sucesso das fazendas",
-    imagem: "/images/noticias/giroboi.png",
+    imagem: "/images/noticias/giroboi.webp",
     url: "https://girodoboi.canalrural.com.br/pecuaria/conhecimento-e-a-base-do-sucesso-das-fazendas-diz-especialista-em-gestao-no-campo/",
   },
   {
@@ -661,12 +661,12 @@ export const noticiasExternas = [
   },
   {
     titulo: "Tecnologia sozinha não transforma uma fazenda",
-    imagem: "/images/noticias/insta.png",
+    imagem: "/images/noticias/insta.webp",
     url: "https://www.instagram.com/p/DXEehaJjNP0/?igsh=aHJ1ZDMzZDR1djl0",
   },
   {
     titulo: "Encontro de Gestores traz foco em pessoas, tecnologia e resultado na pecuária",
-    imagem: "/images/noticias/oestado.png",
+    imagem: "/images/noticias/oestado.webp",
     url: "https://oestadoonline.com.br/agronegocio/encontro-de-gestores-traz-foco-em-pessoas-tecnologia-e-resultado-na-pecuaria/",
   },
   {
@@ -676,12 +676,12 @@ export const noticiasExternas = [
   },
   {
     titulo: "Gestão ganha protagonismo no agro e vira foco de evento em Campo Grande",
-    imagem: "/images/noticias/gestaoGanha.png",
+    imagem: "/images/noticias/gestaoGanha.webp",
     url: "https://www.rcn67.com.br/campo-grande/gestao-ganha-protagonismo-no-agro-e-vira-foco-de-evento-em-campo-grande/",
   },
   {
     titulo: "Rodrigo Patussi diz que fazenda precisa ser tratada como negócio",
-    imagem: "/images/noticias/patussi.png",
+    imagem: "/images/noticias/patussi-png.webp",
     url: "https://www.rcn67.com.br/tres-lagoas/rodrigo-patussi-fazenda-como-negocio/",
   },
 ];

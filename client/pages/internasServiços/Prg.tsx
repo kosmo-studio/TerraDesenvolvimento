@@ -38,7 +38,7 @@ export default function Prg() {
           <section className="relative w-full h-[80vh] text-white">
             <div
               className="absolute inset-0 bg-cover bg-center"
-              style={{ backgroundImage: `url('/images/bg-prg.png')` }}
+              style={{ backgroundImage: `url('/images/bg-prg.webp')` }}
               aria-hidden="true"
             />
             <div className="relative h-full flex flex-col items-center pt-20 md:pt-32 xl:pt-32 text-center p-4 ">
@@ -64,7 +64,7 @@ export default function Prg() {
               <div className="flex flex-col md:flex-row items-center gap-8 px-0 md:px-0 lg:px-5 xl:px-8">
                 <div className="flex-shrink-0 ">
                   <img
-                    src="/images/terra logo.png"
+                    src="/images/terra logo.webp"
                     alt="Descrição da imagem"
                     className="w-28 h-28 md:w-20 md:h-20 lg:w-32 lg:h-32 mx-auto"
                   />

@@ -16,7 +16,7 @@ export default function ImplementacaoDeControle() {
         <AnimatedSection variant="fade">
         {/* Hero Section */}
          <HeroSection
-          backgroundImage="/images/bg-implantacao.png"
+          backgroundImage="/images/bg-implantacao.webp"
           title="implantação de Controle"
           subtitle="Metodologia de controle de dados e informações essenciais, com rapidez e confiabilidade, através da otimização dos controles existentes na fazenda, implantação de sistemas e outros métodos que se façam necessários para ter “a fazenda em suas mãos”."
         />
@@ -28,7 +28,7 @@ export default function ImplementacaoDeControle() {
             <div className="flex flex-col md:flex-row items-center md:items-start gap-8 px-0 md:px-0 lg:px-5 xl:px-8">
               <div className="flex-shrink-0">
                 <img
-                  src="/images/terra logo.png"
+                  src="/images/terra logo.webp"
                   alt="Descrição da imagem"
                   className="w-28 h-28 md:w-20 md:h-20 lg:w-32 lg:h-32 mx-auto"
                 />

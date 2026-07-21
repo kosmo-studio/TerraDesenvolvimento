@@ -15,7 +15,7 @@ export default function DesenvolvimentoGerencial() {
         {/* Hero Section */}
         <AnimatedSection variant="fade">
           <HeroSection
-            backgroundImage="/images/bg-desenvolvimentogerencial.png"
+            backgroundImage="/images/bg-desenvolvimentogerencial.webp"
             title="Desenvolvimento Gerencial"
             subtitle="Construir equipe realizadora capaz de assumir e bater as metas estabelecidas. Tomar ações eficientes no propósito de “forjar” uma cultura gerencial objetiva,  duradoura e que respeite seus valores na conquista de seus objetivos."
           />
@@ -27,7 +27,7 @@ export default function DesenvolvimentoGerencial() {
               <div className="flex flex-col md:flex-row items-center gap-8 px-0 md:px-0 lg:px-5 xl:px-8">
                 <div className="flex-shrink-0">
                   <img
-                    src="/images/terra logo.png"
+                    src="/images/terra logo.webp"
                     alt="Descrição da imagem"
                     className="w-28 h-28 md:w-20 md:h-20 lg:w-32 lg:h-32 mx-auto"
                   />

@@ -11,28 +11,28 @@ import CtaSection from "@/components/CtaSection";
 const depoimentos = [
   {
     id: "carmem-perez",
-    imgSrc: "/images/carmem.jpeg",
+    imgSrc: "/images/carmem.webp",
     nome: "Carmem Perez",
     fazenda: "Fazenda Orvalho das Flores",
     texto: "\"Eu digo que é uma relação mútua, né? Uma relação de troca com a Terra, porque ela sempre esteve presente e me ajudando. Eu não consigo pensar no negócio da pecuária sem essa assessoria. Para mim, essa assessoria é muito importante, porque consigo enxergar o negócio a médio e longo prazo. Consigo ter uma radiografia de tudo o que estamos fazendo. Os números que a Terra sempre nos traz sobre produtividade, questões econômicas e valorização ou não do rebanho são fundamentais. A última reunião que tive agora com a equipe foi desafiadora, porque eles vão mostrar o resultado. Estar nesse momento é desafiador, mas é importante entender onde estamos no negócio. E a Terra, por se especializar em pecuária, traz essas informações de uma forma muito prática e simples.\""
   },
   {
     id: "thiago-carminati",
-    imgSrc: "/images/thiago.jpeg",
+    imgSrc: "/images/thiago.webp",
     nome: "Thiago Carminati",
     fazenda: "Grupo Marajó",
     texto: "\"O ano de 2024 para o grupo Marajó, com a Terra, foi excepcional. Foi o ano em que tivemos uma mudança de chave, então a Terra para mim foi fundamental. Nós melhoramos e intensificamos a propriedade. Sem a ajuda da Terra, isso ia ser impossível.\""
   },
   {
     id: "gustavo-arfux",
-    imgSrc: "/images/gustavoArfux.jpeg",
+    imgSrc: "/images/gustavoArfux.webp",
     nome: "Gustavo Arfux",
     fazenda: "Ouro 67",
     texto: "\"Eu sou pecuarista, mas não tenho conhecimento na área. Na verdade, minha formação é de engenheiro eletricista e trabalho no mercado de energia. Entrei nesse desafio da pecuária por conta da confiança que tenho na Terra. O auxílio, a gestão e a forma empresarial com que eles conduzem a administração das fazendas me ajudaram muito a ter segurança para investir e entrar nesse mercado, porque a linguagem que eles adotam é extremamente gerencial e de alto nível. Isso tornou muito mais fácil compreender as nuances da pecuária e alcançar um bom desempenho na fazenda. Sou muito grato, tenho extrema confiança e indico sempre que posso: venha para a Terra você também!\""
   },
   {
     id: "elton-silveira",
-    imgSrc: "/images/elton.jpeg",
+    imgSrc: "/images/elton.webp",
     nome: "Elton Silveira",
     fazenda: "Fazenda 3 Minas",
     texto: "\"A Terra desenvolvimento me atende há 13 safras e a considero como parceira da nossa propriedade familiar. Fez com que tivéssemos muita evolução! Um crescimento imenso! Quase dobramos nossa produtividade e nosso orçamento passou a ser positivo. Temos projeto de continuar com a Terra por muitos anos; muitas safras.\""
@@ -69,7 +69,7 @@ export default function Resultados() {
       <main>
         <AnimatedSection variant="fade">
           <HeroSection
-            backgroundImage="/images/bg-resultados.png"
+            backgroundImage="/images/bg-resultados.webp"
             title="Clientes Terra Desenvolvimento Agropecuário"
             subtitle=""
           />
@@ -106,7 +106,7 @@ export default function Resultados() {
           <div className="flex items-center mx-auto justify-center w-full max-w-4xl px-4 gap-6">
             <div className="flex-grow h-px bg-[#162946]" />
             <img
-              src="/images/terra logo.png"
+              src="/images/terra logo.webp"
               alt="Ícone Terra"
               className="w-10 h-10 object-contain"
             />

@@ -1,9 +1,9 @@
 import { useState, useEffect } from 'react';
 
 const animatedTexts = [
-  '/images/texto1.png',
-  '/images/texto2.png',
-  '/images/texto3.png',
+  '/images/texto1.webp',
+  '/images/texto2.webp',
+  '/images/texto3.webp',
 ];
 
 export default function HeroHome() {
@@ -33,7 +33,7 @@ export default function HeroHome() {
         <div className="relative h-[200px] md:h-[500px] lg:h-[560px] xl:h-[830px]">
           {/* IMAGEM DE FUNDO PRINCIPAL */}
           <img
-            src="/images/fundoBanner.png"
+            src="/images/fundoBanner.webp"
             alt="Terra - Homem com equipamento agrícola"
             className="absolute inset-0 w-full h-full object-cover"
           />
