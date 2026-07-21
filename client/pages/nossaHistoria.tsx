@@ -15,7 +15,7 @@ export default function NossaHistoria() {
       
         <AnimatedSection>
           <HeroSection
-            backgroundImage="/images/bg-nossahistoria.png"
+            backgroundImage="/images/bg-nossahistoria.webp"
             title="Terra Desenvolvimento Agropecuário"
             subtitle=""
           />
@@ -45,7 +45,7 @@ export default function NossaHistoria() {
                 
                 <div className="flex-grow h-px bg-[#162946]" />
                 <img
-                  src="/images/terra logo.png"
+                  src="/images/terra logo.webp"
                   alt="Ícone Terra"
                   className="w-10 h-10 object-contain"
                 />

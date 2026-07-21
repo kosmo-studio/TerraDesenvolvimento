@@ -15,7 +15,7 @@ export default function PlanejamentoEstrategico() {
           <Header />
           {/* Hero Section */}
           <HeroSection
-            backgroundImage="/images/bg-planejamento.png"
+            backgroundImage="/images/bg-planejamento.webp"
             title="Planejamento Estratégico"
             subtitle="O PROJETO é o elemento determinante para o sucesso da atividade em questão. Foco e clareza nos objetivos, “Ponto B”, determinando o caminho para o crescimento sustentável da lucratividade e gerenciabilidade da fazenda."
           />
@@ -28,7 +28,7 @@ export default function PlanejamentoEstrategico() {
               <div className="flex flex-col md:flex-row items-center md:items-start gap-8 px-0 md:px-0 lg:px-5 xl:px-8">
                 <div className="flex-shrink-0">
                   <img
-                    src="/images/terra logo.png"
+                    src="/images/terra logo.webp"
                     alt="Descrição da imagem"
                     className="w-28 h-28 md:w-20 md:h-20 lg:w-32 lg:h-32 mx-auto"
                   />

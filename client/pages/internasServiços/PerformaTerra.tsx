@@ -14,7 +14,7 @@ export default function PerformaTerra() {
         <AnimatedSection variant="fade">
           {/* Hero Section */}
           <HeroSection
-            backgroundImage="/images/bg-performa.png"
+            backgroundImage="/images/bg-performa.webp"
             title="Performa Terra"
             subtitle="O Performa Terra é a nossa mais nova modalidade de produto, sob medida para sua fazenda e foi criada a partir do pedido de diversos produtores que buscavam uma solução de curto prazo."
           />
@@ -26,7 +26,7 @@ export default function PerformaTerra() {
               <div className="flex flex-col md:flex-row items-center gap-8 px-0 md:px-0 lg:px-5 xl:px-8">
                 <div className="flex-shrink-0">
                   <img
-                    src="/images/terra logo.png"
+                    src="/images/terra logo.webp"
                     alt="Descrição da imagem"
                     className="w-28 h-28 md:w-20 md:h-20 lg:w-32 lg:h-32 mx-auto"
                   />

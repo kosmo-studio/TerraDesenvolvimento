@@ -2,10 +2,10 @@ import React from "react";
 import { useNavigate } from "react-router-dom"; // se estiver usando React Router
 
 const clientsData = [
-  { imgSrc: "/images/carmem.jpeg", name: ["Carmem", "Perez"], link: "/resultados#carmem-perez" },
-  { imgSrc: "/images/thiago.jpeg", name: ["Thiago", "Carminati"], link: "/resultados#thiago-carminati" },
-  { imgSrc: "/images/gustavoArfux.jpeg", name: ["Gustavo", "Arfux"], link: "/resultados#gustavo-arfux" },
-  { imgSrc: "/images/elton.jpeg", name: ["Elton", "Silveira"], link: "/resultados#elton-silveira" },
+  { imgSrc: "/images/carmem.webp", name: ["Carmem", "Perez"], link: "/resultados#carmem-perez" },
+  { imgSrc: "/images/thiago.webp", name: ["Thiago", "Carminati"], link: "/resultados#thiago-carminati" },
+  { imgSrc: "/images/gustavoArfux.webp", name: ["Gustavo", "Arfux"], link: "/resultados#gustavo-arfux" },
+  { imgSrc: "/images/elton.webp", name: ["Elton", "Silveira"], link: "/resultados#elton-silveira" },
 ];
 
 export default function TestimonialsSection() {

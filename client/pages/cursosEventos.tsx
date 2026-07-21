@@ -16,7 +16,7 @@ const beneficiosEncontro = [
 // Unificado: Agora aponta para uma rota geral de cursos ou para a landing page principal do curso
 const cursoGestaoUnificado = {
     title: "Curso de Gestão da Empresa Pecuária",
-    imageSrc: "/images/BANNERCURSOGESTAO.jpeg", // Sugestão: usar a imagem mais genérica ou a de Cuiabá que estava mais atualizada
+    imageSrc: "/images/BANNERCURSOGESTAO.webp", // Sugestão: usar a imagem mais genérica ou a de Cuiabá que estava mais atualizada
     description1: `Um dos cursos com maior sucesso em gestão pecuária do Brasil! <br /> Com mais de <strong>10.000 participantes</strong> formados em <strong>215 edições</strong>, já se consolidou como referência nacional, alcançando média de satisfação acima de <strong>9,0 pontos</strong>.`,
     description2: `Agora em um <strong>formato prático e dinâmico</strong>, você será o protagonista: aplicará os conceitos diretamente no seu próprio Excel, levando imediatamente as ferramentas de gestão para a realidade da sua fazenda.`,
     targetAudience: "Produtores rurais, gestores, técnicos e estudantes que desejam aprofundar seus conhecimentos em gestão agropecuária.",
@@ -28,7 +28,7 @@ const cursoGestaoUnificado = {
 
 const cursoPersonalizadoData = {
     title: "Curso Personalizado em<br /> Gestão Agropecuária",
-    imageSrc: "/images/PalestraCurso.png",
+    imageSrc: "/images/PalestraCurso.webp",
     description1: `Sabemos que cada fazenda é única. Por isso, desenvolvemos um formato flexível, feito sob medida para você e sua equipe.`,
     description2: `No <strong>Curso Personalizado,</strong> os temas e objetivos são definidos junto com nossos especialistas, garantindo que o treinamento seja totalmente adaptado à sua realidade.`,
     targetAudience: "Produtores e equipes que buscam soluções práticas e específicas.",
@@ -104,7 +104,7 @@ export default function CursoseEventos() {
             <main>
                 <Header />
                 <HeroSection
-                    backgroundImage="/images/HeroCursoEvento.png"
+                    backgroundImage="/images/HeroCursoEvento.webp"
                     title="Cursos e Eventos"
                     subtitle="Na Terra Desenvolvimento, acreditamos que conhecimento e relacionamento são pilares fundamentais para o crescimento sustentável do agronegócio. Por isso, oferecemos cursos e eventos que unem prática, inovação e networking, sempre com foco em resultados reais para o seu negócio."
                 />
@@ -126,7 +126,7 @@ export default function CursoseEventos() {
                             </h1>
                             <a href="https://www.encontrogestores.agr.br/" target="_blank" rel="noopener noreferrer" className="flex justify-center mb-10">
                                 <img
-                                    src="/images/InfoEncontroGestores.png"
+                                    src="/images/InfoEncontroGestores.webp"
                                     alt="Encontro de Gestores"
                                     className="rounded-3xl shadow-lg w-full max-w-4xl"
                                 />

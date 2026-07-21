@@ -1,10 +1,76 @@
 export const todasAsNoticias = [
   {
+    id: 13,
+    slug: "gestao-alem-da-producao-futuro-empresas-agropecuarias-decisoes-fundamentadas",
+    titulo: "Gestão além da produção: por que o futuro das empresas agropecuárias depende de decisões bem fundamentadas",
+    resumo: "Em entrevista à Revista DBO, Rodrigo Patussi compartilha reflexões sobre liderança, indicadores, tecnologia e governança, reforçando que a competitividade das empresas agropecuárias passa pela qualidade da gestão.",
+    imagemDestaque: "/images/noticias/rodrigo-patussi-dbo-entrevista.webp",
+    dataPublicacao: "21 de julho de 2026",
+    autor: "Por Terra Desenvolvimento",
+    conteudo: `
+      <p>Em entrevista à Revista DBO, Rodrigo Patussi, CEO da Terra Desenvolvimento, compartilha reflexões sobre liderança, indicadores, tecnologia e governança, reforçando que a competitividade das empresas agropecuárias passa, cada vez mais, pela qualidade da gestão.</p>
+
+      <p>Durante muitos anos, a excelência no agronegócio foi medida quase exclusivamente por indicadores produtivos. Produzir mais, aumentar a produtividade e alcançar melhores índices zootécnicos eram considerados os principais objetivos de uma fazenda de alta performance.</p>
+
+      <p>Esse cenário, no entanto, vem mudando.</p>
+
+      <p>Em entrevista concedida à Revista DBO, Rodrigo Patussi destaca que o sucesso das empresas agropecuárias depende de um conjunto muito mais amplo de fatores. Hoje, resultados consistentes exigem estratégia, liderança, organização e, principalmente, capacidade de tomar boas decisões.</p>
+
+      <h2>Gestão é criar um ambiente para boas decisões</h2>
+      <p>Segundo Rodrigo Patussi, o maior papel da gestão não está apenas em acompanhar números ou controlar processos.</p>
+
+      <p>Sua principal função é criar as condições para que as melhores decisões sejam tomadas ao longo de toda a operação.</p>
+
+      <p>Esse conceito muda a forma como muitas empresas enxergam a administração da fazenda. Mais do que reagir aos desafios do dia a dia, a gestão passa a atuar de forma preventiva, organizando informações, definindo prioridades e alinhando pessoas em torno dos mesmos objetivos.</p>
+
+      <p>Quando as decisões acontecem de maneira estruturada, a empresa reduz desperdícios, melhora a eficiência e aumenta sua capacidade de adaptação diante das mudanças do mercado.</p>
+
+      <h2>Indicadores precisam orientar, não apenas medir</h2>
+      <p>Outro tema abordado na entrevista foi o papel dos indicadores.</p>
+
+      <p>Na visão de Rodrigo, acompanhar dados produtivos e financeiros é importante, mas o verdadeiro valor dessas informações está na capacidade de orientar decisões.</p>
+
+      <p>Indicadores deixam de ser apenas relatórios quando ajudam o gestor a compreender onde estão os gargalos, quais processos precisam evoluir e quais oportunidades podem ser aproveitadas.</p>
+
+      <p>Mais do que acumular números, empresas de alta performance utilizam informações para transformar conhecimento em ação.</p>
+
+      <h2>Tecnologia amplia a capacidade de gestão</h2>
+      <p>O avanço de ferramentas digitais também foi tema da conversa com a Revista DBO.</p>
+
+      <p>Aplicativos, plataformas de gestão, inteligência artificial e análise de dados vêm ampliando significativamente a capacidade de monitorar operações e gerar informações estratégicas.</p>
+
+      <p>Entretanto, Rodrigo destaca que nenhuma tecnologia substitui o papel da liderança. Ferramentas potencializam decisões, mas continuam dependendo de pessoas preparadas para interpretar informações, estabelecer prioridades e conduzir equipes rumo aos objetivos da empresa.</p>
+
+      <h2>Governança fortalece empresas em crescimento</h2>
+      <p>Outro conceito que ganha espaço no agronegócio é a governança.</p>
+
+      <p>Embora muitas vezes associada apenas a grandes grupos empresariais, ela também desempenha um papel importante em propriedades familiares e empresas rurais em processo de expansão.</p>
+
+      <p>Definir responsabilidades, organizar processos, estabelecer critérios para tomada de decisão e criar ambientes mais transparentes fortalece a gestão e prepara a empresa para crescer de forma sustentável.</p>
+
+      <p>Mais do que uma exigência corporativa, governança representa maturidade na forma de administrar o negócio.</p>
+
+      <h2>Liderança e adaptação como diferencial competitivo</h2>
+      <p>Ao longo da entrevista, Rodrigo também reforça que o agronegócio vive um momento de transformação acelerada.</p>
+
+      <p>Mudanças tecnológicas, novas demandas do mercado, sucessão familiar, profissionalização das equipes e maior disponibilidade de informações exigem uma postura cada vez mais estratégica dos gestores.</p>
+
+      <p>Nesse contexto, liderança deixa de significar apenas coordenação de equipes. Passa a representar a capacidade de aprender continuamente, adaptar processos e conduzir pessoas em cenários cada vez mais dinâmicos.</p>
+
+      <h2>A fazenda como uma empresa preparada para o futuro</h2>
+      <p>As reflexões apresentadas na entrevista reforçam um movimento cada vez mais presente no agronegócio brasileiro: enxergar a propriedade rural como uma empresa, onde produtividade continua sendo fundamental, mas precisa caminhar ao lado da gestão.</p>
+
+      <p>Planejamento, indicadores, governança, tecnologia e liderança deixam de ser conceitos isolados para formar um sistema capaz de sustentar resultados de longo prazo.</p>
+
+      <p>Mais do que acompanhar as transformações do setor, empresas agropecuárias preparadas para o futuro são aquelas que desenvolvem a capacidade de transformar informação em decisão e estratégia em execução.</p>
+    `
+  },
+  {
     id: 12,
     slug: "plano-safra-2026-2027-recursos-planejamento-empresas-rurais",
     titulo: "Plano Safra 2026/2027 amplia recursos para o agronegócio e reforça importância do planejamento nas empresas rurais",
     resumo: "Novo ciclo disponibiliza R$ 525,1 bilhões para agricultura empresarial e amplia oportunidades de investimento, modernização e crescimento sustentável.",
-    imagemDestaque: "/images/noticias/plano-safra-2026-2027.jpeg",
+    imagemDestaque: "/images/noticias/plano-safra-2026-2027.webp",
     dataPublicacao: "02 de julho de 2026",
     autor: "Por Terra Desenvolvimento",
     conteudo: `
@@ -68,7 +134,7 @@ export const todasAsNoticias = [
     slug: "gestao-do-futuro-adaptacao-lideranca-execucao-consistente",
     titulo: "Gestão do futuro exige adaptação, liderança e execução consistente, destaca Antônio Chaker no Encontro de Gestores",
     resumo: "Especialista defende que resultados sustentáveis dependem menos de fórmulas prontas e mais da capacidade das empresas de evoluir, desenvolver pessoas e transformar estratégia em execução.",
-    imagemDestaque: "/images/noticias/gestaodoFuturo.jpeg",
+    imagemDestaque: "/images/noticias/gestaodoFuturo.webp",
     dataPublicacao: "01 de julho de 2026",
     autor: "Por Terra Desenvolvimento",
     conteudo: `
@@ -122,7 +188,7 @@ export const todasAsNoticias = [
     slug: "sem-execucao-sem-fazenda-gestao-intencional",
     titulo: "“Sem Execução, Sem Fazenda”: Rodrigo Patussi Explica por que Grandes Projetos Agropecuários Dependem da Gestão Intencional",
     resumo: "CEO da Terra Desenvolvimento defende que o sucesso de grandes fazendas de agricultura e pecuária não está no papel, mas na capacidade da liderança de campo de simplificar o conhecimento técnico e eliminar o ruído da operação.",
-    imagemDestaque: "/images/noticias/patussi.jpeg",
+    imagemDestaque: "/images/noticias/patussi-jpeg.webp",
     dataPublicacao: "15 de junho de 2026",
     autor: "Por Terra Desenvolvimento",
     conteudo: `
@@ -164,7 +230,7 @@ export const todasAsNoticias = [
         "slug": "terceirizacao-gestao-pecuaria-viabilidade-cases-sucesso",
         "titulo": "Terceirizar a Gestão da Fazenda de Pecuária é Viável?",
         "resumo": "A terceirização da gestão total de fazendas de pecuária é uma alternativa crescente no Brasil. A Feed&Food apresenta dois cases de sucesso do Grupo FA Agro e Grupo Virginia, destacando que o modelo exige confiança e participação ativa do proprietário nas decisões.",
-        "imagemDestaque": "/images/materiaRevista.png", 
+        "imagemDestaque": "/images/materiaRevista.webp", 
         "dataPublicacao": "04 de novembro de 2025", 
         "autor": "Por Ariosto Mesquita (Especial para a Feed&Food)",
         "fonte": "Feed&Food",
@@ -292,7 +358,7 @@ export const todasAsNoticias = [
   "slug": "Parceiros-da-Terra",
   "titulo": "Parceiros da Terra: um encontro para falar sobre o que realmente gera resultado no campo.",
   "resumo": "No dia 17 de outubro, em Tocantins, realizamos o evento “Parceiros da Terra”, que reuniu empresas fundamentais para o agronegócio da nossa região...",
-  "imagemDestaque": "/images/parceirosTerra.png",
+  "imagemDestaque": "/images/parceirosTerra.webp",
   "dataPublicacao": "23 de outubro de 2025",
   "autor": "Por Equipe Terra",
   "conteudo": `
@@ -305,7 +371,7 @@ export const todasAsNoticias = [
             
             <video 
               controls 
-              poster="/images/parceiros-terra-capa-video-vertical.jpg" 
+              poster="/images/parceirosTerra.webp" 
               style="width: 100%; height: auto; border-radius: 8px; box-shadow: 0 4px 8px rgba(0,0,0,0.2);"
               
               /* 💡 ATRIBUTOS MOVIDOS PARA CÁ */
@@ -585,7 +651,7 @@ export const todasAsNoticias = [
 export const noticiasExternas = [
   {
     titulo: "Conhecimento é a base do sucesso das fazendas",
-    imagem: "/images/noticias/giroboi.png",
+    imagem: "/images/noticias/giroboi.webp",
     url: "https://girodoboi.canalrural.com.br/pecuaria/conhecimento-e-a-base-do-sucesso-das-fazendas-diz-especialista-em-gestao-no-campo/",
   },
   {
@@ -595,12 +661,12 @@ export const noticiasExternas = [
   },
   {
     titulo: "Tecnologia sozinha não transforma uma fazenda",
-    imagem: "/images/noticias/insta.png",
+    imagem: "/images/noticias/insta.webp",
     url: "https://www.instagram.com/p/DXEehaJjNP0/?igsh=aHJ1ZDMzZDR1djl0",
   },
   {
     titulo: "Encontro de Gestores traz foco em pessoas, tecnologia e resultado na pecuária",
-    imagem: "/images/noticias/oestado.png",
+    imagem: "/images/noticias/oestado.webp",
     url: "https://oestadoonline.com.br/agronegocio/encontro-de-gestores-traz-foco-em-pessoas-tecnologia-e-resultado-na-pecuaria/",
   },
   {
@@ -610,12 +676,12 @@ export const noticiasExternas = [
   },
   {
     titulo: "Gestão ganha protagonismo no agro e vira foco de evento em Campo Grande",
-    imagem: "/images/noticias/gestaoGanha.png",
+    imagem: "/images/noticias/gestaoGanha.webp",
     url: "https://www.rcn67.com.br/campo-grande/gestao-ganha-protagonismo-no-agro-e-vira-foco-de-evento-em-campo-grande/",
   },
   {
     titulo: "Rodrigo Patussi diz que fazenda precisa ser tratada como negócio",
-    imagem: "/images/noticias/patussi.png",
+    imagem: "/images/noticias/patussi-png.webp",
     url: "https://www.rcn67.com.br/tres-lagoas/rodrigo-patussi-fazenda-como-negocio/",
   },
 ];

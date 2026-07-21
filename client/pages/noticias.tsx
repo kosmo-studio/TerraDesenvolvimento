@@ -72,7 +72,7 @@ const buildExternalItems = (externalArticles: ExternalNewsMetadata[]): NewsItem[
       type: "external",
       id: noticia.url,
       title: noticia.titulo,
-      image: noticia.imagem || metadata?.image || "/images/noticiaHeader.png",
+      image: noticia.imagem || metadata?.image || "/images/noticiaHeader.webp",
       date: formatExternalDate(publishedAt),
       timestamp: getExternalTimestamp(publishedAt),
       link: noticia.url,
@@ -190,7 +190,7 @@ export default function Noticias() {
       <main>
         <Header />
         <AnimatedSection variant="fade">
-          <HeroSection backgroundImage="/images/bg-noticias.jpg" title="" subtitle="" />
+          <HeroSection backgroundImage="/images/bg-noticias.webp" title="" subtitle="" />
         </AnimatedSection>
         <AnimatedSection>
           <section className="z-20">

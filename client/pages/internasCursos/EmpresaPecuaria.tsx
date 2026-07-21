@@ -16,7 +16,7 @@ const listaEventosCursos = [
     estado: "GO",
     data: "10 e 11 de junho de 2026",
     local: "CASTRO'S PARK HOTEL",
-    imagem: "/images/GESTAOGOIANIA.png",
+    imagem: "/images/GESTAOGOIANIA-png.webp",
     link: "/EmpresaPecuariaGO", 
     status: "Inscrições Abertas"
   },
@@ -26,7 +26,7 @@ const listaEventosCursos = [
     estado: "PA",
     data: "17 e 18 de junho de 2026",
     local: "UNIFESSPA - UNIDADE 2",
-    imagem: "/images/GESTAOXINGUARA.png",
+    imagem: "/images/GESTAOXINGUARA-png.webp",
     link: "/EmpresaPecuariaXG",
     status: "Inscrições Abertas"
   },
@@ -36,7 +36,7 @@ const listaEventosCursos = [
     estado: "SP",
     data: "06 e 07 de julho de 2026",
     local: "IBIS STYLES",
-    imagem: "/images/bannerPP.png",
+    imagem: "/images/bannerPP-png.webp",
     link: "/EmpresaPecuariaPP",
     status: "Inscrições Abertas"
   },
@@ -90,7 +90,7 @@ export default function EmpresaPecuaria() {
       
       <main>
         <HeroSection
-          backgroundImage="/images/BANNERCURSOGESTAO.jpeg"
+          backgroundImage="/images/BANNERCURSOGESTAO.webp"
           title=" "
           subtitle=" "
         />

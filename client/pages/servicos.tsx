@@ -10,48 +10,48 @@ const servicos = [
     titulo: "Mapeamento de Oportunidades",
     descricao:
       "Apresentar e discutir onde sua fazenda está, o 'Ponto A' e onde poderá chegar, mostrando com clareza a atual situação financeira, produtiva e gerencial da empresa através de indicadores parametrizados.",
-    imagem: "/images/Diagnostico-desempenho.png",
+    imagem: "/images/Diagnostico-desempenho.webp",
     link: "/servicos/MapeamentodeOportunidades",
   },
   {
     titulo: "Implantação de Controle",
     descricao:
       "Metodologia de controle de dados e informações essenciais, com rapidez e confiabilidade, através da otimização dos controles existentes na fazenda, implantação de sistemas e outros métodos que se façam necessários para ter “a fazenda em suas mãos”.",
-    imagem: "/images/Controle.png",
+    imagem: "/images/Controle.webp",
     link: "/servicos/ImplementacaoDeControle",
   },
   {
     titulo: "Planejamento Estratégico",
     descricao:
       "O PROJETO é o elemento determinante para o sucesso da atividade em questão. Foco e clareza nos objetivos, “Ponto B”, determinando o caminho para o crescimento sustentável da lucratividade e gerenciabilidade da fazenda.",
-    imagem: "/images/planejamentoEstrategico.jpeg",
+    imagem: "/images/planejamentoEstrategico.webp",
     link: "/servicos/PlanejamentoEstrategico",
   },
   {
     titulo: "PRG: Programa de Recuperação Gerencial",
     descricao:
       "O Programa de Recuperação (ou intervenção) Gerencial tem por missão gerar lucro para seus acionistas e investidores através da transformação de áreas, valorização de ativos e desenvolvimento da atividade agropecuária.",
-    imagem: "/images/Prg.jpeg",
+    imagem: "/images/Prg-jpeg.webp",
     link: "/servicos/ProgramaRecuperaçãoGerencial",
   },
   {
     titulo: "Desenvolvimento Gerencial",
     descricao:
       "Construir equipe realizadora capaz de assumir e bater as metas estabelecidas. Tomar ações eficientes no propósito de “forjar” uma cultura gerencial objetiva, duradoura e que respeite seus valores na conquista de seus objetivos.",
-    imagem: "/images/desenvolvimentoGen.png",
+    imagem: "/images/desenvolvimentoGen.webp",
     link: "/servicos/DesenvolvimentoGerencial",
   },
   {
     titulo: "Performa Terra",
     descricao: "O Performa Terra é a nossa mais nova modalidade de produto, sob medida para sua fazenda e foi criada a partir do pedido de diversos produtores que buscavam uma solução de curto prazo.",
-    imagem: "/images/performa.png",
+    imagem: "/images/performa.webp",
     link: "/servicos/PerformaTerra",
   },
   {
     titulo: "Análise e Plano de Negócios: Aquisição de Fazendas",
     descricao:
       "Suporte na análise e decisão de investimento e compra de propriedade rural, baseado nas principais variáveis envolvidas na produção, projeção de resultados, rentabilidade e viabilidade econômica.",
-    imagem: "/images/planoNegocio.jpeg",
+    imagem: "/images/planoNegocio.webp",
     link: "/servicos/AnalisePlanoDeNegocio",
   },
 ];

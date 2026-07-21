@@ -16,7 +16,7 @@ const innovationCards = [
     href: "", // Exemplo de link
   },
   {
-    imgSrc: "/images/EquipeTecnica.png",
+    imgSrc: "/images/EquipeTecnica.webp",
     alt: "Equipe técnica",
     title: ["Equipe", "técnica", "especializada"],
     href: "", // Exemplo de link

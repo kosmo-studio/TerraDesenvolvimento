@@ -52,10 +52,10 @@ const modulos = [
  */
 const patrocinadores = {
   ouro: [
-    // { src: "/images/msd.png", alt: "Logo MSD" },
+    // { src: "/images/msd.webp", alt: "Logo MSD" },
   ],
   prata: [
-    // { src: "/images/logonutroncargill.png", alt: "Logo nutroncargill" },
+    // { src: "/images/logonutroncargill.webp", alt: "Logo nutroncargill" },
   ],
   bronze: [
     // Array de bronze está vazia, pronta para novos dados
@@ -63,8 +63,8 @@ const patrocinadores = {
 };
 
 const parceria = [
-  // { src: "/images/castros.png", alt: "Logo castros" },
-  // { src: "/images/metryx-logo.png", alt: "Logo metryx" },
+  // { src: "/images/castros.webp", alt: "Logo castros" },
+  // { src: "/images/metryx-logo.webp", alt: "Logo metryx" },
 ];
 
 export default function EmpresaPecuariaGO() {
@@ -74,7 +74,7 @@ export default function EmpresaPecuariaGO() {
         <Header />
         {/* Hero Section */}
         <HeroSection
-          backgroundImage="/images/GESTAOGOIANIA.png"
+          backgroundImage="/images/GESTAOGOIANIA-png.webp"
           title=""
           subtitle=""
         />

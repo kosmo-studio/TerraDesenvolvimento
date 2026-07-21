@@ -9,49 +9,49 @@ import AnimatedSection from "@/components/AnimatedSection";
 const unidades = [
   {
     cidade: "Campo Grande - MS",
-    imagem: "/images/CG.png",
+    imagem: "/images/CG.webp",
     endereco: "Rua São Paulo, 1568 - Vila Gomes, CEP 79022-140 / Campo Grande - MS",
     telefone: ["55 (67) 3026-3442"],
   },
   {
     cidade: "Maringá - PR",
-    imagem: "/images/maringa.png",
+    imagem: "/images/maringa.webp",
     endereco: "Rua Bernardino de Campo, 619, Zona 07 - Cep: 87030-160 / Maringá - PR",
     telefone: ["55 (44) 3031-8844"],
   },
   {
     cidade: "Goiânia - GO",
-    imagem: "/images/goiania.png",
+    imagem: "/images/goiania.webp",
     endereco: "Av. Olinda, 960, Ed. Lozandes Tower Business Sala 1812 B - Cep: 74884-120 / Goiânia - GO",
     telefone: ["55 (62) 99688-1105"],
   },
   {
     cidade: "Ji-Paraná - RO",
-    imagem: "/images/jiparana.jpeg",
+    imagem: "/images/jiparana.webp",
     endereco: "Av. Mal. Rondon, 334 - Centro - CEP: 76900-036 / Ji-Paraná - RO",
     telefone: ["55 (65) 98429-8379"],
   },
   {
     cidade: "Cuiabá - MT",
-    imagem: "/images/cuiaba.png",
+    imagem: "/images/cuiaba.webp",
     endereco: "Av. República do Líbano, 1620 - Sala 5 Jardim Monte Líbano - Cep: 78048-970 / Cuiabá - MT",
     telefone: ["55 (65) 99692-1046"],
   },
   {
     cidade: "Araguaína - TO",
-    imagem: "/images/araguaina.jpeg",
+    imagem: "/images/araguaina.webp",
     endereco: "Rua Gonçalves Ledo, 264 - Cep: 77805-060 / Araguaína - TO",
     telefone: ["55 (44) 99126-6268"],
   },
   {
     cidade: "Assunção - Paraguai",
-    imagem: "/images/assuncion.png",
+    imagem: "/images/assuncion.webp",
     endereco: "Antolin Irala, 3029, Sala 1D - Assunçã-Paraguai",
     telefone: ["+595 986 923995", "+595 981 503720"],
   },
   {
     cidade: "Santa Cruz de la Sierra - Bolívia",
-    imagem: "/images/santa.png",
+    imagem: "/images/santa.webp",
     endereco: "Rua Francis Morices 470/2, casi Victor Heyn, Asunción. / Santa Cruz de la Sierra - Bolívia",
     telefone: ["+591 76685231", "+591 77694853"],
   },
@@ -94,7 +94,7 @@ export default function Contato() {
       <main className="pb-16">
         <AnimatedSection variant="fade">
           <HeroSection
-            backgroundImage="/images/bg-contato.jpeg"
+            backgroundImage="/images/bg-contato-jpeg.webp"
             title=""
             subtitle=""
           />
