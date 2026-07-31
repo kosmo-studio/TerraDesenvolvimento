@@ -1,5 +1,75 @@
 export const todasAsNoticias = [
   {
+    id: 14,
+    slug: "do-pasto-ao-prato-geracao-de-valor-comeca-antes-da-venda",
+    titulo: "Do pasto ao prato: por que a geração de valor começa muito antes da venda",
+    resumo: "Durante o Encontro de Gestores, Eduardo Fornari mostrou que qualidade é construída ao longo de toda a cadeia, por meio de decisões consistentes e da integração entre pessoas, processos e propósito.",
+    imagemDestaque: "/images/noticias/eduardo-fornari-qualidade-decisoes.webp",
+    dataPublicacao: "31 de julho de 2026",
+    autor: "Por Terra Desenvolvimento",
+    conteudo: `
+      <p>Durante o Encontro de Gestores, Eduardo Fornari mostrou que qualidade não é resultado de uma única etapa da produção. Ela é construída ao longo de toda a cadeia, por meio de decisões consistentes e da integração entre pessoas, processos e propósito.</p>
+
+      <p>Quando o consumidor compra um produto de qualidade, normalmente enxerga apenas o resultado final. Poucos imaginam que, por trás daquela entrega, existe uma sequência de decisões tomadas ao longo de anos.</p>
+
+      <p>Foi justamente essa reflexão que marcou a participação de Eduardo Fornari, diretor do Grupo Vermelho, durante o Encontro de Gestores promovido pela Terra Desenvolvimento.</p>
+
+      <p>Ao apresentar a trajetória construída em parceria com a Fazenda Indaiá, Fornari mostrou que produzir qualidade não depende de uma única etapa do processo. Ela nasce muito antes da venda e exige que cada elo da cadeia compreenda sua responsabilidade na construção do resultado.</p>
+
+      <h2>A qualidade começa muito antes da comercialização</h2>
+      <p>Logo no início da palestra, Eduardo resume uma ideia que atravessa toda a sua apresentação.</p>
+
+      <p>Segundo ele, a carne servida hoje ao consumidor começou a ser construída anos antes, desde a seleção das matrizes, passando pela genética, reprodução, recria, nutrição, confinamento e manejo. Cada decisão fortalece - ou compromete - o resultado final.</p>
+
+      <p>Essa visão reforça um princípio importante para qualquer empresa agropecuária: o produto final nunca é consequência de um único momento da operação.</p>
+
+      <p>Ele é o reflexo da qualidade da gestão realizada ao longo de todo o processo.</p>
+
+      <h2>Cada etapa pode construir - ou destruir - valor</h2>
+      <p>Durante a apresentação, Eduardo utiliza uma metáfora simples e poderosa.</p>
+
+      <p>Ele compara toda a cadeia produtiva à construção de uma parede. Cada etapa representa um novo tijolo. Quando o trabalho é bem executado, a estrutura se fortalece. Porém, um erro em qualquer fase pode comprometer tudo o que foi construído anteriormente.</p>
+
+      <p>Uma falha no abate, na embalagem, na cadeia de frio ou até mesmo na preparação do produto para o consumidor pode destruir anos de investimento realizados dentro da fazenda.</p>
+
+      <p>Essa lógica vai além da indústria da carne. Ela mostra que, em qualquer empresa, qualidade é construída diariamente e depende da consistência de cada processo.</p>
+
+      <h2>Produzir olhando para quem está no fim da cadeia</h2>
+      <p>Outro ponto importante apresentado por Eduardo foi a necessidade de aproximar produção e mercado.</p>
+
+      <p>Durante muitos anos, a pecuária concentrou seus esforços em indicadores produtivos, como peso e rendimento.</p>
+
+      <p>Entretanto, compreender o que realmente gera valor para o consumidor permitiu que a empresa ajustasse seu sistema produtivo para entregar exatamente aquilo que o mercado buscava.</p>
+
+      <p>Essa mudança de perspectiva mostra que produzir bem não significa apenas produzir mais. Significa produzir aquilo que o cliente reconhece como qualidade.</p>
+
+      <h2>Informação transforma decisões</h2>
+      <p>Ao longo da parceria entre o Grupo Vermelho e a Fazenda Indaiá, novas tecnologias de avaliação passaram a fornecer informações muito mais precisas sobre os animais produzidos.</p>
+
+      <p>Esses dados deixaram de servir apenas para classificar carcaças e passaram a orientar decisões dentro da própria fazenda.</p>
+
+      <p>Características como acabamento, marmoreio, rendimento e qualidade passaram a retroalimentar o sistema produtivo, permitindo ajustes contínuos e decisões cada vez mais assertivas.</p>
+
+      <p>Esse talvez seja um dos maiores aprendizados da palestra. Dados só geram valor quando retornam para a operação e ajudam a melhorar os processos.</p>
+
+      <h2>Evolução acontece quando existe parceria</h2>
+      <p>Outro aspecto destacado durante a apresentação foi a construção de uma parceria baseada em objetivos comuns.</p>
+
+      <p>Ao compartilhar informações entre produção e indústria, foi possível ajustar manejos, revisar critérios e evoluir continuamente o padrão do produto entregue ao mercado.</p>
+
+      <p>Mais do que uma relação comercial, Eduardo apresentou um exemplo de integração entre diferentes etapas da cadeia produtiva, mostrando que o crescimento sustentável depende da colaboração entre todos os envolvidos.</p>
+
+      <h2>Qualidade nunca é obra do acaso</h2>
+      <p>Ao encerrar sua palestra, Eduardo resume uma ideia que sintetiza toda sua trajetória:</p>
+
+      <blockquote>"Qualidade não é por acaso. Na verdade, nada é por acaso. Tem muito trabalho, muito suor e muita dedicação."</blockquote>
+
+      <p>A frase vai além da produção de carne. Ela reforça um princípio que se aplica à gestão de qualquer empresa agropecuária: resultados consistentes são consequência de processos bem estruturados, decisões alinhadas e disciplina para evoluir continuamente.</p>
+
+      <p>No fim, o mercado enxerga apenas o produto final. Mas é a qualidade construída em cada etapa da jornada que determina o verdadeiro valor entregue.</p>
+    `
+  },
+  {
     id: 13,
     slug: "gestao-alem-da-producao-futuro-empresas-agropecuarias-decisoes-fundamentadas",
     titulo: "Gestão além da produção: por que o futuro das empresas agropecuárias depende de decisões bem fundamentadas",
