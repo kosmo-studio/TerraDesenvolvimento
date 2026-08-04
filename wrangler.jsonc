@@ -1,8 +1,10 @@
 {
   "$schema": "node_modules/wrangler/config-schema.json",
   "name": "terradesenvolvimento",
+  "main": "worker/index.js",
   "compatibility_date": "2026-07-21",
   "assets": {
+    "binding": "ASSETS",
     "directory": "./dist/spa",
     "not_found_handling": "single-page-application"
   }

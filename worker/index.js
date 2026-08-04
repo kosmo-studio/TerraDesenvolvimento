@@ -55,19 +55,26 @@ const SITUACAO_ENUMS = {
   "Avaliando comprar propriedade": 1656759,
 };
 
-function getAccessToken() {
-  if (!process.env.KOMMO_ACCESS_TOKEN) {
-    throw new Error("KOMMO_ACCESS_TOKEN não configurado.");
-  }
-
-  return process.env.KOMMO_ACCESS_TOKEN;
+function json(data, status = 200) {
+  return Response.json(data, {
+    status,
+    headers: {
+      "Access-Control-Allow-Origin": "*",
+      "Access-Control-Allow-Methods": "POST, OPTIONS",
+      "Access-Control-Allow-Headers": "Content-Type",
+    },
+  });
 }
 
-async function kommoRequest(path, { method = "POST", body } = {}) {
+async function kommoRequest(env, path, { method = "POST", body } = {}) {
+  if (!env.KOMMO_ACCESS_TOKEN) {
+    throw new Error("KOMMO_ACCESS_TOKEN não configurado no Cloudflare.");
+  }
+
   const response = await fetch(`${KOMMO_BASE_URL}${path}`, {
     method,
     headers: {
-      Authorization: `Bearer ${getAccessToken()}`,
+      Authorization: `Bearer ${env.KOMMO_ACCESS_TOKEN}`,
       "Content-Type": "application/json",
       Accept: "application/json",
     },
@@ -122,10 +129,10 @@ function getSituacaoEnumIds(resultado = {}) {
     .filter(Boolean);
 }
 
-async function createContact(lead) {
-  const fullName = `${lead.primeiro_nome || ""} ${lead.sobrenome || ""}`.trim() || "Lead Diagnóstico";
+async function createContact(env, lead) {
+  const fullName = `${lead.primeiro_nome || ""} ${lead.sobrenome || ""}`.trim() || "Lead Site";
 
-  const data = await kommoRequest("/api/v4/contacts", {
+  const data = await kommoRequest(env, "/api/v4/contacts", {
     body: [
       {
         name: fullName,
@@ -150,11 +157,11 @@ async function createContact(lead) {
   return data?._embedded?.contacts?.[0]?.id;
 }
 
-async function createQualifiedLead({ contactId, payload }) {
+async function createQualifiedLead(env, { contactId, payload }) {
   const { lead = {}, resultado = {} } = payload;
   const fullName = `${lead.primeiro_nome || ""} ${lead.sobrenome || ""}`.trim() || "Lead Diagnóstico";
 
-  const data = await kommoRequest("/api/v4/leads", {
+  const data = await kommoRequest(env, "/api/v4/leads", {
     body: [
       {
         name: `Diagnóstico Maturidade - ${fullName}`,
@@ -179,39 +186,81 @@ async function createQualifiedLead({ contactId, payload }) {
   return data?._embedded?.leads?.[0]?.id;
 }
 
-async function updateLeadProfile({ leadId, payload }) {
+async function updateLeadProfile(env, { leadId, payload }) {
   const { lead = {}, perfil = {}, resultado = {} } = payload;
 
-  await kommoRequest(`/api/v4/leads/${leadId}`, {
+  await kommoRequest(env, `/api/v4/leads/${leadId}`, {
     method: "PATCH",
     body: {
       status_id: STATUS_PERFIL_COMPLETO,
       custom_fields_values: [
         valueField(FIELDS.areaHectares, perfil.tamanhoHectares),
-        valueField(FIELDS.regiaoCidade, lead.localizacao),
+        valueField(FIELDS.regiaoCidade, lead.localizacao || lead.cidade),
         multiEnumField(FIELDS.servicosComplementares, getComplementoEnumIds(resultado)),
       ].filter(Boolean),
     },
   });
 }
 
-export default async function handler(req, res) {
-  if (req.method !== "POST") {
-    return res.status(405).json({ error: "Método não permitido" });
-  }
+async function handleKommoLead(request, env) {
+  const payload = await request.json();
+  const contactId = await createContact(env, payload.lead || {});
+  if (!contactId) throw new Error("Kommo não retornou o ID do contato.");
 
-  try {
-    const contactId = await createContact(req.body.lead || {});
-    if (!contactId) throw new Error("Kommo não retornou o ID do contato.");
+  const leadId = await createQualifiedLead(env, { contactId, payload });
+  if (!leadId) throw new Error("Kommo não retornou o ID do lead.");
 
-    const leadId = await createQualifiedLead({ contactId, payload: req.body });
-    if (!leadId) throw new Error("Kommo não retornou o ID do lead.");
+  await updateLeadProfile(env, { leadId, payload });
 
-    await updateLeadProfile({ leadId, payload: req.body });
-
-    return res.status(200).json({ success: true, contactId, leadId });
-  } catch (error) {
-    console.error("Erro ao enviar lead para Kommo:", error);
-    return res.status(500).json({ error: error.message });
-  }
+  return json({ success: true, contactId, leadId });
 }
+
+async function handleBasicContact(request, env) {
+  const body = await request.json();
+  const lead = {
+    primeiro_nome: body.primeiro_nome,
+    sobrenome: body.sobrenome,
+    email: body.email,
+    telefone: body.telefone,
+    localizacao: body.cidade,
+  };
+
+  const contactId = await createContact(env, lead);
+  const leadId = await createQualifiedLead(env, {
+    contactId,
+    payload: {
+      lead,
+      resultado: {},
+      respostas: {},
+      situacao: {},
+      perfil: {},
+    },
+  });
+
+  return json({ success: true, contactId, leadId });
+}
+
+export default {
+  async fetch(request, env) {
+    const url = new URL(request.url);
+
+    if (request.method === "OPTIONS") {
+      return json({}, 204);
+    }
+
+    try {
+      if (url.pathname === "/api/kommo-lead" && request.method === "POST") {
+        return await handleKommoLead(request, env);
+      }
+
+      if (url.pathname === "/api/send-email" && request.method === "POST") {
+        return await handleBasicContact(request, env);
+      }
+    } catch (error) {
+      console.error("Erro na API do Worker:", error);
+      return json({ error: error.message }, 500);
+    }
+
+    return env.ASSETS.fetch(request);
+  },
+};

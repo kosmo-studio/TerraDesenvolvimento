@@ -275,19 +275,6 @@ export default function MaturityDiagnosisForm() {
       `Texto entregue ao usuário: ${text}`,
     ].join("\n");
 
-    const emailRequest = fetch("/api/send-email", {
-      method: "POST",
-      headers: { "Content-Type": "application/json" },
-      body: JSON.stringify({
-        primeiro_nome: lead.primeiro_nome,
-        sobrenome: lead.sobrenome,
-        email: lead.email,
-        telefone: lead.telefone,
-        cidade: lead.localizacao,
-        observacao,
-      }),
-    });
-
     const kommoRequest = fetch("/api/kommo-lead", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
@@ -304,9 +291,9 @@ export default function MaturityDiagnosisForm() {
       }),
     });
 
-    const [emailResponse, kommoResponse] = await Promise.all([emailRequest, kommoRequest]);
+    const kommoResponse = await kommoRequest;
 
-    if (!emailResponse.ok || !kommoResponse.ok) {
+    if (!kommoResponse.ok) {
       throw new Error("Falha ao enviar o diagnóstico para a equipe.");
     }
   };
