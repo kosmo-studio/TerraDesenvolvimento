@@ -82,14 +82,43 @@ async function kommoRequest(env, path, { method = "POST", body } = {}) {
   });
 
   const text = await response.text();
-  const data = text ? JSON.parse(text) : null;
+  let data = null;
+
+  try {
+    data = text ? JSON.parse(text) : null;
+  } catch {
+    data = text;
+  }
 
   if (!response.ok) {
-    const message = data?.detail || data?.title || data?.error || "Erro na API do Kommo.";
-    throw new Error(message);
+    const validationError = data?.["validation-errors"]?.[0]?.errors?.[0];
+    const message =
+      data?.detail ||
+      data?.title ||
+      data?.error ||
+      validationError?.detail ||
+      validationError?.title ||
+      (typeof data === "string" ? data : JSON.stringify(data));
+
+    console.error("Kommo API error", {
+      path,
+      method,
+      status: response.status,
+      response: data,
+      requestBody: body,
+    });
+
+    throw new Error(`Kommo ${response.status} em ${path}: ${message || "erro sem detalhe"}`);
   }
 
   return data;
+}
+
+function normalizeText(value = "") {
+  return String(value)
+    .normalize("NFD")
+    .replace(/[\u0300-\u036f]/g, "")
+    .toLowerCase();
 }
 
 function enumField(fieldId, enumId) {
@@ -119,14 +148,40 @@ function buildQuizJson(payload) {
 
 function getComplementoEnumIds(resultado = {}) {
   return (resultado.servicosComplementares || [])
-    .map((servico) => COMPLEMENTO_ENUMS[servico])
+    .map((servico) => {
+      const text = normalizeText(servico);
+      if (text.includes("auditoria")) return 1656751;
+      if (text.includes("performa")) return 1656753;
+      if (text.includes("curso")) return 1656749;
+      return COMPLEMENTO_ENUMS[servico];
+    })
     .filter(Boolean);
 }
 
 function getSituacaoEnumIds(resultado = {}) {
   return (resultado.situacaoEspecial || [])
-    .map((situacao) => SITUACAO_ENUMS[situacao])
+    .map((situacao) => {
+      const text = normalizeText(situacao);
+      if (text.includes("delegar")) return 1656755;
+      if (text.includes("conflito")) return 1656757;
+      if (text.includes("avaliando")) return 1656759;
+      return SITUACAO_ENUMS[situacao];
+    })
     .filter(Boolean);
+}
+
+function getServicoEnumId(resultado = {}) {
+  const text = normalizeText(resultado.servicoPrincipal);
+
+  if (text.includes("prg") || text.includes("recupera")) return 1656747;
+  if (text.includes("analise") || text.includes("negocio")) return 1656745;
+  if (text.includes("alta performance")) return 1656743;
+  if (text.includes("desenvolvimento")) return 1656741;
+  if (text.includes("planejamento")) return 1656739;
+  if (text.includes("implant")) return 1656737;
+  if (text.includes("mapeamento")) return 1656735;
+
+  return SERVICO_ENUMS[resultado.servicoPrincipal];
 }
 
 async function createContact(env, lead) {
@@ -173,7 +228,7 @@ async function createQualifiedLead(env, { contactId, payload }) {
         custom_fields_values: [
           enumField(FIELDS.nivelMaturidade, NIVEL_ENUMS[resultado.nivel]),
           enumField(FIELDS.dimensaoMaisFraca, DIMENSAO_ENUMS[resultado.dimensaoMaisFraca]),
-          enumField(FIELDS.servicoRecomendado, SERVICO_ENUMS[resultado.servicoPrincipal]),
+          enumField(FIELDS.servicoRecomendado, getServicoEnumId(resultado)),
           multiEnumField(FIELDS.servicosComplementares, getComplementoEnumIds(resultado)),
           multiEnumField(FIELDS.situacaoEspecial, getSituacaoEnumIds(resultado)),
           valueField(FIELDS.respostasQuiz, buildQuizJson(payload)),
