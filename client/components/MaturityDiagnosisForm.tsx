@@ -237,6 +237,7 @@ export default function MaturityDiagnosisForm() {
   const [textoResultado, setTextoResultado] = useState("");
   const [loading, setLoading] = useState(false);
   const [emailStatus, setEmailStatus] = useState<"idle" | "sent" | "error">("idle");
+  const [submissionError, setSubmissionError] = useState("");
 
   const profileStep = QUESTIONS.length + SITUATION_QUESTIONS.length;
   const leadStep = profileStep + 1;
@@ -294,7 +295,14 @@ export default function MaturityDiagnosisForm() {
     const kommoResponse = await kommoRequest;
 
     if (!kommoResponse.ok) {
-      throw new Error("Falha ao enviar o diagnóstico para a equipe.");
+      let message = "Falha ao enviar o diagnóstico para a equipe.";
+      try {
+        const data = await kommoResponse.json();
+        if (data?.error) message = data.error;
+      } catch {
+        // Mantem a mensagem padrão quando a resposta não vier em JSON.
+      }
+      throw new Error(message);
     }
   };
 
@@ -304,6 +312,7 @@ export default function MaturityDiagnosisForm() {
 
     setLoading(true);
     setEmailStatus("idle");
+    setSubmissionError("");
 
     const result = calcularResultado({
       respostas: respostas as MaturidadeRespostas,
@@ -318,7 +327,8 @@ export default function MaturityDiagnosisForm() {
     try {
       await sendLeadToBackends(result, text);
       setEmailStatus("sent");
-    } catch {
+    } catch (error) {
+      setSubmissionError(error instanceof Error ? error.message : "Falha ao enviar o diagnóstico para a equipe.");
       setEmailStatus("error");
     } finally {
       setLoading(false);
@@ -351,7 +361,12 @@ export default function MaturityDiagnosisForm() {
 
         <div className="mt-5 rounded-xl bg-[#f7fbf8] p-4 text-sm text-terra-navy/70">
           {emailStatus === "sent" && "Recebemos seus dados. A equipe da Terra pode usar esse resultado para conduzir o próximo contato."}
-          {emailStatus === "error" && "O resultado foi gerado, mas houve uma falha ao enviar os dados para a equipe."}
+          {emailStatus === "error" && (
+            <span>
+              O resultado foi gerado, mas houve uma falha ao enviar os dados para a equipe.
+              {submissionError ? ` Detalhe: ${submissionError}` : ""}
+            </span>
+          )}
           {emailStatus === "idle" && "Finalizando envio do diagnóstico..."}
         </div>
       </div>
