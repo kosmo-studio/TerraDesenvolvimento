@@ -71,10 +71,14 @@ async function kommoRequest(env, path, { method = "POST", body } = {}) {
     throw new Error("KOMMO_ACCESS_TOKEN não configurado no Cloudflare.");
   }
 
+  const accessToken = String(env.KOMMO_ACCESS_TOKEN)
+    .trim()
+    .replace(/^Bearer\s+/i, "");
+
   const response = await fetch(`${KOMMO_BASE_URL}${path}`, {
     method,
     headers: {
-      Authorization: `Bearer ${env.KOMMO_ACCESS_TOKEN}`,
+      Authorization: `Bearer ${accessToken}`,
       "Content-Type": "application/json",
       Accept: "application/json",
     },
@@ -93,6 +97,9 @@ async function kommoRequest(env, path, { method = "POST", body } = {}) {
   if (!response.ok) {
     const validationError = data?.["validation-errors"]?.[0]?.errors?.[0];
     const message =
+      (response.status === 401
+        ? "Token inválido, expirado, revogado ou colado com valor incorreto no secret KOMMO_ACCESS_TOKEN."
+        : null) ||
       data?.detail ||
       data?.title ||
       data?.error ||
