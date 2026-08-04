@@ -1,4 +1,4 @@
-const KOMMO_BASE_URL = "https://api-g.kommo.com";
+const DEFAULT_KOMMO_BASE_URL = "https://api-g.kommo.com";
 
 const PIPELINE_ID = 14233072;
 const STATUS_QUALIFICADO = 109897840;
@@ -74,8 +74,9 @@ async function kommoRequest(env, path, { method = "POST", body } = {}) {
   const accessToken = String(env.KOMMO_ACCESS_TOKEN)
     .trim()
     .replace(/^Bearer\s+/i, "");
+  const baseUrl = String(env.KOMMO_BASE_URL || DEFAULT_KOMMO_BASE_URL).replace(/\/$/, "");
 
-  const response = await fetch(`${KOMMO_BASE_URL}${path}`, {
+  const response = await fetch(`${baseUrl}${path}`, {
     method,
     headers: {
       Authorization: `Bearer ${accessToken}`,
@@ -110,12 +111,13 @@ async function kommoRequest(env, path, { method = "POST", body } = {}) {
     console.error("Kommo API error", {
       path,
       method,
+      baseUrl,
       status: response.status,
       response: data,
       requestBody: body,
     });
 
-    throw new Error(`Kommo ${response.status} em ${path}: ${message || "erro sem detalhe"}`);
+    throw new Error(`Kommo ${response.status} em ${baseUrl}${path}: ${message || "erro sem detalhe"}`);
   }
 
   return data;
