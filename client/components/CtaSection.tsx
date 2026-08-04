@@ -1,5 +1,5 @@
 import { CheckCircle2 } from "lucide-react";
-import KommoDiagnosisForm from "@/components/KommoDiagnosisForm";
+import { Link } from "react-router-dom";
 
 export default function CtaSection() {
   return (
@@ -18,14 +18,14 @@ export default function CtaSection() {
           </h2>
 
           <p className="mb-7 text-lg font-light leading-relaxed text-terra-navy/75">
-            Preencha o formulário e a equipe da Terra avalia o melhor caminho
-            para entender sua fazenda, seus indicadores e as oportunidades de
-            melhoria na gestão.
+            Responda ao formulário de maturidade gerencial e receba uma leitura inicial
+            com o nível da sua gestão, a dimensão que mais pede atenção e o caminho
+            recomendado pela Terra.
           </p>
 
           <div className="space-y-4 text-base text-terra-navy/85">
             {[
-              "Análise inicial sem compromisso",
+              "Resultado gerado na hora",
               "Atendimento consultivo para produtores e gestores",
               "Direcionamento para a solução mais adequada da Terra",
             ].map((item) => (
@@ -37,15 +37,27 @@ export default function CtaSection() {
           </div>
         </div>
 
-        <div className="overflow-hidden rounded-3xl bg-white p-4 shadow-[0_24px_70px_-35px_rgba(21,41,70,0.55)] sm:p-6">
-          <div className="mb-4 rounded-2xl bg-[#152946] px-5 py-4 text-white">
-            <h3 className="text-xl font-bold">Solicite seu diagnóstico</h3>
-            <p className="mt-1 text-sm text-white/75">
-              Informe seus dados para a equipe comercial retornar.
+        <div className="overflow-hidden rounded-3xl bg-white shadow-[0_24px_70px_-35px_rgba(21,41,70,0.55)]">
+          <img
+            src="/images/bg-planejamento.webp"
+            alt="Gestão rural com planejamento"
+            className="h-56 w-full object-cover"
+          />
+          <div className="p-6 sm:p-8">
+            <h3 className="text-2xl font-bold text-terra-navy">
+              Diagnóstico de Maturidade Gerencial
+            </h3>
+            <p className="mt-3 text-sm leading-relaxed text-terra-navy/70">
+              Acesse a página dedicada, responda ao formulário e veja o diagnóstico
+              personalizado ao final.
             </p>
+            <Link
+              to="/diagnostico-maturidade"
+              className="mt-6 inline-flex h-12 items-center justify-center rounded-md bg-[#37BC69] px-6 text-sm font-semibold text-white transition hover:bg-[#2da75b]"
+            >
+              Iniciar diagnóstico
+            </Link>
           </div>
-
-          <KommoDiagnosisForm />
         </div>
       </div>
     </section>

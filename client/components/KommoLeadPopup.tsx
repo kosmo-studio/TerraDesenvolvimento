@@ -1,4 +1,5 @@
 import { useCallback, useEffect, useState } from "react";
+import { Link } from "react-router-dom";
 
 const STORAGE_KEY = "terra_leadpop_v1";
 const DISPLAY_DELAY = 15_000;
@@ -13,7 +14,7 @@ export default function KommoLeadPopup() {
       if (sessionStorage.getItem(STORAGE_KEY)) return;
       sessionStorage.setItem(STORAGE_KEY, "1");
     } catch {
-      // Mantém o pop-up funcionando caso o armazenamento esteja bloqueado.
+      // Mantem o pop-up funcionando caso o armazenamento esteja bloqueado.
     }
 
     setIsOpen(true);
@@ -52,7 +53,7 @@ export default function KommoLeadPopup() {
       className="fixed inset-0 z-[9990] flex items-center justify-center bg-[rgba(2,8,23,.66)] p-[18px] font-lexend"
       role="dialog"
       aria-modal="true"
-      aria-labelledby="kommo-popup-title"
+      aria-labelledby="diagnosis-popup-title"
       onMouseDown={(event) => {
         if (event.target === event.currentTarget) closePopup();
       }}
@@ -64,28 +65,34 @@ export default function KommoLeadPopup() {
           aria-label="Fechar"
           className="absolute right-3.5 top-2.5 z-[3] h-8 w-8 cursor-pointer rounded-full border-0 bg-white/90 text-[1.3rem] leading-none text-[#152946] transition hover:bg-white focus:outline-none focus:ring-2 focus:ring-[#37BC69]"
         >
-          ×
+          x
         </button>
 
         <div className="bg-[#152946] px-7 pb-[22px] pt-[26px] text-white">
           <span className="text-[.72rem] font-semibold uppercase tracking-[.18em] text-[#37BC69]">
-            Oferta para produtores
+            Diagnóstico para produtores
           </span>
-          <h3 id="kommo-popup-title" className="my-2 pr-8 text-2xl font-bold leading-tight">
-            Diagnóstico gratuito da sua operação
+          <h3 id="diagnosis-popup-title" className="my-2 pr-8 text-2xl font-bold leading-tight">
+            Descubra o nível de maturidade da sua gestão
           </h3>
           <p className="text-[.92rem] font-light leading-relaxed text-white/80">
-            Deixe seu contato e um consultor da Terra faz uma análise inicial da sua
-            propriedade, sem compromisso.
+            Responda ao formulário e receba na hora uma leitura inicial com nível,
+            prioridade e serviço recomendado.
           </p>
         </div>
 
-        <div className="h-[300px] overflow-hidden bg-white">
-          <iframe
-            src="https://forms.kommo.com/rzrczmt"
-            className="mt-[-300px] block h-[620px] w-full border-0 bg-white max-[560px]:mt-[-330px] max-[560px]:h-[680px]"
-            title="Diagnóstico gratuito da sua operação"
-          />
+        <div className="bg-white p-7">
+          <p className="text-sm leading-relaxed text-terra-navy/72">
+            Criamos uma página dedicada para o diagnóstico, com o motor de pontuação
+            calculando o resultado e devolvendo um texto personalizado.
+          </p>
+          <Link
+            to="/diagnostico-maturidade"
+            onClick={closePopup}
+            className="mt-5 inline-flex h-12 w-full items-center justify-center rounded-md bg-[#37BC69] px-5 text-sm font-semibold text-white transition hover:bg-[#2da75b]"
+          >
+            Ir para o diagnóstico
+          </Link>
         </div>
       </div>
     </div>
