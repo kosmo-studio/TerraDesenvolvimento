@@ -55,6 +55,44 @@ const SITUACAO_ENUMS = {
   "Avaliando comprar propriedade": 1656759,
 };
 
+const NIVEL_LABELS = {
+  1: "1 - Intuitivo",
+  2: "2 - Reativo / Organizando",
+  3: "3 - Operacional",
+  4: "4 - Gerencial",
+  5: "5 - Estratégico",
+};
+
+const DIMENSAO_LABELS = {
+  N: "N - Números e Controle",
+  P: "P - Planejamento e Metas",
+  E: "E - Pessoas e Equipe",
+  X: "X - Execução e Processos",
+};
+
+const SERVICO_POR_NIVEL = {
+  1: "Mapeamento de Oportunidades",
+  2: "Implantação de Controles",
+  3: "Planejamento (Produtivo/Estratégico)",
+  4: "Desenvolvimento Gerencial",
+  5: "Alta Performance Gerencial",
+};
+
+const SERVICO_ANALISE_NEGOCIO = "Análise e Plano de Negócios";
+const SERVICO_PRG = "PRG - Programa de Recuperação Gerencial";
+const SITUACAO_QUER_DELEGAR = "Quer delegar a gestão";
+const SITUACAO_CONFLITO_INTERNO = "Conflito interno de confiança";
+const SITUACAO_AVALIANDO_COMPRA = "Avaliando comprar propriedade";
+const LIMITE_HECTARES_PERFORMA = 2000;
+const RESPOSTA_CHAVES = ["N1", "N2", "N3", "P1", "P2", "P3", "E1", "E2", "E3", "X1", "X2", "X3"];
+const DIMENSOES_ORDEM = ["N", "P", "E", "X"];
+const CHAVES_POR_DIMENSAO = {
+  N: ["N1", "N2", "N3"],
+  P: ["P1", "P2", "P3"],
+  E: ["E1", "E2", "E3"],
+  X: ["X1", "X2", "X3"],
+};
+
 function json(data, status = 200) {
   return Response.json(data, {
     status,
@@ -64,6 +102,104 @@ function json(data, status = 200) {
       "Access-Control-Allow-Headers": "Content-Type",
     },
   });
+}
+
+function validarRespostas(valor) {
+  if (!valor || typeof valor !== "object") return false;
+  return RESPOSTA_CHAVES.every((chave) => {
+    const n = valor[chave];
+    return Number.isInteger(n) && n >= 1 && n <= 5;
+  });
+}
+
+function validarSituacao(valor) {
+  if (!valor || typeof valor !== "object") return false;
+  return (
+    (valor.S1 === "ja_opero" || valor.S1 === "avaliando_compra") &&
+    (valor.S2 === "eu_mesmo" || valor.S2 === "quer_delegar") &&
+    (valor.S3 === "sim" || valor.S3 === "nao") &&
+    (valor.S4 === "sim" || valor.S4 === "nao")
+  );
+}
+
+function media(respostas, chaves) {
+  return chaves.reduce((acc, chave) => acc + respostas[chave], 0) / chaves.length;
+}
+
+function calcularResultado(input) {
+  const mediasPorDimensao = {};
+  for (const dimensao of DIMENSOES_ORDEM) {
+    mediasPorDimensao[dimensao] = media(input.respostas, CHAVES_POR_DIMENSAO[dimensao]);
+  }
+
+  const mediaGeral = RESPOSTA_CHAVES.reduce((acc, chave) => acc + input.respostas[chave], 0) / RESPOSTA_CHAVES.length;
+  const nivel = mediaGeral <= 1.8 ? 1 : mediaGeral <= 2.6 ? 2 : mediaGeral <= 3.4 ? 3 : mediaGeral <= 4.2 ? 4 : 5;
+  const dimensaoMaisFraca = DIMENSOES_ORDEM.reduce((maisFraca, atual) =>
+    mediasPorDimensao[atual] < mediasPorDimensao[maisFraca] ? atual : maisFraca,
+  );
+
+  const situacaoEspecial = [];
+  if (input.situacao.S2 === "quer_delegar") situacaoEspecial.push(SITUACAO_QUER_DELEGAR);
+  if (input.situacao.S3 === "sim") situacaoEspecial.push(SITUACAO_CONFLITO_INTERNO);
+  if (input.situacao.S1 === "avaliando_compra") situacaoEspecial.push(SITUACAO_AVALIANDO_COMPRA);
+
+  const servicoPrincipal =
+    situacaoEspecial.includes(SITUACAO_QUER_DELEGAR) || situacaoEspecial.includes(SITUACAO_CONFLITO_INTERNO)
+      ? SERVICO_PRG
+      : situacaoEspecial.includes(SITUACAO_AVALIANDO_COMPRA)
+        ? SERVICO_ANALISE_NEGOCIO
+        : SERVICO_POR_NIVEL[nivel];
+
+  const servicosComplementares = ["Curso de Gestão da Empresa Pecuária"];
+  if (input.situacao.S4 === "nao") servicosComplementares.push("Auditoria de Rebanho");
+  if (input.tamanhoHectares !== undefined && input.tamanhoHectares <= LIMITE_HECTARES_PERFORMA) {
+    servicosComplementares.push("Performa");
+  }
+
+  return {
+    mediasPorDimensao,
+    mediaGeral,
+    nivel,
+    nivelLabel: NIVEL_LABELS[nivel],
+    dimensaoMaisFraca,
+    dimensaoMaisFracaLabel: DIMENSAO_LABELS[dimensaoMaisFraca],
+    servicoPrincipal,
+    servicosComplementares,
+    situacaoEspecial,
+  };
+}
+
+async function handleScore(request, env) {
+  if (!env.WEBHOOK_SECRET) {
+    return json({ erro: "WEBHOOK_SECRET não configurado no Cloudflare." }, 500);
+  }
+
+  if (request.headers.get("x-webhook-secret") !== env.WEBHOOK_SECRET) {
+    return json({ erro: "Não autorizado." }, 401);
+  }
+
+  let body;
+  try {
+    body = await request.json();
+  } catch {
+    return json({ erro: "Corpo da requisição não é um JSON válido." }, 400);
+  }
+
+  const { respostas, situacao, tamanhoHectares } = body || {};
+
+  if (!validarRespostas(respostas)) {
+    return json({ erro: "Campo 'respostas' inválido: esperado N1..X3 com valores inteiros de 1 a 5." }, 400);
+  }
+
+  if (!validarSituacao(situacao)) {
+    return json({ erro: "Campo 'situacao' inválido: esperado S1..S4 com as chaves previstas." }, 400);
+  }
+
+  if (tamanhoHectares !== undefined && (typeof tamanhoHectares !== "number" || tamanhoHectares < 0)) {
+    return json({ erro: "Campo 'tamanhoHectares' inválido." }, 400);
+  }
+
+  return json(calcularResultado({ respostas, situacao, tamanhoHectares }));
 }
 
 async function kommoRequest(env, path, { method = "POST", body } = {}) {
@@ -315,6 +451,10 @@ export default {
     try {
       if (url.pathname === "/api/kommo-lead" && request.method === "POST") {
         return await handleKommoLead(request, env);
+      }
+
+      if ((url.pathname === "/score" || url.pathname === "/api/score") && request.method === "POST") {
+        return await handleScore(request, env);
       }
 
       if (url.pathname === "/api/send-email" && request.method === "POST") {
