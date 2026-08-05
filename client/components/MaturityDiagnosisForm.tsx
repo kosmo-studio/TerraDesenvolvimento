@@ -339,11 +339,11 @@ export default function MaturityDiagnosisForm() {
     return (
       <div className="font-lexend text-terra-navy">
         <div className="mb-5 flex items-start gap-3">
-          <div className="flex h-11 w-11 flex-none items-center justify-center rounded-full bg-[#37BC69]/12 text-[#238b4b]">
+          <div className="flex h-11 w-11 flex-none items-center justify-center rounded-lg bg-terra-beige/25 text-terra-navy">
             <Sparkles className="h-5 w-5" />
           </div>
           <div>
-            <p className="text-sm font-semibold uppercase tracking-[0.14em] text-[#238b4b]">
+            <p className="text-sm font-semibold uppercase tracking-[0.14em] text-terra-navy">
               Resultado do diagnóstico
             </p>
             <h3 className="mt-1 text-2xl font-bold leading-tight">{resultado.nivelLabel}</h3>
@@ -359,7 +359,7 @@ export default function MaturityDiagnosisForm() {
           <ResultMetric label="Complementos" value={resultado.servicosComplementares.join(", ")} />
         </div>
 
-        <div className="mt-5 rounded-xl bg-[#f7fbf8] p-4 text-sm text-terra-navy/70">
+        <div className="mt-5 rounded-xl bg-[#f8f7f3] p-4 text-sm text-terra-navy/70">
           {emailStatus === "sent" && "Recebemos seus dados. A equipe da Terra pode usar esse resultado para conduzir o próximo contato."}
           {emailStatus === "error" && (
             <span>
@@ -380,8 +380,8 @@ export default function MaturityDiagnosisForm() {
           <span>Etapa {step + 1} de {totalSteps}</span>
           <span>{progress}%</span>
         </div>
-        <div className="h-2 overflow-hidden rounded-full bg-[#e7ece9]">
-          <div className="h-full rounded-full bg-[#37BC69] transition-all" style={{ width: `${progress}%` }} />
+        <div className="h-1.5 overflow-hidden rounded-full bg-[#e4dfd2]">
+          <div className="h-full rounded-full bg-terra-navy transition-all" style={{ width: `${progress}%` }} />
         </div>
       </div>
 
@@ -429,7 +429,7 @@ export default function MaturityDiagnosisForm() {
         {step === leadStep && (
           <div className="grid gap-5 lg:grid-cols-[0.78fr_1.22fr] lg:items-start">
             <div>
-              <p className="text-sm font-semibold uppercase tracking-[0.14em] text-[#238b4b]">
+              <p className="text-sm font-semibold uppercase tracking-[0.14em] text-terra-navy">
                 Seus dados
               </p>
               <h3 className="mt-2 text-2xl font-bold leading-tight text-terra-navy">
@@ -461,7 +461,7 @@ export default function MaturityDiagnosisForm() {
           variant="outline"
           onClick={() => setStep((current) => Math.max(0, current - 1))}
           disabled={step === 0 || loading}
-          className="h-11 border-[#d8dedb]"
+          className="h-11 rounded-lg border-[#cfd8d4] bg-white text-terra-navy hover:bg-[#f4f7f5]"
         >
           <ArrowLeft className="h-4 w-4" />
           Voltar
@@ -472,7 +472,7 @@ export default function MaturityDiagnosisForm() {
             type="button"
             onClick={() => setStep((current) => Math.min(leadStep, current + 1))}
             disabled={!canAdvance}
-            className="h-11 bg-[#152946] px-5 text-white hover:bg-[#1f385d]"
+            className="h-11 rounded-lg bg-terra-navy px-5 text-white hover:bg-terra-dark-blue"
           >
             Avançar
             <ArrowRight className="h-4 w-4" />
@@ -481,7 +481,7 @@ export default function MaturityDiagnosisForm() {
           <Button
             type="submit"
             disabled={!canAdvance || loading}
-            className="h-11 bg-[#37BC69] px-5 text-white hover:bg-[#2da75b]"
+            className="h-11 rounded-lg bg-terra-beige px-5 text-terra-navy hover:bg-[#bda675]"
           >
             {loading ? <Loader2 className="h-4 w-4 animate-spin" /> : <Send className="h-4 w-4" />}
             Ver resultado
@@ -504,8 +504,8 @@ function QuestionScreen({
   return (
     <div className="grid gap-5 lg:grid-cols-[0.78fr_1.22fr] lg:items-start">
       <div className="lg:pt-1">
-        <p className="text-sm font-semibold uppercase tracking-[0.14em] text-[#238b4b]">{title}</p>
-        <h3 className="mt-2 text-xl font-bold leading-tight text-terra-navy lg:text-2xl">{text}</h3>
+        <p className="text-sm font-semibold uppercase tracking-[0.14em] text-terra-navy/70">{title}</p>
+        <h3 className="mt-2 text-xl font-semibold leading-tight text-terra-navy lg:text-2xl">{text}</h3>
       </div>
 
       <div className="grid gap-2">
@@ -515,16 +515,16 @@ function QuestionScreen({
             type="button"
             onClick={option.onClick}
             className={cn(
-              "grid min-h-11 grid-cols-[2rem_1fr] items-center gap-3 rounded-xl border px-3 py-2 text-left text-sm transition",
+              "grid min-h-11 grid-cols-[2rem_1fr] items-center gap-3 rounded-lg border px-3 py-2 text-left text-sm transition",
               option.active
-                ? "border-[#37BC69] bg-[#37BC69]/10 text-terra-navy shadow-[0_10px_30px_-24px_rgba(55,188,105,0.9)]"
-                : "border-gray-200 bg-white text-terra-navy/70 hover:border-[#37BC69]/60",
+                ? "border-terra-navy bg-terra-navy text-white shadow-[0_12px_28px_-24px_rgba(21,41,70,0.85)]"
+                : "border-[#e2ddcf] bg-white text-terra-navy/72 hover:border-terra-beige hover:bg-[#f8f7f3]",
             )}
           >
             <span
               className={cn(
                 "flex h-8 w-8 items-center justify-center rounded-full text-sm font-bold",
-                option.active ? "bg-[#37BC69] text-white" : "bg-[#f1f5f3] text-[#238b4b]",
+                option.active ? "bg-terra-beige text-terra-navy" : "bg-[#f2efe7] text-terra-navy",
               )}
             >
               {option.number ?? ""}
@@ -539,8 +539,8 @@ function QuestionScreen({
 
 function ResultMetric({ label, value }: { label: string; value: string }) {
   return (
-    <div className="rounded-xl bg-[#f7fbf8] p-4">
-      <div className="mb-2 flex items-center gap-2 text-[#238b4b]">
+    <div className="rounded-lg border border-[#e2ddcf] bg-[#f8f7f3] p-4">
+      <div className="mb-2 flex items-center gap-2 text-terra-navy">
         <CheckCircle2 className="h-4 w-4" />
         <span className="text-xs font-semibold uppercase tracking-[0.12em]">{label}</span>
       </div>
