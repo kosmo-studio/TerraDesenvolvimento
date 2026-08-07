@@ -10,36 +10,16 @@ import { MapPin, Calendar, ArrowRight } from "lucide-react";
 // --- BANCO DE DADOS DE EVENTOS ---
 // Adicione ou remova cidades aqui para atualizar a tela automaticamente
 const listaEventosCursos = [
-  {
-    id: "GOIÂNIA-GO",
-    cidade: "GOIÂNIA",
-    estado: "GO",
-    data: "10 e 11 de junho de 2026",
-    local: "CASTRO'S PARK HOTEL",
-    imagem: "/images/GESTAOGOIANIA-png.webp",
-    link: "/EmpresaPecuariaGO", 
-    status: "Inscrições Abertas"
-  },
-  {
-    id: "XINGUARA-PA",
-    cidade: "XINGUARA",
-    estado: "PA",
-    data: "17 e 18 de junho de 2026",
-    local: "UNIFESSPA - UNIDADE 2",
-    imagem: "/images/GESTAOXINGUARA-png.webp",
-    link: "/EmpresaPecuariaXG",
-    status: "Inscrições Abertas"
-  },
-  {
-    id: "PRESIDENTE PRUDENTE-SP",
-    cidade: "PRESIDENTE PRUDENTE",
-    estado: "SP",
-    data: "06 e 07 de julho de 2026",
-    local: "IBIS STYLES",
-    imagem: "/images/bannerPP-png.webp",
-    link: "/EmpresaPecuariaPP",
-    status: "Inscrições Abertas"
-  },
+  // {
+  //   id: "GOIÂNIA-GO",
+  //   cidade: "GOIÂNIA",
+  //   estado: "GO",
+  //   data: "10 e 11 de junho de 2026",
+  //   local: "CASTRO'S PARK HOTEL",
+  //   imagem: "/images/GESTAOGOIANIA-png.webp",
+  //   link: "/EmpresaPecuariaGO", 
+  //   status: "Inscrições Abertas"
+  // },
   
  
 ];

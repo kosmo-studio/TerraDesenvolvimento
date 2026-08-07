@@ -1,5 +1,43 @@
 export const todasAsNoticias = [
   {
+    id: 15,
+    slug: "terra-talks-estreia-debate-nutricao-animal-manejo-seca",
+    titulo: "Terra Talks estreia com debate sobre nutrição animal, manejo de seca e margem operacional",
+    resumo: "Novo programa da Terra Desenvolvimento reúne empresas parceiras para discutir temas relevantes do agronegócio. No episódio de estreia, Dorival Falchi recebe Fernando Kamada, da Pontero Nutrição Animal.",
+    imagemDestaque: "/images/noticias/terra-talks-estreia-pontero-nutricao.webp",
+    dataPublicacao: "07 de agosto de 2026",
+    autor: "Por Terra Desenvolvimento",
+    conteudo: `
+      <p>O Terra Talks é o novo programa da Terra Desenvolvimento criado para debater os assuntos mais relevantes do agronegócio ao lado de empresas parceiras.</p>
+
+      <p>No episódio de estreia, Dorival Falchi, Gerente de Contas da Terra Desenvolvimento, recebe Fernando Kamada, zootecnista e Coordenador Técnico da Pontero Nutrição Animal, para uma conversa sobre os desafios e oportunidades da pecuária de corte em um cenário de maior complexidade produtiva.</p>
+
+      <h2>Seca de 2026 e decisões no campo</h2>
+      <p>Entre os temas discutidos está o cenário atípico da seca de 2026, que exige atenção redobrada dos produtores e gestores rurais.</p>
+
+      <p>Em períodos de maior pressão climática, decisões relacionadas ao manejo nutricional, planejamento de lotação, suplementação e estratégia de uso das pastagens ganham ainda mais importância para preservar desempenho, eficiência e resultado econômico.</p>
+
+      <h2>Os riscos invisíveis da transição para as águas</h2>
+      <p>A conversa também aborda os riscos invisíveis do efeito laxativo da rebrota durante a transição para as águas.</p>
+
+      <p>Embora a recuperação das pastagens seja aguardada como um momento positivo para a atividade, esse período também demanda estratégia. Mudanças bruscas na dieta e no comportamento do pasto podem afetar o desempenho dos animais quando não há acompanhamento técnico e planejamento adequado.</p>
+
+      <h2>Nutrição como estratégia de margem</h2>
+      <p>Outro ponto central do debate é a forma como estratégias nutricionais podem transformar a nutrição de um custo obrigatório em uma ferramenta de construção de margem operacional.</p>
+
+      <p>Entre os exemplos discutidos estão o sequestro de bezerros, o uso de aditivos ruminais e a TIP, alternativas que podem apoiar melhores decisões produtivas quando alinhadas ao objetivo da fazenda e ao momento do sistema.</p>
+
+      <p>Mais do que adotar uma tecnologia isolada, o episódio reforça a importância de conectar manejo, informação técnica e gestão para tomar decisões mais consistentes no campo.</p>
+
+      <h2>Conversas que desenvolvem o agro</h2>
+      <p>Com o Terra Talks, a Terra Desenvolvimento amplia os espaços de troca com parceiros e profissionais do setor, levando ao público discussões práticas sobre gestão, produção, mercado e tecnologia.</p>
+
+      <p>A proposta é aproximar conhecimento técnico da realidade das empresas agropecuárias, contribuindo para que produtores e equipes tomem decisões mais bem fundamentadas em cada etapa da operação.</p>
+
+      <p>O episódio completo está disponível no canal da Terra Desenvolvimento no YouTube.</p>
+    `
+  },
+  {
     id: 14,
     slug: "do-pasto-ao-prato-geracao-de-valor-comeca-antes-da-venda",
     titulo: "Do pasto ao prato: por que a geração de valor começa muito antes da venda",
