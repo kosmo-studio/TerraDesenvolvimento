@@ -33,7 +33,7 @@ export default function Prg() {
     <div className="bg-white overflow-x-hidden">
       <main>
         <h1 className="sr-only">
-          Programa de Recuperacao Gerencial
+          Programa de Recuperação Gerencial
         </h1>
         <Header />
         {/* Hero Section */}

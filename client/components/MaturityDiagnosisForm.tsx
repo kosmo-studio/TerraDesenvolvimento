@@ -238,7 +238,7 @@ const scoreInitialDiagnosis = async (
       body: JSON.stringify({ respostas }),
     });
 
-    if (!response.ok) throw new Error("Endpoint de score indisponivel para diagnostico inicial.");
+    if (!response.ok) throw new Error("Endpoint de score indisponível para diagnóstico inicial.");
     return await response.json();
   } catch {
     return calcularDiagnosticoInicial(respostas);
@@ -261,7 +261,7 @@ const scoreFinalDiagnosis = async ({
       body: JSON.stringify({ respostas, situacao, tamanhoHectares }),
     });
 
-    if (!response.ok) throw new Error("Endpoint de score indisponivel para resultado final.");
+    if (!response.ok) throw new Error("Endpoint de score indisponível para resultado final.");
     return await response.json();
   } catch {
     return calcularResultadoCompleto({ respostas, situacao, tamanhoHectares });
@@ -334,7 +334,7 @@ export default function MaturityDiagnosisForm() {
         setStep(checkpointStep);
       } catch (error) {
         setSubmissionError(
-          error instanceof Error ? error.message : "Falha ao calcular o diagnostico inicial.",
+          error instanceof Error ? error.message : "Falha ao calcular o diagnóstico inicial.",
         );
       } finally {
         setScoringInitial(false);
@@ -543,14 +543,14 @@ export default function MaturityDiagnosisForm() {
               </div>
               <Input required className="h-11" type="email" placeholder="E-mail*" value={lead.email} onChange={(event) => handleLeadChange("email", event.target.value)} />
               {lead.email && !emailAnswered && (
-                <p className="text-xs font-medium text-red-700">Informe um e-mail valido.</p>
+                <p className="text-xs font-medium text-red-700">Informe um e-mail válido.</p>
               )}
               <div className="grid gap-3 sm:grid-cols-2">
                 <Input required className="h-11" type="tel" inputMode="tel" placeholder="WhatsApp com DDD*" value={lead.telefone} onChange={(event) => handleLeadChange("telefone", event.target.value)} />
                 <Input className="h-11" placeholder="Estado ou país" value={lead.localizacao} onChange={(event) => handleLeadChange("localizacao", event.target.value)} />
               </div>
               {lead.telefone && !phoneAnswered && (
-                <p className="text-xs font-medium text-red-700">Informe um WhatsApp valido com DDD.</p>
+                <p className="text-xs font-medium text-red-700">Informe um WhatsApp válido com DDD.</p>
               )}
             </div>
           </div>
@@ -650,33 +650,33 @@ function InitialResultScreen({ result }: { result: InitialScoringResult }) {
     <div className="grid gap-5 lg:grid-cols-[0.78fr_1.22fr] lg:items-start">
       <div>
         <p className="text-sm font-semibold uppercase tracking-[0.14em] text-terra-navy">
-          Diagnostico inicial
+          Diagnóstico inicial
         </p>
         <h3 className="mt-2 text-2xl font-bold leading-tight text-terra-navy">
-          Seu diagnostico inicial esta pronto
+          Seu diagnóstico inicial está pronto
         </h3>
         <p className="mt-3 text-sm leading-relaxed text-terra-navy/65">
-          Agora, so mais algumas perguntas rapidas sobre a sua situacao e planos. Isso nao muda o seu nivel de maturidade, mas ajuda a indicar o servico certo para voce.
+          Agora, só mais algumas perguntas rápidas sobre a sua situação e planos. Isso não muda o seu nível de maturidade, mas ajuda a indicar o serviço certo para você.
         </p>
       </div>
 
       <div className="space-y-4 rounded-xl border border-[#e2ddcf] bg-[#f8f7f3] p-5">
         <div>
           <p className="text-xs font-semibold uppercase tracking-[0.12em] text-terra-navy/55">
-            Seu nivel
+            Seu nível
           </p>
           <p className="mt-1 text-2xl font-bold text-terra-navy">{result.nivelLabel}</p>
         </div>
         <div>
           <p className="text-xs font-semibold uppercase tracking-[0.12em] text-terra-navy/55">
-            Area que mais precisa de atencao agora
+            Área que mais precisa de atenção agora
           </p>
           <p className="mt-1 text-lg font-semibold text-terra-navy">
             {result.dimensaoMaisFracaLabel}
           </p>
         </div>
         <p className="text-sm leading-relaxed text-terra-navy/75">
-          Seu diagnostico inicial: nivel {result.nivelLabel}, com {result.dimensaoMaisFracaLabel} como area que mais precisa de atencao agora.
+          Seu diagnóstico inicial: nível {result.nivelLabel}, com {result.dimensaoMaisFracaLabel} como área que mais precisa de atenção agora.
         </p>
       </div>
     </div>

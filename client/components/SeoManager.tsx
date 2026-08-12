@@ -15,133 +15,133 @@ type SeoData = {
 
 const staticSeo: Record<string, SeoData> = {
   "/": {
-    title: "Terra Desenvolvimento Agropecuario | Gestao para fazendas",
+    title: "Terra Desenvolvimento Agropecuário | Gestão para fazendas",
     description:
-      "Consultoria em gestao agropecuaria para fazendas, com planejamento estrategico, controle, diagnostico de desempenho e desenvolvimento gerencial.",
+      "Consultoria em gestão agropecuária para fazendas, com planejamento estratégico, controle, diagnóstico de desempenho e desenvolvimento gerencial.",
   },
   "/servicos": {
-    title: "Servicos de gestao agropecuaria | Terra Desenvolvimento",
+    title: "Serviços de gestão agropecuária | Terra Desenvolvimento",
     description:
-      "Conheca solucoes para melhorar a produtividade, eficiencia, controles, planejamento e resultados da sua fazenda.",
+      "Conheça soluções para melhorar a produtividade, eficiência, controles, planejamento e resultados da sua fazenda.",
     image: `${SITE_URL}/images/Diagnostico-desempenho.webp`,
   },
   "/resultados": {
     title: "Resultados e clientes | Terra Desenvolvimento",
     description:
-      "Veja depoimentos de produtores e empresas rurais que melhoraram a gestao e os resultados com a Terra Desenvolvimento.",
+      "Veja depoimentos de produtores e empresas rurais que melhoraram a gestão e os resultados com a Terra Desenvolvimento.",
     image: `${SITE_URL}/images/bg-resultados.webp`,
   },
   "/Resultados": {
     title: "Resultados e clientes | Terra Desenvolvimento",
     description:
-      "Veja depoimentos de produtores e empresas rurais que melhoraram a gestao e os resultados com a Terra Desenvolvimento.",
+      "Veja depoimentos de produtores e empresas rurais que melhoraram a gestão e os resultados com a Terra Desenvolvimento.",
     image: `${SITE_URL}/images/bg-resultados.webp`,
   },
   "/cursosEventos": {
-    title: "Cursos e eventos de gestao agropecuaria | Terra Desenvolvimento",
+    title: "Cursos e eventos de gestão agropecuária | Terra Desenvolvimento",
     description:
-      "Cursos e eventos para produtores, gestores, tecnicos e estudantes que buscam evoluir na gestao da empresa agropecuaria.",
+      "Cursos e eventos para produtores, gestores, técnicos e estudantes que buscam evoluir na gestão da empresa agropecuária.",
     image: `${SITE_URL}/images/HeroCursoEvento.webp`,
   },
   "/noticias": {
-    title: "Noticias do agronegocio | Terra Desenvolvimento",
+    title: "Notícias do agronegócio | Terra Desenvolvimento",
     description:
-      "Conteudos, entrevistas e noticias sobre gestao, produtividade, mercado e desenvolvimento do agronegocio.",
+      "Conteúdos, entrevistas e notícias sobre gestão, produtividade, mercado e desenvolvimento do agronegócio.",
     image: `${SITE_URL}/images/bg-noticias.webp`,
   },
   "/trabalhe-conosco": {
     title: "Trabalhe conosco | Terra Desenvolvimento",
     description:
-      "Envie seu curriculo e conheca oportunidades para desenvolver sua carreira junto a uma equipe especializada no agronegocio.",
+      "Envie seu currículo e conheça oportunidades para desenvolver sua carreira junto a uma equipe especializada no agronegócio.",
     image: `${SITE_URL}/images/bg-nossahistoria.webp`,
   },
   "/contato": {
     title: "Contato e unidades | Terra Desenvolvimento",
     description:
-      "Fale com um consultor Terra Desenvolvimento e encontre nossas unidades no Brasil, Paraguai e Bolivia.",
+      "Fale com um consultor Terra Desenvolvimento e encontre nossas unidades no Brasil, Paraguai e Bolívia.",
     image: `${SITE_URL}/images/bg-contato-jpeg.webp`,
   },
   "/diagnostico-maturidade": {
-    title: "Diagnostico de maturidade da fazenda | Terra Desenvolvimento",
+    title: "Diagnóstico de maturidade da fazenda | Terra Desenvolvimento",
     description:
-      "Avalie a maturidade da gestao da sua fazenda e identifique oportunidades de evolucao com a Terra Desenvolvimento.",
+      "Avalie a maturidade da gestão da sua fazenda e identifique oportunidades de evolução com a Terra Desenvolvimento.",
   },
   "/nossaHistoria": {
-    title: "Nossa historia | Terra Desenvolvimento Agropecuario",
+    title: "Nossa história | Terra Desenvolvimento Agropecuário",
     description:
-      "Conheca a trajetoria da Terra Desenvolvimento Agropecuario e sua atuacao em gestao profissional de fazendas.",
+      "Conheça a trajetória da Terra Desenvolvimento Agropecuário e sua atuação em gestão profissional de fazendas.",
     image: `${SITE_URL}/images/bg-nossahistoria.webp`,
   },
   "/servicos/MapeamentodeOportunidades": {
     title: "Mapeamento de oportunidades para fazendas | Terra Desenvolvimento",
     description:
-      "Diagnostico de desempenho para entender a situacao financeira, produtiva e gerencial da fazenda e mapear oportunidades.",
+      "Diagnóstico de desempenho para entender a situação financeira, produtiva e gerencial da fazenda e mapear oportunidades.",
     image: `${SITE_URL}/images/bg-analise.webp`,
   },
   "/servicos/ImplementacaoDeControle": {
-    title: "Implantacao de controle agropecuario | Terra Desenvolvimento",
+    title: "Implantação de controle agropecuário | Terra Desenvolvimento",
     description:
-      "Metodologia para organizar dados, controles e informacoes essenciais da fazenda com mais rapidez e confiabilidade.",
+      "Metodologia para organizar dados, controles e informações essenciais da fazenda com mais rapidez e confiabilidade.",
     image: `${SITE_URL}/images/bg-implantacao.webp`,
   },
   "/servicos/PlanejamentoEstrategico": {
-    title: "Planejamento estrategico agropecuario | Terra Desenvolvimento",
+    title: "Planejamento estratégico agropecuário | Terra Desenvolvimento",
     description:
-      "Projeto para orientar o crescimento sustentavel da lucratividade e gerenciabilidade da empresa rural.",
+      "Projeto para orientar o crescimento sustentável da lucratividade e gerenciabilidade da empresa rural.",
     image: `${SITE_URL}/images/bg-planejamento.webp`,
   },
   "/servicos/ProgramaRecuperaçãoGerencial": {
-    title: "Programa de Recuperacao Gerencial | Terra Desenvolvimento",
+    title: "Programa de Recuperação Gerencial | Terra Desenvolvimento",
     description:
-      "Programa para recuperar performance, valorizar ativos e desenvolver a atividade agropecuaria com gestao orientada a resultados.",
+      "Programa para recuperar performance, valorizar ativos e desenvolver a atividade agropecuária com gestão orientada a resultados.",
     image: `${SITE_URL}/images/bg-prg.webp`,
   },
   "/servicos/AnalisePlanoDeNegocio": {
-    title: "Analise e plano de negocios para fazendas | Terra Desenvolvimento",
+    title: "Análise e plano de negócios para fazendas | Terra Desenvolvimento",
     description:
-      "Suporte para analisar investimentos, compra de propriedade rural, rentabilidade e viabilidade economica.",
+      "Suporte para analisar investimentos, compra de propriedade rural, rentabilidade e viabilidade econômica.",
     image: `${SITE_URL}/images/bg-empresapecuaria.webp`,
   },
   "/servicos/DesenvolvimentoGerencial": {
     title: "Desenvolvimento gerencial no agro | Terra Desenvolvimento",
     description:
-      "Apoio para formar equipes realizadoras, fortalecer cultura gerencial e melhorar a execucao nas fazendas.",
+      "Apoio para formar equipes realizadoras, fortalecer cultura gerencial e melhorar a execução nas fazendas.",
     image: `${SITE_URL}/images/bg-desenvolvimentogerencial.webp`,
   },
   "/servicos/PerformaTerra": {
     title: "Performa Terra | Consultoria sob medida para fazendas",
     description:
-      "Solucao de curto prazo e sob medida para melhorar desempenho, indicadores e resultados da fazenda.",
+      "Solução de curto prazo e sob medida para melhorar desempenho, indicadores e resultados da fazenda.",
     image: `${SITE_URL}/images/bg-performa.webp`,
   },
   "/EmpresaPecuaria": {
-    title: "Curso de Gestao da Empresa Pecuaria | Terra Desenvolvimento",
+    title: "Curso de Gestão da Empresa Pecuária | Terra Desenvolvimento",
     description:
-      "Curso pratico para produtores, gestores, tecnicos e estudantes aplicarem ferramentas de gestao na realidade da fazenda.",
+      "Curso prático para produtores, gestores, técnicos e estudantes aplicarem ferramentas de gestão na realidade da fazenda.",
     image: `${SITE_URL}/images/BANNERCURSOGESTAO.webp`,
   },
   "/EmpresaPecuariaGO": {
-    title: "Curso de Gestao da Empresa Pecuaria em Goiania | Terra",
+    title: "Curso de Gestão da Empresa Pecuária em Goiânia | Terra",
     description:
-      "Detalhes, modulos e inscricoes do Curso de Gestao da Empresa Pecuaria em Goiania.",
+      "Detalhes, módulos e inscrições do Curso de Gestão da Empresa Pecuária em Goiânia.",
     image: `${SITE_URL}/images/GESTAOGOIANIA-png.webp`,
   },
   "/EmpresaPecuariaXG": {
-    title: "Curso de Gestao da Empresa Pecuaria em Xinguara | Terra",
+    title: "Curso de Gestão da Empresa Pecuária em Xinguara | Terra",
     description:
-      "Detalhes, modulos e inscricoes do Curso de Gestao da Empresa Pecuaria em Xinguara.",
+      "Detalhes, módulos e inscrições do Curso de Gestão da Empresa Pecuária em Xinguara.",
     image: `${SITE_URL}/images/GESTAOXINGUARA-png.webp`,
   },
   "/EmpresaPecuariaMT": {
-    title: "Curso de Gestao da Empresa Pecuaria em Cuiaba | Terra",
+    title: "Curso de Gestão da Empresa Pecuária em Cuiabá | Terra",
     description:
-      "Detalhes, modulos e inscricoes do Curso de Gestao da Empresa Pecuaria em Cuiaba.",
+      "Detalhes, módulos e inscrições do Curso de Gestão da Empresa Pecuária em Cuiabá.",
     image: `${SITE_URL}/images/BANNERcuiaba-png.webp`,
   },
   "/EmpresaPecuariaPP": {
-    title: "Curso de Gestao da Empresa Pecuaria em Presidente Prudente | Terra",
+    title: "Curso de Gestão da Empresa Pecuária em Presidente Prudente | Terra",
     description:
-      "Detalhes, modulos e inscricoes do Curso de Gestao da Empresa Pecuaria em Presidente Prudente.",
+      "Detalhes, módulos e inscrições do Curso de Gestão da Empresa Pecuária em Presidente Prudente.",
     image: `${SITE_URL}/images/bannerPP-png.webp`,
   },
 };
@@ -184,7 +184,7 @@ const toAbsoluteImage = (image?: string) => {
 const organizationSchema = {
   "@context": "https://schema.org",
   "@type": "Organization",
-  name: "Terra Desenvolvimento Agropecuario",
+  name: "Terra Desenvolvimento Agropecuário",
   url: SITE_URL,
   logo: `${SITE_URL}/images/terra%20logo.webp`,
   sameAs: [
@@ -209,7 +209,7 @@ const buildBreadcrumbSchema = (pathname: string, title: string) => ({
     {
       "@type": "ListItem",
       position: 1,
-      name: "Inicio",
+      name: "Início",
       item: `${SITE_URL}/`,
     },
     {
@@ -247,9 +247,9 @@ export default function SeoManager() {
       data:
         staticSeo[pathname] ??
         ({
-          title: "Pagina nao encontrada | Terra Desenvolvimento",
+          title: "Página não encontrada | Terra Desenvolvimento",
           description:
-            "A pagina solicitada nao foi encontrada. Acesse as principais solucoes da Terra Desenvolvimento Agropecuario.",
+            "A página solicitada não foi encontrada. Acesse as principais soluções da Terra Desenvolvimento Agropecuário.",
         } satisfies SeoData),
     };
   }, [location.pathname]);
