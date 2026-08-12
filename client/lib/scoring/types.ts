@@ -26,17 +26,20 @@ export interface SituacaoRespostas {
 
 export interface ScoringInput {
   respostas: MaturidadeRespostas;
-  situacao: SituacaoRespostas;
+  situacao?: SituacaoRespostas;
   tamanhoHectares?: number;
 }
 
-export interface ScoringResult {
+export interface InitialScoringResult {
   mediasPorDimensao: Record<DimensaoCodigo, number>;
   mediaGeral: number;
   nivel: 1 | 2 | 3 | 4 | 5;
   nivelLabel: string;
   dimensaoMaisFraca: DimensaoCodigo;
   dimensaoMaisFracaLabel: string;
+}
+
+export interface ScoringResult extends InitialScoringResult {
   servicoPrincipal: string;
   servicosComplementares: string[];
   situacaoEspecial: string[];

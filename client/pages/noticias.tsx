@@ -196,9 +196,9 @@ export default function Noticias() {
           <section className="z-20">
             <div className="container mx-auto pt-14 max-w-7xl shadow-[0px_-30px_15px_-10px_rgba(0,0,0,0.3)] text-center bg-white relative -mt-24 md:-mt-36">
               <div className="py-10">
-                <h2 className="text-3xl md:text-4xl lg:text-5xl md:text-center font-bold font-lexend text-terra-navy">
+                <h1 className="text-3xl md:text-4xl lg:text-5xl md:text-center font-bold font-lexend text-terra-navy">
                   Notícias
-                </h2>
+                </h1>
               </div>
               <ArticleSection />
             </div>

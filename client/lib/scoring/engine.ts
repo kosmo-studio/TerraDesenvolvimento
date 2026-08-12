@@ -1,5 +1,6 @@
 import type {
   DimensaoCodigo,
+  InitialScoringResult,
   MaturidadeRespostas,
   ScoringInput,
   ScoringResult,
@@ -95,7 +96,43 @@ function calcularServicosComplementares(
   return complementos;
 }
 
-export function calcularResultado(input: ScoringInput): ScoringResult {
+export function calcularDiagnosticoInicial(respostas: MaturidadeRespostas): InitialScoringResult {
+  const mediasPorDimensao = calcularMediasPorDimensao(respostas);
+  const mediaGeral = calcularMediaGeral(respostas);
+  const nivel = calcularNivel(mediaGeral);
+  const dimensaoMaisFraca = calcularDimensaoMaisFraca(mediasPorDimensao);
+
+  return {
+    mediasPorDimensao,
+    mediaGeral,
+    nivel,
+    nivelLabel: NIVEL_LABELS[nivel],
+    dimensaoMaisFraca,
+    dimensaoMaisFracaLabel: DIMENSAO_LABELS[dimensaoMaisFraca],
+  };
+}
+
+export function calcularResultado(input: ScoringInput): ScoringResult | InitialScoringResult {
+  const diagnostico = calcularDiagnosticoInicial(input.respostas);
+
+  if (!input.situacao) {
+    return diagnostico;
+  }
+
+  const { nivel } = diagnostico;
+  const situacaoEspecial = calcularSituacaoEspecial(input.situacao);
+  const servicoPrincipal = calcularServicoPrincipal(situacaoEspecial, nivel);
+  const servicosComplementares = calcularServicosComplementares(input.situacao, input.tamanhoHectares);
+
+  return {
+    ...diagnostico,
+    servicoPrincipal,
+    servicosComplementares,
+    situacaoEspecial,
+  };
+}
+
+export function calcularResultadoCompleto(input: ScoringInput & { situacao: SituacaoRespostas }): ScoringResult {
   const mediasPorDimensao = calcularMediasPorDimensao(input.respostas);
   const mediaGeral = calcularMediaGeral(input.respostas);
   const nivel = calcularNivel(mediaGeral);

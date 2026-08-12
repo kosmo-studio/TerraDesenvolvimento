@@ -69,6 +69,9 @@ export default function EmpresaPecuaria() {
       <Header />
       
       <main>
+        <h1 className="sr-only">
+          Curso de Gestao da Empresa Pecuaria
+        </h1>
         <HeroSection
           backgroundImage="/images/BANNERCURSOGESTAO.webp"
           title=" "

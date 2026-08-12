@@ -8,6 +8,10 @@ interface HeroSectionProps {
 }
 
 const HeroSection: React.FC<HeroSectionProps> = ({ backgroundImage, title, subtitle }) => {
+  const hasTitle =
+    typeof title === "string" ? title.trim().length > 0 : Boolean(title);
+  const hasSubtitle = subtitle.trim().length > 0;
+
   return (
     <section className="relative w-full h-[80vh] text-white">
       <div
@@ -19,18 +23,20 @@ const HeroSection: React.FC<HeroSectionProps> = ({ backgroundImage, title, subti
       <div className="absolute bottom-0 left-0 w-full h-12 bg-gradient-to-b from-black/10 to-transparent translate-y-full z-1000 pointer-events-none" />
 
       <div className="relative h-full flex flex-col items-center pt-28 md:pt-32 xl:pt-36 text-center p-4 md:p-8 ">
-        <h1 
-          className="text-terra-navy text-4xl md:text-4xl xl:text-6xl lg:w-[1100px] font-bold xl:font-semibold leading-tight mb-4"
-        >
-         
-          {title}
-        </h1>
-        <p 
-          className="text-terra-navy text-md md:text-2xl max-w-4xl font-light"
-        >
-          
-          {subtitle}
-        </p>
+        {hasTitle && (
+          <h1 
+            className="text-terra-navy text-4xl md:text-4xl xl:text-6xl lg:w-[1100px] font-bold xl:font-semibold leading-tight mb-4"
+          >
+            {title}
+          </h1>
+        )}
+        {hasSubtitle && (
+          <p 
+            className="text-terra-navy text-md md:text-2xl max-w-4xl font-light"
+          >
+            {subtitle}
+          </p>
+        )}
       </div>
     </section>
   );
