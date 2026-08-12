@@ -381,7 +381,9 @@ export default function MaturityDiagnosisForm() {
       let message = "Falha ao enviar o diagnóstico para a equipe.";
       try {
         const data = await kommoResponse.json();
-        if (data?.error) message = data.error;
+        if (data?.error && !String(data.error).toLowerCase().includes("kommo 401")) {
+          message = data.error;
+        }
       } catch {
         // Mantem a mensagem padrão quando a resposta não vier em JSON.
       }
