@@ -30,7 +30,7 @@ export default function HeroHome() {
   return (
     <section className="relative pt-28">
       <h1 className="sr-only">
-        Terra Desenvolvimento Agropecuario - gestao profissional para fazendas
+        Terra Desenvolvimento Agropecuário - gestão profissional para fazendas
       </h1>
       <div className="mx-4 lg:mx-8 overflow-hidden rounded-3xl">
         <div className="relative h-[200px] md:h-[500px] lg:h-[560px] xl:h-[830px]">
