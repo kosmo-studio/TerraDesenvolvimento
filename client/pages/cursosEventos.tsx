@@ -121,9 +121,9 @@ export default function CursoseEventos() {
                 <section className="bg-white py-24 px-6 md:px-12">
                     <div className="max-w-4xl mx-auto text-center">
                         <AnimatedSection>
-                            <h1 className="text-3xl md:text-5xl sm:text-4xl font-extrabold text-terra-navy mb-10">
+                            <h2 className="text-3xl md:text-5xl sm:text-4xl font-extrabold text-terra-navy mb-10">
                                 Encontro de Gestores
-                            </h1>
+                            </h2>
                             <a href="https://www.encontrogestores.agr.br/" target="_blank" rel="noopener noreferrer" className="flex justify-center mb-10">
                                 <img
                                     src="/images/InfoEncontroGestores.webp"

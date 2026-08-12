@@ -32,6 +32,9 @@ export default function Prg() {
   return (
     <div className="bg-white overflow-x-hidden">
       <main>
+        <h1 className="sr-only">
+          Programa de Recuperacao Gerencial
+        </h1>
         <Header />
         {/* Hero Section */}
         <AnimatedSection variant="fade">

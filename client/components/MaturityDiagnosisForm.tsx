@@ -3,10 +3,11 @@ import { ArrowLeft, ArrowRight, CheckCircle2, Loader2, Send, Sparkles } from "lu
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { cn } from "@/lib/utils";
-import { calcularResultado } from "@/lib/scoring/engine";
+import { calcularDiagnosticoInicial, calcularResultadoCompleto } from "@/lib/scoring/engine";
 import { escreverTextoResultado } from "@/lib/scoring/responseText";
 import type {
   MaturidadeRespostas,
+  InitialScoringResult,
   RespostaValor,
   ScoringResult,
   SituacaoRespostas,
@@ -221,6 +222,52 @@ const PROFILE_SIZE_OPTIONS: { key: ProfileSizeKey; label: string; hectares: numb
   { key: "acima_5000ha", label: "Acima de 5.000 ha", hectares: 5001 },
 ];
 
+const isValidEmail = (email: string) => /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email.trim());
+const isValidPhone = (phone: string) => {
+  const digits = phone.replace(/\D/g, "");
+  return digits.length >= 10 && digits.length <= 13;
+};
+
+const scoreInitialDiagnosis = async (
+  respostas: MaturidadeRespostas,
+): Promise<InitialScoringResult> => {
+  try {
+    const response = await fetch("/api/score", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({ respostas }),
+    });
+
+    if (!response.ok) throw new Error("Endpoint de score indisponivel para diagnostico inicial.");
+    return await response.json();
+  } catch {
+    return calcularDiagnosticoInicial(respostas);
+  }
+};
+
+const scoreFinalDiagnosis = async ({
+  respostas,
+  situacao,
+  tamanhoHectares,
+}: {
+  respostas: MaturidadeRespostas;
+  situacao: SituacaoRespostas;
+  tamanhoHectares: number;
+}): Promise<ScoringResult> => {
+  try {
+    const response = await fetch("/api/score", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({ respostas, situacao, tamanhoHectares }),
+    });
+
+    if (!response.ok) throw new Error("Endpoint de score indisponivel para resultado final.");
+    return await response.json();
+  } catch {
+    return calcularResultadoCompleto({ respostas, situacao, tamanhoHectares });
+  }
+};
+
 export default function MaturityDiagnosisForm() {
   const [step, setStep] = useState(0);
   const [respostas, setRespostas] = useState<Partial<MaturidadeRespostas>>({});
@@ -233,33 +280,69 @@ export default function MaturityDiagnosisForm() {
     telefone: "",
     localizacao: "",
   });
+  const [initialResult, setInitialResult] = useState<InitialScoringResult | null>(null);
   const [resultado, setResultado] = useState<ScoringResult | null>(null);
   const [textoResultado, setTextoResultado] = useState("");
   const [loading, setLoading] = useState(false);
+  const [scoringInitial, setScoringInitial] = useState(false);
   const [emailStatus, setEmailStatus] = useState<"idle" | "sent" | "error">("idle");
   const [submissionError, setSubmissionError] = useState("");
 
-  const profileStep = QUESTIONS.length + SITUATION_QUESTIONS.length;
+  const checkpointStep = QUESTIONS.length;
+  const firstSituationStep = checkpointStep + 1;
+  const profileStep = firstSituationStep + SITUATION_QUESTIONS.length;
   const leadStep = profileStep + 1;
   const totalSteps = leadStep + 1;
   const progress = useMemo(() => Math.round(((step + 1) / totalSteps) * 100), [step, totalSteps]);
   const selectedSize = PROFILE_SIZE_OPTIONS.find((option) => option.key === profileSize);
   const currentQuestion = step < QUESTIONS.length ? QUESTIONS[step] : null;
-  const situationIndex = step - QUESTIONS.length;
+  const situationIndex = step - firstSituationStep;
   const currentSituation =
     situationIndex >= 0 && situationIndex < SITUATION_QUESTIONS.length
       ? SITUATION_QUESTIONS[situationIndex]
       : null;
 
-  const leadAnswered = Object.values(lead).every(Boolean);
+  const nameAnswered = lead.primeiro_nome.trim().length > 1;
+  const emailAnswered = isValidEmail(lead.email);
+  const phoneAnswered = isValidPhone(lead.telefone);
+  const leadAnswered = nameAnswered && emailAnswered && phoneAnswered;
   const canAdvance =
     (currentQuestion && Boolean(respostas[currentQuestion.key])) ||
+    (step === checkpointStep && Boolean(initialResult)) ||
     (currentSituation && Boolean(situacao[currentSituation.key])) ||
     (step === profileStep && Boolean(profileSize)) ||
     (step === leadStep && leadAnswered);
 
   const handleLeadChange = (field: keyof typeof lead, value: string) => {
     setLead((current) => ({ ...current, [field]: value }));
+  };
+
+  const handleMaturityAnswer = (key: AnswerKey, value: RespostaValor) => {
+    setInitialResult(null);
+    setRespostas((current) => ({ ...current, [key]: value }));
+  };
+
+  const handleNext = async () => {
+    if (!canAdvance || loading || scoringInitial) return;
+
+    if (step === QUESTIONS.length - 1) {
+      setScoringInitial(true);
+      setSubmissionError("");
+      try {
+        const result = await scoreInitialDiagnosis(respostas as MaturidadeRespostas);
+        setInitialResult(result);
+        setStep(checkpointStep);
+      } catch (error) {
+        setSubmissionError(
+          error instanceof Error ? error.message : "Falha ao calcular o diagnostico inicial.",
+        );
+      } finally {
+        setScoringInitial(false);
+      }
+      return;
+    }
+
+    setStep((current) => Math.min(leadStep, current + 1));
   };
 
   const sendLeadToBackends = async (result: ScoringResult, text: string) => {
@@ -314,11 +397,20 @@ export default function MaturityDiagnosisForm() {
     setEmailStatus("idle");
     setSubmissionError("");
 
-    const result = calcularResultado({
-      respostas: respostas as MaturidadeRespostas,
-      situacao: situacao as SituacaoRespostas,
-      tamanhoHectares: selectedSize.hectares,
-    });
+    let result: ScoringResult;
+    try {
+      result = await scoreFinalDiagnosis({
+        respostas: respostas as MaturidadeRespostas,
+        situacao: situacao as SituacaoRespostas,
+        tamanhoHectares: selectedSize.hectares,
+      });
+    } catch (error) {
+      setSubmissionError(error instanceof Error ? error.message : "Falha ao calcular o resultado final.");
+      setEmailStatus("error");
+      setLoading(false);
+      return;
+    }
+
     const text = escreverTextoResultado(result);
 
     setResultado(result);
@@ -395,9 +487,13 @@ export default function MaturityDiagnosisForm() {
               number: option.value,
               label: option.label,
               active: respostas[currentQuestion.key] === option.value,
-              onClick: () => setRespostas((current) => ({ ...current, [currentQuestion.key]: option.value })),
+              onClick: () => handleMaturityAnswer(currentQuestion.key, option.value),
             }))}
           />
+        )}
+
+        {step === checkpointStep && initialResult && (
+          <InitialResultScreen result={initialResult} />
         )}
 
         {currentSituation && (
@@ -442,14 +538,20 @@ export default function MaturityDiagnosisForm() {
 
             <div className="space-y-3">
               <div className="grid gap-3 sm:grid-cols-2">
-                <Input required className="h-11" placeholder="Nome" value={lead.primeiro_nome} onChange={(event) => handleLeadChange("primeiro_nome", event.target.value)} />
-                <Input required className="h-11" placeholder="Sobrenome" value={lead.sobrenome} onChange={(event) => handleLeadChange("sobrenome", event.target.value)} />
+                <Input required className="h-11" placeholder="Nome*" value={lead.primeiro_nome} onChange={(event) => handleLeadChange("primeiro_nome", event.target.value)} />
+                <Input className="h-11" placeholder="Sobrenome" value={lead.sobrenome} onChange={(event) => handleLeadChange("sobrenome", event.target.value)} />
               </div>
-              <Input required className="h-11" type="email" placeholder="E-mail" value={lead.email} onChange={(event) => handleLeadChange("email", event.target.value)} />
+              <Input required className="h-11" type="email" placeholder="E-mail*" value={lead.email} onChange={(event) => handleLeadChange("email", event.target.value)} />
+              {lead.email && !emailAnswered && (
+                <p className="text-xs font-medium text-red-700">Informe um e-mail valido.</p>
+              )}
               <div className="grid gap-3 sm:grid-cols-2">
-                <Input required className="h-11" type="tel" placeholder="WhatsApp" value={lead.telefone} onChange={(event) => handleLeadChange("telefone", event.target.value)} />
-                <Input required className="h-11" placeholder="Estado ou país" value={lead.localizacao} onChange={(event) => handleLeadChange("localizacao", event.target.value)} />
+                <Input required className="h-11" type="tel" inputMode="tel" placeholder="WhatsApp com DDD*" value={lead.telefone} onChange={(event) => handleLeadChange("telefone", event.target.value)} />
+                <Input className="h-11" placeholder="Estado ou país" value={lead.localizacao} onChange={(event) => handleLeadChange("localizacao", event.target.value)} />
               </div>
+              {lead.telefone && !phoneAnswered && (
+                <p className="text-xs font-medium text-red-700">Informe um WhatsApp valido com DDD.</p>
+              )}
             </div>
           </div>
         )}
@@ -460,7 +562,7 @@ export default function MaturityDiagnosisForm() {
           type="button"
           variant="outline"
           onClick={() => setStep((current) => Math.max(0, current - 1))}
-          disabled={step === 0 || loading}
+          disabled={step === 0 || loading || scoringInitial}
           className="h-11 rounded-lg border-[#cfd8d4] bg-white text-terra-navy hover:bg-[#f4f7f5]"
         >
           <ArrowLeft className="h-4 w-4" />
@@ -470,12 +572,18 @@ export default function MaturityDiagnosisForm() {
         {step < leadStep ? (
           <Button
             type="button"
-            onClick={() => setStep((current) => Math.min(leadStep, current + 1))}
-            disabled={!canAdvance}
+            onClick={handleNext}
+            disabled={!canAdvance || scoringInitial}
             className="h-11 rounded-lg bg-terra-navy px-5 text-white hover:bg-terra-dark-blue"
           >
-            Avançar
-            <ArrowRight className="h-4 w-4" />
+            {scoringInitial ? (
+              <Loader2 className="h-4 w-4 animate-spin" />
+            ) : step === checkpointStep ? (
+              "Continuar"
+            ) : (
+              "Avançar"
+            )}
+            {!scoringInitial && <ArrowRight className="h-4 w-4" />}
           </Button>
         ) : (
           <Button
@@ -532,6 +640,44 @@ function QuestionScreen({
             <span className="leading-snug">{option.label}</span>
           </button>
         ))}
+      </div>
+    </div>
+  );
+}
+
+function InitialResultScreen({ result }: { result: InitialScoringResult }) {
+  return (
+    <div className="grid gap-5 lg:grid-cols-[0.78fr_1.22fr] lg:items-start">
+      <div>
+        <p className="text-sm font-semibold uppercase tracking-[0.14em] text-terra-navy">
+          Diagnostico inicial
+        </p>
+        <h3 className="mt-2 text-2xl font-bold leading-tight text-terra-navy">
+          Seu diagnostico inicial esta pronto
+        </h3>
+        <p className="mt-3 text-sm leading-relaxed text-terra-navy/65">
+          Agora, so mais algumas perguntas rapidas sobre a sua situacao e planos. Isso nao muda o seu nivel de maturidade, mas ajuda a indicar o servico certo para voce.
+        </p>
+      </div>
+
+      <div className="space-y-4 rounded-xl border border-[#e2ddcf] bg-[#f8f7f3] p-5">
+        <div>
+          <p className="text-xs font-semibold uppercase tracking-[0.12em] text-terra-navy/55">
+            Seu nivel
+          </p>
+          <p className="mt-1 text-2xl font-bold text-terra-navy">{result.nivelLabel}</p>
+        </div>
+        <div>
+          <p className="text-xs font-semibold uppercase tracking-[0.12em] text-terra-navy/55">
+            Area que mais precisa de atencao agora
+          </p>
+          <p className="mt-1 text-lg font-semibold text-terra-navy">
+            {result.dimensaoMaisFracaLabel}
+          </p>
+        </div>
+        <p className="text-sm leading-relaxed text-terra-navy/75">
+          Seu diagnostico inicial: nivel {result.nivelLabel}, com {result.dimensaoMaisFracaLabel} como area que mais precisa de atencao agora.
+        </p>
       </div>
     </div>
   );

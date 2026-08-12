@@ -83,11 +83,11 @@ export default function EmpresaPecuariaGO() {
         <section className="py-0 md:pt-24 z-20">
           <div className="container mx-auto pt-14 max-w-7xl shadow-[0px_-40px_40px_-20px_rgba(0,0,0,0.3)] text-center bg-white relative mt-[-20px] md:-mt-40">
             <div className=" space-y-2 md:space-y-0 lg:space-y-2 xl:space-y-3 mb-10">
-              <h2 className="text-2xl sm:text-3xl md:text-5xl lg:text-3xl xl:text-5xl md:text-center font-bold font-lexend text-white">
+              <h1 className="text-2xl sm:text-3xl md:text-5xl lg:text-3xl xl:text-5xl md:text-center font-bold font-lexend text-white">
                 <span className="text-terra-navy px-2">
                   Curso de Gestão da Empresa Pecuária
                 </span>
-              </h2>
+              </h1>
             </div>
 
             {/* Texto principal */}
