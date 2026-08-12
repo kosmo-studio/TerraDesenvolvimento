@@ -1,5 +1,3 @@
-const DEFAULT_KOMMO_BASE_URL = "https://api-g.kommo.com";
-
 const PIPELINE_ID = 14233072;
 const STATUS_QUALIFICADO = 109897840;
 const STATUS_PERFIL_COMPLETO = 109897844;
@@ -207,10 +205,19 @@ async function kommoRequest(env, path, { method = "POST", body } = {}) {
     throw new Error("KOMMO_ACCESS_TOKEN não configurado no Cloudflare.");
   }
 
+  if (!env.KOMMO_BASE_URL) {
+    throw new Error("KOMMO_BASE_URL não configurado no Cloudflare. Use a URL da conta, no formato https://subdominio.kommo.com.");
+  }
+
   const accessToken = String(env.KOMMO_ACCESS_TOKEN)
     .trim()
-    .replace(/^Bearer\s+/i, "");
-  const baseUrl = String(env.KOMMO_BASE_URL || DEFAULT_KOMMO_BASE_URL).replace(/\/$/, "");
+    .replace(/^Bearer\s+/i, "")
+    .replace(/^["']|["']$/g, "")
+    .trim();
+  const baseUrl = String(env.KOMMO_BASE_URL)
+    .trim()
+    .replace(/^["']|["']$/g, "")
+    .replace(/\/$/, "");
 
   const response = await fetch(`${baseUrl}${path}`, {
     method,
