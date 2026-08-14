@@ -31,6 +31,7 @@ import EmpresaPecuariaGO from "./pages/internasCursos/EmpresaPecuariaAG";
 import EmpresaPecuariaXG from "./pages/internasCursos/EmpresaPecuariaXG";
 import EmpresaPecuariaMT from "./pages/internasCursos/EmpresaPecuariaMT";
 import EmpresaPecuariaPP from "./pages/internasCursos/EmpresaPecuariaPP";
+import EmpresaPecuariaLD from "./pages/internasCursos/EmpresaPecuariaLD";
 import FloatingWhatsApp from "./components/FloatingWhatsApp";
 
 const queryClient = new QueryClient();
@@ -64,6 +65,7 @@ const App = () => (
           <Route path="/EmpresaPecuariaXG" element={<EmpresaPecuariaXG />} />
           <Route path="/EmpresaPecuariaMT" element={<EmpresaPecuariaMT />} />
           <Route path="/EmpresaPecuariaPP" element={<EmpresaPecuariaPP />} />
+          <Route path="/EmpresaPecuariaLD" element={<EmpresaPecuariaLD />} />
 
           <Route path="/nossaHistoria" element={<NossaHistoria />} />
           <Route path="/noticias/:slug" element={<DetalheNoticia />} />

@@ -144,6 +144,12 @@ const staticSeo: Record<string, SeoData> = {
       "Detalhes, módulos e inscrições do Curso de Gestão da Empresa Pecuária em Presidente Prudente.",
     image: `${SITE_URL}/images/bannerPP-png.webp`,
   },
+  "/EmpresaPecuariaLD": {
+    title: "Curso de Gestão da Empresa Pecuária em Londrina | Terra",
+    description:
+      "Detalhes, módulos e inscrições do Curso de Gestão da Empresa Pecuária em Londrina.",
+    image: `${SITE_URL}/images/banner-londrina-gestao.png`,
+  },
 };
 
 const ensureMeta = (selector: string, create: () => HTMLMetaElement) => {

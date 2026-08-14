@@ -10,6 +10,16 @@ import { MapPin, Calendar, ArrowRight } from "lucide-react";
 // --- BANCO DE DADOS DE EVENTOS ---
 // Adicione ou remova cidades aqui para atualizar a tela automaticamente
 const listaEventosCursos = [
+  {
+    id: "LONDRINA-PR",
+    cidade: "LONDRINA",
+    estado: "PR",
+    data: "29 e 30 de setembro de 2026",
+    local: "IDR - PARANÁ",
+    imagem: "/images/banner-londrina-gestao.png",
+    link: "/EmpresaPecuariaLD", 
+    status: "Inscrições Abertas"
+  },
   // {
   //   id: "GOIÂNIA-GO",
   //   cidade: "GOIÂNIA",
