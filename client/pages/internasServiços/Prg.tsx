@@ -2,10 +2,20 @@ import AnimatedSection from "@/components/AnimatedSection";
 import Footer from "@/components/Footer";
 import Header from "@/components/Header";
 import ClientsSection from "@/components/interno/ClientsSection";
-import CTASection from "@/components/interno/CTASection";
-import HeroSection from "@/components/interno/HeroSection";
 import { Button } from "@/components/ui/button";
-const passos = [
+import { CheckCircle2, Leaf } from "lucide-react";
+
+const beneficios = [
+  "Rentabilidade",
+  "Segurança",
+  "Operação Compartilhada",
+  "Gestão Transparente",
+  "Atividade Agropecuária",
+  "Valorização do Ativo",
+  "Governança Corporativa",
+];
+
+const premissas = [
   {
     titulo: "EFICIÊNCIA PRODUTIVA",
     descricao:
@@ -51,88 +61,78 @@ export default function Prg() {
                 className="w-72 h-auto mb-6"
               />
               <p className="text-terra-navy text-md md:text-2xl max-w-4xl px-5 font-light">
-                O Programa de Recuperação (ou intervenção) Gerencial tem por
+                O Plano de Recuperação (ou intervenção) Gerencial tem por
                 missão gerar lucro para seus acionistas e investidores através
                 da transformação de áreas, valorização de ativos e
-                desenvolvimento da atividade agropecuária.
+                desenvolvimento da atividade agropecuária. Operar com
+                excelência no que tange produção e fluxo de caixa, primando
+                pela transparência e inovação nos processos.
               </p>
             </div>
           </section>
         </AnimatedSection>
 
-        {/* --- Seção de Introdução --- */}
-        <section className="py-0 md:py-24 z-20">
+        <section className="py-0 md:py-20 z-20">
           <AnimatedSection>
-            <div className="container mx-auto pt-14 max-w-7xl shadow-[0px_-40px_40px_-20px_rgba(0,0,0,0.3)] text-center bg-white relative mt-[-20px] md:-mt-40">
-              <div className="flex flex-col md:flex-row items-center gap-8 px-0 md:px-0 lg:px-5 xl:px-8">
-                <div className="flex-shrink-0 ">
-                  <img
-                    src="/images/terra logo.webp"
-                    alt="Descrição da imagem"
-                    className="w-28 h-28 md:w-20 md:h-20 lg:w-32 lg:h-32 mx-auto"
-                  />
-                </div>
-                <div className=" space-y-2 md:space-y-0 lg:space-y-2 xl:space-y-3 ">
-                  <h2 className="text-xl sm:text-3xl md:text-xl lg:text-2xl xl:text-4xl text-left font-light font-lexend text-white">
-                    <span className="bg-terra-navy text-white px-2">
-                      Após decisão e aquisição da propriedade, coordenamos
-                    </span>
-                  </h2>
-                  <h2 className="text-xl sm:text-3xl md:text-xl lg:text-2xl xl:text-4xl text-left font-light font-lexend text-white">
-                    <span className="bg-terra-navy text-white px-2">
-                      projeto de exploração agropecuária para atender as
-                    </span>
-                  </h2>
-                  <h2 className="text-xl sm:text-3xl md:text-xl lg:text-2xl xl:text-4xl text-left font-light font-lexend text-white">
-                    <span className="bg-terra-navy text-white px-2">
-                      expectativas financeiras e gerenciais dos investidores.
-                    </span>
-                  </h2>
-                </div>
-              </div>
-              <p className="text-2xl sm:text-3xl md:text-4xl px-4 lg:px-[5%] xl:px-[5%] font-bold font-lexend text-terra-navy mt-24 mb-10 sm:mb-[-35px]">
-                Afinal, uma avaliação prévia criteriosa do investimento garante
-                a certeza ao investidor da melhor relação benefício custo no uso
-                do seu recurso.
-              </p>
-              <p className="text-2xl sm:text-3xl md:text-4xl px-4 lg:px-[10%] xl:px-[0%] font-bold font-lexend text-terra-navy mt-24 mb-20 sm:mb-[-35px]">
-                Executamos a Análise e Plano de Negócio em 05 etapas:
-              </p>
-            </div>
-          </AnimatedSection>
-        </section>
+            <div className="container mx-auto max-w-7xl shadow-[0px_-40px_40px_-20px_rgba(0,0,0,0.3)] bg-white relative mt-[-20px] md:-mt-40 px-5 py-12 md:px-10 md:py-16 lg:px-14">
+              <div className="flex flex-col gap-8 md:flex-row md:items-start">
+                <img
+                  src="/images/terra logo.webp"
+                  alt="Terra Desenvolvimento Agropecuário"
+                  className="h-20 w-20 flex-shrink-0 md:h-28 md:w-28"
+                />
 
-        <section className="px-4 py-16">
-          <AnimatedSection>
-            <div className="max-w-5xl mx-auto">
-              <div className="flex flex-col items-center space-y-8">
-                {passos.map((passo) => (
-                  // A CAIXA PRINCIPAL COM A BORDA
-                  <div
-                    key={passo.titulo}
-                    className="border rounded-2xl border-terra-navy p-6 md:p-8 w-full"
-                  >
-                    {/* GRID INTERNO PARA AS DUAS COLUNAS DE TEXTO */}
-                    <div className="grid grid-cols-1 md:grid-cols-[1fr_2fr] gap-6 md:gap-8 items-center">
-                      {/* Coluna 1: Título */}
-                      <h3 className="text-xl md:text-3xl font-bold font-lexend text-terra-navy text-center">
-                        {passo.titulo}
-                      </h3>
+                <div className="flex-1">
+                  <p className="text-sm font-bold uppercase tracking-[0.22em] text-terra-gray">
+                    Benefícios
+                  </p>
+                  <div className="mt-4 flex flex-wrap gap-x-6 gap-y-4">
+                    {beneficios.map((beneficio) => (
+                      <div
+                        key={beneficio}
+                        className="flex min-w-[220px] items-center gap-3 text-terra-navy"
+                      >
+                        <CheckCircle2 className="h-5 w-5 flex-shrink-0 text-terra-green" />
+                        <span className="font-lexend text-base font-semibold md:text-lg">
+                          {beneficio}
+                        </span>
+                      </div>
+                    ))}
+                  </div>
 
-                      {/* Coluna 2: Descrição */}
-                      <p className="text-base md:text-lg text-terra-gray text-center md:text-left">
-                        {passo.descricao}
-                      </p>
+                  <div className="mt-12 border-t border-terra-navy/15 pt-10">
+                    <div className="flex items-center gap-3">
+                      <Leaf className="h-7 w-7 text-terra-green" />
+                      <h2 className="text-3xl font-bold font-lexend text-terra-navy sm:text-4xl lg:text-5xl">
+                        Premissas-chave
+                      </h2>
+                    </div>
+
+                    <div className="mt-8 divide-y divide-terra-navy/15">
+                      {premissas.map((premissa) => (
+                        <div
+                          key={premissa.titulo}
+                          className="grid gap-4 py-7 md:grid-cols-[0.42fr_1fr] md:gap-8"
+                        >
+                          <h3 className="font-lexend text-xl font-bold text-terra-navy md:text-2xl">
+                            {premissa.titulo}
+                          </h3>
+
+                          <p className="text-base leading-relaxed text-terra-gray md:text-lg">
+                            {premissa.descricao}
+                          </p>
+                        </div>
+                      ))}
                     </div>
                   </div>
-                ))}
+                </div>
               </div>
             </div>
           </AnimatedSection>
         </section>
         {/* --- Textos e Divisor --- */}
         <AnimatedSection>
-          <div className="max-w-6xl px-3 flex flex-col gap-6 mt-20 sm:mt-40 mx-auto items-center">
+          <div className="max-w-6xl px-3 flex flex-col gap-6 mt-8 sm:mt-16 mx-auto items-center">
             <h2 className="text-[#162946] text-2xl sm:text-4xl md:text-3xl lg:text-4xl xl:text-5xl text-center font-semibold leading-relaxed">
               Com uma gestão orientada para resultados, garantimos a recuperação
               da performance e a valorização dos ativos da fazenda.
