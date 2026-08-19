@@ -1,5 +1,53 @@
 export const todasAsNoticias = [
   {
+    id: 16,
+    slug: "terra-talks-credito-carbono-agronegocio-tourba",
+    titulo: "Terra Talks aborda novas possibilidades do crédito de carbono para o agronegócio",
+    resumo: "Segundo episódio do Terra Talks recebeu Ricardo Gamarra, da Tourba, para discutir como áreas produtivas podem participar de projetos de crédito de carbono.",
+    imagemDestaque: "/images/noticias/terra-talks-credito-carbono-tourba.webp",
+    dataPublicacao: "19 de agosto de 2026",
+    autor: "Por Terra Desenvolvimento",
+    conteudo: `
+      <p>O mercado de crédito de carbono vem ampliando suas possibilidades dentro do agronegócio. Se antes os projetos estavam mais associados à conservação de florestas e reservas, hoje também existem iniciativas voltadas à recuperação de áreas produtivas, mantendo a atividade agropecuária.</p>
+
+      <p>Esse foi o tema do segundo episódio do Terra Talks, apresentado por Humberto Moreto, da Terra Desenvolvimento, que recebeu Ricardo Gamarra, da Tourba, para conversar sobre o funcionamento desse mercado e as oportunidades para produtores rurais.</p>
+
+      <h2>Crédito de carbono também pode estar ligado à produção</h2>
+      <p>Durante a conversa, Ricardo explicou que áreas de produção podem participar de projetos quando novas práticas contribuem para a recuperação do solo e o sequestro de carbono.</p>
+
+      <p>Na pecuária, um exemplo é a recuperação ou reforma de pastagens degradadas. A melhoria da cobertura do solo e das condições produtivas da área pode, dentro dos critérios estabelecidos, ser incorporada a um projeto de carbono.</p>
+
+      <p>Na agricultura, práticas como o uso de plantas de cobertura também podem fazer parte desse processo.</p>
+
+      <p>A proposta é que a sustentabilidade esteja associada à melhoria do próprio sistema produtivo, sem que a propriedade precise deixar de produzir.</p>
+
+      <h2>Como o projeto é validado?</h2>
+      <p>Para que o carbono sequestrado possa ser certificado, é necessário seguir uma metodologia e comprovar que a mudança realmente aconteceu.</p>
+
+      <p>Segundo Ricardo, os projetos desenvolvidos pela Tourba seguem a metodologia VM042, da Verra, e passam por processos de certificação.</p>
+
+      <p>A propriedade também precisa apresentar documentação e evidências das práticas realizadas, como registros, notas fiscais e outros dados capazes de demonstrar a recuperação ou implantação da nova prática.</p>
+
+      <p>Esse processo é fundamental para garantir a rastreabilidade e a credibilidade dos créditos gerados.</p>
+
+      <h2>Uma oportunidade que exige planejamento</h2>
+      <p>Outro ponto destacado no Terra Talks foi que o crédito de carbono não deve ser visto como uma alternativa isolada de geração de receita.</p>
+
+      <p>A recuperação de uma pastagem, por exemplo, já pode trazer benefícios produtivos para a propriedade. O crédito de carbono surge como uma possibilidade adicional associada a esse processo.</p>
+
+      <p>Por isso, conhecer os critérios, organizar as informações da propriedade e manter registros das práticas realizadas são etapas importantes para quem pretende avaliar essa oportunidade.</p>
+
+      <h2>Sustentabilidade e produtividade no mesmo caminho</h2>
+      <p>O segundo episódio do Terra Talks mostra como o mercado de carbono começa a se aproximar cada vez mais da realidade das áreas produtivas.</p>
+
+      <p>Para o produtor, a discussão amplia o olhar sobre sustentabilidade: recuperar uma área, melhorar sua capacidade produtiva e adotar práticas que contribuam para o sequestro de carbono podem fazer parte de uma mesma estratégia.</p>
+
+      <p>O crédito de carbono, nesse contexto, aparece como uma possibilidade adicional dentro de um processo maior de evolução da propriedade.</p>
+
+      <p>O segundo Terra Talks já está disponível nas redes sociais da Terra Desenvolvimento.</p>
+    `
+  },
+  {
     id: 15,
     slug: "terra-talks-estreia-debate-nutricao-animal-manejo-seca",
     titulo: "Terra Talks estreia com debate sobre nutrição animal, manejo de seca e margem operacional",
