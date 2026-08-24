@@ -48,10 +48,14 @@ export default function Prg() {
         <Header />
         {/* Hero Section */}
         <AnimatedSection variant="fade">
-          <section className="relative w-full h-[80vh] text-white">
+          <section className="relative w-full h-[80vh] overflow-hidden text-white">
             <div
-              className="absolute inset-0 bg-cover bg-center"
+              className="absolute inset-0 scale-105 bg-cover bg-center blur-[1px] brightness-[0.68]"
               style={{ backgroundImage: `url('/images/bg-prg.webp')` }}
+              aria-hidden="true"
+            />
+            <div
+              className="absolute inset-0 bg-terra-navy/25"
               aria-hidden="true"
             />
             <div className="relative h-full flex flex-col items-center pt-20 md:pt-32 xl:pt-32 text-center p-4 ">
@@ -60,7 +64,7 @@ export default function Prg() {
                 alt="PRG LOGO"
                 className="w-72 h-auto mb-6"
               />
-              <p className="text-terra-navy text-md md:text-2xl max-w-4xl px-5 font-light">
+              <p className="max-w-4xl px-5 text-md font-normal leading-relaxed text-white drop-shadow-[0_2px_8px_rgba(0,0,0,0.65)] md:text-2xl">
                 O Plano de Recuperação (ou intervenção) Gerencial tem por
                 missão gerar lucro para seus acionistas e investidores através
                 da transformação de áreas, valorização de ativos e
