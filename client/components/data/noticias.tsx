@@ -1,5 +1,104 @@
 export const todasAsNoticias = [
   {
+    id: 17,
+    slug: "gestao-risco-agronegocio-fazenda-mercado-volatil",
+    titulo: "Gestão de risco no agronegócio: como preparar a fazenda para um mercado mais volátil",
+    resumo: "Palestra de Thiago Bernardino no Encontro de Gestores destacou a importância de profissionalizar a gestão financeira, acompanhar os ciclos de mercado e transformar informação em estratégia.",
+    imagemDestaque: "/images/noticias/thiago-bernardino-gestao-risco-agronegocio.webp",
+    dataPublicacao: "27 de agosto de 2026",
+    autor: "Por Terra Desenvolvimento",
+    conteudo: `
+      <p>A atividade agropecuária sempre esteve sujeita às oscilações do mercado. Preços, custos, crédito, câmbio, clima e demanda mudam constantemente e interferem diretamente na rentabilidade das empresas rurais.</p>
+
+      <p>O desafio, portanto, não está apenas em acompanhar essas mudanças, mas em estar preparado para tomar decisões quando elas acontecem.</p>
+
+      <p>Esse foi um dos principais pontos abordados pelo economista e pesquisador Thiago Bernardino durante sua participação no Encontro de Gestores. Ao analisar o cenário do agronegócio, a evolução dos ciclos de mercado e os impactos econômicos sobre a produção, a palestra trouxe uma provocação que se aplica diretamente à gestão das propriedades rurais: quanto mais complexo fica o ambiente de negócios, menos espaço existe para decisões tomadas apenas pela urgência.</p>
+
+      <h2>Um novo cenário exige uma nova postura financeira</h2>
+      <p>Entre os fatores que vêm pressionando o agronegócio estão o custo do capital, a compressão das margens e as dificuldades de acesso a crédito. Diante desse ambiente, a gestão financeira deixa de ser apenas uma ferramenta de acompanhamento e passa a ocupar um papel estratégico dentro da empresa rural.</p>
+
+      <p>Thiago chamou atenção para a necessidade de superar o que definiu como "amadorismo financeiro". Na prática, isso significa deixar de tomar decisões de compra, venda ou investimento apenas quando a necessidade aparece e começar a trabalhar com planejamento.</p>
+
+      <p>Quando uma decisão financeira é tomada sob pressão, as alternativas disponíveis tendem a ser menores. Já quando existe planejamento, o gestor consegue avaliar diferentes cenários, entender seus impactos e escolher o momento mais adequado para agir.</p>
+
+      <p>Planejar não elimina a incerteza. Mas aumenta a capacidade de decidir dentro dela.</p>
+
+      <h2>O mercado é cíclico e a gestão precisa considerar isso</h2>
+      <p>Outro ponto destacado na palestra foi a característica cíclica da atividade agropecuária.</p>
+
+      <p>Na pecuária, por exemplo, períodos de valorização são acompanhados por momentos de ajuste. Em fases de preços mais favoráveis, existe maior capacidade de geração de caixa e investimento. Quando o ciclo se inverte, empresas que não se prepararam podem enfrentar redução de capital, perda de capacidade de investimento e necessidade de tomar decisões defensivas.</p>
+
+      <p>Por isso, uma gestão orientada apenas pelo cenário atual pode se tornar vulnerável justamente quando as condições mudarem.</p>
+
+      <p>A pergunta passa a ser outra: como a empresa estará preparada para o próximo ciclo?</p>
+
+      <p>Isso envolve considerar antecipadamente a capacidade de produção, a disponibilidade de recursos, os compromissos financeiros e os investimentos necessários para atravessar diferentes momentos do mercado.</p>
+
+      <p>A lógica também vale para a agricultura. Bernardino destacou que a atividade é cíclica e que períodos de margens mais apertadas podem reduzir a capacidade de investimento das propriedades, tornando ainda mais importante o acompanhamento dos custos e da geração de caixa.</p>
+
+      <h2>Produção, custo e margem precisam ser analisados juntos</h2>
+      <p>Um dos riscos da gestão rural é olhar para a produção de maneira isolada.</p>
+
+      <p>Produzir mais pode ser positivo, mas o aumento de volume não necessariamente significa aumento de resultado. É preciso considerar quanto custa produzir, qual é o preço obtido e quanto efetivamente permanece como margem para a empresa.</p>
+
+      <p>Esse olhar integrado se torna ainda mais importante em momentos de pressão sobre custos.</p>
+
+      <p>Na pecuária, por exemplo, a valorização do boi pode alterar a relação entre os diferentes elos da cadeia. Ao mesmo tempo em que o preço do animal sobe, custos relacionados à nutrição, sanidade e reprodução também podem avançar, pressionando as margens.</p>
+
+      <p>A gestão precisa, portanto, acompanhar não apenas quanto a empresa produz, mas quanto custa produzir e qual resultado essa produção gera. É essa leitura que permite diferenciar crescimento de resultado.</p>
+
+      <h2>Informação precisa chegar à decisão</h2>
+      <p>Outro elemento central apresentado por Thiago foi o papel dos dados.</p>
+
+      <p>Informações precisas sobre custos, produção, preços e desempenho permitem que o gestor compreenda melhor o negócio e antecipe riscos. Na palestra, a utilização de dados foi associada justamente à possibilidade de reduzir custos, otimizar recursos e mitigar diferentes riscos da atividade.</p>
+
+      <p>Mas possuir dados não significa, por si só, ter uma gestão mais eficiente.</p>
+
+      <p>O valor da informação está na capacidade de utilizá-la para responder perguntas concretas: quanto comprar, quanto produzir, quanto investir, quando vender, e qual risco assumir.</p>
+
+      <p>Quando essas respostas são construídas a partir de informações organizadas e confiáveis, a tomada de decisão deixa de depender exclusivamente da percepção do momento.</p>
+
+      <h2>Gestão de risco vai além do preço</h2>
+      <p>Em um mercado volátil, falar em gestão de risco não significa tentar prever exatamente o que vai acontecer.</p>
+
+      <p>Significa entender onde estão os riscos do negócio e quais alternativas existem para cada cenário.</p>
+
+      <p>Na parte final da palestra, Thiago organizou esse conceito em três dimensões principais: risco de preço, risco de produção e risco de comercialização.</p>
+
+      <p>O risco de preço envolve a relação entre custo e venda. Quanto custa produzir e por quanto será possível comercializar?</p>
+
+      <p>O risco de produção está relacionado à capacidade de entregar o que foi planejado, considerando as variáveis que podem interferir no resultado.</p>
+
+      <p>Já o risco de comercialização envolve uma pergunta que muitas vezes recebe menos atenção: como e quando vender?</p>
+
+      <p>Ter uma estratégia comercial definida pode ser tão importante quanto produzir bem.</p>
+
+      <h2>Estratégia é decidir antes que a urgência decida</h2>
+      <p>A complexidade do mercado torna cada vez mais difícil administrar uma empresa rural olhando apenas para dentro da porteira.</p>
+
+      <p>Questões econômicas, comerciais e geopolíticas interferem nos preços, na demanda, nos custos e nas oportunidades disponíveis para o produtor. Durante a palestra, Thiago também abordou o impacto desses movimentos sobre o agronegócio brasileiro e a importância de compreender o posicionamento do Brasil no mercado internacional.</p>
+
+      <p>Mas acompanhar o cenário externo só produz valor quando essa leitura chega à gestão da empresa.</p>
+
+      <p>É preciso transformar informação em planejamento e planejamento em decisão.</p>
+
+      <blockquote>"Se você não tiver estratégia, você vai ser estratégia de outros."</blockquote>
+
+      <p>No campo, isso significa definir com clareza o que a empresa pretende produzir, quanto pretende investir, quais riscos está disposta a assumir e quais movimentos precisa antecipar.</p>
+
+      <h2>O futuro exige empresas rurais mais preparadas</h2>
+      <p>O agronegócio continuará convivendo com ciclos, oscilações de preços, mudanças no custo do capital, alterações climáticas e transformações no mercado consumidor.</p>
+
+      <p>Não existe uma fórmula capaz de eliminar essas variáveis. Existe, porém, a possibilidade de construir empresas mais preparadas para lidar com elas.</p>
+
+      <p>Isso passa por informação confiável, planejamento financeiro, acompanhamento de indicadores, gestão de riscos e clareza estratégica.</p>
+
+      <p>Mais do que tentar prever exatamente qual será o próximo movimento do mercado, a gestão precisa criar condições para que a empresa consiga tomar boas decisões diante de diferentes possibilidades.</p>
+
+      <p>Porque o mercado muda. Os ciclos mudam. As condições mudam. E uma gestão preparada precisa estar pronta para mudar junto, sem perder de vista o resultado do negócio.</p>
+    `
+  },
+  {
     id: 16,
     slug: "terra-talks-credito-carbono-agronegocio-tourba",
     titulo: "Terra Talks aborda novas possibilidades do crédito de carbono para o agronegócio",
