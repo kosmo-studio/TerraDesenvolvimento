@@ -1,5 +1,119 @@
 export const todasAsNoticias = [
   {
+    id: 18,
+    slug: "gestao-pecuaria-pastagem-suplementacao-intensificacao-resultados",
+    titulo: "Gestão na pecuária: como combinar pastagem, suplementação e intensificação para melhorar os resultados",
+    resumo: "Durante o Encontro de Gestores, Gustavo Rezende discutiu como manejo de pastagens, suplementação, intensificação e gestão podem trabalhar juntos para aumentar a eficiência dos sistemas pecuários.",
+    imagemDestaque: "/images/noticias/gustavo-rezende-gestao-pecuaria.webp",
+    dataPublicacao: "11 de setembro de 2026",
+    autor: "Por Terra Desenvolvimento",
+    conteudo: `
+      <p>Na pecuária, é comum que determinadas estratégias sejam apresentadas como escolhas opostas.</p>
+
+      <p>Pasto ou confinamento. Suplementação ou produção a pasto. Intensificar ou manter um sistema tradicional.</p>
+
+      <p>Mas, durante sua participação no Encontro de Gestores, Gustavo Rezende trouxe uma perspectiva diferente: essas ferramentas não precisam competir entre si. Elas podem cumprir funções complementares dentro de um mesmo sistema.</p>
+
+      <p>A questão, segundo os conceitos apresentados durante a palestra, está menos em definir qual estratégia é "melhor" e mais em compreender qual combinação faz sentido para os objetivos, a estrutura e a realidade de cada negócio.</p>
+
+      <h2>Gestão começa com a capacidade de enxergar o que acontece</h2>
+      <p>Antes de entrar nos temas relacionados à produção animal, a palestra trouxe uma reflexão sobre a importância da informação na gestão.</p>
+
+      <p>De um lado, existem propriedades que tomam decisões com poucas informações sobre o que realmente acontece dentro da operação. De outro, existem negócios que acumulam uma grande quantidade de dados, mas encontram dificuldade em transformar essas informações em decisões.</p>
+
+      <p>Ter números, portanto, não significa automaticamente fazer gestão.</p>
+
+      <p>O valor da informação está na capacidade de utilizá-la para compreender o negócio, identificar oportunidades e ajustar a rota quando necessário.</p>
+
+      <p>Como apresentado durante a palestra, acompanhar indicadores de produção e custo é fundamental para entender se as estratégias adotadas estão, de fato, contribuindo para o resultado da fazenda.</p>
+
+      <h2>Crescer começa com desempenho</h2>
+      <p>Na pecuária, o crescimento da produção costuma ser associado, muitas vezes, ao aumento da quantidade de animais na propriedade.</p>
+
+      <p>Mas a capacidade de ampliar a lotação está diretamente relacionada à capacidade do sistema de sustentar esse crescimento.</p>
+
+      <p>A palestra destacou uma relação simples: a produção da fazenda depende da quantidade de animais e do desempenho individual de cada um deles.</p>
+
+      <p>Quando o desempenho individual é baixo, aumentar a quantidade de animais pode ampliar a pressão sobre o sistema antes de gerar um resultado maior.</p>
+
+      <p>Por outro lado, ganhos individuais consistentes ajudam a aumentar a eficiência e podem criar condições para que a propriedade amplie sua capacidade produtiva.</p>
+
+      <p>Produzir mais, portanto, envolve mais do que colocar mais animais na área. Envolve alimento, estrutura, planejamento, controle e capacidade operacional para sustentar o sistema.</p>
+
+      <h2>O resultado começa antes da balança</h2>
+      <p>Outro ponto importante da palestra foi o manejo das pastagens.</p>
+
+      <p>À primeira vista, uma área pode aparentar ter boa disponibilidade de capim. Mas a quantidade de forragem presente não é, sozinha, suficiente para determinar a capacidade de desempenho dos animais.</p>
+
+      <p>A estrutura dessa pastagem também interfere diretamente no consumo. O conceito apresentado é simples: o animal precisa conseguir colher o alimento com eficiência.</p>
+
+      <p>Quando a estrutura do pasto dificulta esse processo, o animal pode gastar mais tempo e energia para consumir a quantidade necessária. Assim, mesmo com alimento disponível, o consumo pode não ser suficiente para sustentar o desempenho esperado.</p>
+
+      <p>Como síntese prática do manejo, a palestra apresentou uma regra simples para observar a estrutura da pastagem:</p>
+
+      <blockquote>Muita folha. Pouco talo. Nada morto.</blockquote>
+
+      <p>A mensagem reforça que o resultado produtivo começa muito antes da pesagem. Ele está diretamente ligado às condições que o sistema oferece para que o animal consiga consumir e produzir.</p>
+
+      <h2>Tecnologia precisa fazer sentido para a operação</h2>
+      <p>Adubação, suplementação, intensificação, inseminação e investimentos em infraestrutura são algumas das ferramentas disponíveis para ampliar a eficiência dos sistemas pecuários.</p>
+
+      <p>Mas a adoção de uma tecnologia, por si só, não determina o resultado.</p>
+
+      <p>Durante a palestra, foi reforçada a importância de avaliar o impacto de cada ferramenta dentro do negócio: qual resultado ela pode gerar, qual problema ela ajuda a resolver, qual será seu impacto na produção, no custo e na operação, e se a propriedade possui capacidade para executar essa estratégia da forma adequada.</p>
+
+      <p>A tecnologia encontra seu potencial quando está alinhada à realidade da fazenda e à capacidade de execução da operação.</p>
+
+      <p>Por isso, antes da escolha, existe uma etapa fundamental: compreender o sistema e identificar quais ferramentas fazem sentido para aquele momento e para aqueles objetivos.</p>
+
+      <h2>Quando o tempo também entra na conta</h2>
+      <p>Um dos principais pontos apresentados na discussão sobre intensificação da recria foi a importância de ampliar a análise do resultado.</p>
+
+      <p>Dois sistemas podem apresentar resultados semelhantes quando analisados apenas por animal. Mas essa comparação pode mudar quando entram na conta outros fatores, como área utilizada, tempo necessário para completar o ciclo e margem gerada.</p>
+
+      <p>A intensificação, nesse contexto, busca acelerar determinados processos produtivos.</p>
+
+      <p>Ao reduzir o tempo de permanência do animal em uma fase ou dentro do sistema, é possível abrir espaço para novos ciclos mais rapidamente.</p>
+
+      <p>Isso significa que uma estratégia que apresenta custo maior por animal pode gerar um resultado diferente quando analisada sob a perspectiva da produção por hectare e por ano.</p>
+
+      <p>Durante a palestra, esse foi um dos principais exemplos utilizados para mostrar como a unidade de análise pode mudar completamente a percepção sobre o resultado.</p>
+
+      <h2>A estratégia depende do que se pretende otimizar</h2>
+      <p>Esse ponto ajuda a compreender por que diferentes sistemas podem fazer sentido para diferentes propriedades.</p>
+
+      <p>Uma fazenda pode buscar maior margem por animal. Outra pode priorizar produção por área. Outra pode precisar reduzir o tempo dos ciclos para aumentar sua capacidade de produção ao longo do ano.</p>
+
+      <p>Não existe uma única métrica capaz de explicar todo o resultado do negócio. É preciso entender qual objetivo está sendo priorizado e quais indicadores ajudam a avaliar esse objetivo.</p>
+
+      <p>A mesma lógica aparece na comparação entre diferentes níveis de intensificação: uma estratégia pode apresentar melhor resultado por animal, enquanto outra pode gerar maior resultado quando a análise considera a área e o tempo.</p>
+
+      <p>Por isso, decisões produtivas precisam ser avaliadas dentro de uma visão mais ampla do sistema.</p>
+
+      <h2>Pasto, suplementação e confinamento fazem parte do mesmo sistema</h2>
+      <p>Ao final da palestra, a principal mensagem voltou ao ponto de partida.</p>
+
+      <p>Pasto, suplementação e confinamento não precisam ser vistos como estratégias concorrentes.</p>
+
+      <p>Cada ferramenta pode cumprir uma função diferente dentro do sistema. A escolha entre uma ou outra - ou a combinação entre elas - depende da realidade da propriedade, dos recursos disponíveis, da estrutura, dos objetivos produtivos e da estratégia do negócio.</p>
+
+      <p>Mais do que buscar uma solução isolada, o desafio da gestão é entender como as diferentes ferramentas podem trabalhar juntas.</p>
+
+      <p>Uma fazenda eficiente não é construída apenas a partir de boas escolhas individuais. Ela é resultado de decisões que se conectam.</p>
+
+      <h2>Produção e gestão precisam caminhar juntas</h2>
+      <p>A palestra de Gustavo Rezende no Encontro de Gestores reforçou uma visão que vai além da técnica.</p>
+
+      <p>Produzir bem é importante. Mas, em um cenário de margens cada vez mais apertadas e sistemas cada vez mais complexos, compreender o resultado econômico e operacional de cada decisão se torna parte fundamental da gestão.</p>
+
+      <p>A produção mostra o que aconteceu. Os números ajudam a entender por que aconteceu. E a gestão transforma essas informações em decisões para o próximo ciclo.</p>
+
+      <p>É nesse processo que pastagem, suplementação, intensificação, infraestrutura e confinamento deixam de ser apenas ferramentas isoladas.</p>
+
+      <p>Elas passam a fazer parte de uma estratégia construída a partir da realidade de cada negócio.</p>
+    `
+  },
+  {
     id: 17,
     slug: "gestao-risco-agronegocio-fazenda-mercado-volatil",
     titulo: "Gestão de risco no agronegócio: como preparar a fazenda para um mercado mais volátil",
