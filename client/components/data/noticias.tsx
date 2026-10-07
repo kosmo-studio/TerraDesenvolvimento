@@ -1,5 +1,77 @@
 export const todasAsNoticias = [
   {
+    id: 19,
+    slug: "terra-desenvolvimento-canal-do-boi-gestao-margem-volume-pecuaria",
+    titulo: "Terra Desenvolvimento no Canal do Boi: gestão, margem e volume na pecuária",
+    resumo: "Em entrevista exibida pelo Canal do Boi em 02 de outubro de 2026, Luciano Mota Braga destacou a importância de conhecer custos, medir a produção e transformar indicadores em decisões para melhorar os resultados da pecuária.",
+    imagemDestaque: "/images/noticias/luciano-braga-canal-do-boi.jpg",
+    dataPublicacao: "02 de outubro de 2026",
+    autor: "Por Terra Desenvolvimento",
+    conteudo: `
+      <p>Em entrevista exibida pelo Canal do Boi em 02 de outubro de 2026, Luciano Mota Braga destacou a importância de conhecer custos, medir a produção e transformar indicadores em decisões para melhorar os resultados da pecuária.</p>
+
+      <p>Na pecuária de corte, produzir mais não significa necessariamente obter melhores resultados. Da mesma forma, alcançar bons índices de desempenho em determinado indicador pode ter pouco impacto sobre o negócio quando o volume produzido não acompanha essa eficiência.</p>
+
+      <p>Essa foi uma das reflexões apresentadas por Luciano Mota Braga, da Terra Desenvolvimento Agropecuário, em entrevista ao Canal do Boi.</p>
+
+      <p>Segundo Luciano, o gestor precisa manter o foco em dois pontos fundamentais: aumento de margem e aumento de volume.</p>
+
+      <blockquote>"Não adianta eu produzir muita arroba ganhando pouco, e não adianta eu ter um bom resultado por aqueles bezerros que eu estou desmamando, mas ter pouco bezerro para vender."</blockquote>
+
+      <p>A combinação entre eficiência e escala começa pelo conhecimento da própria operação. Antes de definir onde se quer chegar, é preciso compreender o ponto de partida.</p>
+
+      <h2>O diagnóstico como ponto de partida</h2>
+      <p>Para Luciano, o primeiro passo é saber exatamente o que está sendo produzido e quanto custa produzir.</p>
+
+      <p>Esse diagnóstico permite ao produtor compreender a realidade econômica da propriedade antes de estabelecer novos objetivos.</p>
+
+      <p>A partir desse ponto, o planejamento passa a ter uma função prática: direcionar as ações necessárias para melhorar margem e volume e buscar uma evolução que, segundo Luciano, pode representar de 3% a 5% do valor do patrimônio terra.</p>
+
+      <p>Mas planejamento exige informação confiável.</p>
+
+      <p>Por isso, a disciplina no registro dos custos é fundamental.</p>
+
+      <h2>Saber para onde o dinheiro está indo</h2>
+      <p>Mão de obra, sanidade, reprodução, máquinas, taxas e impostos são alguns dos componentes que precisam ser acompanhados dentro da propriedade.</p>
+
+      <p>Mais do que registrar despesas, a organização desses dados permite entender como os recursos estão sendo utilizados e quais pontos merecem atenção dentro da operação.</p>
+
+      <p>O mesmo raciocínio vale para a produção.</p>
+
+      <p>Quantas cabeças foram vendidas? Qual foi o peso? Quanto o rebanho ganhou por dia?</p>
+
+      <p>São perguntas que precisam encontrar respostas em dados.</p>
+
+      <h2>Medir para poder decidir</h2>
+      <p>Na pecuária de corte, a pesagem aparece como uma ferramenta essencial para transformar percepção em informação.</p>
+
+      <p>Como destaca Luciano, saber se o rebanho está ganhando 500 gramas, 650 gramas ou 211 gramas por dia muda completamente a leitura sobre o desempenho do sistema.</p>
+
+      <p>E o impacto fica ainda mais evidente quando esse indicador é relacionado aos custos.</p>
+
+      <blockquote>"Eu gastei com a equipe o mesmo tanto, mas produzir 211 g por cabeça por dia ou 600?"</blockquote>
+
+      <p>A pergunta resume um dos principais pontos da entrevista: o custo, isoladamente, conta apenas uma parte da história.</p>
+
+      <p>Para compreender a eficiência do negócio, é preciso relacionar o que foi gasto ao que foi produzido.</p>
+
+      <h2>Gestão transforma dados em resultado</h2>
+      <p>Uma equipe pode representar um determinado custo para a propriedade. A diferença está no resultado que esse mesmo recurso está ajudando a gerar.</p>
+
+      <p>É nesse ponto que diagnóstico, planejamento e acompanhamento de indicadores se conectam.</p>
+
+      <p>Conhecer os custos mostra onde os recursos estão sendo empregados. Medir a produção mostra o que o sistema está entregando. Comparar essas informações permite identificar oportunidades de melhoria e tomar decisões mais precisas.</p>
+
+      <p>Na prática, a gestão começa quando o produtor deixa de olhar apenas para o tamanho da operação e passa a compreender a relação entre recursos, produção, margem e volume.</p>
+
+      <p>Porque uma pecuária eficiente não é definida apenas pelo quanto produz.</p>
+
+      <p>É definida pela capacidade de produzir com clareza sobre custos, desempenho e resultado.</p>
+
+      <p>E, para isso, antes de decidir o próximo passo, é preciso conhecer exatamente onde se está.</p>
+    `,
+  },
+  {
     id: 18,
     slug: "gestao-pecuaria-pastagem-suplementacao-intensificacao-resultados",
     titulo: "Gestão na pecuária: como combinar pastagem, suplementação e intensificação para melhorar os resultados",
