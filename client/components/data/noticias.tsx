@@ -3,16 +3,16 @@ export const todasAsNoticias = [
     id: 19,
     slug: "terra-desenvolvimento-canal-do-boi-gestao-margem-volume-pecuaria",
     titulo: "Terra Desenvolvimento no Canal do Boi: gestão, margem e volume na pecuária",
-    resumo: "Em entrevista exibida pelo Canal do Boi em 02 de outubro de 2026, Luciano Mota Braga destacou a importância de conhecer custos, medir a produção e transformar indicadores em decisões para melhorar os resultados da pecuária.",
+    resumo: "Em entrevista exibida pelo Canal do Boi em 02 de outubro de 2026, Luciano Araújo destacou a importância de conhecer custos, medir a produção e transformar indicadores em decisões para melhorar os resultados da pecuária.",
     imagemDestaque: "/images/noticias/luciano-braga-canal-do-boi.jpg",
     dataPublicacao: "02 de outubro de 2026",
     autor: "Por Terra Desenvolvimento",
     conteudo: `
-      <p>Em entrevista exibida pelo Canal do Boi em 02 de outubro de 2026, Luciano Mota Braga destacou a importância de conhecer custos, medir a produção e transformar indicadores em decisões para melhorar os resultados da pecuária.</p>
+      <p>Em entrevista exibida pelo Canal do Boi em 02 de outubro de 2026, Luciano Araújo destacou a importância de conhecer custos, medir a produção e transformar indicadores em decisões para melhorar os resultados da pecuária.</p>
 
       <p>Na pecuária de corte, produzir mais não significa necessariamente obter melhores resultados. Da mesma forma, alcançar bons índices de desempenho em determinado indicador pode ter pouco impacto sobre o negócio quando o volume produzido não acompanha essa eficiência.</p>
 
-      <p>Essa foi uma das reflexões apresentadas por Luciano Mota Braga, da Terra Desenvolvimento Agropecuário, em entrevista ao Canal do Boi.</p>
+      <p>Essa foi uma das reflexões apresentadas por Luciano Araújo, da Terra Desenvolvimento Agropecuário, em entrevista ao Canal do Boi.</p>
 
       <p>Segundo Luciano, o gestor precisa manter o foco em dois pontos fundamentais: aumento de margem e aumento de volume.</p>
 
