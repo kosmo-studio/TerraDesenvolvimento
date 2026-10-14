@@ -1,5 +1,96 @@
 export const todasAsNoticias = [
   {
+    id: 20,
+    slug: "terra-talks-sanidade-tecnologia-gestao-eficiencia-pecuaria",
+    titulo: "Terra Talks debate como sanidade, tecnologia e gestão contribuem para a eficiência na pecuária",
+    subtitulo: "Terra Talks | 3ª edição",
+    resumo: "Em conversa com Marcel Onizuka, médico-veterinário e gerente de demandas da MSD, o terceiro episódio do Terra Talks abordou prevenção sanitária, identificação individual dos animais e uso de dados para aprimorar decisões e resultados na pecuária.",
+    imagemDestaque: "/images/noticias/terra-talks-sanidade-tecnologia-gestao-msd.png",
+    dataPublicacao: "14 de outubro de 2026",
+    autor: "Por Terra Desenvolvimento",
+    conteudo: `
+      <p>Em conversa com Marcel Onizuka, médico-veterinário e gerente de demandas da MSD, o terceiro episódio do Terra Talks abordou prevenção sanitária, identificação individual dos animais e uso de dados para aprimorar decisões e resultados na pecuária.</p>
+
+      <p>A eficiência na pecuária depende de diferentes fatores que precisam funcionar de maneira integrada. Sanidade, desempenho produtivo, tecnologia e gestão estão entre os elementos que influenciam os resultados de uma propriedade rural e a capacidade de identificar oportunidades de melhoria.</p>
+
+      <p>Esse foi o ponto de partida da terceira edição do Terra Talks, que recebeu Marcel Onizuka, médico-veterinário formado pela Universidade Federal de Mato Grosso do Sul (UFMS) e gerente de demandas da MSD, para uma conversa sobre tendências em saúde animal e tecnologias aplicadas à produção pecuária.</p>
+
+      <p>Ao longo do encontro, a discussão destacou como a prevenção de doenças, a qualidade das informações e o acompanhamento dos indicadores podem contribuir para uma gestão mais eficiente do negócio rural.</p>
+
+      <h2>Sanidade: um fator que influencia o desempenho produtivo</h2>
+      <p>Um dos pontos centrais da conversa foi o papel da sanidade na eficiência da produção.</p>
+
+      <p>Embora os custos sanitários representem uma parcela relativamente pequena do desembolso de uma propriedade, seus efeitos podem alcançar diferentes indicadores produtivos. Doenças clínicas e subclínicas podem comprometer o desempenho dos animais, inclusive quando os sinais não são facilmente percebidos na rotina da fazenda.</p>
+
+      <p>Para ilustrar essa relação, Marcel utilizou uma comparação: a sanidade funciona como o freio de mão de um veículo. Quando esse freio permanece parcialmente acionado, o carro continua andando, mas com menor eficiência e maior esforço.</p>
+
+      <p>Na pecuária, a lógica é semelhante. Investimentos em genética e nutrição precisam ser acompanhados por condições sanitárias adequadas para que os animais expressem seu potencial produtivo.</p>
+
+      <p>Nesse contexto, a prevenção ganha importância. Protocolos sanitários bem estruturados, vacinação adequada e planejamento dos manejos ajudam a reduzir riscos e a criar condições para um desempenho mais consistente.</p>
+
+      <p>Mais do que reagir aos problemas depois que aparecem, a proposta é antecipar desafios e acompanhar os efeitos das medidas adotadas.</p>
+
+      <h2>Prevenção e indicadores: como avaliar os resultados</h2>
+      <p>A prevenção sanitária foi outro destaque do episódio. Segundo os pontos discutidos, o investimento em vacinação e protocolos preventivos precisa estar associado ao acompanhamento dos indicadores da propriedade.</p>
+
+      <p>Taxas de tratamento, retratamento e ocorrência de doenças, por exemplo, ajudam a observar o comportamento do sistema ao longo do tempo.</p>
+
+      <p>Essa análise permite avaliar se as medidas adotadas estão contribuindo para os resultados esperados e oferece informações para ajustar estratégias.</p>
+
+      <p>A relação entre prevenção e gestão também passa pela avaliação econômica. Quando as margens estão mais estreitas, pequenas variações no desempenho podem ganhar relevância no resultado final.</p>
+
+      <p>Por isso, compreender o custo das ações sanitárias é importante, mas relacioná-lo aos efeitos sobre a produtividade torna a análise mais completa.</p>
+
+      <p>A prevenção ganha força quando deixa de ser vista apenas como uma despesa e passa a ser acompanhada como parte da eficiência produtiva.</p>
+
+      <h2>Identificação individual e qualidade dos dados</h2>
+      <p>Outro tema abordado no Terra Talks foi a evolução das tecnologias de identificação animal.</p>
+
+      <p>À medida que a pecuária se profissionaliza, cresce a necessidade de conhecer não apenas os indicadores gerais do rebanho, mas também o histórico e o desempenho de cada animal.</p>
+
+      <p>Uma taxa de prenhez, por exemplo, oferece uma visão geral dos resultados reprodutivos. A identificação individual permite aprofundar essa análise, relacionando cada matriz ao seu histórico de reprodução e à quantidade de bezerros produzidos ao longo do tempo.</p>
+
+      <p>Essa mudança amplia a capacidade de compreender o que acontece dentro do rebanho e de identificar diferenças que os números agregados podem esconder.</p>
+
+      <p>Entre as ferramentas discutidas estão os brincos eletrônicos, os chips e os bastões de leitura, que auxiliam na coleta e no registro das informações individuais.</p>
+
+      <p>Entretanto, a tecnologia, isoladamente, não garante uma gestão eficiente. Seu valor depende da qualidade dos registros, da existência de sistemas capazes de organizar os dados e de profissionais preparados para interpretar as informações e utilizá-las nas decisões.</p>
+
+      <p>É a combinação desses elementos que permite transformar identificação em conhecimento sobre o negócio.</p>
+
+      <h2>Tecnologia aplicada à realidade da propriedade</h2>
+      <p>A conversa também abordou o potencial de tecnologias que monitoram o comportamento dos animais e auxiliam na identificação precoce de alterações.</p>
+
+      <p>Na produção leiteira, por exemplo, existem ferramentas que acompanham aspectos como movimentação, ruminação, ingestão de alimento e ofegação. A análise dessas informações pode gerar alertas para direcionar a atenção da equipe a animais que precisam ser avaliados.</p>
+
+      <p>Esse tipo de aplicação evidencia uma mudança na forma de acompanhar os rebanhos: em vez de depender exclusivamente da observação visual, o produtor pode contar com informações adicionais para orientar o monitoramento.</p>
+
+      <p>A adoção dessas soluções, porém, exige considerar as particularidades de cada sistema produtivo. Tecnologias desenvolvidas para outras regiões ou realidades precisam ser avaliadas quanto à sua aplicabilidade e viabilidade nas condições brasileiras.</p>
+
+      <p>O objetivo é compreender quais ferramentas fazem sentido para cada operação e como elas podem contribuir para seus resultados.</p>
+
+      <h2>Da informação à decisão: a conexão com a gestão</h2>
+      <p>Ao longo do episódio, ficou evidente que sanidade, tecnologia e gestão compartilham uma necessidade fundamental: informação confiável.</p>
+
+      <p>Sem dados consistentes, torna-se mais difícil avaliar o desempenho, acompanhar a evolução dos indicadores e compreender os efeitos das decisões tomadas.</p>
+
+      <p>O planejamento estabelece objetivos e direciona ações. O monitoramento permite verificar o que está acontecendo na prática. A análise dos resultados, por sua vez, oferece subsídios para corrigir desvios e identificar novas oportunidades.</p>
+
+      <p>É nessa integração que a tecnologia passa a contribuir efetivamente para a gestão do negócio.</p>
+
+      <p>O uso de ferramentas de identificação e monitoramento pode ampliar a quantidade e a qualidade das informações disponíveis. Mas é a capacidade de interpretar esses dados e conectá-los aos objetivos da propriedade que permite transformar informação em resultado.</p>
+
+      <h2>Uma pecuária cada vez mais orientada por informação</h2>
+      <p>A profissionalização da pecuária amplia a importância de decisões fundamentadas em dados, planejamento e acompanhamento contínuo.</p>
+
+      <p>Nesse cenário, a integração entre conhecimento técnico, prevenção sanitária, tecnologia e gestão contribui para uma visão mais abrangente do negócio rural.</p>
+
+      <p>A terceira edição do Terra Talks reforçou justamente essa conexão: compreender o desempenho dos animais, acompanhar os indicadores e avaliar os resultados são etapas complementares de um mesmo processo.</p>
+
+      <p>Na gestão agropecuária, informação ganha valor quando ajuda a compreender o presente, avaliar escolhas e orientar os próximos passos.</p>
+    `,
+  },
+  {
     id: 19,
     slug: "terra-desenvolvimento-canal-do-boi-gestao-margem-volume-pecuaria",
     titulo: "Terra Desenvolvimento no Canal do Boi: gestão, margem e volume na pecuária",
