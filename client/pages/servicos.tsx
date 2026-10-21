@@ -1,3 +1,4 @@
+import { trackFaleConsultor } from "@/lib/analytics";
 import Header from "../components/Header";
 import Footer from "../components/Footer";
 import { Button } from "@/components/ui/button";
@@ -131,7 +132,13 @@ export default function Servicos() {
                 </span>
                 <span className="font-bold">Terra!</span>
               </h2>
-              <a target="_blank" href="https://wa.me/556730263442">
+              <a
+                target="_blank"
+                rel="noopener noreferrer"
+                href="https://wa.me/556730263442"
+                onClick={() => trackFaleConsultor("Página Serviços - Fale com um consultor")}
+                data-gtm-event="click_fale_consultor"
+              >
                 <Button
                   size="lg"
                   className="bg-terra-navy hover:bg-terra-dark-blue/95 text-white px-8 py-4 text-lg font-lexend rounded-lg flex items-center gap-3 mx-auto"

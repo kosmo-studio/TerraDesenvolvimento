@@ -1,3 +1,4 @@
+import { trackFaleConsultor } from "@/lib/analytics";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
 
@@ -109,8 +110,15 @@ export default function Footer() {
                     </a>
                 </p>
             </div>
-             <a target="_blank" href={contactInfo.whatsappLink} rel="noopener noreferrer">
+             <a
+              target="_blank"
+              href={contactInfo.whatsappLink}
+              rel="noopener noreferrer"
+              onClick={() => trackFaleConsultor("Footer - WhatsApp")}
+              data-gtm-event="click_fale_consultor"
+            >
               <Button className="bg-terra-green hover:bg-green-600 text-white px-4 py-2 w-full max-w-xs text-sm font-lexend rounded-lg flex items-center justify-center gap-2 mt-4">
+                <span className="sr-only">FALE COM UM CONSULTOR</span>
                 <IconWhatsapp /> WhatsApp
               </Button>
             </a>

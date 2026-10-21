@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react';
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
-
+import { trackFaleConsultor } from "@/lib/analytics";
 
 const navLinks = [
   { to: "/servicos", label: "Serviços" },
@@ -65,10 +65,16 @@ export default function Header() {
         </nav>
 
         {/* CTA Button: Alterado para 'lg:flex' */}
-        <a target="_blank" href="https://wa.me/556730263442">
-        <Button className="hidden lg:flex bg-terra-dark-blue hover:bg-terra-navy text-white px-4 xl:px-6 py-3 text-xs xl:text-sm font-lexend rounded-lg transition-colors">
-         FALE COM UM CONSULTOR
-        </Button>
+        <a
+          target="_blank"
+          rel="noopener noreferrer"
+          href="https://wa.me/556730263442"
+          onClick={() => trackFaleConsultor("Header Desktop")}
+          data-gtm-event="click_fale_consultor"
+        >
+          <Button className="hidden lg:flex bg-terra-dark-blue hover:bg-terra-navy text-white px-4 xl:px-6 py-3 text-xs xl:text-sm font-lexend rounded-lg transition-colors">
+            FALE COM UM CONSULTOR
+          </Button>
         </a>
         <button className="lg:hidden p-2" aria-label="Menu" onClick={toggleMenu}>
           <svg
@@ -99,10 +105,17 @@ export default function Header() {
               {link.label}
             </Link>
           ))}
-        <a target="_blank" href="https://wa.me/556730263442">
-          <Button className="w-full bg-terra-dark-blue hover:bg-terra-navy text-white px-6 py-3 text-sm font-lexend rounded-lg transition-colors">
-            FALE COM UM CONSULTOR
-          </Button>
+          <a
+            target="_blank"
+            rel="noopener noreferrer"
+            href="https://wa.me/556730263442"
+            onClick={() => trackFaleConsultor("Header Mobile")}
+            data-gtm-event="click_fale_consultor"
+            className="w-full"
+          >
+            <Button className="w-full bg-terra-dark-blue hover:bg-terra-navy text-white px-6 py-3 text-sm font-lexend rounded-lg transition-colors">
+              FALE COM UM CONSULTOR
+            </Button>
           </a>
         </div>
       )}

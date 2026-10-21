@@ -3,8 +3,8 @@ import path from "path";
 
 // Server build configuration
 export default defineConfig({
+  base: "/",
   build: {
-    base: "/",
     lib: {
       entry: path.resolve(__dirname, "server/node-build.ts"),
       name: "server",
@@ -29,14 +29,13 @@ export default defineConfig({
         "events",
         "buffer",
         "querystring",
-        "child_process",
-        // External dependencies that should not be bundled
+        // External dependencies that shouldn't be bundled
         "express",
         "cors",
       ],
       output: {
         format: "es",
-        entryFileNames: "[name].mjs",
+        entryFileNames: "production.js",
       },
     },
     minify: false, // Keep readable for debugging
@@ -49,6 +48,6 @@ export default defineConfig({
     },
   },
   define: {
-    "process.env.NODE_ENV": '"production"',
+    "process.env.NODE_ENV": JSON.stringify("production"),
   },
 });
