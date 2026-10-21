@@ -1,3 +1,4 @@
+import { trackFaleConsultor } from "@/lib/analytics";
 import Header from "../components/Header";
 import Footer from "../components/Footer";
 import { Button } from "@/components/ui/button";
@@ -125,6 +126,8 @@ export default function Contato() {
                     target="_blank"
                     rel="noopener noreferrer"
                     className="inline-block"
+                    onClick={() => trackFaleConsultor("Página Contato - Fale com um consultor")}
+                    data-gtm-event="click_fale_consultor"
                   >
                     {/* ESTILOS REVERTIDOS PARA A VERSÃO CORRETA */}
                     <Button className="bg-terra-navy hover:bg-terra-navy/90 text-white font-bold py-4 px-8 text-lg rounded-lg flex items-center gap-3">
