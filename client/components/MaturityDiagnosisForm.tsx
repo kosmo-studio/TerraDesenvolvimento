@@ -11,6 +11,7 @@ import {
   trackDiagnosticoCheckpoint,
   trackDiagnosticoEtapaContato,
   trackDiagnosticoConcluido,
+  trackDiagnosticoAbandonoContato,
   trackFaleConsultor,
 } from "@/lib/analytics";
 import type {
@@ -236,6 +237,15 @@ const isValidPhone = (phone: string) => {
   return digits.length >= 10 && digits.length <= 13;
 };
 
+const formatPhone = (value: string) => {
+  const digits = value.replace(/\D/g, "").slice(0, 11);
+  if (!digits.length) return "";
+  if (digits.length <= 2) return `(${digits}`;
+  if (digits.length <= 6) return `(${digits.slice(0, 2)}) ${digits.slice(2)}`;
+  if (digits.length <= 10) return `(${digits.slice(0, 2)}) ${digits.slice(2, 6)}-${digits.slice(6)}`;
+  return `(${digits.slice(0, 2)}) ${digits.slice(2, 7)}-${digits.slice(7, 11)}`;
+};
+
 const scoreInitialDiagnosis = async (
   respostas: MaturidadeRespostas,
 ): Promise<InitialScoringResult> => {
@@ -315,23 +325,37 @@ export default function MaturityDiagnosisForm() {
       ? SITUATION_QUESTIONS[situationIndex]
       : null;
 
-  const hasName = lead.primeiro_nome.trim().length > 0;
-  const hasEmail = lead.email.trim().length > 0;
-  const hasPhone = lead.telefone.trim().length > 0;
-
-  const emailValid = !hasEmail || isValidEmail(lead.email);
-  const phoneValid = !hasPhone || isValidPhone(lead.telefone);
-  const leadFormValid = emailValid && phoneValid;
+  // Validação estrita: dados de contato sempre obrigatórios
+  const nameAnswered = lead.primeiro_nome.trim().length >= 2;
+  const emailAnswered = isValidEmail(lead.email);
+  const phoneAnswered = isValidPhone(lead.telefone);
+  const leadAnswered = nameAnswered && emailAnswered && phoneAnswered;
 
   const canAdvance =
     (currentQuestion && Boolean(respostas[currentQuestion.key])) ||
     (step === checkpointStep && Boolean(initialResult)) ||
     (currentSituation && Boolean(situacao[currentSituation.key])) ||
     (step === profileStep && Boolean(profileSize)) ||
-    (step === leadStep && leadFormValid);
+    (step === leadStep && leadAnswered);
+
+  // Rastreia abandono caso o usuário feche ou saia da página na etapa de contato sem ter preenchido o telefone
+  useEffect(() => {
+    if (step === leadStep && !resultado) {
+      const handleBeforeUnload = () => {
+        trackDiagnosticoAbandonoContato({
+          temNome: lead.primeiro_nome.trim().length >= 2,
+          temEmail: isValidEmail(lead.email),
+          temTelefone: isValidPhone(lead.telefone),
+        });
+      };
+      window.addEventListener("beforeunload", handleBeforeUnload);
+      return () => window.removeEventListener("beforeunload", handleBeforeUnload);
+    }
+  }, [step, leadStep, resultado, lead]);
 
   const handleLeadChange = (field: keyof typeof lead, value: string) => {
-    setLead((current) => ({ ...current, [field]: value }));
+    const formattedValue = field === "telefone" ? formatPhone(value) : value;
+    setLead((current) => ({ ...current, [field]: formattedValue }));
   };
 
   const handleMaturityAnswer = (key: AnswerKey, value: RespostaValor) => {
@@ -490,16 +514,6 @@ export default function MaturityDiagnosisForm() {
     await executeSubmission();
   };
 
-  const handleSkipContact = async () => {
-    await executeSubmission({
-      primeiro_nome: "",
-      sobrenome: "",
-      email: "",
-      telefone: "",
-      localizacao: lead.localizacao || "",
-    });
-  };
-
   if (resultado) {
     const temContato = Boolean(lead.telefone || lead.email);
     const whatsappMessage = encodeURIComponent(
@@ -621,24 +635,30 @@ export default function MaturityDiagnosisForm() {
           <div className="grid gap-5 lg:grid-cols-[0.78fr_1.22fr] lg:items-start">
             <div>
               <p className="text-sm font-semibold uppercase tracking-[0.14em] text-terra-navy">
-                Quase pronto!
+                Quase lá!
               </p>
               <h3 className="mt-2 text-2xl font-bold leading-tight text-terra-navy">
-                Onde quer receber a análise detalhada?
+                Informe seus dados para liberar o resultado
               </h3>
               <p className="mt-2 text-sm leading-relaxed text-terra-navy/65">
-                Preencha seus dados para receber o relatório e, se desejar, o contato de um consultor da Terra. Você também pode pular se preferir apenas ver o resultado.
+                Preencha os campos abaixo para gerar sua análise completa e receber as recomendações personalizadas da Terra Desenvolvimento.
               </p>
             </div>
 
             <div className="space-y-3">
               <div className="grid gap-3 sm:grid-cols-2">
-                <Input
-                  className="h-11"
-                  placeholder="Seu nome"
-                  value={lead.primeiro_nome}
-                  onChange={(event) => handleLeadChange("primeiro_nome", event.target.value)}
-                />
+                <div>
+                  <Input
+                    required
+                    className="h-11"
+                    placeholder="Seu nome*"
+                    value={lead.primeiro_nome}
+                    onChange={(event) => handleLeadChange("primeiro_nome", event.target.value)}
+                  />
+                  {lead.primeiro_nome && !nameAnswered && (
+                    <p className="mt-1 text-xs font-medium text-red-600">Informe ao menos 2 caracteres.</p>
+                  )}
+                </div>
                 <Input
                   className="h-11"
                   placeholder="Sobrenome"
@@ -648,28 +668,30 @@ export default function MaturityDiagnosisForm() {
               </div>
               <div>
                 <Input
+                  required
                   className="h-11"
                   type="email"
-                  placeholder="E-mail (opcional para receber o relatório)"
+                  placeholder="Seu e-mail principal*"
                   value={lead.email}
                   onChange={(event) => handleLeadChange("email", event.target.value)}
                 />
-                {lead.email && !emailValid && (
+                {lead.email && !emailAnswered && (
                   <p className="mt-1 text-xs font-medium text-red-600">Informe um e-mail válido (ex: seu@email.com).</p>
                 )}
               </div>
               <div className="grid gap-3 sm:grid-cols-2">
                 <div>
                   <Input
+                    required
                     className="h-11"
                     type="tel"
                     inputMode="tel"
-                    placeholder="WhatsApp com DDD (opcional)"
+                    placeholder="WhatsApp com DDD*"
                     value={lead.telefone}
                     onChange={(event) => handleLeadChange("telefone", event.target.value)}
                   />
-                  {lead.telefone && !phoneValid && (
-                    <p className="mt-1 text-xs font-medium text-red-600">DDD + número (ex: 67999998888).</p>
+                  {lead.telefone && !phoneAnswered && (
+                    <p className="mt-1 text-xs font-medium text-red-600">DDD + número (ex: (67) 99999-8888).</p>
                   )}
                 </div>
                 <Input
@@ -717,25 +739,13 @@ export default function MaturityDiagnosisForm() {
             <Button
               type="submit"
               disabled={!canAdvance || loading}
-              className="h-11 rounded-lg bg-terra-beige px-6 font-semibold text-terra-navy hover:bg-[#bda675]"
+              className="h-11 rounded-lg bg-terra-beige px-6 font-semibold text-terra-navy hover:bg-[#bda675] disabled:opacity-50"
             >
               {loading ? <Loader2 className="h-4 w-4 animate-spin" /> : <Send className="h-4 w-4" />}
-              Ver meu diagnóstico
+              Liberar meu diagnóstico
             </Button>
           )}
         </div>
-
-        {step === leadStep && !loading && (
-          <div className="text-center pt-1">
-            <button
-              type="button"
-              onClick={handleSkipContact}
-              className="text-xs text-terra-navy/60 hover:text-terra-navy underline underline-offset-4 transition"
-            >
-              Prefiro visualizar o diagnóstico direto sem informar meus dados de contato &rarr;
-            </button>
-          </div>
-        )}
       </div>
     </form>
   );

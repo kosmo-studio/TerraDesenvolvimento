@@ -274,3 +274,48 @@ export const trackDiagnosticoConcluido = ({
     }
   }
 };
+
+/**
+ * Disparado quando o usuário respondeu as perguntas do questionário,
+ * chegou na tela de contato, mas abandonou antes de enviar ou sem preencher o telefone.
+ */
+export const trackDiagnosticoAbandonoContato = ({
+  temNome,
+  temEmail,
+  temTelefone,
+}: {
+  temNome: boolean;
+  temEmail: boolean;
+  temTelefone: boolean;
+}) => {
+  if (typeof window === "undefined") return;
+
+  window.dataLayer = window.dataLayer || [];
+  window.dataLayer.push({
+    event: "diagnostico_abandono_contato",
+    tem_nome: temNome,
+    tem_email: temEmail,
+    tem_telefone: temTelefone,
+  });
+
+  if (typeof window.gtag === "function") {
+    try {
+      window.gtag("event", "quiz_abandonment_contact", {
+        event_category: "diagnostico",
+        event_label: !temTelefone ? "Sem Telefone" : "Incompleto",
+      });
+    } catch (e) {
+      console.warn("Erro ao disparar gtag (quiz_abandonment_contact):", e);
+    }
+  }
+
+  if (typeof window.fbq === "function") {
+    try {
+      window.fbq("trackCustom", "DiagnosticoAbandonoContato", {
+        tem_telefone: temTelefone,
+      });
+    } catch (e) {
+      console.warn("Erro ao disparar fbq:", e);
+    }
+  }
+};
