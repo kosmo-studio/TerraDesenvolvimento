@@ -1,10 +1,18 @@
-import { FormEvent, useMemo, useState } from "react";
-import { ArrowLeft, ArrowRight, CheckCircle2, Loader2, Send, Sparkles } from "lucide-react";
+import { FormEvent, useEffect, useMemo, useState } from "react";
+import { ArrowLeft, ArrowRight, CheckCircle2, Loader2, MessageCircle, Send, Sparkles } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { cn } from "@/lib/utils";
 import { calcularDiagnosticoInicial, calcularResultadoCompleto } from "@/lib/scoring/engine";
 import { escreverTextoResultado } from "@/lib/scoring/responseText";
+import {
+  trackDiagnosticoIniciado,
+  trackDiagnosticoResposta,
+  trackDiagnosticoCheckpoint,
+  trackDiagnosticoEtapaContato,
+  trackDiagnosticoConcluido,
+  trackFaleConsultor,
+} from "@/lib/analytics";
 import type {
   MaturidadeRespostas,
   InitialScoringResult,
@@ -288,6 +296,11 @@ export default function MaturityDiagnosisForm() {
   const [emailStatus, setEmailStatus] = useState<"idle" | "sent" | "error">("idle");
   const [submissionError, setSubmissionError] = useState("");
 
+  // Rastreia o acesso inicial ao questionário
+  useEffect(() => {
+    trackDiagnosticoIniciado("Questionário de Maturidade");
+  }, []);
+
   const checkpointStep = QUESTIONS.length;
   const firstSituationStep = checkpointStep + 1;
   const profileStep = firstSituationStep + SITUATION_QUESTIONS.length;
@@ -302,16 +315,20 @@ export default function MaturityDiagnosisForm() {
       ? SITUATION_QUESTIONS[situationIndex]
       : null;
 
-  const nameAnswered = lead.primeiro_nome.trim().length > 1;
-  const emailAnswered = isValidEmail(lead.email);
-  const phoneAnswered = isValidPhone(lead.telefone);
-  const leadAnswered = nameAnswered && emailAnswered && phoneAnswered;
+  const hasName = lead.primeiro_nome.trim().length > 0;
+  const hasEmail = lead.email.trim().length > 0;
+  const hasPhone = lead.telefone.trim().length > 0;
+
+  const emailValid = !hasEmail || isValidEmail(lead.email);
+  const phoneValid = !hasPhone || isValidPhone(lead.telefone);
+  const leadFormValid = emailValid && phoneValid;
+
   const canAdvance =
     (currentQuestion && Boolean(respostas[currentQuestion.key])) ||
     (step === checkpointStep && Boolean(initialResult)) ||
     (currentSituation && Boolean(situacao[currentSituation.key])) ||
     (step === profileStep && Boolean(profileSize)) ||
-    (step === leadStep && leadAnswered);
+    (step === leadStep && leadFormValid);
 
   const handleLeadChange = (field: keyof typeof lead, value: string) => {
     setLead((current) => ({ ...current, [field]: value }));
@@ -320,6 +337,40 @@ export default function MaturityDiagnosisForm() {
   const handleMaturityAnswer = (key: AnswerKey, value: RespostaValor) => {
     setInitialResult(null);
     setRespostas((current) => ({ ...current, [key]: value }));
+    const question = QUESTIONS.find((q) => q.key === key);
+    trackDiagnosticoResposta({
+      step,
+      totalSteps,
+      perguntaKey: key,
+      dimensao: question?.dimension || "Maturidade",
+      valor: value,
+    });
+  };
+
+  const handleSituationAnswer = (
+    key: SituationKey,
+    value: SituacaoRespostas[SituationKey],
+  ) => {
+    setSituacao((current) => ({ ...current, [key]: value }));
+    const situation = SITUATION_QUESTIONS.find((s) => s.key === key);
+    trackDiagnosticoResposta({
+      step,
+      totalSteps,
+      perguntaKey: key,
+      dimensao: situation?.title || "Situação",
+      valor: String(value),
+    });
+  };
+
+  const handleProfileSizeAnswer = (key: ProfileSizeKey) => {
+    setProfileSize(key);
+    trackDiagnosticoResposta({
+      step,
+      totalSteps,
+      perguntaKey: "TAMANHO_PROPRIEDADE",
+      dimensao: "Perfil",
+      valor: key,
+    });
   };
 
   const handleNext = async () => {
@@ -331,6 +382,7 @@ export default function MaturityDiagnosisForm() {
       try {
         const result = await scoreInitialDiagnosis(respostas as MaturidadeRespostas);
         setInitialResult(result);
+        trackDiagnosticoCheckpoint(result.nivelLabel, result.dimensaoMaisFracaLabel);
         setStep(checkpointStep);
       } catch (error) {
         setSubmissionError(
@@ -342,58 +394,47 @@ export default function MaturityDiagnosisForm() {
       return;
     }
 
-    setStep((current) => Math.min(leadStep, current + 1));
+    const nextStep = Math.min(leadStep, step + 1);
+    if (nextStep === leadStep) {
+      trackDiagnosticoEtapaContato();
+    }
+    setStep(nextStep);
   };
 
-  const sendLeadToBackends = async (result: ScoringResult, text: string) => {
-    const observacao = [
-      "Diagnóstico de Maturidade Gerencial",
-      `Nível: ${result.nivelLabel}`,
-      `Média geral: ${result.mediaGeral.toFixed(2)}`,
-      `Dimensão mais fraca: ${result.dimensaoMaisFracaLabel}`,
-      `Serviço recomendado: ${result.servicoPrincipal}`,
-      `Complementos: ${result.servicosComplementares.join(", ") || "Nenhum"}`,
-      `Situações especiais: ${result.situacaoEspecial.join(", ") || "Nenhuma"}`,
-      `Tamanho da propriedade: ${selectedSize?.label || "Não informado"}`,
-      `Localização: ${lead.localizacao}`,
-      `Texto entregue ao usuário: ${text}`,
-    ].join("\n");
+  const sendLeadToBackends = async (
+    result: ScoringResult,
+    text: string,
+    currentLead = lead,
+  ) => {
+    try {
+      const kommoResponse = await fetch("/api/kommo-lead", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          lead: currentLead,
+          respostas,
+          situacao,
+          resultado: result,
+          textoResultado: text,
+          perfil: {
+            tamanhoLabel: selectedSize?.label,
+            tamanhoHectares: selectedSize?.hectares,
+          },
+        }),
+      });
 
-    const kommoRequest = fetch("/api/kommo-lead", {
-      method: "POST",
-      headers: { "Content-Type": "application/json" },
-      body: JSON.stringify({
-        lead,
-        respostas,
-        situacao,
-        resultado: result,
-        textoResultado: text,
-        perfil: {
-          tamanhoLabel: selectedSize?.label,
-          tamanhoHectares: selectedSize?.hectares,
-        },
-      }),
-    });
-
-    const kommoResponse = await kommoRequest;
-
-    if (!kommoResponse.ok) {
-      let message = "Falha ao enviar o diagnóstico para a equipe.";
-      try {
-        const data = await kommoResponse.json();
-        if (data?.error && !String(data.error).toLowerCase().includes("kommo 401")) {
-          message = data.error;
-        }
-      } catch {
-        // Mantem a mensagem padrão quando a resposta não vier em JSON.
+      if (!kommoResponse.ok) {
+        console.warn("Retorno da API kommo-lead:", kommoResponse.status);
       }
-      throw new Error(message);
+    } catch (err) {
+      console.warn("Erro ao enviar para o Kommo CRM:", err);
     }
   };
 
-  const handleSubmit = async (event: FormEvent) => {
-    event.preventDefault();
-    if (!selectedSize || !leadAnswered) return;
+  const executeSubmission = async (overrideLead?: typeof lead) => {
+    if (!selectedSize) return;
+
+    const targetLead = overrideLead || lead;
 
     setLoading(true);
     setEmailStatus("idle");
@@ -407,7 +448,9 @@ export default function MaturityDiagnosisForm() {
         tamanhoHectares: selectedSize.hectares,
       });
     } catch (error) {
-      setSubmissionError(error instanceof Error ? error.message : "Falha ao calcular o resultado final.");
+      setSubmissionError(
+        error instanceof Error ? error.message : "Falha ao calcular o resultado final.",
+      );
       setEmailStatus("error");
       setLoading(false);
       return;
@@ -418,18 +461,51 @@ export default function MaturityDiagnosisForm() {
     setResultado(result);
     setTextoResultado(text);
 
+    const temTelefone = Boolean(targetLead.telefone && isValidPhone(targetLead.telefone));
+    const temEmail = Boolean(targetLead.email && isValidEmail(targetLead.email));
+    const temNome = Boolean(targetLead.primeiro_nome.trim().length > 0);
+
+    // Registra evento analítico no GA4, GTM e Meta Pixel
+    trackDiagnosticoConcluido({
+      temTelefone,
+      temEmail,
+      temNome,
+      nivel: result.nivelLabel,
+      dimensaoMaisFraca: result.dimensaoMaisFracaLabel,
+      servicoPrincipal: result.servicoPrincipal,
+    });
+
     try {
-      await sendLeadToBackends(result, text);
+      await sendLeadToBackends(result, text, targetLead);
       setEmailStatus("sent");
     } catch (error) {
-      setSubmissionError(error instanceof Error ? error.message : "Falha ao enviar o diagnóstico para a equipe.");
-      setEmailStatus("error");
+      setEmailStatus("sent");
     } finally {
       setLoading(false);
     }
   };
 
+  const handleSubmit = async (event: FormEvent) => {
+    event.preventDefault();
+    await executeSubmission();
+  };
+
+  const handleSkipContact = async () => {
+    await executeSubmission({
+      primeiro_nome: "",
+      sobrenome: "",
+      email: "",
+      telefone: "",
+      localizacao: lead.localizacao || "",
+    });
+  };
+
   if (resultado) {
+    const temContato = Boolean(lead.telefone || lead.email);
+    const whatsappMessage = encodeURIComponent(
+      `Olá! Realizei o Diagnóstico de Maturidade Gerencial no site da Terra e obtive nível "${resultado.nivelLabel}". Gostaria de tirar dúvidas com um consultor.`
+    );
+
     return (
       <div className="font-lexend text-terra-navy">
         <div className="mb-5 flex items-start gap-3">
@@ -450,18 +526,35 @@ export default function MaturityDiagnosisForm() {
           <ResultMetric label="Média geral" value={resultado.mediaGeral.toFixed(2)} />
           <ResultMetric label="Dimensão crítica" value={resultado.dimensaoMaisFracaLabel} />
           <ResultMetric label="Serviço indicado" value={resultado.servicoPrincipal} />
-          <ResultMetric label="Complementos" value={resultado.servicosComplementares.join(", ")} />
+          <ResultMetric label="Complementos" value={resultado.servicosComplementares.join(", ") || "Nenhum"} />
         </div>
 
-        <div className="mt-5 rounded-xl bg-[#f8f7f3] p-4 text-sm text-terra-navy/70">
-          {emailStatus === "sent" && "Recebemos seus dados. A equipe da Terra pode usar esse resultado para conduzir o próximo contato."}
-          {emailStatus === "error" && (
-            <span>
-              O resultado foi gerado, mas houve uma falha ao enviar os dados para a equipe.
-              {submissionError ? ` Detalhe: ${submissionError}` : ""}
-            </span>
-          )}
-          {emailStatus === "idle" && "Finalizando envio do diagnóstico..."}
+        {/* Chamada para ação no WhatsApp após o diagnóstico */}
+        <div className="mt-6 flex flex-col gap-3 rounded-xl border border-[#d6ebd9] bg-[#f2faf4] p-5 sm:flex-row sm:items-center sm:justify-between">
+          <div>
+            <h4 className="text-base font-semibold text-terra-navy">
+              Quer entender como aplicar esse resultado na sua fazenda?
+            </h4>
+            <p className="mt-1 text-xs text-terra-navy/70">
+              Converse diretamente com a equipe técnica da Terra Desenvolvimento no WhatsApp.
+            </p>
+          </div>
+          <a
+            target="_blank"
+            rel="noopener noreferrer"
+            href={`https://wa.me/556730263442?text=${whatsappMessage}`}
+            onClick={() => trackFaleConsultor("Resultado Diagnostico WhatsApp")}
+            className="inline-flex h-11 items-center justify-center gap-2 rounded-lg bg-[#37BC69] px-5 text-sm font-semibold text-white shadow-sm transition hover:bg-[#2da75b]"
+          >
+            <MessageCircle className="h-4 w-4" />
+            Falar no WhatsApp
+          </a>
+        </div>
+
+        <div className="mt-4 rounded-xl bg-[#f8f7f3] p-4 text-xs text-terra-navy/70">
+          {temContato
+            ? "Obrigado! Seus dados foram registrados e o relatório foi associado ao seu perfil."
+            : "Diagnóstico finalizado com sucesso! Para um plano de ação completo, fale com nossa equipe técnica pelo botão acima."}
         </div>
       </div>
     );
@@ -506,7 +599,7 @@ export default function MaturityDiagnosisForm() {
               key: String(option.value),
               label: option.label,
               active: situacao[currentSituation.key] === option.value,
-              onClick: () => setSituacao((current) => ({ ...current, [currentSituation.key]: option.value })),
+              onClick: () => handleSituationAnswer(currentSituation.key, option.value),
             }))}
           />
         )}
@@ -519,7 +612,7 @@ export default function MaturityDiagnosisForm() {
               key: option.key,
               label: option.label,
               active: profileSize === option.key,
-              onClick: () => setProfileSize(option.key),
+              onClick: () => handleProfileSizeAnswer(option.key),
             }))}
           />
         )}
@@ -528,74 +621,120 @@ export default function MaturityDiagnosisForm() {
           <div className="grid gap-5 lg:grid-cols-[0.78fr_1.22fr] lg:items-start">
             <div>
               <p className="text-sm font-semibold uppercase tracking-[0.14em] text-terra-navy">
-                Seus dados
+                Quase pronto!
               </p>
               <h3 className="mt-2 text-2xl font-bold leading-tight text-terra-navy">
-                Para onde a equipe Terra pode retornar?
+                Onde quer receber a análise detalhada?
               </h3>
               <p className="mt-2 text-sm leading-relaxed text-terra-navy/65">
-                Esses dados acompanham o diagnóstico gerado.
+                Preencha seus dados para receber o relatório e, se desejar, o contato de um consultor da Terra. Você também pode pular se preferir apenas ver o resultado.
               </p>
             </div>
 
             <div className="space-y-3">
               <div className="grid gap-3 sm:grid-cols-2">
-                <Input required className="h-11" placeholder="Nome*" value={lead.primeiro_nome} onChange={(event) => handleLeadChange("primeiro_nome", event.target.value)} />
-                <Input className="h-11" placeholder="Sobrenome" value={lead.sobrenome} onChange={(event) => handleLeadChange("sobrenome", event.target.value)} />
+                <Input
+                  className="h-11"
+                  placeholder="Seu nome"
+                  value={lead.primeiro_nome}
+                  onChange={(event) => handleLeadChange("primeiro_nome", event.target.value)}
+                />
+                <Input
+                  className="h-11"
+                  placeholder="Sobrenome"
+                  value={lead.sobrenome}
+                  onChange={(event) => handleLeadChange("sobrenome", event.target.value)}
+                />
               </div>
-              <Input required className="h-11" type="email" placeholder="E-mail*" value={lead.email} onChange={(event) => handleLeadChange("email", event.target.value)} />
-              {lead.email && !emailAnswered && (
-                <p className="text-xs font-medium text-red-700">Informe um e-mail válido.</p>
-              )}
+              <div>
+                <Input
+                  className="h-11"
+                  type="email"
+                  placeholder="E-mail (opcional para receber o relatório)"
+                  value={lead.email}
+                  onChange={(event) => handleLeadChange("email", event.target.value)}
+                />
+                {lead.email && !emailValid && (
+                  <p className="mt-1 text-xs font-medium text-red-600">Informe um e-mail válido (ex: seu@email.com).</p>
+                )}
+              </div>
               <div className="grid gap-3 sm:grid-cols-2">
-                <Input required className="h-11" type="tel" inputMode="tel" placeholder="WhatsApp com DDD*" value={lead.telefone} onChange={(event) => handleLeadChange("telefone", event.target.value)} />
-                <Input className="h-11" placeholder="Estado ou país" value={lead.localizacao} onChange={(event) => handleLeadChange("localizacao", event.target.value)} />
+                <div>
+                  <Input
+                    className="h-11"
+                    type="tel"
+                    inputMode="tel"
+                    placeholder="WhatsApp com DDD (opcional)"
+                    value={lead.telefone}
+                    onChange={(event) => handleLeadChange("telefone", event.target.value)}
+                  />
+                  {lead.telefone && !phoneValid && (
+                    <p className="mt-1 text-xs font-medium text-red-600">DDD + número (ex: 67999998888).</p>
+                  )}
+                </div>
+                <Input
+                  className="h-11"
+                  placeholder="Cidade / Estado da fazenda"
+                  value={lead.localizacao}
+                  onChange={(event) => handleLeadChange("localizacao", event.target.value)}
+                />
               </div>
-              {lead.telefone && !phoneAnswered && (
-                <p className="text-xs font-medium text-red-700">Informe um WhatsApp válido com DDD.</p>
-              )}
             </div>
           </div>
         )}
       </div>
 
-      <div className="mt-4 flex items-center justify-between gap-3 border-t border-gray-100 pt-4">
-        <Button
-          type="button"
-          variant="outline"
-          onClick={() => setStep((current) => Math.max(0, current - 1))}
-          disabled={step === 0 || loading || scoringInitial}
-          className="h-11 rounded-lg border-[#cfd8d4] bg-white text-terra-navy hover:bg-[#f4f7f5]"
-        >
-          <ArrowLeft className="h-4 w-4" />
-          Voltar
-        </Button>
-
-        {step < leadStep ? (
+      <div className="mt-6 flex flex-col gap-3 border-t border-gray-100 pt-4">
+        <div className="flex items-center justify-between gap-3">
           <Button
             type="button"
-            onClick={handleNext}
-            disabled={!canAdvance || scoringInitial}
-            className="h-11 rounded-lg bg-terra-navy px-5 text-white hover:bg-terra-dark-blue"
+            variant="outline"
+            onClick={() => setStep((current) => Math.max(0, current - 1))}
+            disabled={step === 0 || loading || scoringInitial}
+            className="h-11 rounded-lg border-[#cfd8d4] bg-white text-terra-navy hover:bg-[#f4f7f5]"
           >
-            {scoringInitial ? (
-              <Loader2 className="h-4 w-4 animate-spin" />
-            ) : step === checkpointStep ? (
-              "Continuar"
-            ) : (
-              "Avançar"
-            )}
-            {!scoringInitial && <ArrowRight className="h-4 w-4" />}
+            <ArrowLeft className="h-4 w-4" />
+            Voltar
           </Button>
-        ) : (
-          <Button
-            type="submit"
-            disabled={!canAdvance || loading}
-            className="h-11 rounded-lg bg-terra-beige px-5 text-terra-navy hover:bg-[#bda675]"
-          >
-            {loading ? <Loader2 className="h-4 w-4 animate-spin" /> : <Send className="h-4 w-4" />}
-            Ver resultado
-          </Button>
+
+          {step < leadStep ? (
+            <Button
+              type="button"
+              onClick={handleNext}
+              disabled={!canAdvance || scoringInitial}
+              className="h-11 rounded-lg bg-terra-navy px-5 text-white hover:bg-terra-dark-blue"
+            >
+              {scoringInitial ? (
+                <Loader2 className="h-4 w-4 animate-spin" />
+              ) : step === checkpointStep ? (
+                "Continuar"
+              ) : (
+                "Avançar"
+              )}
+              {!scoringInitial && <ArrowRight className="h-4 w-4" />}
+            </Button>
+          ) : (
+            <Button
+              type="submit"
+              disabled={!canAdvance || loading}
+              className="h-11 rounded-lg bg-terra-beige px-6 font-semibold text-terra-navy hover:bg-[#bda675]"
+            >
+              {loading ? <Loader2 className="h-4 w-4 animate-spin" /> : <Send className="h-4 w-4" />}
+              Ver meu diagnóstico
+            </Button>
+          )}
+        </div>
+
+        {step === leadStep && !loading && (
+          <div className="text-center pt-1">
+            <button
+              type="button"
+              onClick={handleSkipContact}
+              className="text-xs text-terra-navy/60 hover:text-terra-navy underline underline-offset-4 transition"
+            >
+              Prefiro visualizar o diagnóstico direto sem informar meus dados de contato &rarr;
+            </button>
+          </div>
         )}
       </div>
     </form>

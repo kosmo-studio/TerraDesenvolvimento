@@ -336,29 +336,34 @@ function getServicoEnumId(resultado = {}) {
   return SERVICO_ENUMS[resultado.servicoPrincipal];
 }
 
-async function createContact(env, lead) {
-  const fullName = `${lead.primeiro_nome || ""} ${lead.sobrenome || ""}`.trim() || "Lead Site";
+async function createContact(env, lead = {}) {
+  const fullName =
+    `${lead.primeiro_nome || ""} ${lead.sobrenome || ""}`.trim() ||
+    lead.email ||
+    "Produtor Rural (Site)";
+
+  const customFields = [
+    lead.telefone
+      ? {
+          field_code: "PHONE",
+          values: [{ value: String(lead.telefone).trim() }],
+        }
+      : null,
+    lead.email
+      ? {
+          field_code: "EMAIL",
+          values: [{ value: String(lead.email).trim() }],
+        }
+      : null,
+  ].filter(Boolean);
+
+  const contactData = { name: fullName };
+  if (customFields.length > 0) {
+    contactData.custom_fields_values = customFields;
+  }
 
   const data = await kommoRequest(env, "/api/v4/contacts", {
-    body: [
-      {
-        name: fullName,
-        custom_fields_values: [
-          lead.telefone
-            ? {
-                field_code: "PHONE",
-                values: [{ value: lead.telefone }],
-              }
-            : null,
-          lead.email
-            ? {
-                field_code: "EMAIL",
-                values: [{ value: lead.email }],
-              }
-            : null,
-        ].filter(Boolean),
-      },
-    ],
+    body: [contactData],
   });
 
   return data?._embedded?.contacts?.[0]?.id;
@@ -366,47 +371,104 @@ async function createContact(env, lead) {
 
 async function createQualifiedLead(env, { contactId, payload }) {
   const { lead = {}, resultado = {} } = payload;
-  const fullName = `${lead.primeiro_nome || ""} ${lead.sobrenome || ""}`.trim() || "Lead Diagnóstico";
+  const rawName = `${lead.primeiro_nome || ""} ${lead.sobrenome || ""}`.trim();
+  const hasPhone = Boolean(lead.telefone && String(lead.telefone).trim().length >= 8);
+  const hasEmail = Boolean(lead.email && String(lead.email).trim().length > 3);
+
+  let displayName = rawName;
+  if (!displayName) {
+    displayName = hasEmail ? lead.email : "Produtor Anônimo";
+  }
+
+  const tagStatus = !hasPhone ? " [SEM TELEFONE]" : "";
+  const leadTitle = `Diagnóstico Maturidade - ${displayName}${tagStatus}`;
+
+  const customFields = [
+    enumField(FIELDS.nivelMaturidade, NIVEL_ENUMS[resultado.nivel]),
+    enumField(FIELDS.dimensaoMaisFraca, DIMENSAO_ENUMS[resultado.dimensaoMaisFraca]),
+    enumField(FIELDS.servicoRecomendado, getServicoEnumId(resultado)),
+    multiEnumField(FIELDS.servicosComplementares, getComplementoEnumIds(resultado)),
+    multiEnumField(FIELDS.situacaoEspecial, getSituacaoEnumIds(resultado)),
+    valueField(FIELDS.respostasQuiz, buildQuizJson(payload)),
+    enumField(FIELDS.canalEntrada, CANAL_SITE_ENUM_ID),
+  ].filter(Boolean);
+
+  const leadData = {
+    name: leadTitle,
+    pipeline_id: PIPELINE_ID,
+    status_id: STATUS_QUALIFICADO,
+    _embedded: {
+      contacts: [{ id: contactId }],
+    },
+  };
+
+  if (customFields.length > 0) {
+    leadData.custom_fields_values = customFields;
+  }
 
   const data = await kommoRequest(env, "/api/v4/leads", {
-    body: [
-      {
-        name: `Diagnóstico Maturidade - ${fullName}`,
-        pipeline_id: PIPELINE_ID,
-        status_id: STATUS_QUALIFICADO,
-        _embedded: {
-          contacts: [{ id: contactId }],
-        },
-        custom_fields_values: [
-          enumField(FIELDS.nivelMaturidade, NIVEL_ENUMS[resultado.nivel]),
-          enumField(FIELDS.dimensaoMaisFraca, DIMENSAO_ENUMS[resultado.dimensaoMaisFraca]),
-          enumField(FIELDS.servicoRecomendado, getServicoEnumId(resultado)),
-          multiEnumField(FIELDS.servicosComplementares, getComplementoEnumIds(resultado)),
-          multiEnumField(FIELDS.situacaoEspecial, getSituacaoEnumIds(resultado)),
-          valueField(FIELDS.respostasQuiz, buildQuizJson(payload)),
-          enumField(FIELDS.canalEntrada, CANAL_SITE_ENUM_ID),
-        ].filter(Boolean),
-      },
-    ],
+    body: [leadData],
   });
 
   return data?._embedded?.leads?.[0]?.id;
 }
 
+async function addLeadNote(env, { leadId, payload }) {
+  const { lead = {}, resultado = {}, perfil = {}, textoResultado = "" } = payload;
+  const hasPhone = Boolean(lead.telefone && String(lead.telefone).trim().length >= 8);
+
+  const lines = [
+    "📊 Diagnóstico de Maturidade Gerencial (Site)",
+    `Nome: ${`${lead.primeiro_nome || ""} ${lead.sobrenome || ""}`.trim() || "Não informado"}`,
+    `Telefone / WhatsApp: ${hasPhone ? lead.telefone : "⚠️ NÃO INFORMADO"}`,
+    `E-mail: ${lead.email || "Não informado"}`,
+    `Localização: ${lead.localizacao || "Não informada"}`,
+    `Área da fazenda: ${perfil.tamanhoLabel || "Não informada"}`,
+    `Nível de maturidade: ${resultado.nivelLabel || "N/A"} (Média: ${resultado.mediaGeral ? Number(resultado.mediaGeral).toFixed(2) : "N/A"})`,
+    `Área crítica: ${resultado.dimensaoMaisFracaLabel || "N/A"}`,
+    `Serviço recomendado: ${resultado.servicoPrincipal || "N/A"}`,
+    `Complementos: ${(resultado.servicosComplementares || []).join(", ") || "Nenhum"}`,
+  ];
+
+  if (textoResultado) {
+    lines.push("", "Texto apresentado ao usuário:", textoResultado);
+  }
+
+  try {
+    await kommoRequest(env, `/api/v4/leads/${leadId}/notes`, {
+      method: "POST",
+      body: [
+        {
+          note_type: "common",
+          params: {
+            text: lines.join("\n"),
+          },
+        },
+      ],
+    });
+  } catch (err) {
+    console.warn("Aviso ao criar nota no lead Kommo:", err);
+  }
+}
+
 async function updateLeadProfile(env, { leadId, payload }) {
   const { lead = {}, perfil = {}, resultado = {} } = payload;
 
-  await kommoRequest(env, `/api/v4/leads/${leadId}`, {
-    method: "PATCH",
-    body: {
-      status_id: STATUS_PERFIL_COMPLETO,
-      custom_fields_values: [
-        valueField(FIELDS.areaHectares, perfil.tamanhoHectares),
-        valueField(FIELDS.regiaoCidade, lead.localizacao || lead.cidade),
-        multiEnumField(FIELDS.servicosComplementares, getComplementoEnumIds(resultado)),
-      ].filter(Boolean),
-    },
-  });
+  const customFields = [
+    valueField(FIELDS.areaHectares, perfil.tamanhoHectares),
+    valueField(FIELDS.regiaoCidade, lead.localizacao || lead.cidade),
+    multiEnumField(FIELDS.servicosComplementares, getComplementoEnumIds(resultado)),
+  ].filter(Boolean);
+
+  if (customFields.length > 0) {
+    await kommoRequest(env, `/api/v4/leads/${leadId}`, {
+      method: "PATCH",
+      body: {
+        status_id: STATUS_PERFIL_COMPLETO,
+        custom_fields_values: customFields,
+      },
+    });
+  }
 }
 
 async function handleKommoLead(request, env) {
@@ -418,6 +480,7 @@ async function handleKommoLead(request, env) {
   if (!leadId) throw new Error("Kommo não retornou o ID do lead.");
 
   await updateLeadProfile(env, { leadId, payload });
+  await addLeadNote(env, { leadId, payload });
 
   return json({ success: true, contactId, leadId });
 }
