@@ -325,20 +325,24 @@ export default function MaturityDiagnosisForm() {
       ? SITUATION_QUESTIONS[situationIndex]
       : null;
 
-  // Validação estrita: dados de contato sempre obrigatórios
-  const nameAnswered = lead.primeiro_nome.trim().length >= 2;
-  const emailAnswered = isValidEmail(lead.email);
-  const phoneAnswered = isValidPhone(lead.telefone);
-  const leadAnswered = nameAnswered && emailAnswered && phoneAnswered;
+  // Validação: dados opcionais (não obrigatórios), mas se digitados devem ter formato válido
+  const hasName = lead.primeiro_nome.trim().length > 0;
+  const hasEmail = lead.email.trim().length > 0;
+  const hasPhone = lead.telefone.trim().length > 0;
+
+  const nameValid = !hasName || lead.primeiro_nome.trim().length >= 2;
+  const emailValid = !hasEmail || isValidEmail(lead.email);
+  const phoneValid = !hasPhone || isValidPhone(lead.telefone);
+  const leadFormValid = nameValid && emailValid && phoneValid;
 
   const canAdvance =
     (currentQuestion && Boolean(respostas[currentQuestion.key])) ||
     (step === checkpointStep && Boolean(initialResult)) ||
     (currentSituation && Boolean(situacao[currentSituation.key])) ||
     (step === profileStep && Boolean(profileSize)) ||
-    (step === leadStep && leadAnswered);
+    (step === leadStep && leadFormValid);
 
-  // Rastreia abandono caso o usuário feche ou saia da página na etapa de contato sem ter preenchido o telefone
+  // Rastreia caso o usuário chegue na etapa de contato e abandone antes de clicar para ver o resultado
   useEffect(() => {
     if (step === leadStep && !resultado) {
       const handleBeforeUnload = () => {
@@ -514,6 +518,16 @@ export default function MaturityDiagnosisForm() {
     await executeSubmission();
   };
 
+  const handleSkipContact = async () => {
+    await executeSubmission({
+      primeiro_nome: "",
+      sobrenome: "",
+      email: "",
+      telefone: "",
+      localizacao: lead.localizacao || "",
+    });
+  };
+
   if (resultado) {
     const temContato = Boolean(lead.telefone || lead.email);
     const whatsappMessage = encodeURIComponent(
@@ -638,10 +652,10 @@ export default function MaturityDiagnosisForm() {
                 Quase lá!
               </p>
               <h3 className="mt-2 text-2xl font-bold leading-tight text-terra-navy">
-                Informe seus dados para liberar o resultado
+                Onde você quer receber seu diagnóstico?
               </h3>
               <p className="mt-2 text-sm leading-relaxed text-terra-navy/65">
-                Preencha os campos abaixo para gerar sua análise completa e receber as recomendações personalizadas da Terra Desenvolvimento.
+                Preencha seus dados para receber o relatório completo ou avance para visualizar o resultado na tela agora.
               </p>
             </div>
 
@@ -649,13 +663,12 @@ export default function MaturityDiagnosisForm() {
               <div className="grid gap-3 sm:grid-cols-2">
                 <div>
                   <Input
-                    required
                     className="h-11"
-                    placeholder="Seu nome*"
+                    placeholder="Seu nome"
                     value={lead.primeiro_nome}
                     onChange={(event) => handleLeadChange("primeiro_nome", event.target.value)}
                   />
-                  {lead.primeiro_nome && !nameAnswered && (
+                  {lead.primeiro_nome && !nameValid && (
                     <p className="mt-1 text-xs font-medium text-red-600">Informe ao menos 2 caracteres.</p>
                   )}
                 </div>
@@ -668,29 +681,27 @@ export default function MaturityDiagnosisForm() {
               </div>
               <div>
                 <Input
-                  required
                   className="h-11"
                   type="email"
-                  placeholder="Seu e-mail principal*"
+                  placeholder="Seu e-mail (opcional)"
                   value={lead.email}
                   onChange={(event) => handleLeadChange("email", event.target.value)}
                 />
-                {lead.email && !emailAnswered && (
+                {lead.email && !emailValid && (
                   <p className="mt-1 text-xs font-medium text-red-600">Informe um e-mail válido (ex: seu@email.com).</p>
                 )}
               </div>
               <div className="grid gap-3 sm:grid-cols-2">
                 <div>
                   <Input
-                    required
                     className="h-11"
                     type="tel"
                     inputMode="tel"
-                    placeholder="WhatsApp com DDD*"
+                    placeholder="WhatsApp com DDD (opcional)"
                     value={lead.telefone}
                     onChange={(event) => handleLeadChange("telefone", event.target.value)}
                   />
-                  {lead.telefone && !phoneAnswered && (
+                  {lead.telefone && !phoneValid && (
                     <p className="mt-1 text-xs font-medium text-red-600">DDD + número (ex: (67) 99999-8888).</p>
                   )}
                 </div>
@@ -742,10 +753,22 @@ export default function MaturityDiagnosisForm() {
               className="h-11 rounded-lg bg-terra-beige px-6 font-semibold text-terra-navy hover:bg-[#bda675] disabled:opacity-50"
             >
               {loading ? <Loader2 className="h-4 w-4 animate-spin" /> : <Send className="h-4 w-4" />}
-              Liberar meu diagnóstico
+              Ver resultado do diagnóstico
             </Button>
           )}
         </div>
+
+        {step === leadStep && !loading && (
+          <div className="text-center pt-1">
+            <button
+              type="button"
+              onClick={handleSkipContact}
+              className="text-xs text-terra-navy/60 hover:text-terra-navy underline underline-offset-4 transition"
+            >
+              Prefiro visualizar o diagnóstico direto sem informar meus dados de contato &rarr;
+            </button>
+          </div>
+        )}
       </div>
     </form>
   );

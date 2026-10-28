@@ -1,5 +1,6 @@
 import { CheckCircle2 } from "lucide-react";
 import { Link } from "react-router-dom";
+import { trackCliqueDiagnostico } from "@/lib/analytics";
 
 export default function CtaSection() {
   return (
@@ -53,6 +54,7 @@ export default function CtaSection() {
             </p>
             <Link
               to="/diagnostico-maturidade"
+              onClick={() => trackCliqueDiagnostico("cta_home")}
               className="mt-6 inline-flex h-12 items-center justify-center rounded-md bg-[#37BC69] px-6 text-sm font-semibold text-white transition hover:bg-[#2da75b]"
             >
               Iniciar diagnóstico

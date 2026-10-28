@@ -1,5 +1,6 @@
 import { useCallback, useEffect, useState } from "react";
 import { Link } from "react-router-dom";
+import { trackCliqueDiagnostico } from "@/lib/analytics";
 
 const STORAGE_KEY = "terra_leadpop_v1";
 const DISPLAY_DELAY = 15_000;
@@ -88,7 +89,10 @@ export default function KommoLeadPopup() {
           </p>
           <Link
             to="/diagnostico-maturidade"
-            onClick={closePopup}
+            onClick={() => {
+              trackCliqueDiagnostico("popup_saida");
+              closePopup();
+            }}
             className="mt-5 inline-flex h-12 w-full items-center justify-center rounded-md bg-[#37BC69] px-5 text-sm font-semibold text-white transition hover:bg-[#2da75b]"
           >
             Ir para o diagnóstico

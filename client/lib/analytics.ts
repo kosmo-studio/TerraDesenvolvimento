@@ -61,6 +61,38 @@ export const trackFaleConsultor = (buttonName = "Fale com um consultor") => {
 };
 
 /**
+ * Disparado quando o usuário clica em um botão para iniciar/abrir o Diagnóstico (ex: no Popup ou na Home).
+ */
+export const trackCliqueDiagnostico = (origem = "Botao Site") => {
+  if (typeof window === "undefined") return;
+
+  window.dataLayer = window.dataLayer || [];
+  window.dataLayer.push({
+    event: "click_iniciar_diagnostico",
+    origem_clique: origem,
+  });
+
+  if (typeof window.gtag === "function") {
+    try {
+      window.gtag("event", "click_iniciar_diagnostico", {
+        event_category: "diagnostico",
+        event_label: origem,
+      });
+    } catch (e) {
+      console.warn("Erro ao disparar gtag (click_iniciar_diagnostico):", e);
+    }
+  }
+
+  if (typeof window.fbq === "function") {
+    try {
+      window.fbq("trackCustom", "CliqueIniciarDiagnostico", { origem });
+    } catch (e) {
+      console.warn("Erro ao disparar fbq:", e);
+    }
+  }
+};
+
+/**
  * Disparado quando o usuário abre ou inicia o questionário de Diagnóstico de Maturidade Gerencial.
  */
 export const trackDiagnosticoIniciado = (origem = "Pagina Diagnostico") => {
