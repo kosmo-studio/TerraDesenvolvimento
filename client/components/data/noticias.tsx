@@ -1,5 +1,32 @@
 export const todasAsNoticias = [
   {
+    id: 21,
+    slug: "manejo-de-pastagens-e-eficiencia-na-pecuaria-como-garantir-lucro-no-campo",
+    titulo: "Manejo de Pastagens e Eficiência na Pecuária: Como Garantir Lucro no Campo",
+    resumo: "Em entrevista ao podcast Agro de Primeira, Rodrigo Patussi, zootecnista, empresário e diretor da Terra Desenvolvimento Agropecuário, detalhou as estratégias determinantes para equilibrar a oferta forrageira, otimizar custos de produção e garantir a rentabilidade na atividade pecuária.",
+    imagemDestaque: "/images/noticias/rodrigo-patussi-manejo-pastagens-agro-de-primeira.jpg",
+    dataPublicacao: "06 de novembro de 2026",
+    autor: "Por Terra Desenvolvimento",
+    conteudo: `
+      <p>A pecuária moderna passa por uma transformação em que a margem do negócio depende, cada vez mais, da eficiência de gestão e do manejo dentro da porteira. Em entrevista ao podcast Agro de Primeira, Rodrigo Patussi, zootecnista, empresário e diretor da Terra Desenvolvimento Agropecuário, detalhou as estratégias determinantes para equilibrar a oferta forrageira, otimizar custos de produção e garantir a rentabilidade na atividade pecuária.</p>
+
+      <h2>O Desafio de Equilibrar Oferta e Demanda</h2>
+      <p>O papel fundamental do pecuarista é atuar como gestor no equilíbrio constante entre a demanda animal e a capacidade de suporte da propriedade. Enquanto a demanda é definida pela quantidade de animais mantidos na fazenda e pelas metas de ganho de peso, a oferta reflete a capacidade real de produção de alimento do solo e da pastagem. O período de transição para a época das chuvas representa o momento mais crítico da safra, pois a maior luminosidade e precipitação concentram entre 70% e 80% de toda a massa forrageira e das arrobas geradas no ano. Garantir que o pasto entre estruturado nessa fase é o fator decisivo para que a fazenda aproveite ao máximo esse potencial produtivo.</p>
+
+      <h2>Eficiência de Custos e Margem de Lucro</h2>
+      <p>Embora o setor pecuário no Brasil tenha evoluído expressivamente e passado de médias históricas de 5 a 8 arrobas por hectare para fazendas que alcançam de 12 a mais de 60 arrobas por hectare, produzir em alto volume de forma isolada não assegura o sucesso financeiro. Como os preços de venda da arroba sofrem oscilações de mercado, o verdadeiro controle do produtor reside no custo de produção e na eficiência operacional. Investimentos altos em reforma de pastagem, que chegam a custar cerca de R$ 4.000 por hectare, tornam-se inviáveis quando o pasto dura poucos anos por falha no manejo, gerando um custo de depreciação anual elevado. Da mesma forma, aplicar adubo sem ter estrutura ou animais suficientes para colher o excesso de massa faz com que a planta passe do ponto ideal, reduzindo o desempenho do rebanho e desperdiçando capital de giro.</p>
+
+      <h2>Identificação de Sinais para Manejo ou Reforma</h2>
+      <p>A decisão de reformar uma pastagem deve ser tomada como última alternativa, priorizando-se sempre a manutenção e o manejo adequado das áreas já estabelecidas. A degradação do pasto nem sempre é visível apenas no olho; além da falha no estande de plantas por metro quadrado e do surgimento de plantas invasoras, os principais alertas surgem na queda progressiva da taxa de lotação e do ganho médio diário dos animais ao longo das safras. Nos casos em que a reforma é inevitável, o processo deve ser planejado com meses de antecedência, dando atenção rigorosa ao Valor Cultural (VC) e à realização de testes de germinação das sementes para evitar falhas de estande e prejuízos operacionais.</p>
+
+      <h2>Orientações para o Início da Safra das Águas</h2>
+      <p>Para o início do ciclo produtivo, Rodrigo Patussi destaca quatro orientações essenciais para evitar erros estratégicos no campo. A primeira é avaliar visualmente e tecnicamente as condições da planta, realizando roçadas de uniformização caso o pasto tenha passado no ciclo anterior. A segunda consiste em ajustar rigidamente a taxa de lotação à real capacidade de suporte da fazenda, reduzindo os riscos de sobrepastoreio. Em terceiro lugar, é fundamental manter uma reserva financeira ou plano B para reagir às variações climáticas, seja para adubações estratégicas ou para o ajuste na compra de gado. Por fim, o produtor deve implementar rotinas periódicas de monitoramento de dados, medindo ganhos de peso e lotações de forma frequente para tomar decisões rápidas e baseadas em números reais.</p>
+
+      <p>Confira a entrevista completa e acompanhe todos os detalhes do bate-papo no canal do YouTube:</p>
+      <p><a href="https://www.youtube.com/watch?v=0qdWp4XqkAo" target="_blank" rel="noopener noreferrer">https://www.youtube.com/watch?v=0qdWp4XqkAo</a></p>
+    `,
+  },
+  {
     id: 20,
     slug: "terra-talks-sanidade-tecnologia-gestao-eficiencia-pecuaria",
     titulo: "Terra Talks debate como sanidade, tecnologia e gestão contribuem para a eficiência na pecuária",
